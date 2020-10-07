@@ -1,0 +1,3 @@
+prefLabel, altLabel, definition, broaderConcept
+wind_lidar coherent_Doppler_wind_lidar "laser unit that measures wind"
+scanning_lidar coherent_Doppler_wind_lidar "scanning wind lidar

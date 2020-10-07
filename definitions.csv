@@ -3,7 +3,7 @@ wind_lidar, coherent_Doppler_wind_lidar, "laser unit that measures wind"
 applications, ,"ways that wind lidar can be used", wind_lidar
 devices, ,"specific implementations of wind lidar technology", wind_lidar
 scanning_lidar, coherent_Doppler_wind_lidar, "Devices that can project a laser beam around an arbitrary pattern to measure wind characteristics", devices
-Windscanner, ,"One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project" , devices
+Windscanner, ,"One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project", devices
 measurement_principles, ,"The means by which a lidar makes a measurement of the wind", wind_lidar
 time_of_flight, ,"The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system", measurement_principles
 scanning_geometry, ,"1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe", measurement_principles

@@ -1,5 +1,5 @@
 prefLabel, altLabel, definition, broaderConcept
-wind_lidar, coherent_Doppler_wind_lidar, "laser unit that measures wind"
+wind_lidar, coherent_Doppler_wind_lidar, "laser unit that measures wind",
 applications, ,"ways that wind lidar can be used", wind_lidar
 devices, ,"specific implementations of wind lidar technology", wind_lidar
 scanning_lidar, coherent_Doppler_wind_lidar, "Devices that can project a laser beam around an arbitrary pattern to measure wind characteristics", devices

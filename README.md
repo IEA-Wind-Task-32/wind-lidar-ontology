@@ -1,4 +1,4 @@
-# wind-lidar-glossary
+# Wind lidar glossary
 A glossary of terms for wind lidar.
 
 ## Why

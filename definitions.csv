@@ -1,3 +1,13 @@
 prefLabel, altLabel, definition, broaderConcept
 wind_lidar, coherent_Doppler_wind_lidar, "laser unit that measures wind"
-scanning_lidar, coherent_Doppler_wind_lidar, "scanning wind lidar
+applications, ,"ways that wind lidar can be used", wind_lidar
+devices, ,"specific implementations of wind lidar technology", wind_lidar
+scanning_lidar, coherent_Doppler_wind_lidar, "Devices that can project a laser beam around an arbitrary pattern to measure wind characteristics", devices
+Windscanner, ,"One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project." , devices
+measurement_principles, ,"The means by which a lidar makes a measurement of the wind", wind_lidar
+time_of_flight, ,"The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system", measurement_principles
+scanning_geometry, ,"1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe.", measurement_principles
+tripple_Doppler, ,"A convergent scan geometry employing three lidar units", scanning_geometry
+virtual_met_mast, ,"A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement", scanning_geometry
+use_case, ,"The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy", applications
+Velocity_Azimuth_Display_(VAD), ,"A scan geometry in which the azimuth angle of the beam is varied, like the PPI. A VAD varies the azimuth angle over the full 360 degree range of possible azimuth angles. The WFR model from which final data are derived is based on fitting intermediate values of radial velocity to their expected sinusoidal dependence on azimuth angle.", scanning_geometry

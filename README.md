@@ -1,3 +1,5 @@
+![CI](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/workflows/CI/badge.svg)
+
 # Wind lidar glossary
 A glossary of terms for wind lidar.
 

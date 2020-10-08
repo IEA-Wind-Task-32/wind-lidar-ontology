@@ -16,10 +16,10 @@
 
 
 :IEA_TERM  a             skos:Concept ;
-        skos:altLabel      ""@en ;
-        skos:definition    ""@en ;
+        skos:altLabel      ""@en, ""@de ;
+        skos:definition    ""@en, ""@de ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     ""@en ;
+        skos:prefLabel     ""@en, ""@de ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
 :wind_lidar  a             skos:Concept ;

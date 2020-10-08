@@ -30,19 +30,6 @@
         skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "windscanner"@en .
-@prefix :      <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/> .
-@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc:    <http://purl.org/dc/elements/1.1/> .
-:       a       owl:Ontology .
-:IEAWindTask32GlossaryTerms
-        a               skos:ConceptScheme ;
-        skos:prefLabel  "IEA Wind Task 32 Glossary of Terms"@en .
 :measurement_principles  a             skos:Concept ;
         skos:altLabel      ""@en ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;

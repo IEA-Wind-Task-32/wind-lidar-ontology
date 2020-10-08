@@ -4,27 +4,20 @@
 A glossary of terms for wind lidar.
 
 ## What is it?
-The Task 32 wind lidar glossary is a controlled terminology that includes a hierarchy, synonyms, and interrelationships. This is often called an _ontology_ (see https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
+The Task 32 wind lidar glossary is a controlled terminology for wind lidar that includes a hierarchy, synonyms, and interrelationships. This is often called an [_ontology_](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
 
-## Why
-This repository provides a human- and machine readable glossary of terms for wind lidar. This can be used as a taxonomy for data, publications and software.
+## About the repository
+This repository provides a human- and machine readable glossary of terms for wind lidar. This can be used to help organise and explore data, publications and software.
 
 ## Implementation
 The glossary is created from the .txt files in this repository, that are imported in to the [DTU Wind Energy Taxonomy](https://data.windenergy.dtu.dk/ontologies/view/wtax/en/).
 
 Each branch of the glossary - e.g., `applications`, `devices`, or `measurement principles` - has its own file for simplicity. These files are then automaticaly concatenated with the headers needed for the glossary (in `00_headers.txt`), and imported in to the viewer.
 
-## Structure
-- 00_header.txt contains the headers. 
-- applications.txt
-- devices.txt
-- .... .txt, etc.
-
-These files are then automatically appended on commit to create glossary.ttl.
-
 # To contribute
-
-The data in the glossary can only be changed by the repository maintainers. To make a sugestion for a change, please raise an [issue](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new/choose).
+The data in the glossary can only be changed by the repository maintainers.
+- [Suggest a new definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=new-definition.md&title=%5BNew+definition%5D).
+- [Change a definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=change-definition.md&title=%5BChange+a+definition%5D).
 
 To suggest a new glossary entry please [raise an issue](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=new-definition.md&title=%5BNew+definition%5D).
 
@@ -36,4 +29,4 @@ This repository is maintained by
 - Nikola Vasiljevic at the Danish Technical University.
 
 # Contact
-Questions, comments, and feedback about the terms should be [shared as an issue](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new/choose) or sent to ieawind.task32@ifb.uni-stuttgart.de.
+Questions, comments, and feedback about the glossary should be [shared as an issue](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new/choose) or sent to ieawind.task32@ifb.uni-stuttgart.de.

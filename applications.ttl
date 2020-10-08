@@ -1,0 +1,6 @@
+:applications  a             skos:Concept ;
+        skos:altLabel      ""@en ;
+        skos:definition    "Ways that wind lidar can be used"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "applications"@en, "anwendungen"@de ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .

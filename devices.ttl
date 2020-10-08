@@ -1,0 +1,13 @@
+:devices  a             skos:Concept ;
+        skos:altLabel      ""@en ;
+        skos:definition    "Specific implementations of wind lidar technologies"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "devices"@en ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:windscanner  a             skos:Concept ;
+        skos:broader       :devices ;
+        skos:altLabel      ""@en ;
+        skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "windscanner"@en .

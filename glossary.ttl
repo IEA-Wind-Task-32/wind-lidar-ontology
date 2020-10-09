@@ -11,40 +11,63 @@
 :IEAWindTask32GlossaryTerms
         a               skos:ConceptScheme ;
         skos:prefLabel  "IEA Wind Task 32 Glossary of Terms"@en .
-:applications  a             skos:Concept ;
-        skos:altLabel      ""@en ;
+:applications  a       skos:Concept ;
         skos:definition    "Ways that wind lidar can be used"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "applications"@en, "anwendungen"@de ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
-:devices  a             skos:Concept ;
+
+:virtual_met_mast  a     skos:Concept ;
+        skos:broader       :applications ;
+        skos:altLabel      "Crossed RHI"@en ;
+        skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "applications"@en, "anwendungen"@de ;
+
+:use_case  a     skos:Concept ;
+        skos:broader       :applications ;
+        skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "use case"@en ;
+ :devices  a             skos:Concept ;
         skos:altLabel      ""@en ;
-        skos:definition    "Specific implementations of wind lidar technologies"@en ;
+        skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "devices"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
 :windscanner  a             skos:Concept ;
         skos:broader       :devices ;
-        skos:altLabel      ""@en ;
-        skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project"@en ;
+        skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "windscanner"@en .
 :measurement_principles  a             skos:Concept ;
-        skos:altLabel      ""@en ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "measurement principles"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:multi_lidar a skos:Concept ;
+        skos:broader       :measurement_principles ;
+        skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "multi lidar"@en .
+
 :scanning_geometry  a             skos:Concept ;
         skos:broader       :measurement_principles ;
-        skos:altLabel      ""@en ;
+        skos:altLabel      "scan pattern"@en ;
         skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "scanning geometry"@en .
+
 :velocity_azimuth_display  a             skos:Concept ;
         skos:broader       :scanning_geometry ;
-        skos:altLabel      ""@en ;
         skos:definition    "A scan geometry in which the azimuth angle of the beam is varied, like the PPI. A VAD varies the azimuth angle over the full 360 degree range of possible azimuth angles. The WFR model from which final data are derived is based on fitting intermediate values of radial velocity to their expected sinusoidal dependence on azimuth angle."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "velocity aziumth display (VAD)"@en .
+        skos:prefLabel     "velocity azimuth display (VAD)"@en .
+
+:time_of_flight  a             skos:Concept ;
+        skos:broader       :measurement_principles ;
+        skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "time of flight (TOF)"@en .

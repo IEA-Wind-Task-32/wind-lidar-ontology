@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat *.txt > glossary.ttl
+cat *.txt >| glossary.ttl

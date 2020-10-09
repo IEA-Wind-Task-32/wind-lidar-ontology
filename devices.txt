@@ -1,6 +1,6 @@
 :devices  a             skos:Concept ;
         skos:altLabel      ""@en ;
-        skos:definition    "Specific implementations of wind lidar technologies"@en ;
+        skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "devices"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .

@@ -8,7 +8,7 @@
         skos:broader       :measurement_principles ;
         skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "measurement_principles"@en .
+        skos:prefLabel     "multi lidar"@en .
 
 :scanning_geometry  a             skos:Concept ;
         skos:broader       :measurement_principles ;

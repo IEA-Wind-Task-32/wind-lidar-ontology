@@ -1,4 +1,3 @@
-@prefix :      <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/> .
 @prefix grddl: <http://www.w3.org/2003/g/data-view#> .
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
@@ -7,10 +6,15 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@base :      <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/> .
+
 :       a       owl:Ontology .
 :IEAWindTask32GlossaryTerms
         a               skos:ConceptScheme ;
-        skos:prefLabel  "IEA Wind Task 32 Glossary of Terms"@en .
+        skos:prefLabel  "Wind Lidar"@en ;
+        skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
+        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
+
 :applications  a       skos:Concept ;
         skos:definition    "Ways that wind lidar can be used"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -29,7 +33,8 @@
         skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "use case"@en .
- :devices  a             skos:Concept ;
+
+:devices  a             skos:Concept ;
         skos:altLabel      ""@en ;
         skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -41,6 +46,7 @@
         skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "windscanner"@en .
+
 :measurement_principles  a             skos:Concept ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -72,3 +78,4 @@
         skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "time of flight (TOF)"@en .
+

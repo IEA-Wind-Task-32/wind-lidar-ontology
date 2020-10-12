@@ -29,8 +29,7 @@
         skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "use case"@en .
- 
-:devices  a             skos:Concept ;
+ :devices  a             skos:Concept ;
         skos:altLabel      ""@en ;
         skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -42,7 +41,6 @@
         skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "windscanner"@en .
-
 :measurement_principles  a             skos:Concept ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

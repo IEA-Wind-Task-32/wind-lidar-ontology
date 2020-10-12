@@ -9,11 +9,11 @@
         skos:altLabel      "Crossed RHI"@en ;
         skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "applications"@en, "anwendungen"@de ;
+        skos:prefLabel     "applications"@en, "anwendungen"@de .
 
 :use_case  a     skos:Concept ;
         skos:broader       :applications ;
         skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "use case"@en ;
+        skos:prefLabel     "use case"@en .
  

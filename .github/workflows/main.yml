@@ -32,9 +32,10 @@ jobs:
       - name: Run a multi-line script
         run: |
           sh ./scripts/build_glossary.sh
+          sh ./scripts/build_ontology.sh
 
       - name: Commit
         run: |
           git add .
-          git diff-index --quiet HEAD || git commit -m "generated new glossary.ttl from txt files"
+          git diff-index --quiet HEAD || git commit -m "generated new glossary.ttl and ontology.ttl"
           git push

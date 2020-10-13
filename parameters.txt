@@ -1,0 +1,13 @@
+:parameters  a             skos:Concept ;
+        skos:definition    "Wind lidar-specific parameters."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "parameters"@en ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:carrier_to_noise_ratio  a             skos:Concept ;
+        skos:broader       :parameters ;
+        skos:definition    "A measure of signal strength"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:altLabel      "CNR"@en ;
+        skos:prefLabel     "Carrier to noise ratio"@en .
+

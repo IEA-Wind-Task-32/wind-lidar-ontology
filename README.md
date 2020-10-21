@@ -3,16 +3,23 @@
 # Wind lidar glossary
 This repository provides the source file for a glossary of terms for wind lidar (see the file, `glossary.ttl`). This glossary can be used to help organise and explore data, publications and software.
 
-For a human-friendly version of the repository, see the [the online viewer](https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/).
+[**Check out a human-friendly version of the repository**](https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/).
 
 ## Glossary, ontology, taxonomy, ...
-The Task 32 wind lidar glossary is a controlled vocabulary about wind lidar that includes a hierarchy, synonyms, and interrelationships. This is often called an [_ontology_](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
+There are two main files in this repository:
+- The Task 32 wind lidar glossary (`glossary.ttl`) is a controlled vocabulary about wind lidar that includes a hierarchy, synonyms, and interrelationships.
+- The Task 32 ontology (`ontology.ttl`) includes more custom information
+
+Confused? [Read more about the difference between a glossary and ontology](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
 
 ## Implementation
-The glossary is built from information contained in the text files in this repository.
+The glossary and ontology files are built from information contained in the text files in this repository.
+- the glossary is created by concatenating `00_headers.ttl` with all of the other text files.
+- the ontology is created by concatenating `00_headers.ttl` and `01_parameters.ttl` with all of the other text files.
 
-Each branch of the glossary - e.g., `applications`, `devices`, or `measurement principles` - has its own file. These files are then automatically concatenated with the headers needed for the glossary (in `00_headers.txt`), and imported in to the viewer.
+The ontology and glossary are created automatically by a CI process on commit.
 
+## Syntax
 The file is written using the [Simple Knowledge Organisation System (skos) schema](https://www.w3.org/2009/08/skos-reference/skos.html). It can be checked for conformance to the skos schema using e.g. the [SPARNA skos verification tool](http://labs.sparna.fr/skos-testing-tool/test?url=https://raw.githubusercontent.com/IEA-Wind-Task-32/wind-lidar-glossary/main/glossary.ttl&rules=anr,chr,dcc,dlv,el,hr,husv,ilc,ipl,ml,mri,ncl,oc,oilt,ol,otc,rc,rrc,strc,tchbc,uc,ucil,urc,usr&format=html).
 
 # To contribute

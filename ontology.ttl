@@ -16,6 +16,76 @@
         skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
         skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
 
+
+:applications  a       skos:Concept ;
+        skos:definition    "Ways that wind lidar can be used"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "applications"@en, "anwendungen"@de ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:virtual_met_mast  a     skos:Concept ;
+        skos:broader       :applications ;
+        skos:altLabel      "Crossed RHI"@en ;
+        skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "applications"@en, "anwendungen"@de .
+
+:use_case  a     skos:Concept ;
+        skos:broader       :applications ;
+        skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "use case"@en .
+
+:design  a             skos:Concept ;
+        skos:definition    "Wind lidar designs."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "design"@en ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:module_chassis  a             skos:Concept ;
+        skos:broader       :design ;
+        skos:definition    "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
+        skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;            
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "Chassis module"@en .
+        
+:module_controller  a             skos:Concept ;
+        skos:broader       :design ;
+        skos:definition    "The controller converts commands received from the external computer into actions for individual modules "@en ;
+        skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;            
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "Controller module"@en .
+
+:module_optics  a             skos:Concept ;
+        skos:broader       :design ;
+        skos:definition    "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
+        skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "Optics module"@en .
+:devices  a             skos:Concept ;
+        skos:altLabel      ""@en ;
+        skos:definition    "Specific implementations of wind lidar technologies."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "devices"@en ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:windscanner  a             skos:Concept ;
+        skos:broader       :devices ;
+        skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "windscanner"@en .
+
+:instances  a             skos:Concept ;
+        skos:definition    "Wind lidar instances."@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "instances"@en ;
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+
+:serial_number  a             skos:Concept ;
+        skos:broader       :instances ;
+        skos:definition    "A unique identifier of the lidar instance"@en ;
+        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel     "serial number"@en .
 :measurement_principles  a             skos:Concept ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -47,38 +117,6 @@
         skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "time of flight (TOF)"@en .
-
-:applications  a       skos:Concept ;
-        skos:definition    "Ways that wind lidar can be used"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "applications"@en, "anwendungen"@de ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
-
-:virtual_met_mast  a     skos:Concept ;
-        skos:broader       :applications ;
-        skos:altLabel      "Crossed RHI"@en ;
-        skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "applications"@en, "anwendungen"@de .
-
-:use_case  a     skos:Concept ;
-        skos:broader       :applications ;
-        skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "use case"@en .
-
-:devices  a             skos:Concept ;
-        skos:altLabel      ""@en ;
-        skos:definition    "Specific implementations of wind lidar technologies."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "devices"@en ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
-
-:windscanner  a             skos:Concept ;
-        skos:broader       :devices ;
-        skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "windscanner"@en .
 
 :parameters  a             skos:Concept ;
         skos:definition    "Wind lidar-specific parameters."@en ;

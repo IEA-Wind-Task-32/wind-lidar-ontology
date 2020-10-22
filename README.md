@@ -33,8 +33,12 @@ Contributions will become part of this repository according to the terms of the 
 
 # Maintainers
 This repository is maintained by
-- Andy Clifton as IEA Wind Task 32 Operating Agent
-- Nikola Vasiljevic at the Danish Technical University.
+- [Andy Clifton](https://github.com/andyclifton), IEA Wind Task 32 Operating Agent
+- [Nikola Vasiljevic](niva83) at the Danish Technical University.
+
+... and uses contributions from 
+- [Francisco Costa](https://github.com/pacocosta)
+
 
 # Contact
 Questions, comments, and feedback about the glossary should be [shared as an issue](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new/choose) or sent to ieawind.task32@ifb.uni-stuttgart.de.

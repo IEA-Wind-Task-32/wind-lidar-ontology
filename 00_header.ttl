@@ -8,10 +8,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
-@prefix IEAWindTask32GlossaryTerms: <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/> .
-
-
-IEAWindTask32GlossaryTerms: 
+: 
         a owl:Ontology, skos:ConceptScheme ;
         owl:imports <http://data.windenergy.dtu.dk/controlled-terminology/IEAWindTask32/> ;
         skos:prefLabel  "Wind Lidar"@en ;

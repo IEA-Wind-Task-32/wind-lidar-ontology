@@ -1,17 +1,17 @@
-:applications  a       skos:Concept ;
+IEAWindTask32GlossaryTerms:applications  a       skos:Concept ;
         skos:definition    "Ways that wind lidar can be used"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "applications"@en, "anwendungen"@de ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:virtual_met_mast  a     skos:Concept ;
+IEAWindTask32GlossaryTerms:virtual_met_mast  a     skos:Concept ;
         skos:broader       :applications ;
         skos:altLabel      "Crossed RHI"@en ;
         skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "virtual met mast"@en .
 
-:use_case  a     skos:Concept ;
+IEAWindTask32GlossaryTerms:use_case  a     skos:Concept ;
         skos:broader       :applications ;
         skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

@@ -9,7 +9,7 @@
         skos:altLabel      "Crossed RHI"@en ;
         skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "applications"@en, "anwendungen"@de .
+        skos:prefLabel     "virtual met mast"@en .
 
 :use_case  a     skos:Concept ;
         skos:broader       :applications ;

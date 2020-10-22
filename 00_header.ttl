@@ -8,7 +8,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
-: 
+:IEAWindTask32GlossaryTerms 
         a owl:Ontology, skos:ConceptScheme ;
         skos:prefLabel  "Wind Lidar"@en ;
         skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;

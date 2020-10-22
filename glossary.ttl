@@ -33,32 +33,46 @@
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "use case"@en .
 
-:design  a             skos:Concept ;
-        skos:definition    "Wind lidar designs."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "design"@en ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+:design  a skos:Concept ;
+        skos:definition         "Wind lidar designs."@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "design"@en ;
+        skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
-:module_chassis  a             skos:Concept ;
-        skos:broader       :design ;
-        skos:definition    "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
-        skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;            
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "Chassis module"@en .
+:module_chassis  a skos:Concept ;
+        skos:broader            :design ;
+        skos:definition         "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;            
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "Chassis module"@en .
         
-:module_controller  a             skos:Concept ;
-        skos:broader       :design ;
-        skos:definition    "The controller converts commands received from the external computer into actions for individual modules "@en ;
+:module_controller  a skos:Concept ;
+        skos:broader            :design ;
+        skos:definition         "The controller converts commands received from the external computer into actions for individual modules "@en ;
         skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;            
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "Controller module"@en .
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "Controller module"@en .
 
-:module_optics  a             skos:Concept ;
-        skos:broader       :design ;
-        skos:definition    "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
-        skos:editorialNote    "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "Optics module"@en .
+:module_optics a skos:Concept ;
+        skos:broader            :design ;
+        skos:definition         "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "Optics module"@en .
+        
+:optics_telescope      a       skos:Concept ;
+        skos:broader            :module_optics ;
+        skos:definition         "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "telescope assembly"@en .
+        
+:optics_telescope_aperture a skos:Concept ;
+        skos:broader            :optics_telescope ;
+        skos:definition         "Maximum diameter of the lidar telescope"@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "telescope aperture"@en .
 :devices  a             skos:Concept ;
         skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

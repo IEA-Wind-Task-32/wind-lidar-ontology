@@ -62,7 +62,6 @@
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "Optics module"@en .
 :devices  a             skos:Concept ;
-        skos:altLabel      ""@en ;
         skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "devices"@en ;

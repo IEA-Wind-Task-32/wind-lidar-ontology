@@ -69,10 +69,17 @@
         
 :optics_telescope_aperture a skos:Concept ;
         skos:broader            :optics_telescope ;
-        skos:definition         "Maximum diameter of the lidar telescope"@en ;
+        skos:definition         "The aperture through which laser light is emitted and received"@en ;
         skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture"@en .
+
+:optics_telescope_aperture_diameter a skos:Concept ;
+        skos:broader            :optics_telescope_aperture ;
+        skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "telescope aperture diameter"@en .
 :devices  a             skos:Concept ;
         skos:definition    "Specific implementations of wind lidar technologies."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

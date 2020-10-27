@@ -1,0 +1,5 @@
+design: scanning Lidar
+  module_optics:
+    optics_telescope:
+      optics_telescope_aperture:
+        optics_telescope_aperture_diameter: 0.04

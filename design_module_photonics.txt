@@ -9,7 +9,7 @@
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Mirrors"@en .
+  skos:prefLabel    "Detector"@en .
 
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;

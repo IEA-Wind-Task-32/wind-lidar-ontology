@@ -7,25 +7,25 @@
     
 :module_power.UPS a skos:Concept ;
   skos:broader  :module_power ;
-  skos:definition "Uninterruptible power supply"
+  skos:definition "Uninterruptible power supply"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Uninterruptible power supply"@en .
   
 :module_power.UPS.battery a skos:Concept ;
   skos:broader  :module_power.UPS ;
-  skos:definition "An energy storage component"
+  skos:definition "An energy storage component"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery"@en .
 
 :module_power.UPS.battery.voltage a skos:Concept ;
   skos:broader  :module_power.UPS.battery ;
-  skos:definition "The battery voltage. Units are Volts."
+  skos:definition "The battery voltage. Units are Volts."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery voltage"@en .
 
 :module_power.UPS.battery.capacity a skos:Concept ;
   skos:broader  :module_power.UPS.battery ;
-  skos:definition "The total stored energy in the battery voltage. Units are Amp Hours (Ah)."
+  skos:definition "The total stored energy in the battery voltage. Units are Amp Hours (Ah)."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery capacity"@en .
     

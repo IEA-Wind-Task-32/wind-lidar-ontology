@@ -1,5 +1,21 @@
+instances:
+  serial_number: ABCD123
 design: scanning Lidar
   module_optics:
-    optics_telescope:
-      optics_telescope_aperture:
-        optics_telescope_aperture_diameter: 0.04
+    telescope:
+      aperture:
+        diameter: 0.04
+  module_scanner:
+    servo:
+      # staring lidar has zero slew rate
+      max_azimuth_slew_rate: 0.0
+      max_elevation_slew_rate: 0.0
+  module_photonics:
+    laser_source:
+      laser_diode:
+        wavelength: 1450E-9
+  module_power:
+    UPS:
+      battery:
+        voltage: 12.0
+        capacity: 5.0

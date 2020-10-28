@@ -1,11 +1,11 @@
 :instances  a             skos:Concept ;
-        skos:definition    "Wind lidar instances."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "instances"@en ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:definition    "Wind lidar instances."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "instances"@en ;
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:serial_number  a             skos:Concept ;
-        skos:broader       :instances ;
-        skos:definition    "A unique identifier of the lidar instance"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "serial number"@en .
+:instances.serial_number  a             skos:Concept ;
+  skos:broader       :instances ;
+  skos:definition    "A unique identifier of the lidar instance"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "serial number"@en .

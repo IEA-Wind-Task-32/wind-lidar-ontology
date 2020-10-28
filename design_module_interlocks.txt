@@ -1,0 +1,6 @@
+:module_interlocks  a skos:Concept ;
+  skos:broader            :design ;
+  skos:definition         "The interlocks are a dispersed set of safety systems that prevent or mitigate potentially dangerous activities."@en ;
+  skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "Interlocks"@en .

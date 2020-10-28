@@ -8,7 +8,7 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
-:IEAWindTask32GlossaryTerms
+:IEAWindTask32GlossaryTerms 
         a owl:Ontology, skos:ConceptScheme ;
         skos:prefLabel  "Wind Lidar"@en ;
         skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
@@ -20,14 +20,14 @@
         skos:prefLabel     "applications"@en, "anwendungen"@de ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:virtual_met_mast  a     skos:Concept ;
+:applications.virtual_met_mast  a     skos:Concept ;
         skos:broader       :applications ;
         skos:altLabel      "Crossed RHI"@en ;
         skos:definition    "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "virtual met mast"@en .
 
-:use_case  a     skos:Concept ;
+:applications.use_case  a     skos:Concept ;
         skos:broader       :applications ;
         skos:definition    "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -39,14 +39,14 @@
         skos:prefLabel          "design"@en ;
         skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
-        
-:module_chassis  a skos:Concept ;
-        skos:broader            :design ;
-        skos:definition         "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
-        skos:inScheme           :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel          "Chassis module"@en .
 
+:module_chassis  a skos:Concept ;
+  skos:broader            :design ;
+  skos:definition         "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
+  skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "Chassis module"@en .
+        
 :module_control a skos:Concept ;
   skos:broader      :design ;
   skos:definition   "The control module is the interface between the external controller (human or machine) and the lidar system ."@en ;
@@ -73,7 +73,8 @@
   skos:definition   "The Storage module is responsible for saving data in the lidar system which will be accessed by users at some future time."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Storage module"@en .:module_interlocks  a skos:Concept ;
+  skos:prefLabel    "Storage module"@en .
+  :module_interlocks  a skos:Concept ;
   skos:broader            :design ;
   skos:definition         "The interlocks are a dispersed set of safety systems that prevent or mitigate potentially dangerous activities."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
@@ -81,11 +82,11 @@
   skos:prefLabel          "Interlocks"@en .
 
 :module_optics a skos:Concept ;
-  skos:broader            :design ;
-  skos:definition         "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
-  skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
-  skos:inScheme           :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel          "Optics module"@en .
+        skos:broader            :design ;
+        skos:definition         "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
+        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+        skos:inScheme           :IEAWindTask32GlossaryTerms ;
+        skos:prefLabel          "Optics module"@en .
         
 :module_optics.telescope      a       skos:Concept ;
         skos:broader            :module_optics ;
@@ -107,6 +108,7 @@
         skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture diameter"@en .
+
 :module_photonics a skos:Concept ;
   skos:broader      :design ;
   skos:definition   "The photonics module is the source of emitted light that will be used for the measurements."@en ;
@@ -114,38 +116,38 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photonics module"@en .
 
-:module_photonics.detector a skos:Concept
+:module_photonics.detector a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Mirrors"@en .
 
-:module_photonics.detector.photodetector a skos:Concept
+:module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "Semiconductor light sensor."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "photodetector"@en .
   
-:module_photonics.detector.photodetector.gain a skos:Concept
+:module_photonics.detector.photodetector.gain a skos:Concept ;
   skos:broader    :module_photonics.detector.photodetector ;
   skos:definition   "The gain of the photodetector transimpedance amplifier."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photodetector gain"@en .
 
-:module_photonics.detector.photodetector.voltage_noise a skos:Concept
+:module_photonics.detector.photodetector.voltage_noise a skos:Concept ;
   skos:broader    :module_photonics.detector.photodetector ;
   skos:definition   "The voltage noise of the photodetector transimpedance amplifier."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photodetector voltage noise"@en .
 
-:module_photonics.detector.optical_amplifier a skos:Concept
+:module_photonics.detector.optical_amplifier a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "An assembly to amplify the outgoing laser light signal without coverting it into an electrical signal."@en ;
   skos:editorialNote      "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Optical amplifier"@en .
 
-:module_photonics.detector.beam_splitter a skos:Concept
+:module_photonics.detector.beam_splitter a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "An optical assembly to split a laser beam into two or more beams."@en ;
   skos:editorialNote      "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Beam_splitter"@en ;
@@ -153,19 +155,19 @@
   skos:prefLabel    "Beam splitter"@en ;
   skos:altLabel     "Beamsplitter"@en .
 
-:module_photonics.laser_source a skos:Concept
+:module_photonics.laser_source a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to generate and manage laser light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser source"@en .
 
-:module_photonics.laser_source.laser_diode a skos:Concept
+:module_photonics.laser_source.laser_diode a skos:Concept ;
   skos:broader    :module_photonics.laser_source ;
   skos:definition   "A semiconductor component to generate laser light of a defined frequency."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 
-:module_photonics.laser_source.laser_diode.wavelength a skos:Concept
+:module_photonics.laser_source.laser_diode.wavelength a skos:Concept ;
   skos:broader    :module_photonics.laser_source.laser_diode ;
   skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g. 1450E-9 m for a near-infrared laser source."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
@@ -208,25 +210,25 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Scanner"@en .
     
-:module_scanner.servo a skos:Concept
+:module_scanner.servo a skos:Concept ;
   skos:broader    :module_scanner ;
   skos:definition   "The servo motor(s) drives the scanner motion"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Servo motors"@en .
   
-:module_scanner.servo.max_azimuth_slew_rate a skos:Concept
+:module_scanner.servo.max_azimuth_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the azimuthal direction."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum azimuthal slew rate"@en .
 
-:module_scanner.servo.max_elevation_slew_rate a skos:Concept
+:module_scanner.servo.max_elevation_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the elevation direction."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum elevation slew rate"@en .
 
-:module_scanner.mirrors a skos:Concept
+:module_scanner.mirrors a skos:Concept ;
   skos:broader    :module_scanner ;
   skos:definition   "Mirrors modifying the beam path between the telescope and atmosphere."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
@@ -237,7 +239,7 @@
         skos:prefLabel     "devices"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:windscanner  a             skos:Concept ;
+:devices.windscanner  a             skos:Concept ;
         skos:broader       :devices ;
         skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
@@ -260,13 +262,13 @@
         skos:prefLabel     "measurement principles"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:multi_lidar a skos:Concept ;
+:measurement_principles.multi_lidar a skos:Concept ;
         skos:broader       :measurement_principles ;
         skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "multi lidar"@en .
 
-:scanning_geometry  a             skos:Concept ;
+:measurement_principles.scanning_geometry  a             skos:Concept ;
         skos:broader       :measurement_principles ;
         skos:altLabel      "scan pattern"@en ;
         skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
@@ -274,13 +276,13 @@
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "scanning geometry"@en .
 
-:velocity_azimuth_display  a             skos:Concept ;
+:measurement_principles.scanning_geometry.velocity_azimuth_display  a             skos:Concept ;
         skos:broader       :scanning_geometry ;
         skos:definition    "A scan geometry in which the azimuth angle of the beam is varied, like the PPI. A VAD varies the azimuth angle over the full 360 degree range of possible azimuth angles. The WFR model from which final data are derived is based on fitting intermediate values of radial velocity to their expected sinusoidal dependence on azimuth angle."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "velocity azimuth display (VAD)"@en .
 
-:time_of_flight  a             skos:Concept ;
+:measurement_principles.time_of_flight  a             skos:Concept ;
         skos:broader       :measurement_principles ;
         skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

@@ -17,6 +17,9 @@ This glossary includes terms used to describe the design of a wind lidar. These 
 
 ![The OpenLidar modular wind lidar architecture](https://github.com/e-WindLidar/OpenLidarModuleDefinitions/blob/master/OpenLidarModules.png)
 
+For more details about OpenLidar see Zenodo. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3414197.svg)](https://doi.org/10.5281/zenodo.3414197)
+
+
 ## How to use this
 
 ### To define the inputs for simulations

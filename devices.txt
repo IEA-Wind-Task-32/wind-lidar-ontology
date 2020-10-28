@@ -4,7 +4,7 @@
         skos:prefLabel     "devices"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:windscanner  a             skos:Concept ;
+:devices.windscanner  a             skos:Concept ;
         skos:broader       :devices ;
         skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

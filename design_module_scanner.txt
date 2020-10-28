@@ -5,25 +5,25 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Scanner"@en .
     
-:module_scanner.servo a skos:Concept
+:module_scanner.servo a skos:Concept ;
   skos:broader    :module_scanner ;
   skos:definition   "The servo motor(s) drives the scanner motion"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Servo motors"@en .
   
-:module_scanner.servo.max_azimuth_slew_rate a skos:Concept
+:module_scanner.servo.max_azimuth_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the azimuthal direction."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum azimuthal slew rate"@en .
 
-:module_scanner.servo.max_elevation_slew_rate a skos:Concept
+:module_scanner.servo.max_elevation_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the elevation direction."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum elevation slew rate"@en .
 
-:module_scanner.mirrors a skos:Concept
+:module_scanner.mirrors a skos:Concept ;
   skos:broader    :module_scanner ;
   skos:definition   "Mirrors modifying the beam path between the telescope and atmosphere."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;

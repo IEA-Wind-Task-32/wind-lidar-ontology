@@ -4,4 +4,4 @@
         skos:prefLabel          "design"@en ;
         skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
-        
+

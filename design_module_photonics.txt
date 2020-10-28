@@ -5,38 +5,38 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photonics module"@en .
 
-:module_photonics.detector a skos:Concept
+:module_photonics.detector a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Mirrors"@en .
 
-:module_photonics.detector.photodetector a skos:Concept
+:module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "Semiconductor light sensor."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "photodetector"@en .
   
-:module_photonics.detector.photodetector.gain a skos:Concept
+:module_photonics.detector.photodetector.gain a skos:Concept ;
   skos:broader    :module_photonics.detector.photodetector ;
   skos:definition   "The gain of the photodetector transimpedance amplifier."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photodetector gain"@en .
 
-:module_photonics.detector.photodetector.voltage_noise a skos:Concept
+:module_photonics.detector.photodetector.voltage_noise a skos:Concept ;
   skos:broader    :module_photonics.detector.photodetector ;
   skos:definition   "The voltage noise of the photodetector transimpedance amplifier."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Photodetector voltage noise"@en .
 
-:module_photonics.detector.optical_amplifier a skos:Concept
+:module_photonics.detector.optical_amplifier a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "An assembly to amplify the outgoing laser light signal without coverting it into an electrical signal."@en ;
   skos:editorialNote      "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Optical amplifier"@en .
 
-:module_photonics.detector.beam_splitter a skos:Concept
+:module_photonics.detector.beam_splitter a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "An optical assembly to split a laser beam into two or more beams."@en ;
   skos:editorialNote      "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Beam_splitter"@en ;
@@ -44,19 +44,19 @@
   skos:prefLabel    "Beam splitter"@en ;
   skos:altLabel     "Beamsplitter"@en .
 
-:module_photonics.laser_source a skos:Concept
+:module_photonics.laser_source a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to generate and manage laser light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser source"@en .
 
-:module_photonics.laser_source.laser_diode a skos:Concept
+:module_photonics.laser_source.laser_diode a skos:Concept ;
   skos:broader    :module_photonics.laser_source ;
   skos:definition   "A semiconductor component to generate laser light of a defined frequency."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 
-:module_photonics.laser_source.laser_diode.wavelength a skos:Concept
+:module_photonics.laser_source.laser_diode.wavelength a skos:Concept ;
   skos:broader    :module_photonics.laser_source.laser_diode ;
   skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g. 1450E-9 m for a near-infrared laser source."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;

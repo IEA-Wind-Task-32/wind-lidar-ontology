@@ -8,21 +8,18 @@
 :module_optics.telescope      a       skos:Concept ;
         skos:broader            :module_optics ;
         skos:definition         "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope assembly"@en .
         
 :module_optics.telescope.aperture a skos:Concept ;
         skos:broader            :module_optics.telescope ;
         skos:definition         "The aperture through which laser light is emitted and received"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture"@en .
 
 :module_optics.telescope.aperture.diameter a skos:Concept ;
         skos:broader            :module_optics.telescope.aperture ;
         skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture diameter"@en .
 

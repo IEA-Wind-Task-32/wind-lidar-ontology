@@ -28,7 +28,7 @@ For more details about OpenLidar see Zenodo.
 The glossary defines a structure for the data that describe the design of a wind lidar and how it is used. This could be encoded in a YAML file and used as the input to a lidar simulation.
 
 ### To define a reference lidar device
-The glossary defines a structure for the data that describe the design of a wind lidar. A very incomplete example of how this could be used is included as [https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/blob/main/reference-designs/staring_lidar.yml](reference-designs/staring_lidar.yaml).
+The glossary defines a structure for the data that describe the design of a wind lidar. A very incomplete example of how this could be used is included as [`reference-designs/staring_lidar.yaml`](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/blob/main/reference-designs/staring_lidar.yml.
 
 ## Implementation
 

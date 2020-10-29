@@ -42,7 +42,7 @@
 
 :module_chassis  a skos:Concept ;
   skos:broader            :design ;
-  skos:definition         "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. The module must contain accelerometers and other sensors that can be interfaced with the Control module in order to adjust for measurement errors due to the movement of the lidar system. In addition to this, it should contain stabilizers and mechanisms for easy and secure installation, and should be operate in a wide range of atmospheric conditions. "@en ;
+  skos:definition         "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure. "@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme           :IEAWindTask32GlossaryTerms ;
   skos:prefLabel          "Chassis module"@en .
@@ -91,21 +91,18 @@
 :module_optics.telescope      a       skos:Concept ;
         skos:broader            :module_optics ;
         skos:definition         "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope assembly"@en .
         
 :module_optics.telescope.aperture a skos:Concept ;
         skos:broader            :module_optics.telescope ;
         skos:definition         "The aperture through which laser light is emitted and received"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture"@en .
 
 :module_optics.telescope.aperture.diameter a skos:Concept ;
         skos:broader            :module_optics.telescope.aperture ;
         skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture diameter"@en .
 
@@ -262,23 +259,35 @@
         skos:prefLabel     "measurement principles"@en ;
         skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-:measurement_principles.multi_lidar a skos:Concept ;
-        skos:broader       :measurement_principles ;
-        skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "multi lidar"@en .
 
 :measurement_principles.scanning_geometry  a             skos:Concept ;
         skos:broader       :measurement_principles ;
         skos:altLabel      "scan pattern"@en ;
         skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
         skos:example       "An RHI scan is an example of a scanning geometry"@en ;
+        skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "scanning geometry"@en .
 
-:measurement_principles.scanning_geometry.velocity_azimuth_display  a             skos:Concept ;
-        skos:broader       :scanning_geometry ;
-        skos:definition    "A scan geometry in which the azimuth angle of the beam is varied, like the PPI. A VAD varies the azimuth angle over the full 360 degree range of possible azimuth angles. The WFR model from which final data are derived is based on fitting intermediate values of radial velocity to their expected sinusoidal dependence on azimuth angle."@en ;
+:measurement_principles.single_lidar a skos:Concept ;
+          skos:broader       :measurement_principles.scanning_geometry ;
+          skos:definition   "Measurements made by a single lidar."@en ;
+          skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+          skos:inScheme      :IEAWindTask32GlossaryTerms ;
+          skos:prefLabel     "Single lidar"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan a skos:Concept ;
+            skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+            skos:definition   "A simple scan geometry entails variation in beam orientation in a single degree of freedom"@en ;
+            skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+            skos:inScheme      :IEAWindTask32GlossaryTerms ;
+            skos:prefLabel     "Simple scan"@en .
+
+
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.velocity_azimuth_display  a             skos:Concept ;
+        skos:broader       :scanning_geometry.single_lidar.simple_scan ;
+        skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "velocity azimuth display (VAD)"@en .
 
@@ -287,6 +296,13 @@
         skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "time of flight (TOF)"@en .
+
+
+:measurement_principles.scanning_geometry.multi_lidar a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry ;
+  skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Multi-lidar"@en .
 
 :parameters  a             skos:Concept ;
         skos:definition    "Wind lidar-specific parameters."@en ;

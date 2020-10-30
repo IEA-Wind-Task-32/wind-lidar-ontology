@@ -12,15 +12,15 @@
         a owl:Ontology, skos:ConceptScheme ;
         skos:prefLabel  "Wind Lidar"@en ;
         skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
-        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en ;
-        skos:narrower   :applications, :design, :parameters, :devices, :instances .
+        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
 
 
 :applications  a       skos:Concept ;
   skos:definition    "Ways that wind lidar can be used"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "applications"@en, "anwendungen"@de ;
-  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
+  skos:narrower      :applications.virtual_met_mast, applications.use_case .
 
 :applications.virtual_met_mast  a     skos:Concept ;
   skos:broader       :applications ;
@@ -115,13 +115,15 @@
   skos:definition   "The photonics module is the source of emitted light that will be used for the measurements."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Photonics module"@en .
+  skos:prefLabel    "Photonics module"@en ;
+  skos:narrower     :module_photonics.detector, :module_photonics.laser_source.
 
 :module_photonics.detector a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Detector"@en .
+  skos:prefLabel    "Detector"@en ;
+  skos:narrower   :module_photonics.detector.photodetector, :module_photonics.detector.beam_splitter .
 
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;

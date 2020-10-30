@@ -288,7 +288,7 @@
 
 
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.velocity_azimuth_display  a             skos:Concept ;
-        skos:broader       :scanning_geometry.single_lidar.simple_scan ;
+        skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
         skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "velocity azimuth display (VAD)"@en .

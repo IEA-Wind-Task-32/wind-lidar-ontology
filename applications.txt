@@ -2,7 +2,8 @@
   skos:definition    "Ways that wind lidar can be used"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "applications"@en, "anwendungen"@de ;
-  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
+  skos:narrower      :applications.virtual_met_mast, applications.use_case .
 
 :applications.virtual_met_mast  a     skos:Concept ;
   skos:broader       :applications ;

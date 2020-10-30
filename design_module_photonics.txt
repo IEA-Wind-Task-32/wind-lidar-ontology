@@ -3,13 +3,15 @@
   skos:definition   "The photonics module is the source of emitted light that will be used for the measurements."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Photonics module"@en .
+  skos:prefLabel    "Photonics module"@en ;
+  skos:narrower     :module_photonics.detector, :module_photonics.laser_source.
 
 :module_photonics.detector a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Detector"@en .
+  skos:prefLabel    "Detector"@en ;
+  skos:narrower   :module_photonics.detector.photodetector, :module_photonics.detector.beam_splitter .
 
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;

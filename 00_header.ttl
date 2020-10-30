@@ -12,6 +12,5 @@
         a owl:Ontology, skos:ConceptScheme ;
         skos:prefLabel  "Wind Lidar"@en ;
         skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
-        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en ;
-        skos:narrower   :applications, :design, :parameters, :devices, :instances .
+        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
 

@@ -261,6 +261,13 @@
   skos:definition    "A unique identifier of the lidar instance"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "serial number"@en .
+
+  :instances.type  a             skos:Concept ;
+    skos:broader       :instances ;
+    skos:definition    "The type of lidar device"@en ;
+    skos:broaderTransitive  :devices ;
+    skos:inScheme      :IEAWindTask32GlossaryTerms ;
+    skos:prefLabel     "lidar type"@en .
 :measurement_principles  a             skos:Concept ;
         skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

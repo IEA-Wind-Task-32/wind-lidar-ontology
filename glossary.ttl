@@ -19,7 +19,7 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "applications"@en, "anwendungen"@de ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
-  skos:narrower      :applications.virtual_met_mast, applications.use_case .
+  skos:narrower      :applications.virtual_met_mast, :applications.use_case .
 
 :applications.virtual_met_mast  a     skos:Concept ;
   skos:broader       :applications ;

@@ -14,11 +14,12 @@
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "scanning geometry"@en .
 
-:measurement_principles.single_lidar a skos:Concept ;
+:measurement_principles.scanning_geometry.single_lidar a skos:Concept ;
           skos:broader       :measurement_principles.scanning_geometry ;
           skos:definition   "Measurements made by a single lidar."@en ;
           skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
           skos:inScheme      :IEAWindTask32GlossaryTerms ;
+          skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
           skos:prefLabel     "Single lidar"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.simple_scan a skos:Concept ;

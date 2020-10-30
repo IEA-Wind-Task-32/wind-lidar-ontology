@@ -3,12 +3,14 @@
   skos:definition   "The scanner orients the beam with respect to the housing and other parts of the lidar system. The scanner may be capable of one or more degrees of freedom."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
+  skos:narrower     :module_scanner.mirrors, :module_scanner.servo ;
   skos:prefLabel    "Scanner"@en .
     
 :module_scanner.servo a skos:Concept ;
   skos:broader    :module_scanner ;
   skos:definition   "The servo motor(s) drives the scanner motion"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
+  skos:narrower     :module_scanner.servo.max_azimuth_slew_rate, :module_scanner.servo.max_elevation_slew_rate ;
   skos:prefLabel    "Servo motors"@en .
   
 :module_scanner.servo.max_azimuth_slew_rate a skos:Concept ;

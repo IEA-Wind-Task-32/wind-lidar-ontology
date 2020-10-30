@@ -35,9 +35,11 @@
         skos:prefLabel     "use case"@en .
 
 :design  a skos:Concept ;
-        skos:definition         "Wind lidar designs."@en ;
+        skos:definition         "Wind lidar generic design structure."@en ;
+        skos:editorialNote       "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "design"@en ;
+        skos:narrower           :module_optics, :module_power, :module_control ;
         skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
 
@@ -309,9 +311,10 @@
         skos:definition    "Wind lidar-specific parameters."@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "parameters"@en ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+        skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
+        skos:narrower       :parameters.carrier_to_noise_ratio.
 
-:carrier_to_noise_ratio  a             skos:Concept ;
+:parameters.carrier_to_noise_ratio  a             skos:Concept ;
         skos:broader       :parameters ;
         skos:definition    "A measure of signal strength"@en ;
         skos:inScheme      :IEAWindTask32GlossaryTerms ;

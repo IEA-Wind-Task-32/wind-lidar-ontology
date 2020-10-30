@@ -5,12 +5,15 @@ This repository provides the source file for a glossary of terms for wind lidar 
 
 [**Check out a human-friendly version of the repository**](https://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/).
 
-## Glossary, ontology, taxonomy, ...
-There are two main files in this repository:
-- The Task 32 wind lidar glossary (`glossary.ttl`) is a controlled vocabulary about wind lidar that includes a hierarchy, synonyms, and interrelationships.
-- The Task 32 ontology (`ontology.ttl`) includes more custom information
+[comment]: # ## Glossary, ontology, taxonomy, ...
 
-Confused? [Read more about the difference between a glossary and ontology](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
+[comment]: # There are two main files in this repository:
+
+The Task 32 wind lidar glossary (`glossary.ttl`) is a controlled vocabulary about wind lidar that includes a hierarchy, synonyms, and interrelationships.
+
+[comment]: # - The Task 32 ontology (`ontology.ttl`) includes more custom information
+
+[Read more about the difference between a glossary and ontology](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
 
 ## Link to the OpenLidar module definitions
 This glossary includes terms used to describe the design of a wind lidar. These are structured according to the modular layout proposed in the OpenLidar project.
@@ -38,13 +41,14 @@ The file is written using the [Simple Knowledge Organisation System (skos) schem
 ### Building the glossary and ontology files
 The glossary and ontology files are built from information contained in the text files in this repository.
 - the glossary is created by concatenating `00_headers.ttl` with all of the other text files.
-- the ontology is created by concatenating `00_headers.ttl` and `01_parameters.ttl` with all of the other text files.
 
-The ontology and glossary are created automatically by a CI process on commit.
+[comment]: # - the ontology is created by concatenating `00_headers.ttl` and `01_parameters.ttl` with all of the other text files.
+
+`glossary.ttl` is created automatically by a CI process on commit.
 
 
 # To contribute
-The data in the glossary can only be changed by the repository maintainers. The glossary data is protected to avoid misuse or abuse, and to help provide a clear way for modifying the data in the repository
+The data in the glossary can only be changed by the repository maintainers. The glossary data is protected to ensure availability and avoid misuse or abuse. GitHub issues are used to provide a clear way for modifying the data in the repository
 - [Suggest a new definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=new-definition.md&title=%5BNew+definition%5D).
 - [Change a definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=change-definition.md&title=%5BChange+a+definition%5D).
 
@@ -59,6 +63,7 @@ This repository is maintained by
 
 ... and uses contributions from
 - [Francisco Costa](https://github.com/pacocosta)
+- [Peter Clive]()
 
 
 # Contact

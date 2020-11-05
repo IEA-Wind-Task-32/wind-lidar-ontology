@@ -19,3 +19,4 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "velocity-aziumth display"@en ;
   skos:altLabel     "VAD"@en.
+

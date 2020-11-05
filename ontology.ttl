@@ -32,8 +32,7 @@
 
 :analysis:windfield_reconstruction:VAD a skos:Concept ;
   skos:broader :analysis:windfield_reconstruction ;
-  skos:definition    "VAD is a method of analyzing data from a complete conical
-scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en ;
+  skos:definition    "VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "velocity-aziumth display"@en ;
   skos:altLabel     "VAD"@en.:applications  a       skos:Concept ;

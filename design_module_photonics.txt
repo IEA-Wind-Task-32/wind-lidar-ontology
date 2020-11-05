@@ -59,7 +59,7 @@
 :module_photonics.laser_source.laser_diode a skos:Concept ;
   skos:broader    :module_photonics.laser_source ;
   skos:definition   "A semiconductor component to generate laser light of a defined frequency."@en ;
-  skos:narrower     :module_photonics.laser_diode.wavelength ;
+  skos:narrower     :module_photonics.laser_source.laser_diode.wavelength ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 

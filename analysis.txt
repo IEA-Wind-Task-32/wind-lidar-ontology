@@ -1,9 +1,9 @@
 :analysis  a       skos:Concept ;
   skos:definition    "Ways that wind lidar data can be processed to extract useful data"@en ;
-  skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel     "Anaylsis"@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
-  skos:narrower :analysis:windfield_reconstruction .
+  skos:narrower :analysis:windfield_reconstruction ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Analysis"@en .
 
 :analysis:windfield_reconstruction  a skos:Concept ;
   skos:broader :analysis ;

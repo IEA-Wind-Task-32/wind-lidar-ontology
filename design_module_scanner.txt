@@ -30,3 +30,4 @@
   skos:definition   "Mirrors modifying the beam path between the telescope and atmosphere."@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Mirrors"@en .
+

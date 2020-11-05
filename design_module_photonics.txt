@@ -2,20 +2,23 @@
   skos:broader      :design ;
   skos:definition   "The photonics module is the source of emitted light that will be used for the measurements."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+  skos:narrower     :module_photonics.detector, :module_photonics.laser_source ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Photonics module"@en ;
-  skos:narrower     :module_photonics.detector, :module_photonics.laser_source.
+  skos:prefLabel    "Photonics module"@en .
 
 :module_photonics.detector a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to detect incident light."@en ;
+  skos:narrower   :module_photonics.detector.photodetector,
+  :module_photonics.detector.optical_amplifier, :module_photonics.detector.beam_splitter ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel    "Detector"@en ;
-  skos:narrower   :module_photonics.detector.photodetector, :module_photonics.detector.beam_splitter .
+  skos:prefLabel    "Detector"@en .
+
 
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "Semiconductor light sensor."@en ;
+  skos:narrower   :module_photonics.detector.photodetector.gain, :module_photonics.detector.photodetector.voltage_noise ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "photodetector"@en .
   
@@ -49,12 +52,14 @@
 :module_photonics.laser_source a skos:Concept ;
   skos:broader    :module_photonics ;
   skos:definition   "An assembly to generate and manage laser light."@en ;
+  skos:narrower     :module_photonics.laser_source.laser_diode ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser source"@en .
 
 :module_photonics.laser_source.laser_diode a skos:Concept ;
   skos:broader    :module_photonics.laser_source ;
   skos:definition   "A semiconductor component to generate laser light of a defined frequency."@en ;
+  skos:narrower     :module_photonics.laser_diode.wavelength ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 

@@ -9,8 +9,9 @@
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 :IEAWindTask32GlossaryTerms
-        a owl:Ontology, skos:ConceptScheme ;
-        skos:prefLabel  "Wind Lidar"@en ;
-        skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
-        skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
+  a owl:Ontology, skos:ConceptScheme ;
+  skos:prefLabel  "Wind Lidar"@en ;
+  skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
+  skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
+
 

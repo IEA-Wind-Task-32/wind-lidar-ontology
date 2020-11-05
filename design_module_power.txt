@@ -2,18 +2,21 @@
   skos:broader      :design ;
   skos:definition   "The Power Module is responsible for supplying power to the entire lidar system, including motors, lasers, sensors, and detectors."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+  skos:narrower     :module_power.UPS ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Power module"@en .
     
 :module_power.UPS a skos:Concept ;
   skos:broader  :module_power ;
   skos:definition "Uninterruptible power supply"@en ;
+  skos:narrower     :module_power.UPS.battery ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Uninterruptible power supply"@en .
   
 :module_power.UPS.battery a skos:Concept ;
   skos:broader  :module_power.UPS ;
   skos:definition "An energy storage component"@en ;
+  skos:narrower     :module_power.UPS.battery.voltage, :module_power.UPS.battery.capacity ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery"@en .
 

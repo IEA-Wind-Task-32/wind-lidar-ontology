@@ -81,7 +81,7 @@
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
   skos:narrower :measurement_principles.scanning_geometry.single_lidar.compound_scan.arbitrary_trajectory, :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel     "Simple scan"@en .
+  skos:prefLabel     "Compound scan"@en .
 
 
 :measurement_principles.scanning_geometry.single_lidar.compound_scan.arbitrary_trajectory  a             skos:Concept ;

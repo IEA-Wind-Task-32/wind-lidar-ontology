@@ -3,7 +3,7 @@
         skos:editorialNote       "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "design"@en ;
-        skos:narrower           :module_optics, :module_power, :module_control ;
+        skos:narrower           :module_chassis, :module_control, :module_interlocks, :module_optics, :module_power, :module_photonics, :module_scanner ;
         skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
 

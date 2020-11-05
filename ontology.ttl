@@ -15,7 +15,28 @@
         skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
 
 
-:applications  a       skos:Concept ;
+:analysis  a       skos:Concept ;
+  skos:definition    "Ways that wind lidar data can be processed to extract useful data"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Anaylsis"@en ;
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
+  skos:narrower :analysis:windfield_reconstruction .
+
+:analysis:windfield_reconstruction  a skos:Concept ;
+  skos:broader :analysis ;
+  skos:definition    "Approach to processing wind lidar data to estimate a wind vector at one or more points in the domain sampled by the lidar"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Windfield reconstruction"@en ;
+  skos:altLabel     "Wind field reconstruction"@en ;
+  skos:narrower :analysis:windfield_reconstruction:VAD .
+
+:analysis:windfield_reconstruction:VAD a skos:Concept ;
+  skos:broader :analysis:windfield_reconstruction ;
+  skos:definition    "VAD is a method of analyzing data from a complete conical
+scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "velocity-aziumth display"@en ;
+  skos:altLabel     "VAD"@en.:applications  a       skos:Concept ;
   skos:definition    "Ways that wind lidar can be used"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "applications"@en, "anwendungen"@de ;
@@ -40,7 +61,7 @@
         skos:editorialNote       "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "design"@en ;
-        skos:narrower           :module_optics, :module_power, :module_control ;
+        skos:narrower           :module_chassis, :module_control, :module_interlocks, :module_optics, :module_power, :module_photonics, :module_scanner ;
         skos:topConceptOf       :IEAWindTask32GlossaryTerms .
 
 
@@ -269,50 +290,113 @@
     skos:inScheme      :IEAWindTask32GlossaryTerms ;
     skos:prefLabel     "lidar type"@en .
 :measurement_principles  a             skos:Concept ;
-        skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "measurement principles"@en ;
-        skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "measurement principles"@en ;
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
 
 :measurement_principles.scanning_geometry  a             skos:Concept ;
-        skos:broader       :measurement_principles ;
-        skos:altLabel      "scan pattern"@en ;
-        skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
-        skos:example       "An RHI scan is an example of a scanning geometry"@en ;
-        skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:broader       :measurement_principles ;
+  skos:altLabel      "scan pattern"@en ;
+  skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
+  skos:example       "An RHI scan is an example of a scanning geometry"@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
         skos:prefLabel     "scanning geometry"@en .
 
 :measurement_principles.scanning_geometry.single_lidar a skos:Concept ;
-          skos:broader       :measurement_principles.scanning_geometry ;
-          skos:definition   "Measurements made by a single lidar."@en ;
-          skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
-          skos:inScheme      :IEAWindTask32GlossaryTerms ;
-          skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
-          skos:prefLabel     "Single lidar"@en .
+  skos:broader       :measurement_principles.scanning_geometry ;
+  skos:definition   "Measurements made by a single lidar."@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
+  skos:prefLabel     "Single lidar"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.simple_scan a skos:Concept ;
-            skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
-            skos:definition   "A simple scan geometry entails variation in beam orientation in a single degree of freedom"@en ;
-            skos:editorialNote "The scanning geometry taxonomy is based up on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
-            skos:inScheme      :IEAWindTask32GlossaryTerms ;
-            skos:prefLabel     "Simple scan"@en .
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+  skos:definition   "A simple scan geometry entails variation in beam orientation in a single degree of freedom"@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:narrower :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation   ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Simple scan"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
+  skos:definition   "A simple scan geometry with variable azimuth angle"@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:narrower :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector,
+  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Variable azimuth"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone  a             skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
+  skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
+  skos:related      :analysis:windfield_reconstruction:VAD ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Complete cone"@en .
+          
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector  a             skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
+  skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over less than the full 360 degree range of possible azimuth angles. Wind speed and direction values can potentially be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Cone sector"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS  a             skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
+  skos:definition    "A scan geometry in which the azimuth angle of the beam is varied by 90 degrees over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel      "DBS"@en ;
+  skos:prefLabel     "Doppler beam swinging"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation a skos:Concept ;
+    skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
+    skos:definition   "A simple scan geometry with variable elevation angle"@en ;
+    skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+    skos:narrower :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
+    skos:inScheme      :IEAWindTask32GlossaryTerms ;
+    skos:prefLabel     "Variable elevation"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice  a             skos:Concept ;
+    skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation ;
+    skos:definition    "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en ;
+    skos:inScheme      :IEAWindTask32GlossaryTerms ;
+    skos:altLabel     "Range-height indicator (RHI)"@en .
+    skos:prefLabel     "Vertical slice"@en .
 
 
+:measurement_principles.scanning_geometry.single_lidar.compound_scan a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+  skos:definition   "Compound scans include more degrees of freedom and can follow an arbitrary trajectory or be made up of a sequence of simple scans"@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:narrower :measurement_principles.scanning_geometry.single_lidar.compound_scan.arbitrary_trajectory, :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Simple scan"@en .
 
-:measurement_principles.scanning_geometry.single_lidar.simple_scan.velocity_azimuth_display  a             skos:Concept ;
-        skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
-        skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "velocity azimuth display (VAD)"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.compound_scan.arbitrary_trajectory  a             skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.compound_scan ;
+  skos:definition    "Scans can be made where the beam is swept through an arbitrary combination of elevation and azimuth angles to follow a desired trajectory. This could be considered analagous to tracking the path of a flying bird from a fixed location. "@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Arbitrary trajectory"@en .
+  
+:measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans  a             skos:Concept ;
+    skos:broader       :measurement_principles.scanning_geometry.single_lidar.compound_scan ;
+    skos:definition    "Simple and compound scans can be executed one after another by the same device to reveal more flow characteristics. This can include (for example) a scan to estimate large-scale flow characteristics that are then used to help analyze the results from a sector scan."@en ;
+    skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+    skos:related  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector,
+    :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS,
+    :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
+    skos:inScheme      :IEAWindTask32GlossaryTerms ;
+    skos:prefLabel     "Sequential scans"@en .
 
 :measurement_principles.time_of_flight  a             skos:Concept ;
-        skos:broader       :measurement_principles ;
-        skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
-        skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "time of flight (TOF)"@en .
-
+  skos:broader       :measurement_principles ;
+  skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "time of flight (TOF)"@en .
 
 :measurement_principles.scanning_geometry.multi_lidar a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry ;

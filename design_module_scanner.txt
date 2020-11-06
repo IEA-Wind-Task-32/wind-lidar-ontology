@@ -16,12 +16,14 @@
 :module_scanner.servo.max_azimuth_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the azimuthal direction."@en ;
+  :units "degrees per second";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum azimuthal slew rate"@en .
 
 :module_scanner.servo.max_elevation_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the elevation direction."@en ;
+  :units "degrees per second";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum elevation slew rate"@en .
 

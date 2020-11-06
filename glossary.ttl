@@ -13,8 +13,7 @@
   skos:prefLabel  "Wind Lidar"@en ;
   skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
   skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en ;
-  skos:hasTopConcept :applications, :measurement_principles, :parameters, :design, :analysis, :devices, :instances .
-
+  skos:hasTopConcept :analysis, :applications, :design,  :devices, :instances, :measurement_principles, :parameters .
 
 :analysis  a       skos:Concept ;
   skos:definition    "Ways that wind lidar data can be processed to extract useful data"@en ;
@@ -58,7 +57,6 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "virtual met mast"@en .
 
-
 :design  a skos:Concept ;
   skos:definition         "Wind lidar generic design structure."@en ;
   skos:editorialNote       "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
@@ -66,9 +64,6 @@
   skos:topConceptOf       :IEAWindTask32GlossaryTerms ;
   skos:inScheme           :IEAWindTask32GlossaryTerms ;
   skos:prefLabel          "design"@en .
-        
-        
-
 
 :module_chassis  a skos:Concept ;
   skos:broader            :design ;
@@ -76,8 +71,7 @@
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme           :IEAWindTask32GlossaryTerms ;
   skos:prefLabel          "Chassis module"@en .
-  
-  
+
 :module_control a skos:Concept ;
   skos:broader      :design ;
   skos:definition   "The control module is the interface between the external controller (human or machine) and the lidar system ."@en ;
@@ -85,14 +79,14 @@
   skos:narrower     :module_control.communications, :module_control.signal_processing, :module_control.storage ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Control module"@en .
-    
+
 :module_control.communications a skos:Concept ;
   skos:broader    :module_control ;
   skos:definition   "The system of devices and software that transmit and receive data and commands to and from the lidar device"@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Communications module"@en .
-  
+
 :module_control.signal_processing a skos:Concept ;
   skos:broader    :module_control ;
   skos:definition   "The signal processing module is used to convert the data acquired by the lidar into a data product."@en ;
@@ -106,7 +100,8 @@
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Storage module"@en .
-  :module_interlocks  a skos:Concept ;
+
+:module_interlocks  a skos:Concept ;
   skos:broader            :design ;
   skos:definition         "The interlocks are a dispersed set of safety systems that prevent or mitigate potentially dangerous activities."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
@@ -115,33 +110,33 @@
 
 
 :module_optics a skos:Concept ;
-        skos:broader            :design ;
-        skos:definition         "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
-        skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
-        skos:narrower           :module_optics.telescope ;
-        skos:inScheme           :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel          "Optics module"@en .
+  skos:broader            :design ;
+  skos:definition         "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en ;
+  skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
+  skos:narrower           :module_optics.telescope ;
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "Optics module"@en .
         
 :module_optics.telescope      a       skos:Concept ;
-        skos:broader            :module_optics ;
-        skos:definition         "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en ;
-        skos:narrower           :module_optics.telescope.aperture ;
-        skos:inScheme           :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel          "telescope assembly"@en .
+  skos:broader            :module_optics ;
+  skos:definition         "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en ;
+  skos:narrower           :module_optics.telescope.aperture ;
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "telescope assembly"@en .
         
 :module_optics.telescope.aperture a skos:Concept ;
-        skos:broader            :module_optics.telescope ;
-        skos:definition         "The aperture through which laser light is emitted and received"@en ;
-        skos:narrower           :module_optics.telescope.aperture.diameter ;
-        skos:inScheme           :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel          "telescope aperture"@en .
+  skos:broader            :module_optics.telescope ;
+  skos:definition         "The aperture through which laser light is emitted and received"@en ;
+  skos:narrower           :module_optics.telescope.aperture.diameter ;
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "telescope aperture"@en .
 
 :module_optics.telescope.aperture.diameter a skos:Concept ;
-        skos:broader            :module_optics.telescope.aperture ;
-        skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
-        :units "m";
-        skos:inScheme           :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel          "telescope aperture diameter"@en .
+  skos:broader            :module_optics.telescope.aperture ;
+  skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
+  :units "m";
+  skos:inScheme           :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel          "telescope aperture diameter"@en .
 
 :module_photonics a skos:Concept ;
   skos:broader      :design ;
@@ -158,7 +153,6 @@
   :module_photonics.detector.optical_amplifier, :module_photonics.detector.beam_splitter ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Detector"@en .
-
 
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;
@@ -249,7 +243,8 @@
   :units "Ah";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery capacity"@en .
-    :module_scanner a skos:Concept ;
+
+:module_scanner a skos:Concept ;
   skos:broader      :design ;
   skos:definition   "The scanner orients the beam with respect to the housing and other parts of the lidar system. The scanner may be capable of one or more degrees of freedom."@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
@@ -331,7 +326,6 @@
   skos:prefLabel     "measurement principles"@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
-
 :measurement_principles.scanning_geometry  a             skos:Concept ;
   skos:broader       :measurement_principles ;
   skos:altLabel      "scan pattern"@en ;
@@ -339,7 +333,7 @@
   skos:example       "An RHI scan is an example of a scanning geometry"@en ;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-        skos:prefLabel     "scanning geometry"@en .
+  skos:prefLabel     "scanning geometry"@en .
 
 :measurement_principles.scanning_geometry.single_lidar a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry ;
@@ -395,12 +389,11 @@
     skos:prefLabel     "Variable elevation"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice  a             skos:Concept ;
-    skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation ;
-    skos:definition    "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en ;
-    skos:inScheme      :IEAWindTask32GlossaryTerms ;
-    skos:altLabel     "Range-height indicator (RHI)"@en ;
-    skos:prefLabel     "Vertical slice"@en .
-
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation ;
+  skos:definition    "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel     "Range-height indicator"@en, "RHI"@en ;
+  skos:prefLabel     "Vertical slice"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.compound_scan a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
@@ -419,25 +412,26 @@
   skos:prefLabel     "Arbitrary trajectory"@en .
   
 :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans  a             skos:Concept ;
-    skos:broader       :measurement_principles.scanning_geometry.single_lidar.compound_scan ;
-    skos:definition    "Simple and compound scans can be executed one after another by the same device to reveal more flow characteristics. This can include (for example) a scan to estimate large-scale flow characteristics that are then used to help analyze the results from a sector scan."@en ;
-    skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
-    skos:related  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector,
-    :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS,
-    :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
-    skos:inScheme      :IEAWindTask32GlossaryTerms ;
-    skos:prefLabel     "Sequential scans"@en .
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar.compound_scan ;
+  skos:definition    "In a sequential scan, simple and/or compound scans are executed one after another by the same device to reveal flow characteristics."@en ;
+  skos:example    "A low-elevation conical scan is followed by a sector scan. The results from the conical scan are used to estimate large-scale flow characteristics, which are in turn used to constrain the analysis of data from a sector scan."@en ;
+  skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
+  skos:related  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Sequential scan"@en .
 
 :measurement_principles.time_of_flight  a             skos:Concept ;
   skos:broader       :measurement_principles ;
   skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel     "time of flight (TOF)"@en .
+  skos:altLabel       "TOF"@en ;
+  skos:prefLabel     "Time of flight"@en .
 
 :measurement_principles.scanning_geometry.multi_lidar a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry ;
   skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel       "Multilidar"@en ;
   skos:prefLabel     "Multi-lidar"@en .
 
 :parameters  a             skos:Concept ;
@@ -454,5 +448,4 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel      "CNR"@en ;
   skos:prefLabel     "Carrier to noise ratio"@en .
-
 

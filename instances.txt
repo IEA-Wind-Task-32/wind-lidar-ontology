@@ -1,7 +1,7 @@
 :instances  a             skos:Concept ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
   skos:definition    "Wind lidar instances."@en ;
-  skos:narrower      :instances.serial_number, :instances.types ;
+  skos:narrower      :instances.serial_number, :instances.type ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "instances"@en .
 

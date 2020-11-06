@@ -5,7 +5,4 @@
   skos:topConceptOf       :IEAWindTask32GlossaryTerms ;
   skos:inScheme           :IEAWindTask32GlossaryTerms ;
   skos:prefLabel          "design"@en .
-        
-        
-
 

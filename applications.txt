@@ -18,4 +18,3 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "virtual met mast"@en .
 
-

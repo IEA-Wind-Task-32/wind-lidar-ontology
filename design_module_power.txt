@@ -33,4 +33,4 @@
   :units "Ah";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery capacity"@en .
-    
+

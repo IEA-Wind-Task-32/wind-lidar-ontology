@@ -13,4 +13,3 @@
   skos:altLabel      "CNR"@en ;
   skos:prefLabel     "Carrier to noise ratio"@en .
 
-

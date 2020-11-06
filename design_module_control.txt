@@ -5,14 +5,14 @@
   skos:narrower     :module_control.communications, :module_control.signal_processing, :module_control.storage ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Control module"@en .
-    
+
 :module_control.communications a skos:Concept ;
   skos:broader    :module_control ;
   skos:definition   "The system of devices and software that transmit and receive data and commands to and from the lidar device"@en ;
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Communications module"@en .
-  
+
 :module_control.signal_processing a skos:Concept ;
   skos:broader    :module_control ;
   skos:definition   "The signal processing module is used to convert the data acquired by the lidar into a data product."@en ;
@@ -26,4 +26,4 @@
   skos:editorialNote      "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Storage module"@en .
-  
+

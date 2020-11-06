@@ -14,7 +14,6 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Detector"@en .
 
-
 :module_photonics.detector.photodetector a skos:Concept ;
   skos:broader    :module_photonics.detector ;
   skos:definition   "Semiconductor light sensor."@en ;

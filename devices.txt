@@ -8,13 +8,13 @@
 :devices.windscanner  a             skos:Concept ;
   skos:broader       :devices ;
   skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
-  skos:editorialNote  "Describing a wind lidar unit as 'a windscanner' is insufficient information to identify it\'s capabilities."@en
+  skos:editorialNote  "Describing a wind lidar unit as 'a windscanner' is insufficient information to uniquely describe it."@en
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "windscanner"@en .
 
 :devices.wind_iris  a             skos:Concept ;
   skos:broader       :devices ;
   skos:definition    "Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle."@en ;
-  skos:editorialNote  "Describing a wind lidar unit as 'a Wind Iris' is insufficient information to identify it\'s capabilities."@en
+  skos:editorialNote  "Describing a wind lidar unit as 'a Wind Iris' is insufficient information to uniquely describe it."@en
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Wind Iris"@en .

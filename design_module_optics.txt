@@ -23,6 +23,7 @@
 :module_optics.telescope.aperture.diameter a skos:Concept ;
         skos:broader            :module_optics.telescope.aperture ;
         skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
+        :units "m";
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture diameter"@en .
 

@@ -1,2 +1,3 @@
-
+:units a rdf:property;
+  rdfs:label "units"@en;
 

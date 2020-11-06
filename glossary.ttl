@@ -12,7 +12,8 @@
   a owl:Ontology, skos:ConceptScheme ;
   skos:prefLabel  "Wind Lidar"@en ;
   skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
-  skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en .
+  skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en ;
+  skos:hasTopConcept :analysis, :applications, :design, :devices, :instances, :measurement_principles, :parameters .
 
 
 :analysis  a       skos:Concept ;
@@ -238,12 +239,14 @@
 :module_power.UPS.battery.voltage a skos:Concept ;
   skos:broader  :module_power.UPS.battery ;
   skos:definition "The battery voltage. Units are Volts."@en ;
+  :units "V";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery voltage"@en .
 
 :module_power.UPS.battery.capacity a skos:Concept ;
   skos:broader  :module_power.UPS.battery ;
   skos:definition "The total stored energy in the battery voltage. Units are Amp Hours (Ah)."@en ;
+  :units "Ah";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Battery capacity"@en .
     :module_scanner a skos:Concept ;
@@ -264,12 +267,14 @@
 :module_scanner.servo.max_azimuth_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the azimuthal direction."@en ;
+  :units "degrees per second";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum azimuthal slew rate"@en .
 
 :module_scanner.servo.max_elevation_slew_rate a skos:Concept ;
   skos:broader    :module_scanner.servo ;
   skos:definition   "The maximum rate of operation of the servo motor in the elevation direction."@en ;
+  :units "degrees per second";
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Maximum elevation slew rate"@en .
 
@@ -293,11 +298,11 @@
         skos:prefLabel     "windscanner"@en .
 
 :instances  a             skos:Concept ;
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
   skos:definition    "Wind lidar instances."@en ;
+  skos:narrower      :instances.serial_number, :instances.types ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:narrower     :instances.serial_number, :instances.types ;
-  skos:prefLabel     "instances"@en ;
-  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:prefLabel     "instances"@en .
 
 :instances.serial_number  a             skos:Concept ;
   skos:broader       :instances ;
@@ -311,6 +316,7 @@
   skos:broaderTransitive  :devices ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "lidar type"@en .
+  
 :measurement_principles  a             skos:Concept ;
   skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;

@@ -13,7 +13,7 @@
   skos:prefLabel  "Wind Lidar"@en ;
   skos:historyNote "This glossary is produced and maintained by IEA Wind Task 32."@en ;
   skos:editorialNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en ;
-  skos:hasTopConcept :analysis, :applications, :design, :devices, :instances, :measurement_principles, :parameters .
+  skos:hasTopConcept :applications, :measurement_principles, :parameters, :design, :analysis, :devices, :instances .
 
 
 :units a rdf:property;
@@ -297,16 +297,17 @@
 :devices.windscanner  a             skos:Concept ;
   skos:broader       :devices ;
   skos:definition    "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en ;
-  skos:editorialNote  "Describing a wind lidar unit as a windscanner is insufficient information to uniquely describe it."@en
+  skos:editorialNote  "Describing a wind lidar unit as 'a windscanner' is insufficient information to uniquely describe it's capabilities."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "windscanner"@en .
 
 :devices.wind_iris  a             skos:Concept ;
   skos:broader       :devices ;
   skos:definition    "Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle."@en ;
-  skos:editorialNote  "Describing a wind lidar unit as a Wind Iris is insufficient information to uniquely describe it."@en
+  skos:editorialNote  "Describing a wind lidar unit as 'a Wind Iris' is insufficient information to uniquely describe it's capabilities."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Wind Iris"@en .
+  
 :instances  a             skos:Concept ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
   skos:definition    "Wind lidar instances."@en ;

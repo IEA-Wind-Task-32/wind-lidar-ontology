@@ -138,6 +138,7 @@
 :module_optics.telescope.aperture.diameter a skos:Concept ;
         skos:broader            :module_optics.telescope.aperture ;
         skos:definition         "Characteristic optical diameter of the lidar telescope"@en ;
+        :units "m";
         skos:inScheme           :IEAWindTask32GlossaryTerms ;
         skos:prefLabel          "telescope aperture diameter"@en .
 
@@ -435,6 +436,7 @@
 :parameters.carrier_to_noise_ratio  a             skos:Concept ;
   skos:broader       :parameters ;
   skos:definition    "A measure of signal strength"@en ;
+  :units "dB";
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel      "CNR"@en ;
   skos:prefLabel     "Carrier to noise ratio"@en .

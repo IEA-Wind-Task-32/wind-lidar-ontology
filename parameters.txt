@@ -43,7 +43,7 @@
   skos:broader       :parameters ;
   skos:definition    "A distinguishing feature used to recognise or define the datum plane from which the measurement height is defined "@en ;
   :units "dB";
-  skos:example      "A measurement window or base of the unit (excluding feet)" ;
+  skos:example      "A measurement window or base of the unit (excluding feet)"@en ;
   skos:related       :parameters.datum_plane ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;  
   skos:altLabel      "Reference marker"@en ;

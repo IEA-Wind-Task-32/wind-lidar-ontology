@@ -31,12 +31,12 @@ For more details about OpenLidar see Zenodo.
 The glossary defines a structure for the data that describe the design of a wind lidar and how it is used. This could be encoded in a YAML file and used as the input to a lidar simulation.
 
 ### To define a reference lidar device
-The glossary defines a structure for the data that describe the design of a wind lidar. A very incomplete example of how this could be used is included as [`reference-designs/staring_lidar.yaml`](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/blob/main/reference-designs/staring_lidar.yml.
+The glossary defines a structure for the data that describe the design of a wind lidar. A very incomplete example of how this could be used is included as [`reference-designs/staring_lidar.yaml`](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/blob/main/reference-designs/staring_lidar.yml).
 
 ## Implementation
 
 ### Syntax
-The file is written using the [Simple Knowledge Organisation System (skos) schema](https://www.w3.org/2009/08/skos-reference/skos.html). It can be checked for conformance to the skos schema using e.g. the [SPARNA skos verification tool](http://labs.sparna.fr/skos-testing-tool/test?url=https://raw.githubusercontent.com/IEA-Wind-Task-32/wind-lidar-glossary/main/glossary.ttl&rules=anr,chr,dcc,dlv,el,hr,husv,ilc,ipl,ml,mri,ncl,oc,oilt,ol,otc,rc,rrc,strc,tchbc,uc,ucil,urc,usr&format=html).
+The file is written using the [Simple Knowledge Organisation System (skos) schema](https://www.w3.org/2009/08/skos-reference/skos.html). It can be checked for conformance to the skos schema using e.g. the [SPARNA skos verification tool](https://labs.sparna.fr/skos-testing-tool/test?url=https://raw.githubusercontent.com/IEA-Wind-Task-32/wind-lidar-glossary/main/glossary.ttl&rules=anr,chr,dcc,dlv,el,hr,husv,ilc,ipl,ml,mri,ncl,oc,oilt,ol,otc,rc,rrc,strc,tchbc,uc,ucil,urc,usr&format=html).
 
 ### Building the glossary files
 The glossary is created by concatenating `00_headers.ttl` with all of the other text files in this repository. This is an action that runs on commit (defined in in `/workflows`) that executes the shell scripts in `/scripts`.

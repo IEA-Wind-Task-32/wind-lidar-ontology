@@ -475,7 +475,6 @@
   skos:definition    "The horizontal plane from which the measurement height is defined. "@en ;
   :units "dB";
   skos:related       :parameters.measurement_height ;
-  skos:narrower      :parameters.reference_height.marker ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;  
   skos:altLabel      "Reference height"@en ;
   skos:prefLabel     "Datum plane"@en .

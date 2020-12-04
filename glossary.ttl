@@ -343,9 +343,9 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Measurement volume"@en .
 
-:measurement_principles.probe a skos:concept ;
+:measurement_principles.probe a skos:Concept ;
   skos:broader  :measurement_principles ;
-  skos:definition "In the case of scanning lidar, the probe is a laser pulse emitted along a line of sight whose orientation is determined by the configuration of the lidar. In the case of a continuous wave lidar, the probe is a region of relatively elevated sensitivity along the line of sight determined by the optical focus of the system."@en;
+  skos:definition "In the case of scanning lidar, the probe is a laser pulse emitted along a line of sight whose orientation is determined by the configuration of the lidar. In the case of a continuous wave lidar, the probe is a region of relatively elevated sensitivity along the line of sight determined by the optical focus of the system."@en ;
   skos:narrower      :measurement_principles.probe.volume ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Probe"@en .
@@ -356,7 +356,7 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Probe volume"@en .
 
-:measurement_principles.radial_velocity a skos:concept ;
+:measurement_principles.radial_velocity a skos:Concept ;
   skos:broader  :measurement_principles ;
   skos:definition "An intermediate variable (see intermediate data), the radial velocity is the radial component of the wind velocity vector relative to the location of the lidar measuring it. It is the projection of the wind velocity vector onto the line of sight, directly measured by observing the Doppler shift of the backscattered laser pulse emitted along the line of sight."@en;
   skos:narrower      :measurement_principles ;
@@ -364,7 +364,7 @@
   skos:altLabel     "Radial wind speed"@en ;
   skos:prefLabel     "Radial velocity"@en .
 
-:measurement_principles.scanning_geometry  a             skos:Concept ;
+:measurement_principles.scanning_geometry  a skos:Concept ;
   skos:broader       :measurement_principles ;
   skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
   skos:example       "An RHI scan is an example of a scanning geometry"@en ;

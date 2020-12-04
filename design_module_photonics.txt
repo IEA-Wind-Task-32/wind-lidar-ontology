@@ -62,6 +62,10 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 
+# missing: Pulse repetition frequency
+
+
+
 :module_photonics.laser_source.laser_diode.wavelength a skos:Concept ;
   skos:broader    :module_photonics.laser_source.laser_diode ;
   skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g. 1450E-9 m for a near-infrared laser source."@en ;

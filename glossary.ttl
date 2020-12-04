@@ -328,8 +328,10 @@
 :measurement_principles  a             skos:Concept ;
   skos:definition    "The means by which a lidar makes a measurement of the wind"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel     "measurement principles"@en ;
-  skos:topConceptOf  :IEAWindTask32GlossaryTerms .
+  skos:prefLabel     "measurement principles"@en ;  
+  skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
+  skos:narrower       :measurement_principles.line_of_sight, :measurement_principles.measurement_volume, :measurement_principles.probe, :measurement_principles.radial_velocity, :measurement_principles.scanning_geometry,
+  :measurement_principles.time_of_flight.
 
 :measurement_principles.line_of_sight a skos:Concept ;
   skos:broader       :measurement_principles ;
@@ -476,13 +478,6 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Sequential scan"@en .
 
-:measurement_principles.time_of_flight  a             skos:Concept ;
-  skos:broader       :measurement_principles ;
-  skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
-  skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:altLabel       "TOF"@en ;
-  skos:prefLabel     "Time of flight"@en .
-
 :measurement_principles.scanning_geometry.multi_lidar a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry ;
   skos:definition   "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en ;
@@ -498,7 +493,12 @@
   skos:altLabel       "Convergent-beam lidar"@en ;
   skos:prefLabel     "Convergent scan"@en .
 
-:parameters  a             skos:Concept ;
+:measurement_principles.time_of_flight  a             skos:Concept ;
+  skos:broader       :measurement_principles ;
+  skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel       "TOF"@en ;
+  skos:prefLabel     "Time of flight"@en .:parameters  a             skos:Concept ;
   skos:definition    "Wind lidar-specific parameters."@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
   skos:narrower       :parameters.carrier_to_noise_ratio ;

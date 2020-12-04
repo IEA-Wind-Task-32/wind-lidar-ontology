@@ -6,7 +6,7 @@
 
 :measurement_principles.line_of_sight a skos:Concept ;
   skos:broader       :measurement_principles ;
-  skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system" @en ;
+  skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "scanning geometry"@en .
 
@@ -25,7 +25,7 @@
 
 :measurement_principles.probe.volume a skos:Concept ;
   skos:broader  :measurement_principles.probe ;
-  skos:definition   "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity" @en;
+  skos:definition   "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity."@en;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Probe volume"@en .
 

@@ -203,6 +203,10 @@
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser diode"@en .
 
+# missing: Pulse repetition frequency
+
+
+
 :module_photonics.laser_source.laser_diode.wavelength a skos:Concept ;
   skos:broader    :module_photonics.laser_source.laser_diode ;
   skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g. 1450E-9 m for a near-infrared laser source."@en ;
@@ -327,13 +331,46 @@
   skos:prefLabel     "measurement principles"@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 
+:measurement_principles.line_of_sight a skos:Concept ;
+  skos:broader       :measurement_principles ;
+  skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system" @en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "scanning geometry"@en .
+
+:measurement_principles.measurement_volume a skos:Concept ;
+  skos:broader      :measurement_principles ;
+  skos:definition   "The region characterised by the wind lidar. Corresponds to the region penetrated by the various beam orientations / lines of sight and probe volumes where intermediate data are acquired to produce a final measurement."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Measurement volume"@en .
+
+:measurement_principles.probe a skos:concept ;
+  skos:broader  :measurement_principles ;
+  skos:definition "In the case of scanning lidar, the probe is a laser pulse emitted along a line of sight whose orientation is determined by the configuration of the lidar. In the case of a continuous wave lidar, the probe is a region of relatively elevated sensitivity along the line of sight determined by the optical focus of the system."@en;
+  skos:narrower      :measurement_principles.probe.volume ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Probe"@en .
+
+:measurement_principles.probe.volume a skos:Concept ;
+  skos:broader  :measurement_principles.probe ;
+  skos:definition   "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity" @en;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Probe volume"@en .
+
+:measurement_principles.radial_velocity a skos:concept ;
+  skos:broader  :measurement_principles ;
+  skos:definition "An intermediate variable (see intermediate data), the radial velocity is the radial component of the wind velocity vector relative to the location of the lidar measuring it. It is the projection of the wind velocity vector onto the line of sight, directly measured by observing the Doppler shift of the backscattered laser pulse emitted along the line of sight."@en;
+  skos:narrower      :measurement_principles ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel     "Radial wind speed"@en ;
+  skos:prefLabel     "Radial velocity"@en .
+
 :measurement_principles.scanning_geometry  a             skos:Concept ;
   skos:broader       :measurement_principles ;
-  skos:altLabel      "scan pattern"@en ;
   skos:definition    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en ;
   skos:example       "An RHI scan is an example of a scanning geometry"@en ;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:altLabel      "scan pattern"@en ;  
   skos:prefLabel     "scanning geometry"@en .
 
 :measurement_principles.scanning_geometry.single_lidar a skos:Concept ;
@@ -343,6 +380,24 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
   skos:prefLabel     "Single lidar"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.staring a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+  skos:definition   "A scan geometry comprised of a single beam orientation."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Staring"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.stop-stare a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+  skos:definition   "Line-of-sight data are acquired while the beam remains stationary in one of the pre-determined orientations comprising the scan geometry. No data are acquired while the beam is moved to its next position."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Stop-stare"@en .
+
+:measurement_principles.scanning_geometry.single_lidar.sweep-stare a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
+  skos:definition   "Line-of-sight data are acquired continuously as the beam is scanned between pre-determined positions."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:prefLabel     "Sweep-stare"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.simple_scan a skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar ;
@@ -434,6 +489,14 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel       "Multilidar"@en ;
   skos:prefLabel     "Multi-lidar"@en .
+
+:measurement_principles.scanning_geometry.multi_lidar.convergent_beam a skos:Concept ;
+  skos:broader       :measurement_principles.scanning_geometry.multi_lidar ;
+  skos:definition   "A measurement configuration involving multiple lidar units which are operated in a coordinated and synchronised manner so that their beams converge and intersect at a succession of probe volumes. If three or more lidar units are used, it is possible to characterise the wind velocity vector in the probe volume where the beams intersect within the limitations prescribed by the probe length, sampling interval, and scan geometry."@en ;
+  skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:related          :applications.virtual_met_mast ;
+  skos:altLabel       "Convergent-beam lidar"@en ;
+  skos:prefLabel     "Convergent scan"@en .
 
 :parameters  a             skos:Concept ;
   skos:definition    "Wind lidar-specific parameters."@en ;

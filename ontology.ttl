@@ -208,11 +208,11 @@
 
 # missing: Pulse repetition frequency
 
-
-
 :module_photonics.laser_source.laser_diode.wavelength a skos:Concept ;
   skos:broader    :module_photonics.laser_source.laser_diode ;
-  skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g. 1450E-9 m for a near-infrared laser source."@en ;
+  skos:definition   "The nominal wavelength of the laser source. This is defined in units of meters, e.g., 1450E-9 m for a near-infrared laser source."@en ;
+  :units "m" ;
+  skos:example  "1450E-9 m" ;
   skos:inScheme     :IEAWindTask32GlossaryTerms ;
   skos:prefLabel    "Laser wavelength"@en .
 
@@ -336,7 +336,7 @@
 
 :measurement_principles.line_of_sight a skos:Concept ;
   skos:broader       :measurement_principles ;
-  skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system" @en ;
+  skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "scanning geometry"@en .
 
@@ -355,7 +355,7 @@
 
 :measurement_principles.probe.volume a skos:Concept ;
   skos:broader  :measurement_principles.probe ;
-  skos:definition   "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity" @en;
+  skos:definition   "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity."@en;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Probe volume"@en .
 

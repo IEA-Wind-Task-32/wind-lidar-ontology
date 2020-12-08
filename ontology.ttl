@@ -16,7 +16,7 @@
   skos:hasTopConcept :analysis, :applications, :design,  :devices, :instances, :measurement_principles, :parameters .
 
 :units a rdf:property;
-  rdfs:label "units"@en;
+  rdfs:label "units"@en.
 
 :analysis  a       skos:Concept ;
   skos:definition    "Ways that wind lidar data can be processed to extract useful data"@en ;

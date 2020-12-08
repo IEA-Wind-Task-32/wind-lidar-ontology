@@ -124,7 +124,7 @@
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice  a             skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation ;
   skos:definition    "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en ;
-  skos:related        measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
+  skos:related        :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel     "Range-height indicator"@en, "RHI"@en ;
   skos:prefLabel     "Vertical slice"@en .

@@ -423,7 +423,7 @@
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone  a             skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
   skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
-  skos:related      :analysis:windfield_reconstruction:VAD ;
+  skos:related      :analysis:windfield_reconstruction:VAD, :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Complete cone"@en .
           
@@ -437,6 +437,7 @@
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS  a             skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
   skos:definition    "A scan geometry in which the azimuth angle of the beam is varied by 90 degrees over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
+  skos:related      :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel      "DBS"@en ;
   skos:prefLabel     "Doppler beam swinging"@en .
@@ -477,7 +478,8 @@
   skos:definition    "In a sequential scan, simple and/or compound scans are executed one after another by the same device to reveal flow characteristics."@en ;
   skos:example    "A low-elevation conical scan is followed by a sector scan. The results from the conical scan are used to estimate large-scale flow characteristics, which are in turn used to constrain the analysis of data from a sector scan."@en ;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
-  skos:related  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
+  skos:related  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.complete_cone,
+  :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_elevation.vertical_slice ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Sequential scan"@en .
 

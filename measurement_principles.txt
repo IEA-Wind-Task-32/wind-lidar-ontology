@@ -44,6 +44,7 @@
   skos:example       "An RHI scan is an example of a scanning geometry"@en ;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
+  skos:narrower      :measurement_principles.scanning_geometry.single_lidar, :measurement_principles.scanning_geometry.multi_lidar ;
   skos:altLabel      "scan pattern"@en ;  
   skos:prefLabel     "scanning geometry"@en .
 
@@ -52,7 +53,7 @@
   skos:definition   "Measurements made by a single lidar."@en ;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan ;
+  skos:narrower      :measurement_principles.scanning_geometry.single_lidar.simple_scan, :measurement_principles.scanning_geometry.single_lidar.staring, :measurement_principles.scanning_geometry.single_lidar.stop-stare, :measurement_principles.scanning_geometry.single_lidar.sweep-stare ;
   skos:prefLabel     "Single lidar"@en .
 
 :measurement_principles.scanning_geometry.single_lidar.staring a skos:Concept ;

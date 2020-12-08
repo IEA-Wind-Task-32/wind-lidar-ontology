@@ -322,7 +322,7 @@
 :instances.type  a             skos:Concept ;
   skos:broader       :instances ;
   skos:definition    "The type of lidar device"@en ;
-  skos:broaderTransitive  :devices ;
+  skos:related  :devices ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "lidar type"@en .
   

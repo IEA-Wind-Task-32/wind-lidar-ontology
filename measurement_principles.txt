@@ -10,7 +10,7 @@
   skos:broader       :measurement_principles ;
   skos:definition     "The line along which lidar signals are emitted and backscattered to be detected by the system."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
-  skos:prefLabel     "scanning geometry"@en .
+  skos:prefLabel     "Line of sight"@en .
 
 :measurement_principles.measurement_volume a skos:Concept ;
   skos:broader      :measurement_principles ;

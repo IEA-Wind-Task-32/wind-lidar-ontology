@@ -332,8 +332,7 @@
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Measurement principles"@en ;  
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
-  skos:narrower       :measurement_principles.line_of_sight, :measurement_principles.measurement_volume, :measurement_principles.probe, :measurement_principles.radial_velocity, :measurement_principles.scanning_geometry,
-  :measurement_principles.time_of_flight.
+  skos:narrower       :measurement_principles.line_of_sight, :measurement_principles.measurement_volume, :measurement_principles.probe, :measurement_principles.radial_velocity, :measurement_principles.scanning_geometry, :measurement_principles.time_of_flight.
 
 :measurement_principles.line_of_sight a skos:Concept ;
   skos:broader       :measurement_principles ;

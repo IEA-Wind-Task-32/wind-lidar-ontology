@@ -361,7 +361,6 @@
 :measurement_principles.radial_velocity a skos:Concept ;
   skos:broader  :measurement_principles ;
   skos:definition "An intermediate variable (see intermediate data), the radial velocity is the radial component of the wind velocity vector relative to the location of the lidar measuring it. It is the projection of the wind velocity vector onto the line of sight, directly measured by observing the Doppler shift of the backscattered laser pulse emitted along the line of sight."@en;
-  skos:narrower      :measurement_principles ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel     "Radial wind speed"@en ;
   skos:prefLabel     "Radial velocity"@en .
@@ -498,7 +497,8 @@
   skos:definition    "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:altLabel       "TOF"@en ;
-  skos:prefLabel     "Time of flight"@en .:parameters  a             skos:Concept ;
+  skos:prefLabel     "Time of flight"@en .
+:parameters  a             skos:Concept ;
   skos:definition    "Wind lidar-specific parameters."@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
   skos:narrower       :parameters.carrier_to_noise_ratio, :parameters.measurement_height, :parameters.datum_elevation, :parameters.datum_plane, :parameters.datum_feature ;

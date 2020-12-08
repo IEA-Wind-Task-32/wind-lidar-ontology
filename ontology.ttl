@@ -432,6 +432,7 @@
 :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.cone_sector  a             skos:Concept ;
   skos:broader       :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth ;
   skos:definition    "A scan geometry in which the azimuth angle of the beam is varied over less than the full 360 degree range of possible azimuth angles. Wind speed and direction values can potentially be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en ;
+  skos:related        :measurement_principles.scanning_geometry.single_lidar.compound_scan.sequential_scans ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Cone sector"@en .
 

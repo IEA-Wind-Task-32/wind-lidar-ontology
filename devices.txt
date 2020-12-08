@@ -2,7 +2,7 @@
   skos:definition    "Specific implementations of wind lidar technologies."@en ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:narrower     :devices.windscanner, :devices.wind_iris ;
-  skos:narrowerTransitive  :instances.type ;
+  skos:related        :instances.type ;
   skos:prefLabel     "devices"@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms .
 

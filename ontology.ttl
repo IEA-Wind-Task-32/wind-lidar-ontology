@@ -522,7 +522,7 @@
   skos:broader       :parameters ;
   skos:definition    "The nominal height above the datum plane at which a windfield reconstruction process returns a wind speed. Often used for vertically-profiling wind lidars for comparison to point wind speed measurements from an anemometer."@en ;
   :units "meters per second";
-  skos:related       :analysis:windfield_reconstruction:VAD, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS ;
+  skos:related       :analysis:windfield_reconstruction:VAD, :measurement_principles.scanning_geometry.single_lidar.simple_scan.variable_azimuth.DBS, :parameters.datum_plane ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "Measurement height"@en .
 
@@ -531,7 +531,7 @@
   skos:definition    "The height of the datum plane above sea level"@en ;
   :units "m";
   skos:editorialNote "Sea level should be defined on a project basis and is out of scope of this schema. "@en ;  
-  skos:related       :parameters.datum_plane ;
+  skos:related       :parameters.datum_plane, :parameters.datum_feature ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;  
   skos:prefLabel     "Datum elevation"@en .
 
@@ -539,7 +539,7 @@
   skos:broader       :parameters ;
   skos:definition    "The horizontal plane from which the measurement height is defined. "@en ;
   :units "dB";
-  skos:related       :parameters.measurement_height ;
+  skos:related       :parameters.measurement_height, :parameters.datum_elevation, :parameters.datum_feature ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;  
   skos:altLabel      "Reference height"@en ;
   skos:prefLabel     "Datum plane"@en .
@@ -549,7 +549,7 @@
   skos:definition    "A distinguishing feature used to recognise or define the datum plane from which the measurement height is defined "@en ;
   :units "dB";
   skos:example      "A measurement window or base of the unit (excluding feet)"@en ;
-  skos:related       :parameters.datum_plane ;
+  skos:related       :parameters.datum_plane, :parameters.datum_elevation ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;  
   skos:altLabel      "Reference marker"@en ;
   skos:prefLabel     "Datum feature"@en .

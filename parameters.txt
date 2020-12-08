@@ -1,7 +1,7 @@
 :parameters  a             skos:Concept ;
   skos:definition    "Wind lidar-specific parameters."@en ;
   skos:topConceptOf  :IEAWindTask32GlossaryTerms ;
-  skos:narrower       :parameters.carrier_to_noise_ratio ;
+  skos:narrower       :parameters.carrier_to_noise_ratio, :parameters.measurement_height, :parameters.datum_elevation, :parameters.datum_plane, :parameters.datum_feature ;
   skos:inScheme      :IEAWindTask32GlossaryTerms ;
   skos:prefLabel     "parameters"@en .
 

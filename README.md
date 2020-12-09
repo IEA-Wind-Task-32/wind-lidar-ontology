@@ -15,6 +15,8 @@ The Task 32 wind lidar glossary (`glossary.ttl`) is a controlled vocabulary abou
 
 [Read more about the difference between a glossary and ontology](https://asistdl.onlinelibrary.wiley.com/doi/epdf/10.1002/bult.2013.1720390211).
 
+**Confused?** Join [the discussions](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/discussions/) and ask away.
+
 ## Link to the OpenLidar module definitions
 This glossary includes terms used to describe the design of a wind lidar. These are structured according to the modular layout proposed in the OpenLidar project.
 
@@ -25,7 +27,7 @@ For more details about OpenLidar see Zenodo.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3414197.svg)](https://doi.org/10.5281/zenodo.3414197)
 
 
-## How to use this
+## How to use this glossary
 
 ### To define the inputs for simulations
 The glossary defines a structure for the data that describe the design of a wind lidar and how it is used. This could be encoded in a YAML file and used as the input to a lidar simulation.
@@ -46,6 +48,10 @@ The glossary is created by concatenating `00_headers.ttl` with all of the other 
 # To contribute
 The data in the glossary can only be changed by the repository maintainers. The glossary data is protected to ensure availability and avoid misuse or abuse.
 
+## NEW: Discussions
+Not familiar with GitHub? Don't know the difference between an issue and a hole in the ground? Jump in to the discussion at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/discussions/ instead, and we'll help.
+
+## Raise an issue
 GitHub issues are used to provide an open and auditable way for modifying the data in the repository
 - [Suggest a new definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=new-definition.md&title=%5BNew+definition%5D).
 - [Change a definition](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/issues/new?assignees=&labels=&template=change-definition.md&title=%5BChange+a+definition%5D).
@@ -57,7 +63,7 @@ Contributions will become part of this repository according to the terms of the 
 # Maintainers
 This repository is maintained by
 - [Andy Clifton](https://github.com/andyclifton), IEA Wind Task 32 Operating Agent
-- [Nikola Vasiljevic](niva83) at the Danish Technical University.
+- [Nikola Vasiljevic](https://github.com/niva83) at the Danish Technical University.
 
 ... and uses contributions from
 - [Francisco Costa](https://github.com/pacocosta)

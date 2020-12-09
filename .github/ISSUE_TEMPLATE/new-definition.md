@@ -7,35 +7,36 @@ assignees: ''
 
 ---
 
-The information provided here will be used to create a gloassry entry, for example https://data.windenergy.dtu.dk/ontologies/view/wtax/en/page/Nacelle.
+_The information provided here will be used to create a glossary entry in the [IEA Wind Task 32 Glossary of Terms](http://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/). Please fill in all of the text marked "..."._
 
 # Before you start
 - [ ] There is no similar existing entry in the Task 32 lidar glossary.
 
 # Proposed new entry
+_An entry is a combination of a label and a description. Source information can also be included._
 
-## Preferred Term (required)
-e.g. Nacelle
+## Preferred label (required)
+_The usual label used for the entry, e.g., "probe length"_
 
 - ...
 
-## Alternative Term (required)
-e.g. Turbine Nacelle
+## Alternative label (optional)
+_Another word or phrase that could be used for this entry, e.g., "pulse length"._
 
 - ...
 
 ## Definition (required)
-Free text that will be used as the definition, e.g. "tower-top structure to provide weather protection". A source DOI can also be provided as part of the text.
+_Free text that will be used as the definition for this energy, e.g. "the length over which the line-of-sight wind speed is determined". A source DOI can also be provided as part of the text._
 
 - ...
 
 ## Broader Concept (optional)
-Does this entry belong to something else, e.g., "Wind Turbine"? The default for this glossary is "wind lidar"
+_A parent entry. e.g., "measurement principles". This helps establish semantic meaning in the glossary._
 
 - ...
 
 # What happens next?
-Approved entries will be entered into https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/blob/main/definitions.csv.
+Approved entries will be entered into https://github.com/IEA-Wind-Task-32/wind-lidar-glossary and then copied to http://data.windenergy.dtu.dk/ontologies/view/IEATask32Glossary/en/.
 
 # For interal use only
 Please do not change any of the following text. This will be used to help process this issue.

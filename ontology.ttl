@@ -1,11 +1,11 @@
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix ontolidar: <http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/> .
+@prefix ontolidar: <http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/> a skos:ConceptScheme;
+<http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/> a skos:ConceptScheme;
   dct:creator "Andy Insert your ORCID here"@en, "Paco insert your ORCID here"@en, <http://orcid.org/0000-0002-9381-9693>;
   dct:description "Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars."@en;
   dct:title "IEA Wind Task 32 Wind Lidar Ontology"@en;
@@ -24,16 +24,16 @@ ontolidar:units a rdf:Property;
 
 ontolidar:Analysis a skos:Concept;
   skos:definition "Ways that wind lidar data can be processed to extract useful data"@en;
-  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/>;
   skos:narrower ontolidar:WindfieldReconstruction;
   skos:prefLabel "Analysis"@en;
-  skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/> .
+  skos:topConceptOf <http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/> .
 
 ontolidar:WindfieldReconstruction a skos:Concept;
   skos:altLabel "Wind field reconstruction"@en;
   skos:broader ontolidar:Analysis;
   skos:definition "Approach to processing wind lidar data to estimate a wind vector at one or more points in the domain sampled by the lidar"@en;
-  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/>;
   skos:narrower ontolidar:velocityaziumthdisplay;
   skos:prefLabel "Windfield Reconstruction"@en .
 
@@ -41,5 +41,5 @@ ontolidar:velocityaziumthdisplay a skos:Concept;
   skos:altLabel "VAD"@en;
   skos:broader ontolidar:WindfieldReconstruction;
   skos:definition "VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
-  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminologies/wind-lidar-ontology/>;
+  skos:inScheme <http://data.windenergy.dtu.dk/controlled-terminology/wind-lidar-ontology/>;
   skos:prefLabel "velocity-aziumth display"@en .

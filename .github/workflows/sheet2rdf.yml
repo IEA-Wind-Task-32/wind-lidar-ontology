@@ -1,0 +1,79 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Sheet2RDF
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  sheet2rdf:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: prepare
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git pull
+          pip3 install pandas
+          pip3 install gsheets
+          pip3 install openpyxl
+          curl -L https://github.com/cmader/qSKOS/releases/download/2.0.3/qSKOS-cmd.jar -o qSKOS.jar
+          curl -L https://github.com/sparna-git/xls2rdf/releases/download/2.1.1/xls2rdf-app-2.1.1-onejar.jar -o xls2rdf.jar
+
+      - name: conversion-sheet2xls
+        env:
+          CLIENT: ${{secrets.CLIENT}}
+          STORAGE: ${{secrets.STORAGE}}
+          FILE_NAME: ${{secrets.FILE_NAME}}
+          SHEET_ID: ${{secrets.SHEET_ID}}
+        run: |
+          python3 ./scripts/sheet2xls.py
+
+      - name: conversion-xls2rdf
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+        run: |
+          java -jar xls2rdf.jar convert -i $FILE_NAME.xlsx -o $FILE_NAME.ttl -l en
+          mv xls2rdf.log ./logs/
+
+      - name: test
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+        run: |
+          java -jar qSKOS.jar analyze -dc mil,bl $FILE_NAME.ttl -o ./logs/rdf-test.log
+
+      - name: deploy
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+          GRAPH: ${{secrets.GRAPH}}
+          DB_PASS: ${{secrets.DB_PASS}}
+          DB_USER: ${{secrets.DB_USER}}
+          SPARQL_ENDPOINT: ${{secrets.SPARQL_ENDPOINT}}
+        run: |
+          ./scripts/deploy2db.sh
+
+      - name: commit-artifacts
+        env:
+          FILE_NAME: ${{secrets.FILE_NAME}}
+        run: |
+          rm qSKOS.jar
+          rm xls2rdf.jar
+          git add .
+          git diff-index --quiet HEAD || git commit -m "new .ttl from Google sheet has been generated"
+          git push

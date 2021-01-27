@@ -9,9 +9,9 @@ skos:editorialNote,This glossary is produced and maintained by IEA Wind Task 32.
 skos:historyNote,Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary.
 dct:title,IEA Wind Task 32 Wind Lidar Ontology
 dct:description,Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars.
-dct:creator,Andy Insert your ORCID here
+dct:creator,https://orcid.org/0000-0001-9698-5083
 dct:creator,http://orcid.org/0000-0002-9381-9693
-dct:creator,Paco insert your ORCID here
+dct:creator,https://orcid.org/0000-0003-1318-9677
 dct:contributor
 pav:version,0.1
 pav:createdOn,2020-11-06T00:00:00+01:00

@@ -1,4 +1,4 @@
-[![CI](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/workflows/CI/badge.svg)](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/actions?query=workflow%3ACI)
+[![CI](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/workflows/Sheet2RDF/badge.svg)](https://github.com/IEA-Wind-Task-32/wind-lidar-glossary/actions?query=workflow%3ASheet2RDF)
 
 # Wind lidar glossary
 This repository provides the source file for a glossary of terms for wind lidar (see the file, `glossary.ttl`). This glossary can be used to help organise and explore data, publications and software.

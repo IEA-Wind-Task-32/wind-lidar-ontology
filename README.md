@@ -3,7 +3,7 @@
 # Wind lidar ontology
 This repository provides the source file for a wind lidar ontology. The Task 32 wind lidar ontology is a controlled vocabulary about wind lidar that also includes a hierarchy, synonyms, and interrelationships. It can be used to help organise and explore data, publications and software.
 
-[**Check out a human-friendly version of the ontology**](http://vocab.ieawindtask32.org/ontolidar/en/).
+[**Check out a human-friendly version of the ontology**](http://vocab.ieawindtask32.org/wind-lidar-ontology/).
 
 
 ## Based on the OpenLidar module definitions

@@ -27,12 +27,12 @@
   pav:lastUpdatedOn "2021-01-13T00:00:00+01:00"@en;
   pav:version "0.1"@en;
   skos:editorialNote "This glossary is produced and maintained by IEA Wind Task 32."@en;
-  skos:hasTopConcept ontolidar:Analysis, ontolidar:Applications, ontolidar:Design, ontolidar:Measurementprinciples,
-    ontolidar:devices, ontolidar:instances, ontolidar:parameters, ontolidar:sweepstare;
+  skos:hasTopConcept ontolidar:Analysis, ontolidar:Applications, ontolidar:Design, ontolidar:Devices,
+    ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:Parameters;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
-ontolidar:units a rdf:Property;
+ontolidar:Units a rdf:Property;
   rdfs:label "units"@en;
   skos:definition "A unit for parameter or variable being defined."@en;
   skos:prefLabel "units"@en .
@@ -49,35 +49,35 @@ ontolidar:WindfieldReconstruction a skos:Concept;
   skos:broader ontolidar:Analysis;
   skos:definition "Approach to processing wind lidar data to estimate a wind vector at one or more points in the domain sampled by the lidar"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:velocityaziumthdisplay;
+  skos:narrower ontolidar:VelocityAzimuthDisplay;
   skos:prefLabel "Windfield Reconstruction"@en .
 
-ontolidar:velocityaziumthdisplay a skos:Concept;
+ontolidar:VelocityAzimuthDisplay a skos:Concept;
   skos:altLabel "VAD"@en;
   skos:broader ontolidar:WindfieldReconstruction;
   skos:definition "VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "velocity-aziumth display"@en .
+  skos:prefLabel "Velocity-azimuth display"@en .
 
 ontolidar:Applications a skos:Concept;
   skos:definition "Ways that wind lidar can be used"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:usecase, ontolidar:virtualmetmast;
+  skos:narrower ontolidar:UseCase, ontolidar:VirtualMetMast;
   skos:prefLabel "Applications"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
-ontolidar:usecase a skos:Concept;
+ontolidar:UseCase a skos:Concept;
   skos:broader ontolidar:Applications;
   skos:definition "The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "use case"@en .
+  skos:prefLabel "Use case"@en .
 
-ontolidar:virtualmetmast a skos:Concept;
+ontolidar:VirtualMetMast a skos:Concept;
   skos:altLabel "Crossed RHI"@en;
   skos:broader ontolidar:Applications;
   skos:definition "A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "virtual met mast"@en .
+  skos:prefLabel "Virtual met mast"@en .
 
 ontolidar:Design a skos:Concept;
   skos:definition "Wind lidar generic design structure"@en;
@@ -86,49 +86,49 @@ ontolidar:Design a skos:Concept;
   skos:prefLabel "Design"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
-ontolidar:Chassismodule a skos:Concept;
+ontolidar:ChassisModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure"@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Chassis module"@en .
 
-ontolidar:Controlmodule a skos:Concept;
+ontolidar:ControlModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The control module is the interface between the external controller (human or machine) and the lidar system"@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Control module"@en .
 
-ontolidar:Communicationsmodule a skos:Concept;
+ontolidar:CommunicationsModule a skos:Concept;
   skos:broader ontolidar:controlmodule;
   skos:definition "The system of devices and software that transmit and receive data and commands to and from the lidar device"@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Communications module"@en .
 
-ontolidar:Signalprocessingmodule a skos:Concept;
+ontolidar:SignalProcessingModule a skos:Concept;
   skos:broader ontolidar:controlmodule;
   skos:definition "The signal processing module is used to convert the data acquired by the lidar into a data product"@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Signal processing module"@en .
 
-ontolidar:Storagemodule a skos:Concept;
+ontolidar:StorageModule a skos:Concept;
   skos:broader ontolidar:controlmodule;
   skos:definition "The Storage module is responsible for saving data in the lidar system which will be accessed by users at some future time."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Storage module"@en .
 
-ontolidar:Safetyinterlocks a skos:Concept;
+ontolidar:SafetyInterlocks a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The interlocks are a dispersed set of safety systems that prevent or mitigate potentially dangerous activities."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Safety interlocks"@en .
 
-ontolidar:Opticsmodule a skos:Concept;
+ontolidar:OpticsModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly.\""@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
@@ -141,20 +141,20 @@ ontolidar:Telescope a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Telescope"@en .
 
-ontolidar:Telescopeaperture a skos:Concept;
+ontolidar:TelescopeAperture a skos:Concept;
   skos:broader ontolidar:telescope;
   skos:definition "The aperture through which laser light is emitted and received"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Telescope aperture"@en .
 
-ontolidar:Telescopeaperturediameter a skos:Concept;
+ontolidar:TelescopeApertureDiameter a skos:Concept;
   ontolidar:units "meters"@en;
   skos:broader ontolidar:telescopeaperture;
   skos:definition "Characteristic optical diameter of the lidar telescope"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Telescope aperture diameter"@en .
 
-ontolidar:Photonicsmodule a skos:Concept;
+ontolidar:PhotonicsModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The photonics module is the source of emitted light that will be used for the measurements."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
@@ -167,33 +167,32 @@ ontolidar:Detector a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Detector"@en .
 
-ontolidar:photodetector a skos:Concept;
+ontolidar:Photodetector a skos:Concept;
   skos:broader ontolidar:detector;
   skos:definition "Semiconductor light sensor."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Photodetectorvoltagenoise, ontolidar:photodetectorgain;
-  skos:prefLabel "photodetector"@en .
+  skos:prefLabel "Photodetector"@en .
 
-ontolidar:photodetectorgain a skos:Concept;
+ontolidar:PhotodetectorGain a skos:Concept;
   skos:broader ontolidar:photodetector;
   skos:definition "The gain of the photodetector transimpedance amplifier."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "photodetector gain"@en .
+  skos:prefLabel "Photodetector gain"@en .
 
-ontolidar:Photodetectorvoltagenoise a skos:Concept;
+ontolidar:PhotodetectorVoltageNoise a skos:Concept;
   skos:broader ontolidar:photodetector;
   skos:definition "The voltage noise of the photodetector transimpedance amplifier."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Photodetector voltage noise"@en .
 
-ontolidar:Opticalamplifier a skos:Concept;
+ontolidar:OpticalAmplifier a skos:Concept;
   skos:broader ontolidar:detector;
   skos:definition "An assembly to amplify the outgoing laser light signal without coverting it into an electrical signal."@en;
   skos:editorialNote "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier\""@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Optical amplifier"@en .
 
-ontolidar:Beamsplitter a skos:Concept;
+ontolidar:BeamSplitter a skos:Concept;
   skos:altLabel "beamsplitter"@en;
   skos:broader ontolidar:detector;
   skos:definition "An optical assembly to split a laser beam into two or more beams."@en;
@@ -201,104 +200,101 @@ ontolidar:Beamsplitter a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Beam splitter"@en .
 
-ontolidar:Lasersource a skos:Concept;
+ontolidar:LaserSource a skos:Concept;
   skos:broader ontolidar:photonicsmodule;
   skos:definition "An assembly to generate and manage laser light."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Laser source"@en .
 
-ontolidar:Laserdiode a skos:Concept;
+ontolidar:LaserDiode a skos:Concept;
   skos:broader ontolidar:lasersource;
   skos:definition "A semiconductor component to generate laser light of a defined frequency."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Laser diode"@en .
 
-ontolidar:Laserdiodewavelength a skos:Concept;
+ontolidar:LaserDiodeWavelength a skos:Concept;
   ontolidar:units "meters"@en;
   skos:broader ontolidar:laserdiode;
   skos:definition "The nominal wavelength of the laser source. This is defined in units of meters, e.g., 1450E-9 m for a near-infrared laser source."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Laser diode wavelength"@en .
 
-ontolidar:Powermodule a skos:Concept;
+ontolidar:PowerModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The Power Module is responsible for supplying power to the entire lidar system, including motors, lasers, sensors, and detectors."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Power module"@en .
 
-ontolidar:Uninterruptiblepowersupply a skos:Concept;
+ontolidar:UninterruptiblePowerSupply a skos:Concept;
   skos:broader ontolidar:powermodule;
   skos:definition "Uninterruptible power supply (UPS)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Uninterruptible power supply"@en .
 
-ontolidar:UPSBattery a skos:Concept;
+ontolidar:UpsBattery a skos:Concept;
   skos:broader ontolidar:uninterruptablepowersupply;
   skos:definition "An energy storage component"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "UPS Battery"@en .
 
-ontolidar:UPSbatteryvoltage a skos:Concept;
+ontolidar:UpsBatteryVoltage a skos:Concept;
   ontolidar:units "volts"@en;
   skos:broader ontolidar:UPSbattery;
   skos:definition "The battery voltage. Units are Volts."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "UPS battery voltage"@en .
 
-ontolidar:UPSbatterycapacity a skos:Concept;
+ontolidar:UpsBatteryCapacity a skos:Concept;
   ontolidar:units "Amp hours"@en;
   skos:broader ontolidar:UPSbattery;
   skos:definition "The total stored energy in the battery voltage. Units are Amp Hours (Ah)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "UPS battery capacity"@en .
 
-ontolidar:Scannermodule a skos:Concept;
+ontolidar:ScannerModule a skos:Concept;
   skos:broader ontolidar:design;
   skos:definition "The scanner orients the beam with respect to the housing and other parts of the lidar system. The scanner may be capable of one or more degrees of freedom."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Scanner module"@en .
 
-ontolidar:Scannerazimuthpositioningservo a skos:Concept;
+ontolidar:ScannerAzimuthPositioningServo a skos:Concept;
   skos:broader ontolidar:scannermodule;
   skos:definition "The azimuth servo motor drives the scanner in the azimuthal direction"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Azimuthslewrate;
   skos:prefLabel "Scanner azimuth positioning servo"@en .
 
-ontolidar:Azimuthslewrate a skos:Concept;
+ontolidar:AzimuthSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
   skos:broader ontolidar:Scannerazimuthpositioningservo;
   skos:definition "The maximum rate of operation of the servo motor in the azimuthal direction"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Azimuth slew rate"@en .
 
-ontolidar:Scannerelevationpositioningservo a skos:Concept;
+ontolidar:ScannerElevationPositioningServo a skos:Concept;
   skos:broader ontolidar:scannermodule;
   skos:definition "The azimuth servo motor drives the scanner in the elevation direction"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Elevationslewrate;
   skos:prefLabel "Scanner elevation positioning servo"@en .
 
-ontolidar:Elevationslewrate a skos:Concept;
+ontolidar:ElevationSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
   skos:broader ontolidar:Scannerelevationpositioningservo;
   skos:definition "The maximum rate of operation of the servo motor in the elevation direction"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Elevation slew rate"@en .
 
-ontolidar:Scannermirrors a skos:Concept;
+ontolidar:ScannerMirrors a skos:Concept;
   skos:broader ontolidar:scannermodule;
   skos:definition "Mirrors modifying the beam path between the telescope and atmosphere."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Scanner mirrors"@en .
 
-ontolidar:devices a skos:Concept;
+ontolidar:Devices a skos:Concept;
   skos:definition "Specific implementations of wind lidar technologies."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:WindIris, ontolidar:Windscanner;
-  skos:prefLabel "devices"@en;
+  skos:prefLabel "Devices"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:Windscanner a skos:Concept;
@@ -310,44 +306,53 @@ ontolidar:Windscanner a skos:Concept;
 
 ontolidar:WindIris a skos:Concept;
   skos:broader ontolidar:devices;
-  skos:definition "Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle."@en;
+  skos:definition "Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle"@en;
   skos:editorialNote "Describing a wind lidar unit as 'a wind iris' is insufficient information to uniquely describe it's capabilities."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Wind Iris"@en .
 
-ontolidar:instances a skos:Concept;
-  skos:definition "Wind lidar instances."@en;
+ontolidar:Instances a skos:Concept;
+  skos:definition "Wind lidar instances"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:lidartype, ontolidar:serialnumber;
-  skos:prefLabel "instances"@en;
+  skos:narrower ontolidar:LidarType;
+  skos:prefLabel "Instances"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
-ontolidar:serialnumber a skos:Concept;
+ontolidar:SerialNumber a skos:Concept;
   skos:broader ontolidar:instances;
   skos:definition "wind lidar serial number"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "serial number"@en .
+  skos:prefLabel "Serial number"@en .
 
-ontolidar:lidartype a skos:Concept;
-  skos:broader ontolidar:instances;
+ontolidar:LidarType a skos:Concept;
+  skos:broader ontolidar:Instances;
   skos:definition "The type of lidar device"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "lidar type"@en;
+  skos:prefLabel "Lidar type"@en;
   skos:related ontolidar:devices .
 
-ontolidar:Measurementprinciples a skos:Concept;
+ontolidar:MeasurementPrinciples a skos:Concept;
   skos:definition "The means by which a lidar makes a measurement of the wind"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:LineOfSight, ontolidar:MeasurementVolume, ontolidar:Probe,
+    ontolidar:RadialVelocity, ontolidar:ScanningGeometry, ontolidar:TimeOfFlight;
   skos:prefLabel "Measurement principles"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
-ontolidar:Lineofsight a skos:Concept;
+ontolidar:LineOfSight a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "The line along which lidar signals are emitted and backscattered to be detected by the system."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Line-of-sight"@en .
+  skos:prefLabel "Line of sight"@en .
 
-ontolidar:Measurementvolume a skos:Concept;
+ontolidar:TimeOfFlight a skos:Concept;
+  skos:altLabel "TOF"@en;
+  skos:broader ontolidar:MeasurementPrinciples;
+  skos:definition "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Time of flight"@en .
+
+ontolidar:MeasurementVolume a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "The region characterised by the wind lidar. Corresponds to the region penetrated by the various beam orientations / lines of sight and probe volumes where intermediate data are acquired to produce a final measurement."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -357,227 +362,243 @@ ontolidar:Probe a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "In the case of scanning lidar, the probe is a laser pulse emitted along a line of sight whose orientation is determined by the configuration of the lidar. In the case of a continuous wave lidar, the probe is a region of relatively elevated sensitivity along the line of sight determined by the optical focus of the system."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Probevolume;
+  skos:narrower ontolidar:ProbeVolume;
   skos:prefLabel "Probe"@en .
 
-ontolidar:Probevolume a skos:Concept;
+ontolidar:ProbeVolume a skos:Concept;
   skos:broader ontolidar:Probe;
   skos:definition "The volume in which the probe interacts with the atmosphere resulting in the measurement of a radial velocity."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Probe volume"@en .
 
-ontolidar:radialvelocity a skos:Concept;
+ontolidar:RadialVelocity a skos:Concept;
   skos:altLabel "Radial wind speed"@en;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "An intermediate variable (see intermediate data), the radial velocity is the radial component of the wind velocity vector relative to the location of the lidar measuring it. It is the projection of the wind velocity vector onto the line of sight, directly measured by observing the Doppler shift of the backscattered laser pulse emitted along the line of sight."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "radial velocity"@en .
+  skos:prefLabel "Radial velocity"@en .
 
-ontolidar:Scanninggeometry a skos:Concept;
-  skos:altLabel "scan pattern"@en;
+ontolidar:ScanningGeometry a skos:Concept;
+  skos:altLabel "Scan pattern"@en;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:MultiLidar, ontolidar:SingleLidar;
   skos:prefLabel "Scanning geometry"@en .
 
-ontolidar:Singlelidar a skos:Concept;
-  skos:broader ontolidar:scanninggeometry;
+ontolidar:SingleLidar a skos:Concept;
+  skos:broader ontolidar:ScanningGeometry;
   skos:definition "Measurements made by a single lidar."@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:staring, ontolidar:stopstare;
+  skos:narrower ontolidar:ArbitraryTrajectory, ontolidar:CompoundScan, ontolidar:SimpleScan,
+    ontolidar:Staring, ontolidar:StopStare, ontolidar:SweepStare;
   skos:prefLabel "Single lidar"@en .
 
-ontolidar:staring a skos:Concept;
-  skos:broader ontolidar:Singlelidar;
+ontolidar:Staring a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "A scan geometry comprised of a single beam orientation."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "staring"@en .
+  skos:prefLabel "Staring"@en .
 
-ontolidar:stopstare a skos:Concept;
-  skos:broader ontolidar:Singlelidar;
+ontolidar:StopStare a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "Line-of-sight data are acquired while the beam remains stationary in one of the pre-determined orientations comprising the scan geometry. No data are acquired while the beam is moved to its next position.\"@en ;"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "stop-stare"@en .
+  skos:prefLabel "Stop-stare"@en .
 
-ontolidar:sweepstare a skos:Concept;
+ontolidar:SweepStare a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "Line-of-sight data are acquired continuously as the beam is scanned between pre-determined positions."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "sweep-stare"@en;
-  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+  skos:prefLabel "Sweep-stare"@en .
 
-ontolidar:Simplescan a skos:Concept;
-  skos:broader ontolidar:singlelidar;
+ontolidar:SimpleScan a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "A simple scan geometry entails variation in beam orientation in a single degree of freedom"@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:VariableAzimuthScan, ontolidar:VariableElevation;
   skos:prefLabel "Simple scan"@en .
 
-ontolidar:Variableazimuthscan a skos:Concept;
-  skos:broader ontolidar:simplescan;
+ontolidar:VariableAzimuthScan a skos:Concept;
+  skos:broader ontolidar:SimpleScan;
   skos:definition "A simple scan geometry with variable azimuth angle"@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:CompleteCone, ontolidar:ConeSector, ontolidar:DopplerBeamSwinging;
   skos:prefLabel "Variable azimuth scan"@en .
 
-ontolidar:Completecone a skos:Concept;
-  skos:broader ontolidar:variableazimuthscan;
+ontolidar:CompleteCone a skos:Concept;
+  skos:broader ontolidar:VariableAzimuthScan;
   skos:definition "A scan geometry in which the azimuth angle of the beam is varied over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Complete cone"@en .
 
-ontolidar:Conesector a skos:Concept;
-  skos:broader ontolidar:variableazimuthscan;
+ontolidar:ConeSector a skos:Concept;
+  skos:broader ontolidar:VariableAzimuthScan;
   skos:definition "A scan geometry in which the azimuth angle of the beam is varied over less than the full 360 degree range of possible azimuth angles. Wind speed and direction values can potentially be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Cone sector"@en .
 
-ontolidar:Dopplerbeamswinging a skos:Concept;
+ontolidar:DopplerBeamSwinging a skos:Concept;
   skos:altLabel "DBS"@en;
-  skos:broader ontolidar:variableazimuthscan;
+  skos:broader ontolidar:VariableAzimuthScan;
   skos:definition "A scan geometry in which the azimuth angle of the beam is varied by 90 degrees over the full 360 degree range of possible azimuth angles. Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Doppler beam swinging"@en .
 
-ontolidar:Variableelevation a skos:Concept;
-  skos:broader ontolidar:simplescan;
+ontolidar:VariableElevation a skos:Concept;
+  skos:broader ontolidar:SimpleScan;
   skos:definition "A simple scan geometry with variable elevation angle"@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Variable elevation"@en .
 
-ontolidar:Verticalslice a skos:Concept;
+ontolidar:VerticalSlice a skos:Concept;
   skos:altLabel "RHI"@en, "Range-height indicator"@en;
-  skos:broader ontolidar:variableelevationscan;
+  skos:broader ontolidar:VariableElevationScan;
   skos:definition "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Vertical slice"@en .
 
-ontolidar:Compoundscan a skos:Concept;
-  skos:broader ontolidar:singlelidar;
+ontolidar:CompoundScan a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "Compound scans include more degrees of freedom and can follow an arbitrary trajectory or be made up of a sequence of simple scans"@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:SequentialScan;
   skos:prefLabel "Compound scan"@en .
 
-ontolidar:Arbitrarytrajectory a skos:Concept;
-  skos:broader ontolidar:singlelidar;
+ontolidar:ArbitraryTrajectory a skos:Concept;
+  skos:broader ontolidar:SingleLidar;
   skos:definition "Scans can be made where the beam is swept through an arbitrary combination of elevation and azimuth angles to follow a desired trajectory. This could be considered analagous to tracking the path of a flying bird from a fixed location."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Arbitrary trajectory"@en .
 
-ontolidar:Sequentialscan a skos:Concept;
-  skos:broader ontolidar:compoundscan;
+ontolidar:SequentialScan a skos:Concept;
+  skos:broader ontolidar:CompoundScan;
   skos:definition "In a sequential scan, simple and/or compound scans are executed one after another by the same device to reveal flow characteristics."@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Sequential scan"@en .
 
-ontolidar:Multilidar a skos:Concept;
+ontolidar:MultiLidar a skos:Concept;
   skos:altLabel "multilidar"@en;
-  skos:broader ontolidar:scanninggeometry;
+  skos:broader ontolidar:ScanningGeometry;
   skos:definition "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:ConvergentScan;
   skos:prefLabel "Multi-lidar"@en .
 
-ontolidar:Convergentscan a skos:Concept;
+ontolidar:ConvergentScan a skos:Concept;
   skos:altLabel "Convergent beam"@en, "convergent-beam lidar"@en;
-  skos:broader ontolidar:multilidar;
+  skos:broader ontolidar:MultiLidar;
   skos:definition "A measurement configuration involving multiple lidar units which are operated in a coordinated and synchronised manner so that their beams converge and intersect at a succession of probe volumes. If three or more lidar units are used, it is possible to characterise the wind velocity vector in the probe volume where the beams intersect within the limitations prescribed by the probe length, sampling interval, and scan geometry."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Convergent scan"@en .
 
-ontolidar:parameters a skos:Concept;
+ontolidar:Parameters a skos:Concept;
   skos:definition "Wind lidar-specific parameters."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Carriertonoiseratio, ontolidar:Datumelevation, ontolidar:Datumfeature,
-    ontolidar:Datumplane, ontolidar:Measurementheight;
-  skos:prefLabel "parameters"@en;
+  skos:narrower ontolidar:Azimuth, ontolidar:CarrierToNoiseRatio, ontolidar:DatumElevation,
+    ontolidar:DatumFeature, ontolidar:DatumPlane, ontolidar:Elevation, ontolidar:MeasurementHeight;
+  skos:prefLabel "Parameters"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
-ontolidar:Carriertonoiseratio a skos:Concept;
+ontolidar:CarrierToNoiseRatio a skos:Concept;
   skos:altLabel "CNR"@en;
-  skos:broader ontolidar:parameters;
+  skos:broader ontolidar:Parameters;
   skos:definition "A measure of signal strength"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Carrier to noise ratio"@en .
 
-ontolidar:Measurementheight a skos:Concept;
+ontolidar:Azimuth a skos:Concept;
+  ontolidar:units "degrees"@en;
+  skos:altLabel "Azimuth angle"@en;
+  skos:broader ontolidar:Parameters;
+  skos:definition "The angle between the line of sight of the lidar and a reference vector on the datum plane."@en;
+  skos:editorialNote "The reference vector from which the azimuth is defined is often true north, but could be some other defined vector."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Azimuth"@en .
+
+ontolidar:Elevation a skos:Concept;
+  ontolidar:units "degrees"@en;
+  skos:altLabel "Elevation angle"@en;
+  skos:broader ontolidar:Parameters;
+  skos:definition "The angle between the line of sight of the lidar and the datum plane."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Elevation"@en .
+
+ontolidar:MeasurementHeight a skos:Concept;
   ontolidar:units "meters"@en;
-  skos:broader ontolidar:parameters;
+  skos:broader ontolidar:Parameters;
   skos:definition "The nominal height above the datum plane at which a windfield reconstruction process returns a wind speed. Often used for vertically-profiling wind lidars for comparison to point wind speed measurements from an anemometer."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Measurement height"@en .
 
-ontolidar:Datumelevation a skos:Concept;
+ontolidar:DatumElevation a skos:Concept;
   ontolidar:units "meters"@en;
-  skos:broader ontolidar:parameters;
+  skos:broader ontolidar:Parameters;
   skos:definition "The height of the datum plane above sea level"@en;
   skos:editorialNote "Sea level should be defined on a project basis and is out of scope of this schema."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Datum elevation"@en .
 
-ontolidar:Datumplane a skos:Concept;
+ontolidar:DatumPlane a skos:Concept;
   skos:altLabel "Reference height"@en;
-  skos:broader ontolidar:parameters;
+  skos:broader ontolidar:Parameters;
   skos:definition "The horizontal plane from which the measurement height is defined, e.g., lidar window, local ground, a platform top surface, or other reference."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Datum plane"@en;
   skos:related ontolidar:datumfeature .
 
-ontolidar:Datumfeature a skos:Concept;
+ontolidar:DatumFeature a skos:Concept;
   skos:altLabel "Reference marker"@en;
-  skos:broader ontolidar:parameters;
+  skos:broader ontolidar:Parameters;
   skos:definition "A distinguishing feature used to recognise or define the datum plane from which the measurement height is defined"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Datum feature"@en .
 
-ontolidar:design skos:narrower ontolidar:Chassismodule, ontolidar:Controlmodule, ontolidar:Opticsmodule,
-    ontolidar:Photonicsmodule, ontolidar:Powermodule, ontolidar:Safetyinterlocks, ontolidar:Scannermodule .
+ontolidar:design skos:narrower ontolidar:ChassisModule, ontolidar:ControlModule, ontolidar:OpticsModule,
+    ontolidar:PhotonicsModule, ontolidar:PowerModule, ontolidar:SafetyInterlocks, ontolidar:ScannerModule .
 
-ontolidar:controlmodule skos:narrower ontolidar:Communicationsmodule, ontolidar:Signalprocessingmodule,
-    ontolidar:Storagemodule .
+ontolidar:controlmodule skos:narrower ontolidar:CommunicationsModule, ontolidar:SignalProcessingModule,
+    ontolidar:StorageModule .
 
 ontolidar:opticsmodule skos:narrower ontolidar:Telescope .
 
-ontolidar:telescope skos:narrower ontolidar:Telescopeaperture .
+ontolidar:telescope skos:narrower ontolidar:TelescopeAperture .
 
-ontolidar:telescopeaperture skos:narrower ontolidar:Telescopeaperturediameter .
+ontolidar:telescopeaperture skos:narrower ontolidar:TelescopeApertureDiameter .
 
-ontolidar:photonicsmodule skos:narrower ontolidar:Detector, ontolidar:Lasersource .
+ontolidar:photonicsmodule skos:narrower ontolidar:Detector, ontolidar:LaserSource .
 
-ontolidar:detector skos:narrower ontolidar:Beamsplitter, ontolidar:Opticalamplifier,
-    ontolidar:photodetector .
+ontolidar:detector skos:narrower ontolidar:BeamSplitter, ontolidar:OpticalAmplifier,
+    ontolidar:Photodetector .
 
-ontolidar:lasersource skos:narrower ontolidar:Laserdiode .
+ontolidar:photodetector skos:narrower ontolidar:PhotodetectorGain, ontolidar:PhotodetectorVoltageNoise .
 
-ontolidar:laserdiode skos:narrower ontolidar:Laserdiodewavelength .
+ontolidar:lasersource skos:narrower ontolidar:LaserDiode .
 
-ontolidar:powermodule skos:narrower ontolidar:Uninterruptiblepowersupply .
+ontolidar:laserdiode skos:narrower ontolidar:LaserDiodeWavelength .
 
-ontolidar:uninterruptablepowersupply skos:narrower ontolidar:UPSBattery .
+ontolidar:powermodule skos:narrower ontolidar:UninterruptiblePowerSupply .
 
-ontolidar:UPSbattery skos:narrower ontolidar:UPSbatterycapacity, ontolidar:UPSbatteryvoltage .
+ontolidar:uninterruptablepowersupply skos:narrower ontolidar:UpsBattery .
 
-ontolidar:scannermodule skos:narrower ontolidar:Scannerazimuthpositioningservo, ontolidar:Scannerelevationpositioningservo,
-    ontolidar:Scannermirrors .
+ontolidar:UPSbattery skos:narrower ontolidar:UpsBatteryCapacity, ontolidar:UpsBatteryVoltage .
 
-ontolidar:MeasurementPrinciples skos:narrower ontolidar:Lineofsight, ontolidar:Measurementvolume,
-    ontolidar:Probe, ontolidar:Scanninggeometry, ontolidar:radialvelocity .
+ontolidar:scannermodule skos:narrower ontolidar:ScannerAzimuthPositioningServo, ontolidar:ScannerElevationPositioningServo,
+    ontolidar:ScannerMirrors .
 
-ontolidar:scanninggeometry skos:narrower ontolidar:Multilidar, ontolidar:Singlelidar .
+ontolidar:Scannerazimuthpositioningservo skos:narrower ontolidar:AzimuthSlewRate .
 
-ontolidar:singlelidar skos:narrower ontolidar:Arbitrarytrajectory, ontolidar:Compoundscan,
-    ontolidar:Simplescan .
+ontolidar:Scannerelevationpositioningservo skos:narrower ontolidar:ElevationSlewRate .
 
-ontolidar:simplescan skos:narrower ontolidar:Variableazimuthscan, ontolidar:Variableelevation .
+ontolidar:devices skos:narrower ontolidar:WindIris, ontolidar:Windscanner .
 
-ontolidar:variableazimuthscan skos:narrower ontolidar:Completecone, ontolidar:Conesector,
-    ontolidar:Dopplerbeamswinging .
+ontolidar:instances skos:narrower ontolidar:SerialNumber .
 
-ontolidar:variableelevationscan skos:narrower ontolidar:Verticalslice .
-
-ontolidar:compoundscan skos:narrower ontolidar:Sequentialscan .
-
-ontolidar:multilidar skos:narrower ontolidar:Convergentscan .
+ontolidar:VariableElevationScan skos:narrower ontolidar:VerticalSlice .

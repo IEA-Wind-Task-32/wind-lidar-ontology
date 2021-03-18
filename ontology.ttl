@@ -27,8 +27,9 @@
   pav:lastUpdatedOn "2021-01-13T00:00:00+01:00"@en;
   pav:version "0.1"@en;
   skos:editorialNote "This glossary is produced and maintained by IEA Wind Task 32."@en;
-  skos:hasTopConcept ontolidar:Analysis, ontolidar:Applications, ontolidar:Design, ontolidar:Devices,
-    ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:Parameters;
+  skos:hasTopConcept ontolidar:All-fiberLidar, ontolidar:Analysis, ontolidar:Applications,
+    ontolidar:Design, ontolidar:Devices, ontolidar:Instances, ontolidar:MeasurementPrinciples,
+    ontolidar:Parameters;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -55,7 +56,8 @@ ontolidar:WindfieldReconstruction a skos:Concept;
 ontolidar:VelocityAzimuthDisplay a skos:Concept;
   skos:altLabel "VAD"@en;
   skos:broader ontolidar:WindfieldReconstruction;
-  skos:definition "VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method. The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
+  skos:definition "VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method."@en;
+  skos:editorialNote "The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Velocity-azimuth display"@en .
 
@@ -160,6 +162,14 @@ ontolidar:TelescopeApertureDiameter a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Telescope aperture diameter"@en .
 
+ontolidar:All-fiberLidar a skos:Concept;
+  ontolidar:units "boolean"@en;
+  skos:definition "All-fiber transmission Lidar system"@en;
+  skos:editorialNote "True if lidar is all-fiber"@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Beam transmission system"@en;
+  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+
 ontolidar:PhotonicsModule a skos:Concept;
   skos:broader ontolidar:Design;
   skos:definition "The photonics module is the source of emitted light that will be used for the measurements."@en;
@@ -192,6 +202,14 @@ ontolidar:PhotodetectorVoltageNoise a skos:Concept;
   skos:definition "The voltage noise of the photodetector transimpedance amplifier."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Photodetector voltage noise"@en .
+
+ontolidar:AcoustoOpticModulator a skos:Concept;
+  skos:altLabel "AOM"@en;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/Signal\u0020modulation>;
+  skos:definition "Bragg cell diffracting and shifting frequency of the light using sound waves (radio-frequency). Produces a pulsed output beam."@en;
+  skos:editorialNote "Only pulsed lidar"@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Acousto optic modulator"@en .
 
 ontolidar:OpticalAmplifier a skos:Concept;
   skos:broader ontolidar:Detector;
@@ -483,7 +501,7 @@ ontolidar:VerticalSlice a skos:Concept;
 
 ontolidar:CompoundScan a skos:Concept;
   skos:broader ontolidar:SingleLidar;
-  skos:definition "Compound scans include more degrees of freedom and can follow an arbitrary trajectory or be made up of a sequence of simple scans"@en;
+  skos:definition "Scans can be made where the beam is swept through a vertical slice by varying the elevation angle but not the azimuth angle. These scans are also known as range-height-indicator (RHI) scans. This scan geometry may be used to look at details in the flow in the cross-sectional surface sampled by the scan"@en;
   skos:editorialNote "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:SequentialScan;
@@ -503,7 +521,7 @@ ontolidar:SequentialScan a skos:Concept;
   skos:prefLabel "Sequential scan"@en .
 
 ontolidar:MultiLidar a skos:Concept;
-  skos:altLabel "multilidar"@en;
+  skos:altLabel "multilidar"@en, "multistatic"@en;
   skos:broader ontolidar:ScanningGeometry;
   skos:definition "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -590,6 +608,9 @@ ontolidar:DatumFeature a skos:Concept;
   skos:prefLabel "Datum feature"@en .
 
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorGain, ontolidar:PhotodetectorVoltageNoise .
+
+<http://vocab.ieawindtask32.org/wind-lidar-ontology/Signal\u0020modulation> skos:narrower
+    ontolidar:AcoustoOpticModulator .
 
 ontolidar:UninterruptablePowerSupply skos:narrower ontolidar:UpsBattery .
 

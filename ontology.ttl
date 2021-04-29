@@ -87,7 +87,7 @@ ontolidar:Design a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ChassisModule, ontolidar:ControlModule, ontolidar:OpticsModule,
     ontolidar:PhotonicsModule, ontolidar:PowerModule, ontolidar:SafetyInterlocks, ontolidar:ScannerModule;
-  skos:prefLabel "Design"@en;
+  skos:prefLabel "Auslegung"@de, "Design"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:ChassisModule a skos:Concept;
@@ -146,7 +146,7 @@ ontolidar:Telescope a skos:Concept;
   skos:definition "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:TelescopeAperture;
-  skos:prefLabel "Telescope"@en .
+  skos:prefLabel "Telescope"@en, "Teleskop"@de .
 
 ontolidar:TelescopeAperture a skos:Concept;
   skos:broader ontolidar:Telescope;
@@ -329,7 +329,7 @@ ontolidar:Devices a skos:Concept;
   skos:definition "Specific implementations of wind lidar technologies."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:WindIris, ontolidar:Windscanner;
-  skos:prefLabel "Devices"@en;
+  skos:prefLabel "Devices"@en, "Geräte"@de;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:Windscanner a skos:Concept;
@@ -350,7 +350,7 @@ ontolidar:Instances a skos:Concept;
   skos:definition "Wind lidar instances"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:LidarType, ontolidar:SerialNumber;
-  skos:prefLabel "Instances"@en;
+  skos:prefLabel "Instances"@en, "Instanzen"@de;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:SerialNumber a skos:Concept;

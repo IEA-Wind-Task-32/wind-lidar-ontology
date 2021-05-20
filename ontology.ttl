@@ -69,7 +69,7 @@ ontolidar:Applications a skos:Concept;
     "Ways that wind lidar can be used"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:UseCase, ontolidar:VirtualMetMast;
-  skos:prefLabel "Applications"@en, "Applicazioni"@it;
+  skos:prefLabel "Anwendungen"@de, "Applications"@en, "Applicazioni"@it;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:UseCase a skos:Concept;
@@ -235,7 +235,7 @@ ontolidar:OpticalAmplifier a skos:Concept;
   skos:broader ontolidar:Detector;
   skos:definition "An assembly to amplify the outgoing laser light signal without converting it into an electrical signal."@en,
     "Sistema di amplificazione della potenza ottica della luce laser emessa."@it;
-  skos:editorialNote "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier\""@en;
+  skos:editorialNote "Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Amplificatore ottico"@it, "Optical amplifier"@en .
 
@@ -369,9 +369,9 @@ ontolidar:Windscanner a skos:Concept;
   skos:broader ontolidar:Devices;
   skos:definition "One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project."@en,
     "Uno dei vari tipi di sistemi che possono essere utilizzati per effettuare scansioni su geometrie convergenti. Originariamente noto come il progetto windscanner.eu project di DTU."@it;
-  skos:editorialNote "Describing a wind lidar unit as \"a windscanner\" is insufficient information to uniquely describe it's capabilities."@en;
+  skos:editorialNote "Describing a wind lidar unit as 'a windscanner' is insufficient information to uniquely describe it's capabilities."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar \"WindScanner\""@it, "Windscanner"@en .
+  skos:prefLabel "Lidar 'WindScanner'"@it, "Windscanner"@de, "Windscanner"@en .
 
 ontolidar:WindIris a skos:Concept;
   skos:broader ontolidar:Devices;
@@ -379,7 +379,7 @@ ontolidar:WindIris a skos:Concept;
     "Un particolare tipo di sistema stand-alone lidar con applicazioni per misurazioni dalla navicella di una turbina eolica."@it;
   skos:editorialNote "Describing a wind lidar unit as 'a wind iris' is insufficient information to uniquely describe it's capabilities."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar \"Wind Iris\""@it, "Wind Iris"@en .
+  skos:prefLabel "Lidar 'Wind Iris'"@it, "Wind Iris"@de, "Wind Iris"@en .
 
 ontolidar:Instances a skos:Concept;
   skos:definition "Esempi di lidar eolici."@it, "Wind lidar instances"@en;

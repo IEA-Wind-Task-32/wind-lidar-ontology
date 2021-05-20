@@ -14,6 +14,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosmos: <http://purl.org/net/skosmos#> .
 @prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -24,6 +25,9 @@
   dct:description "Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars."@de,
     "Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars."@en;
   dct:title "IEA Wind Task 32 Wind Lidar Ontology"@de, "IEA Wind Task 32 Wind Lidar Ontology"@en;
+  skosmos:defaultLanguage "EN"@en;
+  skosmos:language "EN, DE, IT"@en;
+  skosmos:uiLanguageDropdown "True"@en;
   pav:createdOn "2020-11-06T00:00:00+01:00"@en;
   pav:lastUpdatedOn "2021-01-13T00:00:00+01:00"@en;
   pav:version "0.1"@en;
@@ -32,9 +36,7 @@
     ontolidar:Design, ontolidar:Devices, ontolidar:Instances, ontolidar:MeasurementPrinciples,
     ontolidar:Parameters;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
-  skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en;
-  <skosmos:defaultLanguage> "EN"@en;
-  <skosmos:language> "EN, DE, IT"@en .
+  skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
 ontolidar:Units a rdf:Property;
   rdfs:label "units"@en;

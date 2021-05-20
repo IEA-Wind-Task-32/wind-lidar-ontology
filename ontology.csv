@@ -16,6 +16,8 @@ dct:creator,https://orcid.org/0000-0001-9698-5083
 dct:creator,http://orcid.org/0000-0002-9381-9693
 dct:creator,https://orcid.org/0000-0003-1318-9677
 dct:contributor
+skosmos:defaultLanguage,EN
+skosmos:language,"EN, DE, IT"
 pav:version,0.1
 pav:createdOn,2020-11-06T00:00:00+01:00
 pav:lastUpdatedOn,2021-01-13T00:00:00+01:00

@@ -32,7 +32,9 @@
     ontolidar:Design, ontolidar:Devices, ontolidar:Instances, ontolidar:MeasurementPrinciples,
     ontolidar:Parameters;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
-  skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
+  skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en;
+  <skosmos:defaultLanguage> "EN"@en;
+  <skosmos:language> "EN, DE, IT"@en .
 
 ontolidar:Units a rdf:Property;
   rdfs:label "units"@en;

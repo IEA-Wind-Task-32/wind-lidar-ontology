@@ -192,7 +192,7 @@ ontolidar:PhotonicsModule a skos:Concept;
     "The photonics module is the source of emitted light that will be used for the measurements."@en;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Detector, ontolidar:LaserSource;
+  skos:narrower ontolidar:AcoustoOpticModulator, ontolidar:Detector, ontolidar:LaserSource;
   skos:prefLabel "Componente fotonica"@it, "Photonics module"@en .
 
 ontolidar:Detector a skos:Concept;
@@ -224,7 +224,7 @@ ontolidar:PhotodetectorVoltageNoise a skos:Concept;
 
 ontolidar:AcoustoOpticModulator a skos:Concept;
   skos:altLabel "AOM"@en;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/Signal\u0020modulation>;
+  skos:broader ontolidar:PhotonicsModule;
   skos:definition "Bragg cell diffracting and shifting frequency of the light using sound waves (radio-frequency). Produces a pulsed output beam."@en,
     "Cella di Bragg per diffrangere e traslare in frequenza la luce utilizzando onde sonore a radiofrequenza. Produce un fascio pulsato in uscita."@it;
   skos:editorialNote "Only pulsed lidar"@en;
@@ -668,9 +668,6 @@ ontolidar:DatumFeature a skos:Concept;
   skos:prefLabel "Datum feature"@en, "Elemento di riferimento"@it .
 
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorGain, ontolidar:PhotodetectorVoltageNoise .
-
-<http://vocab.ieawindtask32.org/wind-lidar-ontology/Signal\u0020modulation> skos:narrower
-    ontolidar:AcoustoOpticModulator .
 
 ontolidar:UninterruptablePowerSupply skos:narrower ontolidar:UpsBattery .
 

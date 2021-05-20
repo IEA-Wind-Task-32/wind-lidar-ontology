@@ -1,14 +1,17 @@
 ConceptScheme URI,http://vocab.ieawindtask32.org/wind-lidar-ontology/
 PREFIX,ontolidar,http://vocab.ieawindtask32.org/wind-lidar-ontology/
 PREFIX,pav,http://purl.org/pav/
+PREFIX,dc,http://purl.org/dc/elements/1.1/
 PREFIX,dct,http://purl.org/dc/terms/
 PREFIX,rdf,http://www.w3.org/1999/02/22-rdf-syntax-ns#
 PREFIX,rdfs,http://www.w3.org/2000/01/rdf-schema#
 skos:prefLabel,IEA Wind Task 32 Wind Lidar Ontology
 skos:editorialNote,This glossary is produced and maintained by IEA Wind Task 32.
 skos:historyNote,Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary.
-dct:title,IEA Wind Task 32 Wind Lidar Ontology
-dct:description,Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars.
+dct:title@en,IEA Wind Task 32 Wind Lidar Ontology
+dct:description@en,Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars.
+dct:title@de,IEA Wind Task 32 Wind Lidar Ontology
+dct:description@de,Ontological representation of wind lidar supporting development of modular tools and processes for wind lidars.
 dct:creator,https://orcid.org/0000-0001-9698-5083
 dct:creator,http://orcid.org/0000-0002-9381-9693
 dct:creator,https://orcid.org/0000-0003-1318-9677

@@ -13,6 +13,9 @@ This ontology includes terms used to describe the design of a wind lidar. These 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3414197.svg)](https://doi.org/10.5281/zenodo.3414197)
 
+## Developed using sheet2df and OntoStack
+We use [sheet2rdf](https://github.com/fair-data-collective/sheet2rdf) to build wind lidar ontology, while DTU Wind Energy instance of OntoStack to serve the ontology. `sheet2rdf` and `OntoStack` are developed by [FAIR Data Collective](https://dk.linkedin.com/company/fair-data-collective).
+
 
 ## How to use this ontology
 There are several ways the ontology.
@@ -62,7 +65,7 @@ Contributions will become part of this repository according to the terms of the 
 # Maintainers
 This repository is maintained by
 - [Andy Clifton](https://github.com/andyclifton), IEA Wind Task 32 Operating Agent
-- [Nikola Vasiljevic](https://github.com/niva83) at the Danish Technical University.
+- [Nikola Vasiljevic](https://github.com/niva83), DTU Wind Energy.
 
 ... and uses contributions from
 - [Francisco Costa](https://github.com/pacocosta)

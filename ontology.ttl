@@ -782,9 +782,8 @@ ontolidar:Devices a skos:Concept;
     "Particolari realizzazioni di tecnologie lidar per applicazioni eoliche."@it, "Specific implementations of wind lidar technologies."@en,
     "测风激光雷达技术的具体实现设备。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Vindicator, ontolidar:WindIris, ontolidar:Windcube, ontolidar:WindcubeV1,
-    ontolidar:WindcubeV2, ontolidar:WindcubeV2.1, ontolidar:Windscanner, ontolidar:Zephir,
-    ontolidar:Zephir150, ontolidar:Zephir175, ontolidar:Zephir300, ontolidar:Zx300;
+  skos:narrower ontolidar:Vindicator, ontolidar:WindIris, ontolidar:Windcube, ontolidar:Windscanner,
+    ontolidar:Zephir, ontolidar:Zx300;
   skos:prefLabel "Devices"@en, "Dispositivos"@es, "Geräte"@de, "Strumenti lidar"@it,
     "设备"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
@@ -817,46 +816,41 @@ ontolidar:Windcube a skos:Concept;
   skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@de, "WindCube"@en, "WindCube"@es .
 
 ontolidar:WindcubeV1 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:WindCube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'WindCube V1'"@it, "WindCube V1"@de, "WindCube V1"@en, "WindCube V1"@es;
-  skos:related ontolidar:WindCube .
+  skos:prefLabel "Lidar 'WindCube V1'"@it, "WindCube V1"@de, "WindCube V1"@en, "WindCube V1"@es .
 
 ontolidar:WindcubeV2 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:WindCube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'WindCube V2'"@it, "WindCube V2"@de, "WindCube V2"@en, "WindCube V2"@es;
-  skos:related ontolidar:WindCube .
+  skos:prefLabel "Lidar 'WindCube V2'"@it, "WindCube V2"@de, "WindCube V2"@en, "WindCube V2"@es .
 
 ontolidar:WindcubeV2.1 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:WindCube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Lidar 'WindCube V2.1'"@it, "WindCube V2.1"@de, "WindCube V2.1"@en,
-    "WindCube V2.1"@es;
-  skos:related ontolidar:WindCube .
+    "WindCube V2.1"@es .
 
 ontolidar:Zephir a skos:Concept;
   skos:broader ontolidar:Devices;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:Zephir150, ontolidar:Zephir175, ontolidar:Zephir300;
   skos:prefLabel "Lidar 'Zephir'"@it, "Zephir"@de, "Zephir"@en, "Zephir"@es .
 
 ontolidar:Zephir150 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:Zephir;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Zephir 150'"@it, "Zephir 150"@de, "Zephir 150"@en, "Zephir 150"@es;
-  skos:related ontolidar:Zephir .
+  skos:prefLabel "Lidar 'Zephir 150'"@it, "Zephir 150"@de, "Zephir 150"@en, "Zephir 150"@es .
 
 ontolidar:Zephir175 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:Zephir;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Zephir 175'"@it, "Zephir 175"@de, "Zephir 175"@en, "Zephir 175"@es;
-  skos:related ontolidar:Zephir .
+  skos:prefLabel "Lidar 'Zephir 175'"@it, "Zephir 175"@de, "Zephir 175"@en, "Zephir 175"@es .
 
 ontolidar:Zephir300 a skos:Concept;
-  skos:broader ontolidar:Devices;
+  skos:broader ontolidar:Zephir;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Zephir 300'"@it, "Zephir 300"@de, "Zephir 300"@en, "Zephir 300"@es;
-  skos:related ontolidar:Zephir .
+  skos:prefLabel "Lidar 'Zephir 300'"@it, "Zephir 300"@de, "Zephir 300"@en, "Zephir 300"@es .
 
 ontolidar:Zx300 a skos:Concept;
   skos:broader ontolidar:Devices;
@@ -1273,5 +1267,7 @@ ontolidar:DataFormats a skos:Concept;
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorGain, ontolidar:PhotodetectorVoltageNoise .
 
 ontolidar:UninterruptablePowerSupply skos:narrower ontolidar:UpsBattery .
+
+ontolidar:WindCube skos:narrower ontolidar:WindcubeV1, ontolidar:WindcubeV2, ontolidar:WindcubeV2.1 .
 
 ontolidar:VariableElevationScan skos:narrower ontolidar:VerticalSlice .

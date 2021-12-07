@@ -130,13 +130,13 @@ ontolidar:Devices,Devices,Geräte,Strumenti lidar,Dispositivos,设备,,,Specific
 ontolidar:Windscanner,Windscanner,Windscanner,Lidar 'WindScanner',Escáner de viento,Windscanner测风雷达,,,One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project.,,Uno dei vari tipi di sistemi che possono essere utilizzati per effettuare scansioni su geometrie convergenti. Originariamente noto come il progetto windscanner.eu project di DTU.,Uno de los varios tipos de sistemas que se pueden utilizar para realizar escaneos de geometría convergente.  Originariamente hace referencia al proyecto windscanner.eu de DTU.,一种激光雷达测风系统，可用于进行会聚扫描的几何形状。最初是指DTU领导的winddscanner.eu项目。,,ontolidar:Devices,,,,,,Describing a wind lidar unit as 'a windscanner' is insufficient information to uniquely describe it's capabilities.
 ontolidar:WindIris,Wind Iris,Wind Iris,Lidar 'Wind Iris',Wind Iris,Wind Iris测风雷达,,,Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle,,Un particolare tipo di sistema stand-alone lidar con applicazioni per misurazioni dalla navicella di una turbina eolica.,"Tipo de dispositivo lidar autónomo destinado a ser utilizado como lidar de visión frontal de  flujo entrante, montado en la góndola de un aerogenerador.",一种独立式激光雷达设备，主要作为前视激光雷达安装在风电机组机舱上,,ontolidar:Devices,,,,,,Describing a wind lidar unit as 'a wind iris' is insufficient information to uniquely describe it's capabilities.
 ontolidar:Windcube,WindCube,WindCube,Lidar 'WindCube',WindCube,,,,,,,,,,ontolidar:Devices
-ontolidar:WindcubeV1,WindCube V1,WindCube V1,Lidar 'WindCube V1',WindCube V1,,,,,,,,,,ontolidar:Devices,,ontolidar:WindCube
-ontolidar:WindcubeV2,WindCube V2,WindCube V2,Lidar 'WindCube V2',WindCube V2,,,,,,,,,,ontolidar:Devices,,ontolidar:WindCube
-ontolidar:WindcubeV2.1,WindCube V2.1,WindCube V2.1,Lidar 'WindCube V2.1',WindCube V2.1,,,,,,,,,,ontolidar:Devices,,ontolidar:WindCube
+ontolidar:WindcubeV1,WindCube V1,WindCube V1,Lidar 'WindCube V1',WindCube V1,,,,,,,,,,ontolidar:WindCube
+ontolidar:WindcubeV2,WindCube V2,WindCube V2,Lidar 'WindCube V2',WindCube V2,,,,,,,,,,ontolidar:WindCube
+ontolidar:WindcubeV2.1,WindCube V2.1,WindCube V2.1,Lidar 'WindCube V2.1',WindCube V2.1,,,,,,,,,,ontolidar:WindCube
 ontolidar:Zephir,Zephir,Zephir,Lidar 'Zephir',Zephir,,,,,,,,,,ontolidar:Devices
-ontolidar:Zephir150,Zephir 150,Zephir 150,Lidar 'Zephir 150',Zephir 150 ,,,,,,,,,,ontolidar:Devices,,ontolidar:Zephir
-ontolidar:Zephir175,Zephir 175,Zephir 175,Lidar 'Zephir 175',Zephir 175,,,,,,,,,,ontolidar:Devices,,ontolidar:Zephir
-ontolidar:Zephir300,Zephir 300,Zephir 300,Lidar 'Zephir 300',Zephir 300,,,,,,,,,,ontolidar:Devices,,ontolidar:Zephir
+ontolidar:Zephir150,Zephir 150,Zephir 150,Lidar 'Zephir 150',Zephir 150 ,,,,,,,,,,ontolidar:Zephir
+ontolidar:Zephir175,Zephir 175,Zephir 175,Lidar 'Zephir 175',Zephir 175,,,,,,,,,,ontolidar:Zephir
+ontolidar:Zephir300,Zephir 300,Zephir 300,Lidar 'Zephir 300',Zephir 300,,,,,,,,,,ontolidar:Zephir
 ontolidar:Zx300,ZX300,ZX300,Lidar 'ZX300',ZX300,,,,,,,,,,ontolidar:Devices
 ontolidar:Vindicator,Vindicator,Vindicator,Lidar Vindicator',,,,,,,,,,,ontolidar:Devices
 ontolidar:Instances,Instances,Instanzen,Esempi di lidars,Instancias,激光雷达示例,,,Wind lidar instances,,Esempi di lidar eolici.,Instancias del lidar de viento.,风激光雷达实例

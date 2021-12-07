@@ -42,15 +42,15 @@ ontolidar:Applications,Applications,Anwendungen,Applicazioni,Aplicaciones,应用
 ontolidar:UseCase,Use case,,Casi di uso,Caso de uso,应用案例,,,"The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy",,"La combinazione di tre elementi: 1. Requisiti derivati dai risultati attesi (in opposizione ai requisiti definiti dai vincoli del sistema, come nel confronto fra i sensori di prima generazione e le misurazioni di prima generazione); 2. Il metodo di misurazione selezionati per soddisfarli; 3. Le condizioni di operazione che definiscono le prestazioni (in termine di precisione) del metodo impiegato.","Combinación de tres elementos: 1. Requisitos de datos orientados a los resultados (en contraposición a los requisitos orientados a las restricciones, véase sensor de primera generación / mediciones de primera generación); 2. Método de medición seleccionado para cumplirlos; 3. Las condiciones de operación que determinan el rendimiento del método con respecto a la precisión del mismo.",三个要素的组合： 1. 结果导向的数据要求（与约束导向的要求相反，请参阅第一代传感器/第一代测量）； 2. 选择可实现的测量方法； 3. 决定该方法在准确度性能方面的操作条件,,ontolidar:Applications
 ontolidar:AdditionalSensor,Additional sensor,,,Sensor adicional,,,,Anemometer and vaines mounted on a meteorological mast,,,Anemómetros y veleta montados sobre torre meteorológica,,,ontolidar: UseCase
 ontolidar:WindCharacterisation,Wind characterisation,,,Caracterización de las propiedades del viento,,,,,,,,,,ontolidar: UseCase
-ontolidar:IecStandars61400121,IEC Standars 61400-12-1,,,Norma IEC 61400-12-1,,,,,,,,,,ontolidar: UseCase,,ontolidar: WindCharacterisation
+ontolidar:IecStandars61400121,IEC Standars 61400-12-1,,,Norma IEC 61400-12-1,,,,,,,,,,ontolidar: WindCharacterisation
 ontolidar:TurbineCertification,Turbine certification,,,Certificación de la turbina eólica,,,,,,,,,,ontolidar: UseCase
 ontolidar:PerformanceVerification,Performance verification,,,Verificación del rendimiento ,,,,,,,,,,ontolidar: UseCase
-ontolidar:IecStandars61400122,IEC Standars 61400-12-2,,,Norma IEC 61400-12-2,,,,,,,,,,ontolidar: UseCase,,ontolidar: PerformanceVerification
-ontolidar:IecStandars61400123,IEC Standars 61400-12-3,,,Norma IEC 61400-12-3,,,,,,,,,,ontolidar: UseCase,,ontolidar: PerformanceVerification
-ontolidar:Task32RecommendedPractices,Task32 Recommended practices,,,Recomendaciones Task32,,,,Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain,,,,,,ontolidar: UseCase,,ontolidar: PerformanceVerification
+ontolidar:IecStandars61400122,IEC Standars 61400-12-2,,,Norma IEC 61400-12-2,,,,,,,,,,ontolidar: PerformanceVerification
+ontolidar:IecStandars61400123,IEC Standars 61400-12-3,,,Norma IEC 61400-12-3,,,,,,,,,,ontolidar: PerformanceVerification
+ontolidar:Task32RecommendedPractices,Task32 Recommended practices,,,Recomendaciones Task32,,,,Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain,,,,,,ontolidar: PerformanceVerification
 ontolidar:WindTurbineControl,Wind turbine control,,,Técnicas de control de la turbina eólica,,,,,,,,,,ontolidar: UseCase
-ontolidar:Turbulence,Turbulence,,,Turbulencia,,,,,,,,,,ontolidar: UseCase,,ontolidar: WindTurbineControl
-ontolidar:Wakes,Wakes,,,Estelas,,,,,,,,,,ontolidar: UseCase,,ontolidar: WindTurbineControl
+ontolidar:Turbulence,Turbulence,,,Turbulencia,,,,,,,,,,ontolidar: WindTurbineControl
+ontolidar:Wakes,Wakes,,,Estelas,,,,,,,,,,ontolidar: WindTurbineControl
 ontolidar:WindPlantControl,Wind plant control,,,Control de parque eólico,,,,,,,,,,ontolidar: UseCase
 ontolidar:YawAlignment,Yaw alignment,,,Alneamiento de guiñada,,,,,,,,,,ontolidar: UseCase
 ontolidar:MetmastPerformanceVerification,Metmast performance verification,,,Verificación del rendimiento de la torre meteorológica,,,,,,,,,,ontolidar: UseCase
@@ -129,10 +129,10 @@ ontolidar:ScannerMirrors,Scanner mirrors,,Specchi dello scanner,Espejos del esc�
 ontolidar:Devices,Devices,Geräte,Strumenti lidar,Dispositivos,设备,,,Specific implementations of wind lidar technologies.,,Particolari realizzazioni di tecnologie lidar per applicazioni eoliche.,Implementaciones específicas de la tecnología del lidar de viento.,测风激光雷达技术的具体实现设备。
 ontolidar:Windscanner,Windscanner,Windscanner,Lidar 'WindScanner',Escáner de viento,Windscanner测风雷达,,,One of many different types of system that can be used to perform convergent scan geometries. Originally referred to the DTU-led windscanner.eu project.,,Uno dei vari tipi di sistemi che possono essere utilizzati per effettuare scansioni su geometrie convergenti. Originariamente noto come il progetto windscanner.eu project di DTU.,Uno de los varios tipos de sistemas que se pueden utilizar para realizar escaneos de geometría convergente.  Originariamente hace referencia al proyecto windscanner.eu de DTU.,一种激光雷达测风系统，可用于进行会聚扫描的几何形状。最初是指DTU领导的winddscanner.eu项目。,,ontolidar:Devices,,,,,,Describing a wind lidar unit as 'a windscanner' is insufficient information to uniquely describe it's capabilities.
 ontolidar:WindIris,Wind Iris,Wind Iris,Lidar 'Wind Iris',Wind Iris,Wind Iris测风雷达,,,Type of free-standing lidar device intended for use as a forward-looking lidar mounted on a wind turbine nacelle,,Un particolare tipo di sistema stand-alone lidar con applicazioni per misurazioni dalla navicella di una turbina eolica.,"Tipo de dispositivo lidar autónomo destinado a ser utilizado como lidar de visión frontal de  flujo entrante, montado en la góndola de un aerogenerador.",一种独立式激光雷达设备，主要作为前视激光雷达安装在风电机组机舱上,,ontolidar:Devices,,,,,,Describing a wind lidar unit as 'a wind iris' is insufficient information to uniquely describe it's capabilities.
-ontolidar:Windcube,WindCube,WindCube,Lidar 'WindCube',WindCube,,,,,,,,,,ontolidar:Devices
-ontolidar:WindcubeV1,WindCube V1,WindCube V1,Lidar 'WindCube V1',WindCube V1,,,,,,,,,,ontolidar:WindCube
-ontolidar:WindcubeV2,WindCube V2,WindCube V2,Lidar 'WindCube V2',WindCube V2,,,,,,,,,,ontolidar:WindCube
-ontolidar:WindcubeV2.1,WindCube V2.1,WindCube V2.1,Lidar 'WindCube V2.1',WindCube V2.1,,,,,,,,,,ontolidar:WindCube
+ontolidar:Windcube,Windcube,WindCube,Lidar 'WindCube',WindCube,,,,,,,,,,ontolidar:Devices
+ontolidar:WindcubeV1,WindCube V1,WindCube V1,Lidar 'WindCube V1',WindCube V1,,,,,,,,,,ontolidar:Windcube
+ontolidar:WindcubeV2,WindCube V2,WindCube V2,Lidar 'WindCube V2',WindCube V2,,,,,,,,,,ontolidar:Windcube
+ontolidar:WindcubeV2.1,WindCube V2.1,WindCube V2.1,Lidar 'WindCube V2.1',WindCube V2.1,,,,,,,,,,ontolidar:Windcube
 ontolidar:Zephir,Zephir,Zephir,Lidar 'Zephir',Zephir,,,,,,,,,,ontolidar:Devices
 ontolidar:Zephir150,Zephir 150,Zephir 150,Lidar 'Zephir 150',Zephir 150 ,,,,,,,,,,ontolidar:Zephir
 ontolidar:Zephir175,Zephir 175,Zephir 175,Lidar 'Zephir 175',Zephir 175,,,,,,,,,,ontolidar:Zephir

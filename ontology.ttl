@@ -158,10 +158,9 @@ ontolidar:WindCharacterisation a skos:Concept;
   skos:prefLabel "Caracterización de las propiedades del viento"@es, "Wind characterisation"@en .
 
 ontolidar:IecStandars61400121 a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindCharacterisation>;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standars 61400-12-1"@en, "Norma IEC 61400-12-1"@es;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindCharacterisation> .
+  skos:prefLabel "IEC Standars 61400-12-1"@en, "Norma IEC 61400-12-1"@es .
 
 ontolidar:TurbineCertification a skos:Concept;
   skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
@@ -174,23 +173,20 @@ ontolidar:PerformanceVerification a skos:Concept;
   skos:prefLabel "Performance verification"@en, "Verificación del rendimiento"@es .
 
 ontolidar:IecStandars61400122 a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification>;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standars 61400-12-2"@en, "Norma IEC 61400-12-2"@es;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification> .
+  skos:prefLabel "IEC Standars 61400-12-2"@en, "Norma IEC 61400-12-2"@es .
 
 ontolidar:IecStandars61400123 a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification>;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standars 61400-12-3"@en, "Norma IEC 61400-12-3"@es;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification> .
+  skos:prefLabel "IEC Standars 61400-12-3"@en, "Norma IEC 61400-12-3"@es .
 
 ontolidar:Task32RecommendedPractices a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification>;
   skos:definition "Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Recomendaciones Task32"@es, "Task32 Recommended practices"@en;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification> .
+  skos:prefLabel "Recomendaciones Task32"@es, "Task32 Recommended practices"@en .
 
 ontolidar:WindTurbineControl a skos:Concept;
   skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
@@ -198,16 +194,14 @@ ontolidar:WindTurbineControl a skos:Concept;
   skos:prefLabel "Técnicas de control de la turbina eólica"@es, "Wind turbine control"@en .
 
 ontolidar:Turbulence a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindTurbineControl>;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Turbulence"@en, "Turbulencia"@es;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindTurbineControl> .
+  skos:prefLabel "Turbulence"@en, "Turbulencia"@es .
 
 ontolidar:Wakes a skos:Concept;
-  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
+  skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindTurbineControl>;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Estelas"@es, "Wakes"@en;
-  skos:related <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindTurbineControl> .
+  skos:prefLabel "Estelas"@es, "Wakes"@en .
 
 ontolidar:WindPlantControl a skos:Concept;
   skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase>;
@@ -813,20 +807,21 @@ ontolidar:WindIris a skos:Concept;
 ontolidar:Windcube a skos:Concept;
   skos:broader ontolidar:Devices;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@de, "WindCube"@en, "WindCube"@es .
+  skos:narrower ontolidar:WindcubeV1, ontolidar:WindcubeV2, ontolidar:WindcubeV2.1;
+  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@de, "WindCube"@es, "Windcube"@en .
 
 ontolidar:WindcubeV1 a skos:Concept;
-  skos:broader ontolidar:WindCube;
+  skos:broader ontolidar:Windcube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Lidar 'WindCube V1'"@it, "WindCube V1"@de, "WindCube V1"@en, "WindCube V1"@es .
 
 ontolidar:WindcubeV2 a skos:Concept;
-  skos:broader ontolidar:WindCube;
+  skos:broader ontolidar:Windcube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Lidar 'WindCube V2'"@it, "WindCube V2"@de, "WindCube V2"@en, "WindCube V2"@es .
 
 ontolidar:WindcubeV2.1 a skos:Concept;
-  skos:broader ontolidar:WindCube;
+  skos:broader ontolidar:Windcube;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Lidar 'WindCube V2.1'"@it, "WindCube V2.1"@de, "WindCube V2.1"@en,
     "WindCube V2.1"@es .
@@ -1259,15 +1254,21 @@ ontolidar:DataFormats a skos:Concept;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020UseCase> skos:narrower ontolidar:AdditionalSensor,
-    ontolidar:IecStandars61400121, ontolidar:IecStandars61400122, ontolidar:IecStandars61400123,
-    ontolidar:MetmastPerformanceVerification, ontolidar:PerformanceVerification, ontolidar:Task32RecommendedPractices,
-    ontolidar:TurbineCertification, ontolidar:Turbulence, ontolidar:Wakes, ontolidar:WindCharacterisation,
-    ontolidar:WindPlantControl, ontolidar:WindTurbineControl, ontolidar:YawAlignment .
+    ontolidar:MetmastPerformanceVerification, ontolidar:PerformanceVerification, ontolidar:TurbineCertification,
+    ontolidar:WindCharacterisation, ontolidar:WindPlantControl, ontolidar:WindTurbineControl,
+    ontolidar:YawAlignment .
+
+<http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindCharacterisation> skos:narrower
+    ontolidar:IecStandars61400121 .
+
+<http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020PerformanceVerification>
+  skos:narrower ontolidar:IecStandars61400122, ontolidar:IecStandars61400123, ontolidar:Task32RecommendedPractices .
+
+<http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020WindTurbineControl> skos:narrower
+    ontolidar:Turbulence, ontolidar:Wakes .
 
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorGain, ontolidar:PhotodetectorVoltageNoise .
 
 ontolidar:UninterruptablePowerSupply skos:narrower ontolidar:UpsBattery .
-
-ontolidar:WindCube skos:narrower ontolidar:WindcubeV1, ontolidar:WindcubeV2, ontolidar:WindcubeV2.1 .
 
 ontolidar:VariableElevationScan skos:narrower ontolidar:VerticalSlice .

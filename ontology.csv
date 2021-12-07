@@ -36,39 +36,43 @@ ontolidar: ThresholdFiltering,Threshold filtering method
 ontolidar: OutliersFilter,Ouliers filtering method
 ontolidar:CoordinateSystemTransformation,Coordinate system transformation
 ontolidar:LidarMotionsCompensation,Lidar motions compensation
-ontolidar:AnalogToDigitalConverter,Analog to digital converter
 ontolidar:VelocityAzimuthDisplay,Velocity-azimuth display,,Campionamento di velocità in azimut,Muestreo de velocidad en azimut,速度-方位角（VAD）测量法,,,"VAD is a method of analyzing data from a complete conical scan whereby many closely spaced azimuthal points may be sampled by the lidar, and the data are used to estimate the wind speed at each height using a statistical fitting method.",,"Un particolare metodo di analisi dati di un lidar a geometria conica. Data una scansione completa del cono ad una specifica altezza, i punti di misurazione contigui l'uno all'altro nello spazio vengono combinati secondo metodi statistici di interpolazione per ricostruire la velocità del vento.",VAD es un método de análisis de datos provenientes de un escaneo de geometría cónica en el que varios puntos azimutales estrechamente espaciados son muestreados por el lidar. Dichos datos se utilizan para estimar la velocidad del viento a una determinada altura utilizanso métodos de ajuste estadísticos.,VAD是一种激光测风雷达的测量方法，通过倒圆锥形的扫描方式，雷达可以对许多间隔很近的方位角点进行采样，然后使用统计拟合方法将数据用于推算每个高度的风速。,VAD,ontolidar:WindfieldReconstruction,,,,,,The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968).
 ontolidar:Applications,Applications,Anwendungen,Applicazioni,Aplicaciones,应用
 ontolidar:UseCase,Use case,,Casi di uso,Caso de uso,应用案例,,,"Ways that wind lidar can be used. The combination of three elements: 1. Outcome-driven data requirements (as opposed to constraint-driven requirements, see 1st generation sensor / 1st generation measurements); 2. The measurement method selected to fulfil them; 3. The operational conditions that determine the performance of the method with respect to accuracy",,"Differenti scopi per cui un wind lidar può essere utilizzato. La combinazione di tre elementi: 1. Requisiti derivati dai risultati attesi (in opposizione ai requisiti definiti dai vincoli del sistema, come nel confronto fra i sensori di prima generazione e le misurazioni di prima generazione); 2. Il metodo di misurazione selezionati per soddisfarli; 3. Le condizioni di operazione che definiscono le prestazioni (in termine di precisione) del metodo impiegato.","Formas en las que el lidar de viento puede ser utilizado. Combinación de tres elementos: 1. Requisitos de datos orientados a los resultados (en contraposición a los requisitos orientados a las restricciones, véase sensor de primera generación / mediciones de primera generación); 2. Método de medición seleccionado para cumplirlos; 3. Las condiciones de operación que determinan el rendimiento del método con respecto a la precisión del mismo.",风力激光雷达的使用方法. 三个要素的组合： 1. 结果导向的数据要求（与约束导向的要求相反，请参阅第一代传感器/第一代测量）； 2. 选择可实现的测量方法； 3. 决定该方法在准确度性能方面的操作条件
-ontolidar:AdditionalSensor,Additional sensor,,,Sensor adicional,,,,Anemometer and vaines mounted on a meteorological mast,,,Anemómetros y veleta montados sobre torre meteorológica,,,ontolidar: UseCase
-ontolidar:WindCharacterisation,Wind characterisation,,,Caracterización de las propiedades del viento,,,,,,,,,,ontolidar: UseCase
-ontolidar:IecStandars61400121,IEC Standars 61400-12-1,,,Norma IEC 61400-12-1,,,,,,,,,,ontolidar: WindCharacterisation
-ontolidar:TurbineCertification,Turbine certification,,,Certificación de la turbina eólica,,,,,,,,,,ontolidar: UseCase
-ontolidar:PerformanceVerification,Performance verification,,,Verificación del rendimiento ,,,,,,,,,,ontolidar: UseCase
-ontolidar:IecStandars61400122,IEC Standars 61400-12-2,,,Norma IEC 61400-12-2,,,,,,,,,,ontolidar: PerformanceVerification
-ontolidar:IecStandars61400123,IEC Standars 61400-12-3,,,Norma IEC 61400-12-3,,,,,,,,,,ontolidar: PerformanceVerification
-ontolidar:Task32RecommendedPractices,Task32 Recommended practices,,,Recomendaciones Task32,,,,Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain,,,,,,ontolidar: PerformanceVerification
-ontolidar:WindTurbineControl,Wind turbine control,,,Técnicas de control de la turbina eólica,,,,,,,,,,ontolidar: UseCase
-ontolidar:Turbulence,Turbulence,,,Turbulencia,,,,,,,,,,ontolidar: WindTurbineControl
-ontolidar:Wakes,Wakes,,,Estelas,,,,,,,,,,ontolidar: WindTurbineControl
-ontolidar:WindPlantControl,Wind plant control,,,Control de parque eólico,,,,,,,,,,ontolidar: UseCase
-ontolidar:YawAlignment,Yaw alignment,,,Alneamiento de guiñada,,,,,,,,,,ontolidar: UseCase
-ontolidar:MetmastPerformanceVerification,Metmast performance verification,,,Verificación del rendimiento de la torre meteorológica,,,,,,,,,,ontolidar: UseCase
-ontolidar:WindTunnelMeasurements,Wind tunnel measurements,,,Medidas en túnel de viento,,,,,,,,,,ontolidar: UseCase
+ontolidar:AdditionalSensor,Additional sensor,,,Sensor adicional,,,,Anemometer and vaines mounted on a meteorological mast,,,Anemómetros y veleta montados sobre torre meteorológica,,,ontolidar:UseCase
+ontolidar:WindCharacterisation,Wind characterisation,,,Caracterización de las propiedades del viento,,,,,,,,,,ontolidar:UseCase
+ontolidar:IecStandars61400121,IEC Standars 61400-12-1,,,Norma IEC 61400-12-1,,,,,,,,,,ontolidar:WindCharacterisation
+ontolidar:TurbineCertification,Turbine certification,,,Certificación de la turbina eólica,,,,,,,,,,ontolidar:UseCase
+ontolidar:PerformanceVerification,Performance verification,,,Verificación del rendimiento ,,,,,,,,,,ontolidar:UseCase
+ontolidar:IecStandars61400122,IEC Standars 61400-12-2,,,Norma IEC 61400-12-2,,,,,,,,,,ontolidar:PerformanceVerification
+ontolidar:IecStandars61400123,IEC Standars 61400-12-3,,,Norma IEC 61400-12-3,,,,,,,,,,ontolidar:PerformanceVerification
+ontolidar:Task32RecommendedPractices,Task32 Recommended practices,,,Recomendaciones Task32,,,,Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain,,,,,,ontolidar:PerformanceVerification
+ontolidar:WindTurbineControl,Wind turbine control,,,Técnicas de control de la turbina eólica,,,,,,,,,,ontolidar:UseCase
+ontolidar:Turbulence,Turbulence,,,Turbulencia,,,,,,,,,,ontolidar:WindTurbineControl
+ontolidar:Wakes,Wakes,,,Estelas,,,,,,,,,,ontolidar:WindTurbineControl
+ontolidar:WindPlantControl,Wind plant control,,,Control de parque eólico,,,,,,,,,,ontolidar:UseCase
+ontolidar:YawAlignment,Yaw alignment,,,Alneamiento de guiñada,,,,,,,,,,ontolidar:UseCase
+ontolidar:MetmastPerformanceVerification,Metmast performance verification,,,Verificación del rendimiento de la torre meteorológica,,,,,,,,,,ontolidar:UseCase
+ontolidar:WindTunnelMeasurements,Wind tunnel measurements,,,Medidas en túnel de viento,,,,,,,,,,ontolidar:UseCase
 ontolidar:VirtualMetMast,Virtual met mast,,Torre meteorologica virtuale,Torre meteorológica virtual,虚拟测风塔,,,"A series of wind measurements made at discrete vertical locations, aping a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement",,"Una serie di misurazioni effettuate a varie altezze discrete da terra, in un modo del tutto simile alla distribuzione delle misurazioni dagli anemometri di una torre metereologica. Queste misurazioni possono essere effettuate utilizzando diversi approcci, inclusi il Crossed RHI (XRHI) ed altri sistemi di misurazione a due o tre sistemi laser.","Series de medición del viento localizadas en puntos concretos de la vertical, imitando un mástil meteorológico. Se pueden llevar a cabo utilizando muvhos enfoques, como RHI cruzado (XRHI) y otras mediciones utilizando dos o tres lidares conjuntamente. ",类似于测风塔，在竖直方向、离散的不同高度进行的测风。包括许多实现方法，如交叉 RHI (XRHI)方法，双雷达测量或三雷达测量等,Crossed RHI,ontolidar:Applications
 ontolidar:Design,Design,Auslegung,Struttura generale,Diseño,设计,,,Wind lidar generic design structure,,Descrizione delle componenti generali di un lidar e del raccordo fra di esse.,Estructura de diseño genérico del lidar de viento.,测风激光雷达通用设计结构,,,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:ChassisModule,Chassis module,,Telaio,Módulo de chasis,机架模块,,,"The Chassis module is responsible for the various mounting solutions for the lidar, including, but not limited to, mounting on a nacelle, a meteorological tower, the ground, a floating platform, or a mobile structure",,"Modulo di ancoraggio del sistema lidar per ognuna delle sue possibili applicazioni. Include, ma non si limita alle varie soluzioni di montaggio sulla navicella di una turbina, su una torre metereologica, a terra, su una piattaforma flottante o su una struttura mobile.","El módulo que representa el chásis representa las diversas soluciones de montaje del lidar, incluyendo (pero sin estar limitado a) montaje sobre góndola, torre meteorológica, sobre suelo, plataforma flotante o estructua móvil.",底盘模块负责激光雷达的各种安装方案，包括但不限于安装在机舱、气象塔、地面、浮动平台或移动结构上,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:LocationDetection,Location detection,,,Localización,,,,,,,,,,ontolidar:Design
-ontolidar:Gps,GPS,,,GPS,,,,,,,,,,ontolidar:ChassisModule,,ontolidar: LocationDetection
-ontolidar:Inclinometer,Inclinometer,,,Inclinómetros,,,,,,,,,,ontolidar:ChassisModule,,ontolidar: LocationDetection
+ontolidar:Gps,GPS,,,GPS,,,,,,,,,,ontolidar:LocationDetection
+ontolidar:Inclinometer,Inclinometer,,,Inclinómetros,,,,,,,,,,ontolidar:LocationDetection
 ontolidar:MotionDetection,Motion detection,,,Detección de movimiento,,,,,,,,,,ontolidar:ChassisModule
-ontolidar:Accelerometer,Accelerometer,,,Acelerómetro,,,,,,,,,,ontolidar:ChassisModule,,ontolidar: MotionDetection
-ontolidar:Gyrometer,Gyrometer,,,Girómetro,,,,,,,,,,ontolidar:ChassisModule,,ontolidar: MotionDetection
+ontolidar:Accelerometer,Accelerometer,,,Acelerómetro,,,,,,,,,,ontolidar:MotionDetection
+ontolidar:Gyrometer,Gyrometer,,,Girómetro,,,,,,,,,,ontolidar:MotionDetection
 ontolidar:EnvironmentalConditionsDetection,Environmental conditions detection,,,Detección de condiciones medioambientales,,,,,,,,,,ontolidar:ChassisModule
-ontolidar:LocalMetstation,Local MetStation,,,Estación meteorológica local,,,,,,,,,,ontolidar:ChassisModule,,ontolidar: EnvironmentalConditionsDetection
+ontolidar:LocalMetstation,Local MetStation,,,Estación meteorológica local,,,,,,,,,,ontolidar:EnvironmentalConditionsDetection
 ontolidar:ControlModule,Control module,,Componente di controllo,Módulo de control,控制模块,,,The control module is the interface between the external controller (human or machine) and the lidar system,,Modulo di interfaccia fra l'utente di controllo esterno (umano per controllo manuale o un software per un controllo automatico) ed il sistema lidar.,El módulo de control representa la interfaz entre el controlador externo (humano o máquina) y el sistema lidar.,控制模块是外部控制（人或机器）与激光雷达系统之间的接口,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:CommunicationsModule,Communications module,,Componente di comunicazione,Componentes de comunicación,通讯模块,,,The system of devices and software that transmit and receive data and commands to and from the lidar device,,"Modulo (composto da parti hardware e software) che trasmette e riceve dati e comandi, da e per il sistema lidar.",Sistema de dispositivos y software que transmite y recibe datos.,向激光雷达设备发送和接收数据和命令的设备和软件系统,,ontolidar:ControlModule,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:SignalProcessingModule,Signal processing module,,Componente di processamento dati,Módulo de procesamiento de señal,信号处理模块,,,The signal processing module is used to convert the data acquired by the lidar into a data product,,Modulo utilizzato per convertire i dati acquisiti dal lidar nei dati finali richiesti.,El módulo de procesamiento de datos se utiliza para convertir los datos adquridos por el lidar en datos finales.,信号处理模块用于将激光雷达采集到的原始数据转化为（输出的）数据产品,,ontolidar:ControlModule,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
+ontolidar:Filter,Filter,,,Filtro,,,,,,,,,,ontolidar:SignalProcessingModule
+ontolidar:FrequencyAnaliser,Frequency analiser,,,Analizador de frecuencia,,,,,,,,,,ontolidar:SignalProcessingModule
+ontolidar:Dsp,DSP,,,DSP,,,,,,,,,,ontolidar:FrequencyAnaliser
+ontolidar:PeakIdentification,Peak identification,,,Detección de pico,,,,,,,,,,ontolidar:FrequencyAnaliser
+ontolidar:Fft,FFT,,,FFT,,,,,,,,,,ontolidar:FrequencyAnaliser
 ontolidar:StorageModule,Storage module,,Componente di stoccaggio dati,Módulo de almacenamiento,存储模块,,,The Storage module is responsible for saving data in the lidar system which will be accessed by users at some future time.,,"Sistema di memoria dati del lidar. Utilizzato per avere accesso ai dati in ogni momento, su richiesta dell'utente.",El módulo de almacenamiento se ocupa del almacenaje de datos que serán utilizados por el usuario en el futuro.,存储模块负责将数据保存在激光雷达系统中，用户将来可以访问这些数据。,,ontolidar:ControlModule,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:SafetyInterlocks,Safety interlocks,,Dispositivi di sicurezza,Dispositivos de seguidad,安全联锁,,,The interlocks are a dispersed set of safety systems that prevent or mitigate potentially dangerous activities.,,"Meccanismi di sicurezza diffusi nel sistema lidar, atti a prevenire o mitigare le conseguenze di possibili malfunzionamenti. ",Las interconexiones son un conjunto de sistemas de seguridad instalados a lo largo de los componentes del lidar que impiden o mitigan las actividades potencialmente peligrosas.,联锁装置是一组分散的安全系统，可防止或降低潜在的危险。,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar:OpticsModule,Optics module,,Componenti ottiche,Módulo óptico,光学模块,,,"The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly.""",,Parte del lidar che trasforma le proprietà della luce laser da quelle della sorgente a quelle ottimali per essere inviate sul target e poi raccolte dal ricevitore.,El módulo óptico está diseñado para modificar el rayo láser original y converirlo en radiación con las especificiones  deseadas (modos) que pueda ser enviada al objetivo y racibida por el detector de forma adecuada.,光学模块旨在将原始激光束转换为具有所需规格的辐射，可以将其发送到目标并由探测器正确接收。”,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
@@ -78,38 +82,45 @@ ontolidar:TelescopeApertureDiameter,Telescope aperture diameter,,Diametro dell'a
 ontolidar:TelescopeFocalLength,Telescope focal length
 ontolidar:EndFibreToLensDistance,End-fibre to lens distance
 ontolidar:TelescopeLense,Telescope lense
-ontolidar:BeamTransmissionSystem(Photonics),Beam transmission system (photonics),,Sistema di trasmissione del fascio,Sistema de transmisión del haz,(光子)光束传输系统,,,All-fibre transmission Lidar system,,Sistema di trasmissione del lidar realizzato interamente in fibra ottica.,Sistema de transmisión de la señal lidar lidar íntegramente relizado con fibra óptica,全光纤传输激光雷达系统,,ontolidar:PhotonicsModule,,,,,,True if lidar is all-fibre
-ontolidar:FibreMode,Fibre mode
 ontolidar:BeamTransmissionSystem(Optics),Beam transmission system (optics),,,,(光学)光束传输系统,,,,,,,,,ontolidar:OpticsModule
 ontolidar:PhotonicsModule,Photonics module,,Componente fotonica,Módulo de fotónica,光子模块,,,The photonics module is the source of emitted light that will be used for the measurements.,,Modulo sorgente della luce laser utilizzato per le misurazioni. ,El módulo fotónico es la fuente de emisión de  luz utilizada para efectuar las medidas.,光子模块是用于测量的发射光的光源。,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
-ontolidar:EmittedLight,Emitted light
-ontolidar:ContinuousWaveLidar,Continuous Wave lidar
-ontolidar:PulsedLidar,Pulsed lidar
-ontolidar:PulseShape,Pulse shape
-ontolidar:PulseDuration,Pulse duration
-ontolidar:Detector,Detector,,Rilevatore,Detector,探测器,,,An assembly to gather and detect incident light,,"Gruppo di sistemi per ricevere, rilevare e misurare la luce incidente.",Conjunto de dispositivos encargados de recoger y detectar la luz incidente.,收集和检测入射光的组件,,ontolidar:PhotonicsModule
-ontolidar:Photodetector,Photodetector,,Fotorivelatore,Fotodetector,光电探测器,,,Semiconductor light sensor.,,Fotosensore a semi-conduttori.,Sensor de luz semiconductor.,半导体光传感器。,,ontolidar:Detector
-ontolidar:PhotodetectorGain,Photodetector gain,,Guadagno del fotorivelatore,Ganancia del fotodetector,光电探测器增益,,,The gain of the photodetector transimpedance amplifier.,,Guadagno dell'amplificatore a transimpedenza del fotodetettore.,Ganancia del semiconductor.,光电探测器跨阻放大器的增益。,,ontolidar:PhotoDetector
-ontolidar:PhotodetectorActiveArea,Photodetector active area
-ontolidar:PhotodetectorSnr,Photodetector SNR
-ontolidar:PhotodetectorVoltageNoise,Photodetector voltage noise,,Rumore di tensione del fotorivelatore,Ruido de voltaje del fotodetector,光电探测器电压噪声,,,The voltage noise of the photodetector transimpedance amplifier.,,Rumore di tensione dell'amplificatore a transimpedenza del fotodetettore.,Ruido de voltaje del fotodetector.,光电探测器跨阻放大器的电压噪声。,,ontolidar:PhotoDetector
-ontolidar:AcoustoOpticModulator,Acousto optic modulator,,Modulatore acusto-ottico,Modulador acusto-óptico,声光调制器,,,Bragg cell diffracting and shifting frequency of the light using sound waves (radio-frequency). Produces a pulsed output beam.,,Cella di Bragg per diffrangere e traslare in frequenza la luce utilizzando onde sonore a radiofrequenza. Produce un fascio pulsato in uscita.,Celda de Bragg utilizada para difractar y trasladar la frecuencia de la luz mediante el uso de ondas sonoras de radiofrecuencia. Produce un rayo pulsado a la salida.,布拉格单元利用声波（射频）对光进行衍射和移频。产生一个脉冲输出光束。,AOM,ontolidar:PhotonicsModule,,,,,,Only pulsed lidar
-ontolidar:AomRadioFrequency,AOM radio frequency
-ontolidar:AomPulsedmethod,AOM PulsedMethod
-ontolidar:AomQswitching,AOM QSwitching
-ontolidar:AomInsertionLoss,AOM Insertion loss
-ontolidar:OpticalAmplifier,Optical amplifier,,Amplificatore ottico,Amplificador óptico,光放大器,,,An assembly to amplify the outgoing laser light signal without converting it into an electrical signal.,,Sistema di amplificazione della potenza ottica della luce laser emessa.,Conjunto de dispositivos utilizados para amplificar la luz del láser emitido sin convertirlo previemente en señal eléctrica.,放大输出的激光信号而不将其转换为电信号的组件。,,ontolidar:Detector,,,,,,Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier
-ontolidar:OpticalAmplifierGain,Optical amplifier gain
-ontolidar:OpticalAmplifierBandwidth,Optical amplifier bandwidth
-ontolidar:BeamSplitter,Beam splitter ,,Sdoppiatore ottico,Divisor de haz,分束器,,,An optical assembly to split a laser beam into two or more beams.,,Un sistema ottico per la divisione di un fascio laser in due o più fasci. ,Sistema para dividir el rayo láser en dos o más rayos.,一种将激光束分成两束或更多束的光学组件。,beamsplitter,ontolidar:Detector,,,,,,Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Beam_splitter
 ontolidar:LaserSource,Laser source,,Sorgente laser,Fuente láser,激光源,,,An assembly to generate and manage laser light.,,Un sistema di generazione e controllo della luce laser.,Conjunto de dispositivos para generar y regular el rayo de luz láser.,一种产生和控制激光的组件。,,ontolidar:PhotonicsModule
 ontolidar:LaserDiode,Laser diode,,Diodo laser,Diodo láser,激光二极管,,,A semiconductor component to generate laser light of a defined frequency.,,Un dispositivo optoelettronico a semiconduttore che genera luce laser monocromatica.,Componente semiconductor destinado a generar luz láser de una frecuencia definida.,一种半导体元件，用于产生规定频率的激光。,,ontolidar:LaserSource
-ontolidar:LaserMode,Laser mode
-ontolidar:LaserFrequency,Laser frequency
-ontolidar:LaserPolarisation,Laser polarisation
-ontolidar:LaserPhase,Laser phase
-ontolidar:LaserIntensity,Laser intensity
+ontolidar:LaserMode,Laser mode,,,,,,,"Defined by the frequency, polarization and phase of the emitted light",,,,,,ontolidar:LaserSource
+ontolidar:LaserFrequency,Laser frequency,,,,,,,,,,,,,ontolidar:LaserMode
+ontolidar:LaserPolarisation,Laser polarisation,,,,,,,Polarization of the laser source signal,,,,,,ontolidar:LaserMode
+ontolidar:LaserPhase,Laser phase,,,,,,,,,,,,,ontolidar:LaserMode
+ontolidar:LaserIntensity,Laser intensity,,,,,,,,,,,,,ontolidar:LaserMode
 ontolidar:LaserDiodeWavelength,Laser diode wavelength,,Lunghezza d'onda del diodo laser,Longitud de onda del diodo láser,激光二极管波长,,,"The nominal wavelength of the laser source. This is defined in units of meters, e.g., 1450E-9 m for a near-infrared laser source.",,La lunghezza d'onda nominale della sorgente laser. Definita in unità di lunghezzza (metri): ad esempio 1450E-9 m per una sorgente laser nel vicino infrarosso.,Longitud de onda nominal del láser,激光源的标称波长。这是以米为单位定义的，例如，对于近红外激光源，1450E-9米。,,ontolidar:LaserDiode,meters
+ontolidar:AcoustoOpticModulator,Acousto optic modulator,,Modulatore acusto-ottico,Modulador acusto-óptico,声光调制器,,,Bragg cell diffracting and shifting frequency of the light using sound waves (radio-frequency). Produces a pulsed output beam.,,Cella di Bragg per diffrangere e traslare in frequenza la luce utilizzando onde sonore a radiofrequenza. Produce un fascio pulsato in uscita.,Celda de Bragg utilizada para difractar y trasladar la frecuencia de la luz mediante el uso de ondas sonoras de radiofrecuencia. Produce un rayo pulsado a la salida.,布拉格单元利用声波（射频）对光进行衍射和移频。产生一个脉冲输出光束。,AOM,ontolidar:PhotonicsModule,,,,,,Only pulsed lidar
+ontolidar:AomRadioFrequency,AOM radio frequency,,,,,,,,,,,,,ontolidar: AcoustoOpticModulator
+ontolidar:AomPulsedmethod,AOM PulsedMethod,,,,,,,,,,,,,ontolidar: AcoustoOpticModulator
+ontolidar:AomQswitching,AOM QSwitching,,,,,,,,,,,,,ontolidar: AcoustoOpticModulator
+ontolidar:AomInsertionLoss,AOM Insertion loss,,,,,,,,,,,,,ontolidar: AcoustoOpticModulator
+ontolidar:EmittedLight,Emitted light,,,,,,,,,,,,,ontolidar:PhotonicsModule,,ontolidar:AcoustoOpticModulator
+ontolidar:ContinuousWaveLidar,Continuous Wave lidar,,,,,,,,,,,,,ontolidar:EmittedLight
+ontolidar:PulsedLidar,Pulsed lidar,,,,,,,,,,,,,ontolidar:EmittedLight
+ontolidar:PulseShape,Pulse shape,,,,,,,,,,,,,ontolidar:PulsedLidar
+ontolidar:PulseDuration,Pulse duration,,,,,,,,,,,,,ontolidar:PulsedLidar
+ontolidar:PulseSampleRate,Pulse sample rate,,,,,,,Time slot between pulses sent to sample the wind,,,,,,ontolidar:PulsedLidar
+ontolidar:BackscatteredLight,Backscattered light,,,,,,,Light reaching the detector,,,,,,ontolidar:PhotonicsModule
+ontolidar:DesiredBackscatteredLight,Desired backscattered light,,,,,,,Light from the lidar beam (desired frequency and polarization) reaching the detector,,,,,,ontolidar:BackscatteredLight
+ontolidar:NonDesiredBackscatteredLight,Non-desired backscattered light,,,,,,,Non-desired light from atmosphere (non polarised) reaching the detector,,,,,,ontolidar:BackscatteredLight
+ontolidar:Detector,Detector,,Rilevatore,Detector,探测器,,,An assembly to gather and detect incident light,,"Gruppo di sistemi per ricevere, rilevare e misurare la luce incidente.",Conjunto de dispositivos encargados de recoger y detectar la luz incidente.,收集和检测入射光的组件,,ontolidar:PhotonicsModule
+ontolidar:OpticalAmplifier,Optical amplifier,,Amplificatore ottico,Amplificador óptico,光放大器,,,An assembly to amplify the outgoing laser light signal without converting it into an electrical signal.,,Sistema di amplificazione della potenza ottica della luce laser emessa.,Conjunto de dispositivos utilizados para amplificar la luz del láser emitido sin convertirlo previemente en señal eléctrica.,放大输出的激光信号而不将其转换为电信号的组件。,,ontolidar:Detector,,,,,,Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Optical_amplifier
+ontolidar:OpticalAmplifierGain,Optical amplifier gain,,,,,,,,,,,,,ontolidar:OpticalAmplifier
+ontolidar:OpticalAmplifierBandwidth,Optical amplifier bandwidth,,,,,,,,,,,,,ontolidar:OpticalAmplifier
+ontolidar:BeamSplitter,Beam splitter ,,Sdoppiatore ottico,Divisor de haz,分束器,,,An optical assembly to split a laser beam into two or more beams.,,Un sistema ottico per la divisione di un fascio laser in due o più fasci. ,Sistema para dividir el rayo láser en dos o más rayos.,一种将激光束分成两束或更多束的光学组件。,beamsplitter,ontolidar:Detector,,,,,,Definition based on Wikipedia entry at https://en.wikipedia.org/wiki/Beam_splitter
+ontolidar:Photodetector,Photodetector,,Fotorivelatore,Fotodetector,光电探测器,,,Semiconductor light sensor.,,Fotosensore a semi-conduttori.,Sensor de luz semiconductor.,半导体光传感器。,,ontolidar:Detector
+ontolidar:PhotodetectorGain,Photodetector gain,,Guadagno del fotorivelatore,Ganancia del fotodetector,光电探测器增益,,,The gain of the photodetector transimpedance amplifier.,,Guadagno dell'amplificatore a transimpedenza del fotodetettore.,Ganancia del semiconductor.,光电探测器跨阻放大器的增益。,,ontolidar:PhotoDetector
+ontolidar:PhotodetectorActiveArea,Photodetector active area,,,,,,,,,,,,,ontolidar:PhotoDetector
+ontolidar:PhotodetectorSnr,Photodetector SNR,,,,,,,,,,,,,ontolidar:PhotoDetector
+ontolidar:PhotodetectorVoltageNoise,Photodetector voltage noise,,Rumore di tensione del fotorivelatore,Ruido de voltaje del fotodetector,光电探测器电压噪声,,,The voltage noise of the photodetector transimpedance amplifier.,,Rumore di tensione dell'amplificatore a transimpedenza del fotodetettore.,Ruido de voltaje del fotodetector.,光电探测器跨阻放大器的电压噪声。,,ontolidar:PhotoDetector
+ontolidar:AnalogToDigitalConverter,Analog to digital converter,,,Convertidor analógico-digital,,,,,,,,,,ontolidar:Detector
+ontolidar:Interfaces,Interfaces,,Sistema di trasmissione del fascio,Sistema de transmisión del haz,(光子)光束传输系统,,,Beam transmission system,,Sistema di trasmissione del lidar.,Sistema de transmisión de la señal lidar.,全光纤传输激光雷达系统,,ontolidar:PhotonicsModule,,,,,,True if lidar is all-fibre
+ontolidar:Fibre,Fibre,,,,,,,,,,,,,ontolidar:Interfaces
+ontolidar:MultiMode,Multi-mode,,,,,,,Fibre mode,,,,,,ontolidar:Fibre
+ontolidar:SingleMode,Single mode,,,,,,,Fibre mode,,,,,,ontolidar:Fibre
 ontolidar:PowerModule,Power module,,Componente di alimentazione,Módulo de alimentación,电源模块,,,"The Power Module is responsible for supplying power to the entire lidar system, including motors, lasers, sensors, and detectors.",,"Modulo di rifornimento e distribuzione dell'energia in ogni parte del sistema lidar, inclusi i motori, il laser, i sensori ed il ricevitore.",El módulo de potencia (o de alimentación) es responsable de abastecer al lidar de la energía necesaria para el funcionamiento del sistema.,电源模块负责为整个激光雷达系统供电，包括对电机、激光器、传感器和探测器等的供电。,,ontolidar:Design,,,,,,Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions
 ontolidar: PowerConverter,Power converter
 ontolidar:UninterruptiblePowerSupply,Uninterruptible power supply,,Gruppo di continuità (UPS),SAI,不间断电源(UPS),,,Uninterruptible power supply (UPS),,Gruppo di continuità (UPS).,Sistema de alimentación ininterrumpida (SAI).,不间断电源（UPS）,,ontolidar:PowerModule

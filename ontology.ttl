@@ -259,7 +259,8 @@ ontolidar:SignalProcessingModule a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Filter, ontolidar:FrequencyAnalyser;
   skos:prefLabel "Componente di processamento dati"@it, "Módulo de procesamiento de señal"@es,
-    "Signal processing module"@en, "信号处理模块"@cn .
+    "Signal processing module"@en, "信号处理模块"@cn;
+  skos:related ontolidar:DataProcessing .
 
 ontolidar:Filter a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
@@ -269,27 +270,29 @@ ontolidar:Filter a skos:Concept;
 ontolidar:FrequencyAnalyser a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:Dsp, ontolidar:Fft, ontolidar:FrequencyAnalyserSampleRate,
+    ontolidar:PeakIdentification;
   skos:prefLabel "Analizador de frecuencia"@es, "Frequency analyser"@en .
 
 ontolidar:Dsp a skos:Concept;
-  skos:broader ontolidar:FrequencyAnaliser;
+  skos:broader ontolidar:FrequencyAnalyser;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "DSP"@en, "DSP"@es .
 
 ontolidar:PeakIdentification a skos:Concept;
-  skos:broader ontolidar:FrequencyAnaliser;
+  skos:broader ontolidar:FrequencyAnalyser;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Detección de pico"@es, "Peak identification"@en;
   skos:related ontolidar:DopplerSpectra .
 
 ontolidar:Fft a skos:Concept;
-  skos:broader ontolidar:FrequencyAnaliser;
+  skos:broader ontolidar:FrequencyAnalyser;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "FFT"@en, "FFT"@es .
 
 ontolidar:FrequencyAnalyserSampleRate a skos:Concept;
   ontolidar:units "Hz"@en;
-  skos:broader ontolidar:FrequencyAnaliser;
+  skos:broader ontolidar:FrequencyAnalyser;
   skos:definition "Number of frequency spectra the lidar computes to obtain the radial velocity for one single realisation."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Frequency analyser sample rate"@en, "Tasa de muestreo"@es .
@@ -1562,9 +1565,6 @@ ontolidar:EWindlidar a skos:Concept;
   skos:prefLabel "e-windLidar"@en .
 
 ontolidar:Applications skos:narrower ontolidar:VirtualMetMast .
-
-ontolidar:FrequencyAnaliser skos:narrower ontolidar:Dsp, ontolidar:Fft, ontolidar:FrequencyAnalyserSampleRate,
-    ontolidar:PeakIdentification .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/\u0020AcoustoOpticModulator> skos:narrower
     ontolidar:AomInsertionLoss, ontolidar:AomPulsedmethod, ontolidar:AomQswitching, ontolidar:AomRadioFrequency .

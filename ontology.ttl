@@ -33,9 +33,8 @@
   pav:version "0.1"@en;
   skos:editorialNote "This ontology is produced and maintained by IEA Wind Task 32."@en;
   skos:hasTopConcept ontolidar:DataFormats, ontolidar:DataProcessing, ontolidar:Design,
-    ontolidar:Devices, <http://vocab.ieawindtask32.org/wind-lidar-ontology/Instances(NewDefinition)>,
-    ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup, ontolidar:Parameters,
-    ontolidar:Safety, ontolidar:UseCase;
+    ontolidar:Devices, ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
+    ontolidar:Parameters, ontolidar:Safety, ontolidar:UseCase;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -372,7 +371,7 @@ ontolidar:OpticsModule a skos:Concept;
   skos:broader ontolidar:Design;
   skos:definition "El módulo óptico está diseñado para modificar el rayo láser original y converirlo en radiación con las especificiones deseadas (modos) que pueda ser enviada al objetivo y racibida por el detector de forma adecuada."@es,
     "Parte del lidar che trasforma le proprietà della luce laser da quelle della sorgente a quelle ottimali per essere inviate sul target e poi raccolte dal ricevitore."@it,
-    "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly.\""@en,
+    "The optics module is designed to alter the original laser beam into radiation with desired specification that can be sent to the target and received by the detector properly."@en,
     "光学模块旨在将原始激光束转换为具有所需规格的辐射，可以将其发送到目标并由探测器正确接收。”"@cn;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en,
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
@@ -383,7 +382,7 @@ ontolidar:OpticsModule a skos:Concept;
 ontolidar:Telescope a skos:Concept;
   skos:broader ontolidar:OpticsModule;
   skos:definition "Il sistema di lenti, specchi ed altri elementi ottici e meccanici che in un lidar emettono e ricevono luce laser."@it,
-    "Sistema de lente, espejos y otros comonentes ópticos."@es, "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light"@en,
+    "Sistema de lente, espejos y otros comonentes ópticos."@es, "The system of lenses, mirrors and other optical and mechanical components that emit and receive laser light."@en,
     "发射和接收激光的透镜、反射镜和其他光学和机械组件的系统"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:EndFibreToLensDistance, ontolidar:FocalLength, ontolidar:Lense,
@@ -393,7 +392,7 @@ ontolidar:Telescope a skos:Concept;
 ontolidar:TelescopeApertureDiameter a skos:Concept;
   ontolidar:units "meters"@en;
   skos:broader ontolidar:Telescope;
-  skos:definition "Characteristic optical diameter of the lidar telescope. The aperture through which laser light is emitted and received"@en,
+  skos:definition "Characteristic optical diameter of the lidar telescopeaperture. The aperture through which laser light is emitted and received."@en,
     "Diametro ottico del telescopio del lidar. La finestra attraverso cui il laser viene emesso e ricevuto fra lo spazio interno del lidar e l'ambiente esterno."@it,
     "Diámetro de la apertura del telescopio. La aperture a través de la cual se emite y recibe la luz láser."@es,
     "激光雷达望远镜的特征光学直径. 发射和接收激光的孔径"@cn;
@@ -411,7 +410,7 @@ ontolidar:FocalLength a skos:Concept;
 
 ontolidar:EndFibreToLensDistance a skos:Concept;
   skos:broader ontolidar:Telescope;
-  skos:definition "Distance between the end-fibre and the lens. Continuous wave lidars use this distance to vary the focal length"@en,
+  skos:definition "Distance between the end-fibre and the lens. Continuous wave lidars use this distance to vary the focal length."@en,
     "Distanza fra il punto terminale della fibra ottica ed il centro della lente."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Distanza fra il termine della fibra ottica e la la lente"@it, "End-fibre to lens distance"@en;
@@ -466,25 +465,25 @@ ontolidar:LaserMode a skos:Concept;
 
 ontolidar:LaserFrequency a skos:Concept;
   skos:broader ontolidar:LaserMode;
-  skos:definition "Frequenza della luce della sorgente laser."@it, "Light frequency of the laser source"@en;
+  skos:definition "Frequenza della luce della sorgente laser."@it, "Light frequency of the laser source."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Frequenza del laser"@it, "Laser frequency"@en .
 
 ontolidar:LaserPolarisation a skos:Concept;
   skos:broader ontolidar:LaserMode;
-  skos:definition "Polarization of the laser source signal"@en, "Polarizzazione della luce della sorgente laser."@it;
+  skos:definition "Polarization of the laser source signal."@en, "Polarizzazione della luce della sorgente laser."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Laser polarisation"@en, "Polarizzazione del laser"@it .
 
 ontolidar:LaserPhase a skos:Concept;
   skos:broader ontolidar:LaserMode;
-  skos:definition "Fase della luce della sorgente laser"@it, "Light phase of the laser source"@en;
+  skos:definition "Fase della luce della sorgente laser"@it, "Light phase of the laser source."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Fase del laser"@it, "Laser phase"@en .
 
 ontolidar:LaserIntensity a skos:Concept;
   skos:broader ontolidar:LaserMode;
-  skos:definition "Intensità della luce della sorgente laser."@it, "Light intensity of the laser source"@en;
+  skos:definition "Intensità della luce della sorgente laser."@it, "Light intensity of the laser source."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Intensità del laser"@it, "Laser intensity"@en .
 
@@ -535,7 +534,7 @@ ontolidar:AomQswitching a skos:Concept;
 ontolidar:AomInsertionLoss a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
   skos:definition "Perdita di potenza docuta alla presenza di un modulatore acustico."@it,
-    "Power loss due to the insertion of the acoustic modulator"@en;
+    "Power loss due to the insertion of the acoustic modulator."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "AOM Insertion loss"@en .
 
@@ -801,7 +800,7 @@ ontolidar:ScannerModule a skos:Concept;
 ontolidar:ScannerAzimuthPositioningServo a skos:Concept;
   skos:broader ontolidar:ScannerModule;
   skos:definition "El servomotor ayimutal gestiona el escáner en la dirección azimutal."@es,
-    "Servomotore dedicato a muovere il modulo di scansione nel piano azimutale."@it, "The azimuth servo motor that drives the scanner in the azimuthal direction"@en,
+    "Servomotore dedicato a muovere il modulo di scansione nel piano azimutale."@it, "The azimuth servo motor that drives the scanner in the azimuthal direction."@en,
     "方位角伺服马达驱动扫描器在方位角方向上变化。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:AzimuthAngle, ontolidar:AzimuthSlewRate;
@@ -814,7 +813,7 @@ ontolidar:AzimuthAngle a skos:Concept;
   skos:broader ontolidar:ScannerAzimuthPositioningServo;
   skos:definition "Angulo subtendido entre la línea de visión (line-of-sight o LOS, por sus siglas en inglés) del lidar y el vector de referencia del plano de referencia."@es,
     "L'angolo fra la direzione del fascio laser ed un vettore di riferimento in un piano di riferimento."@it,
-    "The angle between the line of sight of the lidar and a reference vector on the reference coordinate system.."@en,
+    "The angle between the line of sight of the lidar and a reference vector on the reference coordinate system."@en,
     "激光雷达的视线与基准平面上的参考向量之间的夹角。"@cn;
   skos:editorialNote "Il vettore di riferimento dell'angolo di azimith è spesso quello che indica il nord geografico. Un qualsiasi altro vettore, in realtà, potrebbe analogamente servire allo scopo."@it,
     "The reference vector from which the azimuth is defined is often true north, but could be some other defined vector."@en;
@@ -825,7 +824,7 @@ ontolidar:AzimuthSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
   skos:broader ontolidar:ScannerAzimuthPositioningServo;
   skos:definition "Massima velocità di operazione del servomotore nel piano azimutale."@it,
-    "The maximum rate of operation of the servo motor in the azimuthal direction"@en,
+    "The maximum rate of operation of the servo motor in the azimuthal direction."@en,
     "Velocidad máxima de funcionamiento del servomotor en la dirección azimutal."@es,
     "伺服电机在方位角方向的最大运行速率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -836,7 +835,7 @@ ontolidar:ScannerElevationPositioningServo a skos:Concept;
   skos:broader ontolidar:ScannerModule;
   skos:definition "El servomotor de elevación acciona el escáner en la dirección de elevación."@es,
     "Servomotore dedicato a modificare l'altezza sull'orizzonte del fascio laser."@it,
-    "The elevation servo motor that drives the scanner in the elevation direction"@en,
+    "The elevation servo motor that drives the scanner in the elevation direction."@en,
     "仰角伺服电机在仰角方向驱动扫描仪"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ElevationAngle, ontolidar:ElevationSlewRate;
@@ -857,7 +856,7 @@ ontolidar:ElevationSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
   skos:broader ontolidar:ScannerElevationPositioningServo;
   skos:definition "Massima velocità di modifica dell'altezza del fascio laser."@it,
-    "The maximum rate of operation of the servo motor in the elevation direction"@en,
+    "The maximum rate of operation of the servo motor in the elevation direction."@en,
     "Velocidad máxima de funcionamiento del servomotor en la dirección de elevación."@es,
     "伺服电机在仰角方向的最大运行速率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -867,7 +866,7 @@ ontolidar:ElevationSlewRate a skos:Concept;
 ontolidar:ScannerMirrors a skos:Concept;
   skos:broader ontolidar:ScannerModule;
   skos:definition "Espejos destinados a modificar la trayectoria del haz entre el telescopio y la atmósfera."@es,
-    "Scanner components intended to modify the beam trajectories of both, the laser beam and the backscattered one. The scanner mirrors steer the outgoing beam towards the atmosphere and the backscattered incoming beam towards the receiver. Usually,some of these mirrors are coupled with servo motors, enabling the lidar to perform measurements in differents orientations by varying the mirror angles ."@en,
+    "Scanner components intended to modify the beam trajectories of both, the laser beam and the backscattered one. The scanner mirrors steer the outgoing beam towards the atmosphere and the backscattered incoming beam towards the receiver. Usually,some of these mirrors are coupled with servo motors, enabling the lidar to perform measurements in differents orientations by varying the mirror angles."@en,
     "Specchi per modificare il cammino ottico del fascio laser fra il telescopio e l'atmosfera esterna."@it,
     "修改望远镜和大气层之间光束路径的镜子。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -1107,12 +1106,14 @@ ontolidar:Vindicator a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Lidar Vindicator'"@it, "Vindicator"@de, "Vindicator"@en .
 
-<http://vocab.ieawindtask32.org/wind-lidar-ontology/Instances(NewDefinition)> a skos:Concept;
+ontolidar:Instances a skos:Concept;
   skos:definition "Cada uno de los objetos lidar"@es, "Each single wind lidar object"@en,
     "Ogni singolo esemplare di lidar eolici."@it, "风激光雷达实例"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Esempi di lidars"@it, "Instances (new definition)"@en, "Instancias"@es,
-    "Instanzen"@de, "激光雷达示例"@cn;
+  skos:narrower <http://vocab.ieawindtask32.org/wind-lidar-ontology/LidarType(ExtendedDefinition)>,
+    <http://vocab.ieawindtask32.org/wind-lidar-ontology/SerialNumber(ExtendedDefinition)>;
+  skos:prefLabel "Esempi di lidars"@it, "Instances"@en, "Instancias"@es, "Instanzen"@de,
+    "激光雷达示例"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/SerialNumber(ExtendedDefinition)>
@@ -1282,7 +1283,7 @@ ontolidar:NonStatic a skos:Concept;
 
 ontolidar:FilteringStrategy a skos:Concept;
   skos:broader ontolidar:WindfieldReconstruction;
-  skos:definition "The filtering methods that applied to clean raw data, which generated as outputs by lidar"@en;
+  skos:definition "The filtering methods that applied to clean raw data, which generated as outputs by lidar."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:PostProcessedData, ontolidar:PreProcessedData, ontolidar:RawData;
   skos:prefLabel "Filtering strategy"@en .
@@ -1298,7 +1299,7 @@ ontolidar:RawData a skos:Concept;
 ontolidar:WeightingFunction a skos:Concept;
   skos:broader ontolidar:RawData;
   skos:definition "Función utilizada para ponderar la frecuencia de las diferentes señales que se retrodispersan a lo largo del volumen de medición. La contribución a la estimación de la frecuencia Doppler es tanto mayor cuanto menor es la distancia al punto bajo medición. En general, se puede aproximar a una función Lorentziana."@es,
-    "Function used to weight the backscattered intensity from the probe volume. The closer to the focused point, the higher contribution to the estimation of the Doppler frequency at that point. In general, it can be aproximated by a Lorentzian function. (to be moved to a suitable place)"@en,
+    "Function used to weight the backscattered intensity from the probe volume. The closer to the focused point, the higher contribution to the estimation of the Doppler frequency at that point. In general, it can be aproximated by a Lorentzian function. (to be moved to a suitable place)."@en,
     "Pesi relativi al volume della sonda da applicare all'intensità della luce di backscatter. Più si è prossimi al punto focale, maggiore è il contributo alla formazione del picco Doppler."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Función de ponderación"@es, "Funzione di ponderazione"@it, "Gewichtungsfunktion"@de,
@@ -1307,7 +1308,7 @@ ontolidar:WeightingFunction a skos:Concept;
 
 ontolidar:PreProcessedData a skos:Concept;
   skos:broader ontolidar:FilteringStrategy;
-  skos:definition "Data that generated after filtering raw data by applying CNR thresholds and removing outliers"@en,
+  skos:definition "Data that generated after filtering raw data by applying CNR thresholds and removing outliers."@en,
     "Dati ottenuti dopo aver applicato ai dati grezzi le soglie CNR ed averli puliti dalle anomalie."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CnrThreshold, ontolidar:Outliers;
@@ -1316,7 +1317,7 @@ ontolidar:PreProcessedData a skos:Concept;
 ontolidar:Outliers a skos:Concept;
   skos:broader ontolidar:PreProcessedData;
   skos:definition "In un gruppo di misurazioni, singole misure dalle caratteristiche particolarmente differenti rispetto alle statistiche principali del gruppo stesso."@it,
-    "Observations that lie abnormal distances from other values in a random sample from a population"@en;
+    "Observations that lie abnormal distances from other values in a random sample from a population."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Anomalie"@it, "Outliers"@en .
 
@@ -1523,7 +1524,7 @@ ontolidar:ArbitraryTrajectory a skos:Concept;
 ontolidar:StopStare a skos:Concept;
   skos:broader ontolidar:SingleLidar;
   skos:definition "Line-of-sight data are acquired while the beam remains stationary in one of the pre-determined orientations comprising the scan geometry. No data are acquired while the beam is moved to its next position.\"@en ;"@en,
-    "Los datos de la línea de visión (line-of-sight o LOS, por sus siglas en inglés) son adquiridos mientras el rayo permanece estacionario en una de las orientaciones predeterminada a lo largo de la secuencis de escaneo. Ninguna medida se realiza durante la fase de reposicionamiento del laser a su siguiente posición."@es,
+    "Los datos de la línea de visión (line-of-sight o LOS, por sus siglas en inglés) son adquiridos mientras el rayo permanece estacionario en una de las orientaciones predeterminada a lo largo de la secuencia de escaneo. Ninguna medida se realiza durante la fase de reposicionamiento del laser a su siguiente posición."@es,
     "Metodo di acquisizione dati in cui la misurazione avviene mentre il fascio laser è mantenuto fermo nello spazio in una direzione predefinita. Nessuna misurazione è effettuata durante la fase di riposizionamento del fascio laser."@it,
     "当光束在扫描几何方式的一个预设定方向上保持静止时，获取视线方向(LOS)的数据。当光束移动到下一个位置时，不获取数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -1902,9 +1903,6 @@ ontolidar:UninterruptiblePowerSupply skos:narrower ontolidar:Intensity, ontolida
 ontolidar:MoveLaser skos:narrower ontolidar:MolasB300, ontolidar:MolasNl .
 
 ontolidar:Galion skos:narrower ontolidar:GalionScanningLidarG4000 .
-
-ontolidar:Instances skos:narrower <http://vocab.ieawindtask32.org/wind-lidar-ontology/LidarType(ExtendedDefinition)>,
-    <http://vocab.ieawindtask32.org/wind-lidar-ontology/SerialNumber(ExtendedDefinition)> .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emmiter/ReceiverConfiguration>
   skos:narrower ontolidar:Bistatic, ontolidar:Monostatic .

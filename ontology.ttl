@@ -314,7 +314,7 @@ ontolidar:SignalProcessingModule a skos:Concept;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en,
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Filter, ontolidar:FrequencyAnalyser;
+  skos:narrower ontolidar:AnalogToDigitalConverter, ontolidar:Filter, ontolidar:FrequencyAnalyser;
   skos:prefLabel "Componente di processamento dati"@it, "Módulo de procesamiento de señal"@es,
     "Signal processing module"@en, "信号处理模块"@cn;
   skos:related ontolidar:DataProcessing .
@@ -354,6 +354,15 @@ ontolidar:FrequencyAnalyserSampleRate a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Frequency analyser sample rate"@en, "Frequenza di campionamento dell'analizzatore"@it,
     "Tasa de muestreo"@es .
+
+ontolidar:AnalogToDigitalConverter a skos:Concept;
+  skos:broader ontolidar:Detector, ontolidar:SignalProcessingModule;
+  skos:definition "Convertitore del segnale analogico del fotodetettore in segnale digitale per l'analizzatore di frequenza."@it,
+    "Converts the analog beating signal, representing the Doppler shift, from the photodetector to digital signal to be fed into the frequency analyser."@en,
+    "Device transforming from analog signal from the photodetector into digital one to be fed into the frequency analyser. The resolution of the ADC depends on the number of bits. For a wind lidar device usually between 12 an 16 bits."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Analog to digital converter"@en, "Analog-to-digital converter"@en,
+    "Convertidor analógico-digital"@es, "Convertitore analogico-digitale"@it .
 
 ontolidar:StorageModule a skos:Concept;
   skos:broader ontolidar:ControlModule;
@@ -682,14 +691,6 @@ ontolidar:PhotodetectorVoltageNoise a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Photodetector voltage noise"@en, "Ruido de voltaje del fotodetector"@es,
     "Rumore di tensione del fotorivelatore"@it, "光电探测器电压噪声"@cn .
-
-ontolidar:AnalogToDigitalConverter a skos:Concept;
-  skos:broader ontolidar:Detector;
-  skos:definition "Convertitore del segnale analogico del fotodetettore in segnale digitale per l'analizzatore di frequenza."@it,
-    "Converts the analog beating signal, representing the Doppler shift, from the photodetector to digital signal to be fed into the frequency analyser."@en;
-  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Analog to digital converter"@en, "Convertidor analógico-digital"@es,
-    "Convertitore analogico-digitale"@it .
 
 ontolidar:Interfaces a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;

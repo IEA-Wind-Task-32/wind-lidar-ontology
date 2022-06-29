@@ -252,18 +252,18 @@ ontolidar:Zx,ZX,,ZX,,,,,Common data format for the products of the company ZX li
 ontolidar:HaloPhotonics,Halo photonics,,Halo photonics,,,,,Common data format for the products of the company Halo photonics.,,Formato dati comune per i prodotti dell'azienda Halo photonics.,,,,ontolidar:DataFormats
 ontolidar:EWindlidar,e-windLidar,,e-windLidar,,,,,"An attempt to standardize wind lidar data formats and making them to follow the FAIR principle (Findable, Accessible, Interoperable, Reusable). ",,"Un tentativo di standardizzare il formato dati dei lidar e di costruirlo secondo i principi FAIR (dati ricercabili, accessibili, interoperabili e riutilizzabili).",,,,ontolidar:DataFormats,,,,,,https://zenodo.org/record/2478051/files/e_WindLidar.pdf?download=1,,https://zenodo.org/record/2478051/files/e_WindLidar.pdf?download=1
 ontolidar:DataCommunication,Data communication
-ontolidar:NtpTimeSynchronisation,NTP time synchronisation,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:FtpDataTransfer,FTP data transfer,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:UserInterface,User interface,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:Wifi,WIFI,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:Lan,LAN,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:SamplingFrequency,Sampling frequency,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:LoggingFrequency,Logging frequency,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:FileGranulity,File granulity,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:DataTransferFrequency,Data transfer frequency,,,,,,,,,,,,,ontolidar: Datacommunication
-ontolidar:DataAveragingPeriod,Data averaging period,,,,,,,,,,,,,ontolidar: Datacommunication
+ontolidar:NtpTimeSynchronisation,NTP time synchronisation,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:FtpDataTransfer,FTP data transfer,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:UserInterface,User interface,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:Wifi,WIFI,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:Lan,LAN,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:SamplingFrequency,Sampling frequency,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:LoggingFrequency,Logging frequency,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:FileGranulity,File granulity,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:DataTransferFrequency,Data transfer frequency,,,,,,,,,,,,,ontolidar:Datacommunication
+ontolidar:DataAveragingPeriod,Data averaging period,,,,,,,,,,,,,ontolidar:Datacommunication
 ontolidar:Installation,Installation
-ontolidar:Deployment,Deployment,,,,,,,,,,,,,ontolidar: Installation
-ontolidar:Repair,Repair,,,,,,,,,,,,,ontolidar: Installation
-ontolidar:Relocation,Relocation,,,,,,,,,,,,,ontolidar: Installation
-ontolidar:Decommission,Decommission,,,,,,,,,,,,,ontolidar: Installation
+ontolidar:Deployment,Deployment,,,,,,,,,,,,,ontolidar:Installation
+ontolidar:Repair,Repair,,,,,,,,,,,,,ontolidar:Installation
+ontolidar:Relocation,Relocation,,,,,,,,,,,,,ontolidar:Installation
+ontolidar:Decommission,Decommission,,,,,,,,,,,,,ontolidar:Installation

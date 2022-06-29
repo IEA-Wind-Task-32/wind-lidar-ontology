@@ -1895,56 +1895,59 @@ ontolidar:EWindlidar a skos:Concept;
 
 ontolidar:DataCommunication a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:DataAveragingPeriod, ontolidar:DataTransferFrequency, ontolidar:FileGranulity,
+    ontolidar:FtpDataTransfer, ontolidar:Lan, ontolidar:LoggingFrequency, ontolidar:NtpTimeSynchronisation,
+    ontolidar:SamplingFrequency, ontolidar:UserInterface, ontolidar:Wifi;
   skos:prefLabel "Data communication"@en;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:NtpTimeSynchronisation a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "NTP time synchronisation"@en .
 
 ontolidar:FtpDataTransfer a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "FTP data transfer"@en .
 
 ontolidar:UserInterface a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "User interface"@en .
 
 ontolidar:Wifi a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "WIFI"@en .
 
 ontolidar:Lan a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "LAN"@en .
 
 ontolidar:SamplingFrequency a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Sampling frequency"@en .
 
 ontolidar:LoggingFrequency a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Logging frequency"@en .
 
 ontolidar:FileGranulity a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "File granulity"@en .
 
 ontolidar:DataTransferFrequency a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Data transfer frequency"@en .
 
 ontolidar:DataAveragingPeriod a skos:Concept;
-  skos:broader ontolidar:Datacommunication;
+  skos:broader ontolidar:DataCommunication;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Data averaging period"@en .
 
@@ -1989,8 +1992,3 @@ ontolidar:Galion skos:narrower ontolidar:GalionScanningLidarG4000 .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emmiter/ReceiverConfiguration>
   skos:narrower ontolidar:Bistatic, ontolidar:Monostatic .
-
-ontolidar:Datacommunication skos:narrower ontolidar:DataAveragingPeriod, ontolidar:DataTransferFrequency,
-    ontolidar:FileGranulity, ontolidar:FtpDataTransfer, ontolidar:Lan, ontolidar:LoggingFrequency,
-    ontolidar:NtpTimeSynchronisation, ontolidar:SamplingFrequency, ontolidar:UserInterface,
-    ontolidar:Wifi .

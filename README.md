@@ -20,7 +20,7 @@ We use [sheet2rdf](https://github.com/fair-data-collective/sheet2rdf) to build w
 ## How to use this ontology
 There are several ways the ontology.
 
-## As a glossary
+### As a glossary
 If you just want to know what a certain lidar-related term means, [check out a human-friendly version of the ontology**](http://vocab.ieawindtask32.org/ontolidar/en/).
 
 ### To define the inputs for simulations

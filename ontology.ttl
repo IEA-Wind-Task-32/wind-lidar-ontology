@@ -32,10 +32,10 @@
   pav:lastUpdatedOn "2021-01-13T00:00:00+01:00"@en;
   pav:version "0.1"@en;
   skos:editorialNote "This ontology is produced and maintained by IEA Wind Task 32."@en;
-  skos:hasTopConcept ontolidar:DataCommunication, ontolidar:DataFormats, ontolidar:DataProcessing,
-    ontolidar:Design, ontolidar:Devices, ontolidar:Installation, ontolidar:Instances,
-    ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup, ontolidar:Parameters,
-    ontolidar:Safety, ontolidar:UseCase;
+  skos:hasTopConcept ontolidar:CrossCorrelation, ontolidar:DataCommunication, ontolidar:DataFormats,
+    ontolidar:DataProcessing, ontolidar:Design, ontolidar:Devices, ontolidar:Doppler,
+    ontolidar:Installation, ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
+    ontolidar:Parameters, ontolidar:ParticleTracking, ontolidar:Safety, ontolidar:UseCase;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -561,13 +561,6 @@ ontolidar:PulsedLidar a skos:Concept;
   skos:narrower ontolidar:PulseDuration, ontolidar:PulseSampleRate, ontolidar:PulseShape;
   skos:prefLabel "Lidar pulsati"@it, "Pulsed lidar"@en .
 
-ontolidar:PulseShape a skos:Concept;
-  skos:broader ontolidar:PulsedLidar;
-  skos:definition "Continuous wave light can be modulated (e.g. with an acousto-optic-modulator or AOM) to obtain pulses at high power intensities altering the transmitted power and concentrating this energy in a short space. The power intensity around this area can be described as a gaussian function centered around the frequency of interest, which is commonly used to describe the shape of the pulse."@en,
-    "Forma dell'impulso emesso."@it;
-  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Pulse shape"@en .
-
 ontolidar:PulseDuration a skos:Concept;
   skos:broader ontolidar:PulsedLidar;
   skos:definition "Durata dell'impulso emesso. Caratterizza la lunghezza della sonda."@it,
@@ -581,6 +574,13 @@ ontolidar:PulseSampleRate a skos:Concept;
     "Time slot between pulses sent to sample the wind."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Frequenza di campionamento del laser pulsato"@it, "Pulse sample rate"@en .
+
+ontolidar:PulseShape a skos:Concept;
+  skos:broader ontolidar:PulsedLidar;
+  skos:definition "Continuous wave light can be modulated (e.g. with an acousto-optic-modulator or AOM) to obtain pulses at high power intensities altering the transmitted power and concentrating this energy in a short space. The power intensity around this area can be described as a gaussian function centered around the frequency of interest, which is commonly used to describe the shape of the pulse."@en,
+    "Forma dell'impulso emesso."@it;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Pulse shape"@en .
 
 ontolidar:BackscatteredLight a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -767,21 +767,21 @@ ontolidar:UpsBatteryCapacity a skos:Concept;
   skos:prefLabel "Capacidad de la batería del SAI"@es, "Capacità della batteria dell'UPS"@it,
     "UPS battery capacity"@en, "UPS电池容量"@cn .
 
-ontolidar:Power a skos:Concept;
+ontolidar:UpsBatteryPower a skos:Concept;
   ontolidar:units "W"@en;
   skos:broader ontolidar:UninterruptiblePowerSupply;
   skos:definition "Lidar working power provided by the USP when working off-line"@en,
     "Potenza emessa dal gruppo di continuità per garantire l'operabilità del lidar quando disconnesso dalla rete elettrica."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Potenza"@it, "Power"@en .
+  skos:prefLabel "Potenza"@it, "UPS battery power"@en .
 
-ontolidar:Intensity a skos:Concept;
+ontolidar:UpsBatteryIntensity a skos:Concept;
   ontolidar:units "A"@en;
   skos:broader ontolidar:UninterruptiblePowerSupply;
   skos:definition "Intensità della corrente elettrica provvigionata dal gruppo di continuità."@it,
     "Lidar working current intensity provided by the USP when working off-line"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Intensity"@en, "Intensità"@it .
+  skos:prefLabel "Intensità"@it, "UPS battery intensity"@en .
 
 ontolidar:ScannerModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -1773,6 +1773,21 @@ ontolidar:WindSpeedEvaluation a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Valutazione della velocità del vento"@it, "Wind speed evaluation"@en .
 
+ontolidar:ParticleTracking a skos:Concept;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Particle tracking"@en;
+  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+
+ontolidar:CrossCorrelation a skos:Concept;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Cross-correlation"@en;
+  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+
+ontolidar:Doppler a skos:Concept;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Doppler"@en;
+  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+
 ontolidar:LineOfSight a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
   skos:definition "La direzione lungo cui il raggio laser del lidar è emesso e riflesso dall'atmosfera verso il lidar."@it,
@@ -1902,56 +1917,77 @@ ontolidar:DataCommunication a skos:Concept;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:NtpTimeSynchronisation a skos:Concept;
+  ontolidar:units "milliseconds"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "A networking protocol for clock synchronization between computer systems and Lidar computer over packet-switched, variable-latency data networks. the maximum difference in the clock times between systems"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "NTP time synchronisation"@en .
 
 ontolidar:FtpDataTransfer a skos:Concept;
+  ontolidar:units "text"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "Data transfer protocol based on FTP"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "FTP data transfer"@en .
 
 ontolidar:UserInterface a skos:Concept;
+  ontolidar:units "text"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "A graphical user interface implemented for Lidar data at Lidar end or at user end"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "User interface"@en .
 
 ontolidar:Wifi a skos:Concept;
+  ontolidar:units "text"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "Data transfer over WLAN protocol"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "WIFI"@en .
 
 ontolidar:Lan a skos:Concept;
+  ontolidar:units "text"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "Data transfer over LAN protocol"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "LAN"@en .
 
 ontolidar:SamplingFrequency a skos:Concept;
+  ontolidar:units "Hz"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "maximum sampling frequency of the Lidar measurement device"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Sampling frequency"@en .
 
 ontolidar:LoggingFrequency a skos:Concept;
+  ontolidar:units "Hz"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "maximum logging frequency of the logger or the Lidar measurement device"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Logging frequency"@en .
 
 ontolidar:FileGranulity a skos:Concept;
+  ontolidar:units "samples"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "the size of the file in terms of time period or samples e.g. 10-min files or 1 hour files"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "File granulity"@en .
 
 ontolidar:DataTransferFrequency a skos:Concept;
+  ontolidar:units "Hz"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "the frequency at which data is transferred between the measurement device (primary) and a secondary device"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Data transfer frequency"@en .
 
 ontolidar:DataAveragingPeriod a skos:Concept;
+  ontolidar:units "seconds"@en;
   skos:broader ontolidar:DataCommunication;
+  skos:definition "Data averaging period for the data, e.g., 20 Hz data can be averaged to 10 min data"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Data averaging period"@en .
 
 ontolidar:Installation a skos:Concept;
+  skos:definition "Installation date and time, location (gps)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Decommission, ontolidar:Deployment, ontolidar:Relocation,
     ontolidar:Repair;
@@ -1959,22 +1995,30 @@ ontolidar:Installation a skos:Concept;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:Deployment a skos:Concept;
+  ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
+  skos:definition "Deployment data and time, location (gps)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Deployment"@en .
 
 ontolidar:Repair a skos:Concept;
+  ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
+  skos:definition "Repair data and time, location (gps)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Repair"@en .
 
 ontolidar:Relocation a skos:Concept;
+  ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
+  skos:definition "Relocation data and time, location (gps)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Relocation"@en .
 
 ontolidar:Decommission a skos:Concept;
+  ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
+  skos:definition "Decommission data and time, location (gps)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Decommission"@en .
 
@@ -1983,8 +2027,8 @@ ontolidar:Applications skos:narrower ontolidar:VirtualMetMast .
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorActiveArea, ontolidar:PhotodetectorGain,
     ontolidar:PhotodetectorSnr, ontolidar:PhotodetectorVoltageNoise .
 
-ontolidar:UninterruptiblePowerSupply skos:narrower ontolidar:Intensity, ontolidar:Power,
-    ontolidar:UpsBatteryCapacity, ontolidar:UpsBatteryVoltage .
+ontolidar:UninterruptiblePowerSupply skos:narrower ontolidar:UpsBatteryCapacity, ontolidar:UpsBatteryIntensity,
+    ontolidar:UpsBatteryPower, ontolidar:UpsBatteryVoltage .
 
 ontolidar:MoveLaser skos:narrower ontolidar:MolasB300, ontolidar:MolasNl .
 

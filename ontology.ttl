@@ -343,10 +343,26 @@ ontolidar:SignalProcessingModule a skos:Concept;
   skos:editorialNote "Definition based on the OpenLidar module definitions at https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@en,
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:Filter, ontolidar:FrequencyAnalyser;
+  skos:narrower ontolidar:AnalogToDigitalConverter, ontolidar:Filter, ontolidar:FrequencyAnalyser;
   skos:prefLabel "Componente di processamento dati"@it, "Módulo de procesamiento de señal"@es,
     "Signal processing module"@en, "信号处理模块"@cn;
   skos:related ontolidar:DataProcessing .
+
+ontolidar:AnalogToDigitalConverter a skos:Concept;
+  skos:broader ontolidar:SignalProcessingModule;
+  skos:definition "Convertitore del segnale analogico del fotodetettore in segnale digitale per l'analizzatore di frequenza."@it,
+    "Defines the resolution of the analog to digital converter, and represents the number of values or \"levels\" the signal can be discretise in."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:NumberOfBits;
+  skos:prefLabel "Analog to digital converter"@en, "Convertidor analógico-digital"@es,
+    "Convertitore analogico-digitale"@it, "模拟到数字转换器"@cn .
+
+ontolidar:NumberOfBits a skos:Concept;
+  skos:broader ontolidar:AnalogToDigitalConverter;
+  skos:definition "Number of bits of the analog to digital converter."@en;
+  skos:editorialNote "Defines the resolution of the analog to digital converter, and represents the number of values or \"levels\" in which the signal can be quantised."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Number of bits"@en .
 
 ontolidar:Filter a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
@@ -616,7 +632,14 @@ ontolidar:PulseDuration a skos:Concept;
     "光脉冲的持续时间。当我们在时域中表示光脉冲的强度时，脉冲持续时间可以由描述该强度的函数的FWHM来表征。激光雷达不是在一个点上测量，而是在一个探测体积内测量，因此，FWHM是激光雷达实际测量的探测体积的特征。因此，脉冲持续时间直接影响激光雷达的估计，因为较长的脉冲持续时间会产生较长的探测体积。"@cn;
   skos:editorialNote "Lidars do not measure in a single point but rather whithin a probe volume, so that the full width at half maximum (FWHM) of the function characterising the pulse shape defines the probe volume whithin which the lidar is measuring. Therefore, the pulse duration directly impacts lidar estimations, since higher pulse durations give rise to longer probe volumes."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:FullWidthAtHalfMaximum;
   skos:prefLabel "Durata dell'impulso"@it, "Pulse duration"@en, "脉冲持续时间"@cn .
+
+ontolidar:FullWidthAtHalfMaximum a skos:Concept;
+  skos:broader ontolidar:PulseDuration;
+  skos:definition "In a distribution, the full width at half maximum represents the distance between the two values of the independent variable (x axis) when the value of the dependent variable (y axis) is half of its maximum value."@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Full width at half maximum"@en .
 
 ontolidar:PulseSampleRate a skos:Concept;
   skos:broader ontolidar:PulsedLidar;
@@ -664,8 +687,7 @@ ontolidar:Detector a skos:Concept;
   skos:definition "An assembly to gather and detect incident light"@en, "Conjunto de dispositivos encargados de recoger y detectar la luz incidente."@es,
     "Gruppo di sistemi per ricevere, rilevare e misurare la luce incidente."@it, "收集和检测入射光的组件"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:AnalogToDigitalConverter, ontolidar:BeamSplitter, ontolidar:OpticalAmplifier,
-    ontolidar:Photodetector;
+  skos:narrower ontolidar:BeamSplitter, ontolidar:OpticalAmplifier, ontolidar:Photodetector;
   skos:prefLabel "Detector"@en, "Detector"@es, "Rilevatore"@it, "探测器"@cn .
 
 ontolidar:OpticalAmplifier a skos:Concept;
@@ -746,14 +768,6 @@ ontolidar:PhotodetectorVoltageNoise a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Photodetector voltage noise"@en, "Ruido de voltaje del fotodetector"@es,
     "Rumore di tensione del fotorivelatore"@it, "光电探测器电压噪声"@cn .
-
-ontolidar:AnalogToDigitalConverter a skos:Concept;
-  skos:broader ontolidar:Detector;
-  skos:definition "Convertitore del segnale analogico del fotodetettore in segnale digitale per l'analizzatore di frequenza."@it,
-    "Converts the analog beating signal, representing the Doppler shift, from the photodetector to digital signal to be fed into the frequency analyser. The resolution of the ADC depends on the number of bits. For a wind lidar device n° of bits is usually between 12 an 16."@en;
-  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Analog to digital converter"@en, "Convertidor analógico-digital"@es,
-    "Convertitore analogico-digitale"@it, "模拟到数字转换器"@cn .
 
 ontolidar:Interfaces a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -1266,6 +1280,7 @@ ontolidar:TimeIntegration a skos:Concept;
   skos:broader ontolidar:DopplerSpectra;
   skos:definition "Aggregation period of individual Doppler spectra"@en, "Periodo di aggregazione di spettri Doppler singoli"@it,
     "单个多普勒频谱的积分时间"@cn;
+  skos:editorialNote "Time whithin which the frequency analyser accumulates individual frequency spectra generated by the frequency analyser. Then it averages them to obtain the Doppler spectra the lidar uses to estimate the wind radial velocity."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Integración de tiempo"@es, "Integrazione temporale"@it, "Time integration"@en,
     "Zeitintegration"@de, "时间积分"@cn .
@@ -1273,8 +1288,7 @@ ontolidar:TimeIntegration a skos:Concept;
 ontolidar:CentroidPowerValue a skos:Concept;
   skos:altLabel "Median"@en;
   skos:broader ontolidar:DopplerSpectra;
-  skos:definition "Peak identification method which identifies the Doppler frequency shift as the centroid power value in the lidar power spectral density function"@en,
-    "The centroid power value of lidar power spectral density function?"@cn;
+  skos:definition "The power value calculated as the centorid of the Doppler spectrum which is identified with the radial velocity measured by the lidar"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Centroid power value"@en, "Centroide"@es, "Centroide"@it, "Schwerpunkt"@de,
     "中心值"@cn;
@@ -1282,16 +1296,14 @@ ontolidar:CentroidPowerValue a skos:Concept;
 
 ontolidar:MeanPowerValue a skos:Concept;
   skos:broader ontolidar:DopplerSpectra;
-  skos:definition "Peak identification method which identifies the Doppler frequency shift as the mean power value in the lidar power spectral density function"@en,
-    "The mean power value of lidar power spectral density function?"@cn;
+  skos:definition "The mean power value in the Doppler spectrum which is identified with the radial velocity measured by the lidar"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Mean power value"@en, "Media"@it, "der Mittelwert"@de, "平均值"@cn;
   skos:related ontolidar:PeakIdentification .
 
 ontolidar:MaximumPowerValue a skos:Concept;
   skos:broader ontolidar:DopplerSpectra;
-  skos:definition "Peak identification method which identifies the Doppler frequency shift as the maximum power value in the lidar power spectral density function."@en,
-    "The maximum power value in the lidar power spectral density function?"@cn;
+  skos:definition "The maximum power value in the Doppler spectrum which is identified with the radial velocity lidar output"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Massimo"@it, "Maximum power value"@en, "最大值"@cn;
   skos:related ontolidar:PeakIdentification .

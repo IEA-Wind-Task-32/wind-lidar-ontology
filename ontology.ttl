@@ -32,10 +32,10 @@
   pav:lastUpdatedOn "2021-01-13T00:00:00+01:00"@en;
   pav:version "0.1"@en;
   skos:editorialNote "This ontology is produced and maintained by IEA Wind Task 32."@en;
-  skos:hasTopConcept ontolidar:CrossCorrelation, ontolidar:DataCommunication, ontolidar:DataFormats,
-    ontolidar:DataProcessing, ontolidar:Design, ontolidar:Devices, ontolidar:Installation,
-    ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
-    ontolidar:Parameters, ontolidar:ParticleTracking, ontolidar:Safety, ontolidar:UseCase;
+  skos:hasTopConcept ontolidar:DataCommunication, ontolidar:DataFormats, ontolidar:DataProcessing,
+    ontolidar:Design, ontolidar:Devices, ontolidar:Installation, ontolidar:Instances,
+    ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup, ontolidar:Parameters,
+    ontolidar:Safety, ontolidar:UseCase;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -351,7 +351,7 @@ ontolidar:SignalProcessingModule a skos:Concept;
 ontolidar:AnalogToDigitalConverter a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
   skos:definition "Convertitore del segnale analogico del fotodetettore in segnale digitale per l'analizzatore di frequenza."@it,
-    "Defines the resolution of the analog to digital converter, and represents the number of values or \"levels\" the signal can be discretise in."@en;
+    "Converts the analog signal from the photodetector into a digital signal to properly be analised by the frequency analyser."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:NumberOfBits;
   skos:prefLabel "Analog to digital converter"@en, "Convertidor analógico-digital"@es,
@@ -782,9 +782,9 @@ ontolidar:Interfaces a skos:Concept;
 
 ontolidar:Fibre a skos:Concept;
   skos:broader ontolidar:Interfaces;
-  skos:definition "Mean used to transport the light beam through the optical lidar components. Lidar hardware components are connected to each other by fibre optics to guide the beam along its path."@en,
+  skos:definition "Mean used to transport the lidar signal when in its optical form."@en,
     "Sistema di trasmissione del fascio laser basato du un sistema di fibra ottica."@it;
-  skos:editorialNote "Specially for the telescope module, using fibre optics makes possible to avoid costly and cumbersome alignment processes."@en;
+  skos:editorialNote "Lidar hardware components are connected to each other by fibre optics to guide the laser beam along its path. Specially for the telescope module, using fibre optics makes possible to avoid costly and cumbersome alignment processes."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Fibra"@it, "Fibre"@en, "光纤"@cn .
 
@@ -1958,20 +1958,21 @@ ontolidar:WindSpeedEvaluation a skos:Concept;
     "Calculation of the wind velocity using a wind field reconstruction method."@en, "Cálculo de la velocidad del viento mediante un método de reconstrucción del campo de viento."@es,
     "使用風場重建方法計算風速。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:narrower ontolidar:CrossCorrelation, ontolidar:ParticleTracking;
   skos:prefLabel "Valutazione della velocità del vento"@it, "Wind speed evaluation"@en,
     "风速评估"@cn .
 
 ontolidar:ParticleTracking a skos:Concept;
-  skos:definition "Wind field model: particle tracking as a application where the lidar beam follows the particle in the flow (refer to Langrangian statistics)"@en;
+  skos:broader ontolidar:WindSpeedEvaluation;
+  skos:definition "Wind field model: particle tracking as an application where the lidar beam follows the particle in the flow (refer to Langrangian statistics)"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Particle tracking"@en, "Tracciamento di particella"@it, "粒子跟踪"@cn;
-  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+  skos:prefLabel "Particle tracking"@en, "Tracciamento di particella"@it, "粒子跟踪"@cn .
 
 ontolidar:CrossCorrelation a skos:Concept;
+  skos:broader ontolidar:WindSpeedEvaluation;
   skos:definition "Wind field model: cross-correlation as a term to describe turbulence in the field using statistics"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Correlazione incrociata"@it, "Cross-correlation"@en, "交叉相关"@cn;
-  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+  skos:prefLabel "Correlazione incrociata"@it, "Cross-correlation"@en, "交叉相关"@cn .
 
 ontolidar:LineOfSight a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;

@@ -604,43 +604,43 @@ ontolidar:AcoustoOpticModulator a skos:Concept;
     "布拉格单元利用声波（射频）对光进行衍射和移频。产生一个脉冲输出光束。"@cn;
   skos:editorialNote "Only pulsed lidar"@en, "Sólo válido para lidar pulsado"@es, "Valido solo per sistemi lidar impulsati"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:AomInsertionLoss, ontolidar:AomPulsedmethod, ontolidar:AomQswitching,
-    ontolidar:AomRadioFrequency;
+  skos:narrower ontolidar:InsertionLoss, ontolidar:Pulsedmethod, ontolidar:RadioFrequency;
   skos:prefLabel "Acousto-optic modulator"@en, "Modulador acusto-óptico"@es, "Modulatore acusto-ottico"@it,
     "声光调制器"@cn .
 
-ontolidar:AomRadioFrequency a skos:Concept;
+ontolidar:RadioFrequency a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
   skos:definition "Frequenza radio usata dal modulatore acustico per modulare l'impulso luminoso (per lidar impulsati)"@it,
     "Radio frecuencia utilizada por el modulador acústico-óptico para modular el pulso de luz. Sólo para lídares pulsados."@es,
     "Radio frequency used by the acoustic modulator to modulate the pulse (for pulsed lidars)"@en,
     "声学调制器用于调制脉冲的无线电频率（对于脉冲激光雷达）。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM radio frequency"@en, "AOM 无线电频率"@cn, "Frequenza radio AOM"@it .
+  skos:prefLabel "AOM 无线电频率"@cn, "Frequenza radio AOM"@it, "Radio frequency"@en .
 
-ontolidar:AomPulsedmethod a skos:Concept;
+ontolidar:Pulsedmethod a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
   skos:definition "Method used to shape the pulse in pulsed lidars"@en, "Metodo per regolare la forma dell'impulso in lidar impulsati"@it,
     "Método para regular la forma de un pulso de luz"@es, "用来塑造脉冲的方法"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM PulsedMethod"@en, "AOM 脉冲法"@cn, "Metodo impulsato AOM"@it .
+  skos:narrower ontolidar:Qswitching;
+  skos:prefLabel "AOM 脉冲法"@cn, "Metodo impulsato AOM"@it, "PulsedMethod"@en .
 
-ontolidar:AomQswitching a skos:Concept;
-  skos:broader ontolidar:AcoustoOpticModulator;
+ontolidar:Qswitching a skos:Concept;
+  skos:broader ontolidar:Pulsedmethod;
   skos:definition "Technique by which short light pulses can be obtained from a continuous wave laser source, with a given pulse repetition rate controlled via a modulator."@en,
     "Tecnica di produzione di impulsi brevi di luce a partire da una sorgente laser di luce continua. La frequenza dell'impulso è regolata da un modulatore."@it,
     "Técnica para la formación de pulsos de luz a partir the una fuente láser de radiación continua. Un modulador regula la frecuencia en la emisión del pulso."@es,
     "可从连续波激光源获得短光脉冲的技术，尖端为纳秒，通过调制器控制特定的脉冲重复率。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM QSwitching"@cn, "AOM QSwitching"@en, "QSwitch AOM"@it .
+  skos:prefLabel "AOM QSwitching"@cn, "QSwitch AOM"@it, "QSwitching"@en .
 
-ontolidar:AomInsertionLoss a skos:Concept;
+ontolidar:InsertionLoss a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
   skos:definition "Perdita di potenza dovuta alla presenza di un modulatore acustico."@it,
     "Power loss due to the insertion of the acousto-optic modulator."@en, "Pérdida de potencia debido a la inserción del modulador acústico-óptico."@es,
     "由于插入了声学调制器而造成的功率损失。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM Insertion loss"@en, "AOM插入损耗"@cn, "Perdita di potenza AOM"@it .
+  skos:prefLabel "AOM插入损耗"@cn, "Insertion loss"@en, "Perdita di potenza AOM"@it .
 
 ontolidar:EmittedLight a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;

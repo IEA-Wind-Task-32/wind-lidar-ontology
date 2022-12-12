@@ -35,7 +35,7 @@
   skos:hasTopConcept ontolidar:DataCommunication, ontolidar:DataFormats, ontolidar:DataProcessing,
     ontolidar:Design, ontolidar:Devices, ontolidar:DopplerPeak, ontolidar:Installation,
     ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
-    ontolidar:Parameters, ontolidar:UseCase;
+    ontolidar:Parameters, ontolidar:UseCase, ontolidar:WindSpeed;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -46,7 +46,7 @@ ontolidar:Units a rdf:Property;
   skos:prefLabel "Unidades"@es, "Unità"@it, "units"@en, "单位"@cn .
 
 ontolidar:VelocityAzimuthDisplay a skos:Concept;
-  skos:altLabel "VAD"@en, "VOOI"@en;
+  skos:altLabel "VAD"@en;
   skos:broader ontolidar:WindfieldReconstruction;
   skos:definition "Un particolare metodo di analisi dati di un lidar a geometria conica. Data una scansione completa del cono ad una specifica altezza, i punti di misurazione contigui l'uno all'altro nello spazio vengono combinati secondo metodi statistici di interpolazione per ricostruire la velocità del vento."@it,
     "VAD es un método de análisis de datos provenientes de un escaneo de geometría cónica en el que varios puntos azimutales estrechamente espaciados son muestreados por el lidar. Dichos datos se utilizan para estimar la velocidad del viento a una determinada altura utilizando métodos de ajuste estadísticos."@es,
@@ -1598,12 +1598,19 @@ ontolidar:Outputs a skos:Concept;
   skos:prefLabel "Outputs"@en, "Risultati"@it, "输出结果"@cn .
 
 ontolidar:WindVelocity a skos:Concept;
+  skos:altLabel "Wind speed"@en;
   skos:broader ontolidar:Outputs;
   skos:definition "The wind velocity vector consist of wind speed and wind direction in a given time."@en,
     "Vettore della velocita' del vento, dato dalla combinazione di velocita assoluta e direzione"@it,
     "给定时间内的风速和风向"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Velocità del vento"@it, "Wind velocity"@en, "风速"@cn .
+
+ontolidar:WindSpeed a skos:Concept;
+  ontolidar:cfConvention "wind_speed"@en;
+  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
+  skos:prefLabel "Wind speed"@en;
+  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:TurbulenceIntensity a skos:Concept;
   skos:broader ontolidar:Outputs;

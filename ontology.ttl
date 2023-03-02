@@ -221,7 +221,7 @@ ontolidar:WindTunnelMeasurements a skos:Concept;
 
 ontolidar:VirtualMetMast a skos:Concept;
   skos:altLabel "Crossed RHI"@en;
-  skos:broader ontolidar:Applications;
+  skos:broader ontolidar:Multi-lidar;
   skos:definition "A series of wind measurements made at discrete vertical locations, mimicking a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement."@en,
     "Series de medición del viento localizadas en puntos concretos de la vertical, imitando un mástil meteorológico. Se pueden llevar a cabo utilizando muvhos enfoques, como RHI cruzado (XRHI) y otras mediciones utilizando dos o tres lidares conjuntamente."@es,
     "Una serie di misurazioni effettuate a varie altezze discrete da terra, in un modo del tutto simile alla distribuzione delle misurazioni dagli anemometri di una torre metereologica. Queste misurazioni possono essere effettuate utilizzando diversi approcci, inclusi il Crossed RHI (XRHI) ed altri sistemi di misurazione a due o tre sistemi laser."@it,
@@ -892,7 +892,8 @@ ontolidar:PowerModule a skos:Concept;
 ontolidar:PowerConverter a skos:Concept;
   skos:broader ontolidar:PowerModule;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Converter di potenza"@it, "Power converter"@en, "电源转换器"@cn .
+  skos:prefLabel "Converter di potenza"@it, "Convertidor de potencia"@es, "Power converter"@en,
+    "电源转换器"@cn .
 
 ontolidar:UninterruptablePowerSupply a skos:Concept;
   skos:broader ontolidar:PowerModule;
@@ -955,7 +956,7 @@ ontolidar:ScannerModule a skos:Concept;
     ontolidar:ScannerMirrors, ontolidar:ScanningSampleRate;
   skos:prefLabel "Componente di scansione"@it, "Módulo del escáner"@es, "Scanner module"@en,
     "扫描器模块"@cn;
-  skos:related ontolidar:ScanningGeometry .
+  skos:related ontolidar:ScanGeometry .
 
 ontolidar:ScannerAzimuthPositioningServo a skos:Concept;
   skos:broader ontolidar:ScannerModule;
@@ -1514,10 +1515,11 @@ ontolidar:ScanGeometry a skos:Concept;
     "La taxonomía de la geometría de escaneo está basada en la Figura 3 de NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@es,
     "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:NonStatic, ontolidar:Static;
+  skos:narrower ontolidar:MeasurementVolume, ontolidar:MultiLidar, ontolidar:NonStatic,
+    ontolidar:SingleLidar, ontolidar:Static;
   skos:prefLabel "Geometria di scansionamento"@it, "Geometria di scansione"@it, "Geometrie scannen"@de,
     "Geometría de escaneo"@es, "Scan geometry"@en, "扫描的几何路径"@cn, "扫描路径"@cn;
-  skos:related ontolidar:ScanningGeometry .
+  skos:related ontolidar:ScanGeometry .
 
 ontolidar:Static a skos:Concept;
   skos:broader ontolidar:ScanGeometry;
@@ -1694,7 +1696,7 @@ ontolidar:MeasurementSetup a skos:Concept;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:SingleLidar a skos:Concept;
-  skos:broader ontolidar:ScanningGeometry;
+  skos:broader ontolidar:ScanGeometry;
   skos:definition "A single lidar that returns line-of-sight data that are converted in to windfield characteristics without the use of data from another lidar or wind speed measurement device."@en,
     "Misurazioni effettuate da un lidar singolo"@it, "Un solo lidar aislado que devuelve datos de la línea de visión (line-of-sight o LOS, por sus siglas en inglés) que se convierten en características del campo de viento sin el uso de datos de otro lidar o dispositivo de medición de la velocidad del viento."@es,
     "仅用单独的一个激光雷达，凭其自身测量的视向数据推算出气流（风）特性，而无需使用来自另一个激光雷达或风速测量设备的数据。"@cn;
@@ -1828,7 +1830,7 @@ ontolidar:Staring a skos:Concept;
 
 ontolidar:MultiLidar a skos:Concept;
   skos:altLabel "multilidar"@en, "multistatic"@en;
-  skos:broader ontolidar:ScanningGeometry;
+  skos:broader ontolidar:ScanGeometry;
   skos:definition "Coordinated measurements made in the same region by multiple lidar. Measurements may or may not be synchronised in time."@en,
     "Medidas coordinadas relizadas en la misma región por diferentes dispositivos lidar. Las medidas pueden estar sincronizadas en el tiempo."@es,
     "Misurazioni coordinate effettuate nella stessa regione da più sistemi lidar. Le misurazioni possono essere sincronizzate nel tempo."@it,
@@ -1838,7 +1840,7 @@ ontolidar:MultiLidar a skos:Concept;
   skos:prefLabel "Multi-lidar"@en, "Multi-lidar"@es, "Multi-lidar"@it, "多激光雷达"@cn .
 
 ontolidar:MeasurementVolume a skos:Concept;
-  skos:broader ontolidar:ScanningGeometry;
+  skos:broader ontolidar:ScanGeometry;
   skos:definition "Lo spazio illuminato dai fasci laser del lidar. Corresponde all'unione di tutte le regioni investigata dai singoli fasci laser (e loro singole aree di misurazione - probe volumes) che possono costituire un sistema lidar da cui le misurazioni grezze sono prese e combinate per costruire la misurazione finale."@it,
     "Región caracterizada por el lidar de viento. Corresponde a la región en la que los diferentes rayos con diversas orientaciones (o líneas de visión, LOS por sus siglas en inglés) penetran en la atmósfera tomando datos a lo largo de un volumen de muestreo. A lo largo de estos volúmenes de muestreo, cada uno correspondiente a una orientación (o línea de visión) el sistema adquiere datos intermedios de los que se extraen las mediciones finales."@es,
     "The region characterised by the wind lidar. Corresponds to the region penetrated by the various beam orientations / lines of sight and probe volumes where intermediate data are acquired to produce a final measurement."@en,
@@ -1907,7 +1909,7 @@ ontolidar:ProbeVolume a skos:Concept;
 
 ontolidar:RayleighLength a skos:Concept;
   skos:broader ontolidar:ProbeVolume;
-  skos:definition "Distance, from the beam waist in the propagation direction, where the area of the beam section is increased by a factor of 2, or the radius is increased by a factor of the squared root of 2. The Rayleigh length is used to characterise the probe volume and corresponds to the half of the probe length. It also can be defined as half of the FWHM of the weighting function characterising the probe volulme."@en,
+  skos:definition "Distance, from the beam waist in the propagation direction, where the area of the beam section is increased by a factor of 2, or the radius is increased by a factor of the squared root of 2. The Rayleigh length is used to characterise the probe volume and corresponds to the half of the probe length. It also can be defined as half of the full-width half-maximum (FWHM) of the weighting function characterising the probe volume."@en,
     "Distancia, tomando como referencia la distancia focal del haz, en la dirección de propagación del mismo, donde el área de la sección del haz se duplica, o dicho de otro modo, el radio se incrementa en un factor raíz de 2. La longitud de Rayleigh se utiliza para caracterizar el volumen de la sonda y corresponde a la mitad de la longitud de muestreo."@es,
     "Distanza lungo la direzione di propagazione del raggio laser fra il punto di minima apertura radiale del raggio laser al punto di apertura radiale doppia rispetto al valor minimo. La distanza di Rayleigh è usata per caratterizzare il volume della sonda di misurazione e corrisponde a metà della lunghezza della sonda di prova."@it,
     "一种距离的表示方式，从传播方向的光束腰部开始，光束部分的截面积面积增加了2倍，或者截面半径增加了根号2倍。瑞利长度用于描述探测体积的特征，相当于探测体长度的一半。"@cn;
@@ -2420,7 +2422,7 @@ ontolidar:Decommission a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Decommission"@en, "Ritiro"@it, "退役"@cn .
 
-ontolidar:Applications skos:narrower ontolidar:VirtualMetMast .
+ontolidar:Multi-lidar skos:narrower ontolidar:VirtualMetMast .
 
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorActiveArea, ontolidar:PhotodetectorGain,
     ontolidar:PhotodetectorSnr, ontolidar:PhotodetectorVoltageNoise .
@@ -2431,9 +2433,6 @@ ontolidar:UninterruptiblePowerSupply skos:narrower ontolidar:UpsBatteryCapacity,
 ontolidar:MoveLaser skos:narrower ontolidar:MolasB300, ontolidar:MolasNl .
 
 ontolidar:Galion skos:narrower ontolidar:GalionScanningLidarG4000 .
-
-ontolidar:ScanningGeometry skos:narrower ontolidar:MeasurementVolume, ontolidar:MultiLidar,
-    ontolidar:SingleLidar .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emmiter/ReceiverConfiguration>
   skos:narrower ontolidar:Bistatic, ontolidar:Monostatic .

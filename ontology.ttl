@@ -35,7 +35,7 @@
   skos:hasTopConcept ontolidar:DataCommunication, ontolidar:DataFormats, ontolidar:DataProcessing,
     ontolidar:Design, ontolidar:Devices, ontolidar:DopplerPeak, ontolidar:Installation,
     ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
-    ontolidar:Parameters, ontolidar:UseCase, ontolidar:WindSpeed;
+    ontolidar:Parameters, ontolidar:UseCase;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -388,7 +388,7 @@ ontolidar:AnalogToDigitalConverter a skos:Concept;
 ontolidar:NumberOfBits a skos:Concept;
   skos:broader ontolidar:AnalogToDigitalConverter;
   skos:definition "Number of bits of the analog to digital converter."@en, "Numero di bit del convertitore analogico-digitale"@it,
-    "Número de bits del convertidor analógico-digital"@es, "模拟数字转换器的比特数。"@cn;
+    "Número de bits del convertidor analógico-digital."@es, "模拟数字转换器的比特数。"@cn;
   skos:editorialNote "Define la resolución del convertidos analógico-digital y representa el número de valores o \"niveles\" en que la señal puede ser cuantizada."@es,
     "Defines the resolution of the analog to digital converter, and represents the number of values or \"levels\" in which the signal can be quantised."@en,
     "Definisce la risoluzione del convertitore analogico-digitale e rappresenta il numero di valori (livelli) in cui il segnale viene separato"@it;
@@ -397,7 +397,7 @@ ontolidar:NumberOfBits a skos:Concept;
 
 ontolidar:Filter a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
-  skos:definition "Filtro pasa-baja"@es, "Filtro passa-basso"@it, "Low pass filter."@en,
+  skos:definition "Filtro pasa-baja."@es, "Filtro passa-basso"@it, "Low pass filter."@en,
     "低通滤波器。"@cn;
   skos:editorialNote "El ruido aleatorio de la señal debida al hardware y luz retrodispersada se filtra aplicando un umbral que define qué parte de la señal corresponde a información sobre las características del viento y qué parte es simplemente ruido de señal ."@es,
     "Segnala la presenza di rumore dall'hardware, da backscatter non legato al vento Tipicamente il filtro e' costituito da una semplice soglia sul livello di rumore."@it,
@@ -610,7 +610,7 @@ ontolidar:LaserWavelength a skos:Concept;
   ontolidar:units "meters"@en;
   skos:broader ontolidar:LaserSource;
   skos:definition "La lunghezza d'onda nominale della sorgente laser. Definita in unità di lunghezzza (metri): ad esempio 1450E-9 m per una sorgente laser nel vicino infrarosso."@it,
-    "Longitud de onda nominal del láser"@es, "The nominal wavelength of the laser source."@en,
+    "Longitud de onda nominal del láser."@es, "The nominal wavelength of the laser source."@en,
     "激光源的标称波长。这是以米为单位定义的，例如，对于近红外激光源，1450E-9米。"@cn;
   skos:editorialNote "In unita' di metri."@it, "This is defined in units of meters, e.g., 1450e-9 m for a near-infrared laser source."@en,
     "Unidad en metros"@es;
@@ -891,6 +891,9 @@ ontolidar:PowerModule a skos:Concept;
 
 ontolidar:PowerConverter a skos:Concept;
   skos:broader ontolidar:PowerModule;
+  skos:definition "Device used to convert the voltage, frequency or a combination of both from an external source into the volltage and frequency usable by the lidar and its various componets."@en,
+    "Dispositivo utilizado para convertir el voltaje, la frecuencia o una combinación de ambos de una fuente externa en el voltaje y la frecuencia utilizables por el lidar y sus diversos componentes."@es;
+  skos:editorialNote "Lidar can operate in DC current."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Converter di potenza"@it, "Convertidor de potencia"@es, "Power converter"@en,
     "电源转换器"@cn .
@@ -908,7 +911,7 @@ ontolidar:UpsBatteryVoltage a skos:Concept;
   ontolidar:units "volts"@en;
   skos:broader ontolidar:UninterruptiblePowerSupply;
   skos:definition "Il voltaggio della batteria (in unità di Volt)."@it, "The battery voltage."@en,
-    "Voltaje de la batería. Unidade en voltios."@es, "电池电压。"@cn;
+    "Voltaje de la batería."@es, "电池电压。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "UPS battery voltage"@en, "UPS电池电压"@cn, "Voltaggio della batteria dell'UPS"@it,
     "Voltaje de batería del SAI"@es .
@@ -1313,7 +1316,7 @@ ontolidar:Vindicator a skos:Concept;
   skos:prefLabel "Lidar Vindicator'"@it, "Vindicator"@cn, "Vindicator"@de, "Vindicator"@en .
 
 ontolidar:Instances a skos:Concept;
-  skos:definition "Cada uno de los objetos lidar"@es, "Each single wind lidar object."@en,
+  skos:definition "Cada uno de los objetos lidar."@es, "Each single wind lidar object."@en,
     "Ogni singolo esemplare di lidar eolici."@it, "测风激光雷达实例"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower <http://vocab.ieawindtask32.org/wind-lidar-ontology/LidarType(ExtendedDefinition)>,
@@ -1391,6 +1394,7 @@ ontolidar:CentroidPowerValue a skos:Concept;
   skos:definition "El valor de potencia calculado como el centroide del espectro Doppler, que finalmente se identifica con la velocidad radial medida por el lidar."@es,
     "The power value calculated as the centroid of the Doppler spectrum which eventually is identified with the radial velocity measured by the lidar."@en,
     "Valore dello spettro Doppler corrispondente al centroide della distribuzione"@it;
+  skos:editorialNote "The centroid corresponds to the arithmetic mean of the averaged frequency spectrum yielded by the lidar frequency analiser"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Centroid power value"@en, "Centroide"@es, "Centroide"@it, "Schwerpunkt"@de,
     "中心值"@cn;
@@ -1505,12 +1509,12 @@ ontolidar:ScanGeometry a skos:Concept;
   skos:altLabel "Scan pattern"@en;
   skos:broader ontolidar:MeasurementSetup, ontolidar:WindfieldReconstruction;
   skos:definition "1. Serie de configuraciones de medidas realizadas por un lidar de escaneo que requieren que el haz lidar sea escaneado o barrido entre un número de orientacions diferentes. La geometría de barrido asegura que se adquieran mediciones en un volumen suficiente para posibilitar la reconstrucción del campo de viento. La secuencia de orientaciones del haz puede repetirse para adquirir una serie temporalde datos finales, adquiridos en cada iteración. Los escaneos pueden realizarse en modo stop-stare o sweep-stare. 2. La colección de líneas de visión (line-of-sight o LOS, por sus siglas en inglés) del haz a lo largo de las cuales el lidar está programado para emitir su sondeo."@es,
+    "1. The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en,
     "1. Una serie di configurazioni di misuraizone per uno scanning lidar che definisce come il fascio laser debba essere mosso e spostato fra una serie di posizioni pre-definite. Questa serie garantisce l'acquisizione in misura sufficiente di dati per ricostruire il campo di vento. La sequenza delle orientazioni può essere ripetuta per registrare una serie temporale della stessa quantità misurata. Il movimento da una posizione di misurazione alla successiva può essere effettuato in modalità stop-stare o sweep-stare. 2. L'insieme delle direzioni di misurazione / orientazioni del fascio laser in cui il lidar emette la sua sonda."@it,
     "1. 激光雷达扫描方式（顺序）的安排，要求激光雷达光束在一些不同的方向之间扫描或扫过。扫描的几何路径确保在整个测量范围内获得足够的测量结果以重建气流（风）流场。对应的光束方向的可以重复进行扫描，通过迭代扫描获得时间序列的数据集。扫描可以在停滞或扫掠模式下进行。2. 激光雷达的扫描光束方向，沿着雷达程序设定的发射其探测信号的方向。"@cn,
     "Secuencia de posicionamientos del rayo láser lidar en el espacio, que requiere que el rayo lidar escanee o barra una serie de orientaciones diferentes."@es,
     "Sequence of lidar laser beam placements in space, which require the lidar beam to be scanned or swept between a number of different orientations."@en,
-    "Sequenza dei posizionamenti del raggio laser del lidar nello spazio."@it, "The arrangement of a sequence of scanning lidar configurations that require the lidar beam to be scanned or swept between a number of different orientations. The scan geometry ensures measurements are acquired throughout the measurement volume sufficient for wind field reconstruction. The sequence of beam orientations may be repeated to acquire a time series of final data acquired from each iteration. Scans may be performed in stop-stare or sweep-stare mode. 2. The collection of lines of sight / beam orientations along which the lidar is programmed to emit its probe."@en,
-    "测风激光雷达光束在空间中扫过的位置，通常需要在若干不同方向上进行扫描。"@cn;
+    "Sequenza dei posizionamenti del raggio laser del lidar nello spazio."@it, "测风激光雷达光束在空间中扫过的位置，通常需要在若干不同方向上进行扫描。"@cn;
   skos:editorialNote "La tassonomia della geometria di scansione è basata sulla figura 3 di NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@it,
     "La taxonomía de la geometría de escaneo está basada en la Figura 3 de NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@es,
     "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
@@ -1587,14 +1591,15 @@ ontolidar:CnrThreshold a skos:Concept;
 ontolidar:ProcessedData a skos:Concept;
   skos:broader ontolidar:FilteringStrategy;
   skos:definition "Data that generated after processing the pre-processed data by special or case-dependent filtering methods. e.g. Filtering of data for the period when the lidar beam hits the wave."@en,
-    "Dati prodotti per applicazione di filtri sui dati pre-processati."@it, "用因地（时）制宜的方法处理后的数据，以获得最终更可靠的数据集。例如，用特殊的方法对光束击中波浪时的数据进行过滤。"@cn;
+    "Dati prodotti per applicazione di filtri sui dati pre-processati."@it, "Datos generados tras el procesamiento de los datos pre-procesados mediante métodos especiales de filtrado u otros, en función del propósito."@es,
+    "用因地（时）制宜的方法处理后的数据，以获得最终更可靠的数据集。例如，用特殊的方法对光束击中波浪时的数据进行过滤。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Dati post-processati"@it, "Processed data"@en, "已处理的数据"@cn .
 
 ontolidar:Outputs a skos:Concept;
   skos:broader ontolidar:WindfieldReconstruction;
   skos:definition "Data that generated after data-processing."@en, "Dati al termine della fase di processamento e filtraggio"@it,
-    "经各种方法处理后的雷达数据"@cn;
+    "Datos generados como producto final del proceso de medición del viento."@es, "经各种方法处理后的雷达数据"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:TurbulenceIntensity, ontolidar:Uncertainties, ontolidar:WindVelocity;
   skos:prefLabel "Outputs"@en, "Risultati"@it, "输出结果"@cn .
@@ -1602,17 +1607,12 @@ ontolidar:Outputs a skos:Concept;
 ontolidar:WindVelocity a skos:Concept;
   skos:altLabel "Wind speed"@en;
   skos:broader ontolidar:Outputs;
-  skos:definition "The wind velocity vector consist of wind speed and wind direction in a given time."@en,
+  skos:definition "El vector de velocidad del viento está formado por la velocidad y la dirección del viento para un momento dado."@es,
+    "The wind velocity vector consist of wind speed and wind direction in a given time."@en,
     "Vettore della velocita' del vento, dato dalla combinazione di velocita assoluta e direzione"@it,
     "给定时间内的风速和风向"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Velocità del vento"@it, "Wind velocity"@en, "风速"@cn .
-
-ontolidar:WindSpeed a skos:Concept;
-  ontolidar:cfConvention "wind_speed"@en;
-  skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Wind speed"@en;
-  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:TurbulenceIntensity a skos:Concept;
   skos:broader ontolidar:Outputs;
@@ -1655,7 +1655,7 @@ ontolidar:CloudDetection a skos:Concept;
   skos:broader ontolidar:DataFiltering;
   skos:definition "A range (or a quantity) to indicate the laser beam is reflected from Cloud, and the corresponding lidar measurement data shall be filtered out during the data processing."@en,
     "Filtro specifico per rimuovere dati spuri dovuti alla presenza di nuvole nel tragitto del raggio laser."@it,
-    "Rango (o cantidad) para indicar que el rayo láser ha sido reflejado por una nube, y que los datos de medición lidar correspondientes se filtrarán durante el procesamiento de datos"@es,
+    "Rango (o cantidad) para indicar que el rayo láser ha sido reflejado por una nube, y que los datos de medición lidar correspondientes se filtrarán durante el procesamiento de datos."@es,
     "一个范围（或数值）用来表示激光束被云层反射，在数据处理过程中应将对应的测量数据进行过滤去除。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Cloud detection"@en, "Rilevamento di nuvole"@it, "云层识别"@cn .
@@ -1861,7 +1861,8 @@ ontolidar:Probe a skos:Concept;
 
 ontolidar:Range a skos:Concept;
   skos:broader ontolidar:Probe;
-  skos:definition "La distanza massima oltre cui la misurazione è inibita a causa di criteri sulla disponibilità di segnale (ad esemçpio, insufficiente SNR)"@it,
+  skos:definition "Distancia máxima a partir de la cual la detección está limitada por un criterio de disponibilidad de datos, por ejemplo, la SNR."@es,
+    "La distanza massima oltre cui la misurazione è inibita a causa di criteri sulla disponibilità di segnale (ad esemçpio, insufficiente SNR)"@it,
     "The maximum distance beyond which detection is limited by a data availability criterion, for example, SNR."@en,
     "探测的最大距离。超过这个距离，数据可用性会降低，例如，信噪比超出正常范围。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -2214,9 +2215,9 @@ ontolidar:Parameters a skos:Concept;
 ontolidar:CarrierToNoiseRatio a skos:Concept;
   skos:altLabel "CNR"@en;
   skos:broader ontolidar:Parameters;
-  skos:definition "In a modulated signal (i.e. the pulse), the carrier to noise ratio is the ratio of the signal power to the signal noise power."@en,
-    "Medida de la fuerza de la señal de retorno."@es, "Una misura della forza del segnale di ritorno al lidar."@it,
-    "在调制信号中，载波噪声比是信号功率与信号噪声功率的比值。"@cn;
+  skos:definition "En una señal modulada, CNR es el cociente entre la potencia de la señal y la potencia del ruido de es señal."@es,
+    "In a modulated signal (i.e. the pulse), the carrier to noise ratio is the ratio of the signal power to the signal noise power."@en,
+    "Una misura della forza del segnale di ritorno al lidar."@it, "在调制信号中，载波噪声比是信号功率与信号噪声功率的比值。"@cn;
   skos:editorialNote "A measure of lidar return signal quality. Is the signal to noise ratio of the modulated signal sent to probe the atmosphere and defines the lidar data availability. If CNR is below a certain threshold the information carried by the backscattered (modulated) light is discarded. Often used interchangably with SNR."@en,
     "Spesso usato in modo interscambiabile con SNR"@it, "Una medida de la calidad de la señal de retorno del lidar. Es la relación señal/ruido de la señal modulada enviada para sondear la atmósfera y define la disponibilidad de los datos lidar. Si el CNR está por debajo de un determinado umbral, la información transportada por la luz retrodispersada (modulada) se descarta. A menudo se utiliza de forma intercambiable con SNR."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -2226,8 +2227,9 @@ ontolidar:CarrierToNoiseRatio a skos:Concept;
 ontolidar:SignalToNoiseRatio a skos:Concept;
   skos:altLabel "SNR"@en;
   skos:broader ontolidar:Parameters;
-  skos:definition "Medida de la fuerza de la señal de retorno."@es, "The ratio of signal power to signal noise power before modulation."@en,
-    "Una misura della forza del segnale di ritorno al lidar."@it, "信号功率与信号噪声功率之比。"@cn;
+  skos:definition "SNR es el cociente entre la potencia de la señaly la potencia del ruido de esa señal."@es,
+    "The ratio of signal power to signal noise power before modulation."@en, "Una misura della forza del segnale di ritorno al lidar."@it,
+    "信号功率与信号噪声功率之比。"@cn;
   skos:editorialNote "A menudo se usa de forma intercambiable con CNR."@es, "Often used interchangably with CNR."@en,
     "Spesso usato in modo interscambiabile con CNR"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;

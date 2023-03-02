@@ -221,7 +221,7 @@ ontolidar:WindTunnelMeasurements a skos:Concept;
 
 ontolidar:VirtualMetMast a skos:Concept;
   skos:altLabel "Crossed RHI"@en;
-  skos:broader ontolidar:Multi-lidar;
+  skos:broader ontolidar:MultiLidar;
   skos:definition "A series of wind measurements made at discrete vertical locations, mimicking a met mast. These can be implemented using many approaches including Crossed RHI (XRHI) and other dual- or triple-lidar measurement."@en,
     "Series de medición del viento localizadas en puntos concretos de la vertical, imitando un mástil meteorológico. Se pueden llevar a cabo utilizando muvhos enfoques, como RHI cruzado (XRHI) y otras mediciones utilizando dos o tres lidares conjuntamente."@es,
     "Una serie di misurazioni effettuate a varie altezze discrete da terra, in un modo del tutto simile alla distribuzione delle misurazioni dagli anemometri di una torre metereologica. Queste misurazioni possono essere effettuate utilizzando diversi approcci, inclusi il Crossed RHI (XRHI) ed altri sistemi di misurazione a due o tre sistemi laser."@it,
@@ -1836,7 +1836,7 @@ ontolidar:MultiLidar a skos:Concept;
     "Misurazioni coordinate effettuate nella stessa regione da più sistemi lidar. Le misurazioni possono essere sincronizzate nel tempo."@it,
     "多个激光雷达在同一区域进行的协调测量。测量结果在时间上可能会（或不会）同步。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:ConvergentScan;
+  skos:narrower ontolidar:ConvergentScan, ontolidar:VirtualMetMast;
   skos:prefLabel "Multi-lidar"@en, "Multi-lidar"@es, "Multi-lidar"@it, "多激光雷达"@cn .
 
 ontolidar:MeasurementVolume a skos:Concept;
@@ -2421,8 +2421,6 @@ ontolidar:Decommission a skos:Concept;
     "Decommission date and time, location (gps)."@en, "退役日期和时间，地点(gps)"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Decommission"@en, "Ritiro"@it, "退役"@cn .
-
-ontolidar:Multi-lidar skos:narrower ontolidar:VirtualMetMast .
 
 ontolidar:PhotoDetector skos:narrower ontolidar:PhotodetectorActiveArea, ontolidar:PhotodetectorGain,
     ontolidar:PhotodetectorSnr, ontolidar:PhotodetectorVoltageNoise .

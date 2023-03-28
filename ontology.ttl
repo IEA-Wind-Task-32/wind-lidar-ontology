@@ -55,8 +55,8 @@ ontolidar:VelocityAzimuthDisplay a skos:Concept;
   skos:editorialNote "El método VAD se describe en Lhermitte (1996) y en Browning and Wexler (1968)"@es,
     "Il metodo VAD è descritto in Lhermitte (1966) e Bowning e Wexler (1968)."@it, "The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Campionamento di velocità in azimut"@it, "Muestreo de velocidad en azimut"@es,
-    "VAD测量法"@cn, "Velocity azimuth display"@en .
+  skos:prefLabel "Azimut Geschwindigkeitsanzeige"@de, "Campionamento di velocità in azimut"@it,
+    "Muestreo de velocidad en azimut"@es, "VAD测量法"@cn, "Velocity azimuth display"@en .
 
 ontolidar:UseCase a skos:Concept;
   skos:definition "Formas en las que el lidar de viento puede ser utilizado. Combinación de tres elementos: 1. Requisitos de datos orientados a los resultados (en contraposición a los requisitos orientados a las restricciones, véase sensor de primera generación / mediciones de primera generación); 2. Método de medición seleccionado para cumplirlos; 3. Las condiciones de operación que determinan el rendimiento del método con respecto a la precisión del mismo."@es,

@@ -33,9 +33,9 @@
   pav:version "0.1"@en;
   skos:editorialNote "This ontology is produced and maintained by IEA Wind Task 32."@en;
   skos:hasTopConcept ontolidar:DataCommunication, ontolidar:DataFormats, ontolidar:DataProcessing,
-    ontolidar:Design, ontolidar:Devices, ontolidar:DopplerPeak, ontolidar:Installation,
-    ontolidar:Instances, ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup,
-    ontolidar:Parameters, ontolidar:UseCase;
+    ontolidar:Design, ontolidar:Devices, ontolidar:Installation, ontolidar:Instances,
+    ontolidar:MeasurementPrinciples, ontolidar:MeasurementSetup, ontolidar:Parameters,
+    ontolidar:UseCase;
   skos:historyNote "Suggestions for additions or changes should be made through the glossary repository at https://github.com/IEA-Wind-Task-32/wind-lidar-glossary."@en;
   skos:prefLabel "IEA Wind Task 32 Wind Lidar Ontology"@en .
 
@@ -55,7 +55,7 @@ ontolidar:VelocityAzimuthDisplay a skos:Concept;
   skos:editorialNote "El método VAD se describe en Lhermitte (1996) y en Browning and Wexler (1968)"@es,
     "Il metodo VAD è descritto in Lhermitte (1966) e Bowning e Wexler (1968)."@it, "The VAD method is described in Lhermitte (1966) and Browning and Wexler (1968)."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Azimut Geschwindigkeitsanzeige"@de, "Campionamento di velocità in azimut"@it,
+  skos:prefLabel "Campionamento di velocità in azimut"@it, "Geschwindigkeits-Azimut-Anzeige"@de,
     "Muestreo de velocidad en azimut"@es, "VAD测量法"@cn, "Velocity azimuth display"@en .
 
 ontolidar:UseCase a skos:Concept;
@@ -67,7 +67,8 @@ ontolidar:UseCase a skos:Concept;
     ontolidar:PerformanceVerification, ontolidar:TurbineCertification, ontolidar:WindCharacterisation,
     ontolidar:WindPlantControl, ontolidar:WindTunnelMeasurements, ontolidar:WindTurbineControl,
     ontolidar:YawAlignment;
-  skos:prefLabel "Casi di uso"@it, "Caso de uso"@es, "Use case"@en, "应用场景"@cn;
+  skos:prefLabel "Anwendungsfall"@de, "Casi di uso"@it, "Caso de uso"@es, "Use case"@en,
+    "应用场景"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:AdditionalSensor a skos:Concept;
@@ -77,7 +78,7 @@ ontolidar:AdditionalSensor a skos:Concept;
     "除用传统标准的风速仪测量外，对风力发电机组/风电场进行基于激光雷达的测量。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Additional sensor"@en, "Sensor adicional"@es, "Sensore aggiuntivo"@it,
-    "额外的传感器"@cn .
+    "Zusätzlicher Sensor"@de, "额外的传感器"@cn .
 
 ontolidar:WindCharacterisation a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -86,8 +87,8 @@ ontolidar:WindCharacterisation a skos:Concept;
     "Misurazioni lidar volte a definire le proprietà locali del vento."@it, "基于激光雷达的测量，确定测量区域内风的流场特征"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:IecStandard61400121;
-  skos:prefLabel "Caracterización de las propiedades del viento"@es, "Identificazione delle proprietà del vento"@it,
-    "Wind characterisation"@en, "风的特性"@cn .
+  skos:prefLabel "Caracterización de las propiedades del viento"@es, "Charakterisierung des Windes"@de,
+    "Identificazione delle proprietà del vento"@it, "Wind characterisation"@en, "风的特性"@cn .
 
 ontolidar:IecStandard61400121 a skos:Concept;
   skos:broader ontolidar:WindCharacterisation;
@@ -96,8 +97,8 @@ ontolidar:IecStandard61400121 a skos:Concept;
     "Standard interanzionali di riferimento per turbine eoliche, strumenti eolici e strumentazioni di misurazione del vento"@it,
     "风力发电机组功率特性测试国际标准"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standard 61400-12-1"@en, "IEC标准61400-12-1"@cn, "Norma IEC 61400-12-1"@es,
-    "Standard IEC 61400-12-1"@it .
+  skos:prefLabel "IEC Standard 61400-12-1"@en, "IEC-Norm 61400-12-1"@de, "IEC标准61400-12-1"@cn,
+    "Norma IEC 61400-12-1"@es, "Standard IEC 61400-12-1"@it .
 
 ontolidar:TurbineCertification a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -107,7 +108,7 @@ ontolidar:TurbineCertification a skos:Concept;
     "旨在验证风力发电机的设计、测试和制造符合规定的风力等级，并符合国际认证标准以及所有其他适用的标准和法规要求，是风力发电机组商业化的前提。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Certificación de la turbina eólica"@es, "Certificazione per turbine eoliche"@it,
-    "Turbine certification"@en, "风力发电机组认证"@cn .
+    "Turbine certification"@en, "Zertifizierung von Turbinen"@de, "风力发电机组认证"@cn .
 
 ontolidar:PerformanceVerification a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -117,8 +118,8 @@ ontolidar:PerformanceVerification a skos:Concept;
     "测试风力发电机组性能（功率特性）的过程，通常是为了验证风电机组的实际运行性能与制造商设定性能之间的差异"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:IecStandard61400502, ontolidar:IecStandard61400503, ontolidar:Task32RecommendedPractices;
-  skos:prefLabel "Performance verification"@en, "Verifica delle performances"@it, "Verificación del rendimiento"@es,
-    "性能测试"@cn .
+  skos:prefLabel "Leistungsüberprüfung"@de, "Performance verification"@en, "Verifica delle performances"@it,
+    "Verificación del rendimiento"@es, "性能测试"@cn .
 
 ontolidar:IecStandard61400502 a skos:Concept;
   skos:broader ontolidar:PerformanceVerification;
@@ -127,8 +128,8 @@ ontolidar:IecStandard61400502 a skos:Concept;
     "Wind turbine's power performance measurement standards based on ground based lidars."@en,
     "基于地面式测风激光雷达的风力发电机组功率特性测试国际标准"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standard 61400-50-2"@en, "IEC Standard 61400-50-2"@it, "IEC标准61400-50-2"@cn,
-    "Norma IEC 61400-50-2"@es .
+  skos:prefLabel "IEC Standard 61400-50-2"@en, "IEC Standard 61400-50-2"@it, "IEC-Norm 61400-50-2"@de,
+    "IEC标准61400-50-2"@cn, "Norma IEC 61400-50-2"@es .
 
 ontolidar:IecStandard61400503 a skos:Concept;
   skos:broader ontolidar:PerformanceVerification;
@@ -137,8 +138,8 @@ ontolidar:IecStandard61400503 a skos:Concept;
     "Wind turbine's power performance measurement standards based on nacelle mounted lidars."@en,
     "基于机舱式测风激光雷达的风力发电机组功率特性测试国际标准"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "IEC Standard 61400-50-3"@en, "IEC Standard 61400-50-3"@it, "IEC标准61400-50-3"@cn,
-    "Norma IEC 61400-50-3"@es .
+  skos:prefLabel "IEC Standard 61400-50-3"@en, "IEC Standard 61400-50-3"@it, "IEC-Norm 61400-50-3"@de,
+    "IEC标准61400-50-3"@cn, "Norma IEC 61400-50-3"@es .
 
 ontolidar:Task32RecommendedPractices a skos:Concept;
   skos:broader ontolidar:PerformanceVerification;
@@ -147,7 +148,7 @@ ontolidar:Task32RecommendedPractices a skos:Concept;
     "Task 32 Reccomended practices for Offshore Power Performance - Testing/Complex terrain."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Raccomandazioni della IEA Task32"@it, "Recomendaciones Task32"@es,
-    "Task32 Recommended practices"@en, "Task32 推荐做法"@cn .
+    "Task32 Empfohlene Vorgehensweisen"@de, "Task32 Recommended practices"@en, "Task32 推荐做法"@cn .
 
 ontolidar:WindTurbineControl a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -158,8 +159,8 @@ ontolidar:WindTurbineControl a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower <http://vocab.ieawindtask32.org/wind-lidar-ontology/Turbulence(ControlInPresenceOf)>,
     <http://vocab.ieawindtask32.org/wind-lidar-ontology/Wakes(ControlOf)>;
-  skos:prefLabel "Controllo dei generatori eolici"@it, "Técnicas de control de la turbina eólica"@es,
-    "Wind turbine control"@en, "风力发电机组控制"@cn .
+  skos:prefLabel "Controllo dei generatori eolici"@it, "Steuerung von Windkraftanlagen"@de,
+    "Técnicas de control de la turbina eólica"@es, "Wind turbine control"@en, "风力发电机组控制"@cn .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Turbulence(ControlInPresenceOf)>
   a skos:Concept;
@@ -170,7 +171,7 @@ ontolidar:WindTurbineControl a skos:Concept;
     "基于激光雷达在湍流情况下控制风力发电机组的技术。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Turbolenza (controllo in presenza di)"@it, "Turbulence (control in presence of)"@en,
-    "Turbulencia"@es, "湍流（存在时的控制）"@cn .
+    "Turbulencia"@es, "Turbulenz (Kontrolle in Gegenwart von)"@de, "湍流（存在时的控制）"@cn .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Wakes(ControlOf)> a skos:Concept;
   skos:broader ontolidar:WindTurbineControl;
@@ -178,8 +179,8 @@ ontolidar:WindTurbineControl a skos:Concept;
     "Técnicas basadas en datos lidar para el control de estelas creadas por la turbina eólica."@es,
     "基于激光雷达来控制风力发电机组尾流的技术。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Estelas"@es, "Scie (controllo delle)"@it, "Wakes (control of)"@en,
-    "尾流（控制）"@cn .
+  skos:prefLabel "Estelas"@es, "Scie (controllo delle)"@it, "Wakes (Steuerung von)"@de,
+    "Wakes (control of)"@en, "尾流（控制）"@cn .
 
 ontolidar:WindPlantControl a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -188,8 +189,8 @@ ontolidar:WindPlantControl a skos:Concept;
     "Tecniche di controllo collettivo di turbine eoliche nello stesso parco basate su misurazioni da lidar."@it,
     "基于激光雷达，对于同一个风电场内的风力发电机组进行集体控制的技术。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Control de parque eólico"@es, "Controllo del parco eolico"@it, "Wind plant control"@en,
-    "风电场控制"@cn .
+  skos:prefLabel "Control de parque eólico"@es, "Controllo del parco eolico"@it, "Steuerung von Windkraftanlagen"@de,
+    "Wind plant control"@en, "风电场控制"@cn .
 
 ontolidar:YawAlignment a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -198,8 +199,8 @@ ontolidar:YawAlignment a skos:Concept;
     "Lidar based alignment of the yaw of the turbine. Aimed at pointing the generator directly into the wind."@en,
     "基于激光雷达对风力发电机组的偏航角进行调整，旨在使机组对风更加准确。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Allineamento della turbina"@it, "Alneamiento de guiñada"@es, "Yaw alignment"@en,
-    "偏航校准"@cn .
+  skos:prefLabel "Allineamento della turbina"@it, "Alneamiento de guiñada"@es, "Ausrichtung des Gierens"@de,
+    "Yaw alignment"@en, "偏航校准"@cn .
 
 ontolidar:MetmastPerformanceVerification a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -209,7 +210,8 @@ ontolidar:MetmastPerformanceVerification a skos:Concept;
     "基于激光雷达的测量，以验证测风塔上测风仪器的测量质量。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Metmast performance verification"@en, "Verifica delle torri anemometriche"@it,
-    "Verificación del rendimiento de la torre meteorológica"@es, "测风塔性能验证"@cn .
+    "Verificación del rendimiento de la torre meteorológica"@es, "Verifizierung der Metmast-Leistung"@de,
+    "测风塔性能验证"@cn .
 
 ontolidar:WindTunnelMeasurements a skos:Concept;
   skos:broader ontolidar:UseCase;
@@ -217,7 +219,7 @@ ontolidar:WindTunnelMeasurements a skos:Concept;
     "Misurazioni lidar effettuate in gallerie del vento."@it, "风洞中基于激光雷达的测量"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Medidas en túnel de viento"@es, "Misurazioni in galleria del vento"@it,
-    "Wind tunnel measurements"@en, "风洞测量"@cn .
+    "Wind tunnel measurements"@en, "Windkanal-Messungen"@de, "风洞测量"@cn .
 
 ontolidar:VirtualMetMast a skos:Concept;
   skos:altLabel "Crossed RHI"@en;
@@ -228,7 +230,7 @@ ontolidar:VirtualMetMast a skos:Concept;
     "类似于测风塔，在竖直方向、离散的不同高度进行的测风。包括许多实现方法，如交叉 RHI (XRHI)方法，双雷达测量或三雷达测量等"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Torre meteorologica virtuale"@it, "Torre meteorológica virtual"@es,
-    "Virtual met mast"@en, "虚拟测风塔"@cn .
+    "Virtual met mast"@en, "Virtueller Messmast"@de, "虚拟测风塔"@cn .
 
 ontolidar:Design a skos:Concept;
   skos:definition "Descrizione delle componenti generali di un lidar e del raccordo fra di esse."@it,
@@ -241,8 +243,7 @@ ontolidar:Design a skos:Concept;
   skos:narrower ontolidar:ChassisModule, ontolidar:ControlModule, ontolidar:InterlocksModule,
     ontolidar:LocationDetection, ontolidar:MotionDetection, ontolidar:OpticsModule, ontolidar:PhotonicsModule,
     ontolidar:PowerModule, ontolidar:ScannerModule;
-  skos:prefLabel "Auslegung"@de, "Design"@en, "Diseño"@es, "Struttura generale"@it,
-    "设计"@cn;
+  skos:prefLabel "Design"@en, "Diseño"@es, "Entwurf"@de, "Struttura generale"@it, "设计"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:ChassisModule a skos:Concept;
@@ -256,7 +257,8 @@ ontolidar:ChassisModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:EnvironmentalConditionsDetection;
-  skos:prefLabel "Chassis module"@en, "Módulo de chasis"@es, "Telaio"@it, "底盘模块"@cn .
+  skos:prefLabel "Chassis module"@en, "Chassis-Modul"@de, "Módulo de chasis"@es, "Telaio"@it,
+    "底盘模块"@cn .
 
 ontolidar:LocationDetection a skos:Concept;
   skos:broader ontolidar:Design;
@@ -266,7 +268,8 @@ ontolidar:LocationDetection a skos:Concept;
     "读取激光雷达准确位置和朝向的设备和相关方法，从而保证可以获得准确的测量位置信息。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Gps, ontolidar:Inclinometer;
-  skos:prefLabel "Localización"@es, "Localizzazione"@it, "Location detection"@en, "位置检测"@cn .
+  skos:prefLabel "Localización"@es, "Localizzazione"@it, "Location detection"@en, "Standort-Erkennung"@de,
+    "位置检测"@cn .
 
 ontolidar:Gps a skos:Concept;
   skos:broader ontolidar:LocationDetection;
@@ -274,7 +277,7 @@ ontolidar:Gps a skos:Concept;
     "Sistema de posicionamiento global que define de forma única la posición del lidar."@es,
     "Sistema di posizionamento globale. Sistema di posizionamento del lidar."@it, "全球定位系统，可准确地描述激光雷达的位置。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "GPS"@cn, "GPS"@en, "GPS"@es, "GPS"@it .
+  skos:prefLabel "GPS"@cn, "GPS"@de, "GPS"@en, "GPS"@es, "GPS"@it .
 
 ontolidar:Inclinometer a skos:Concept;
   skos:broader ontolidar:LocationDetection;
@@ -282,7 +285,8 @@ ontolidar:Inclinometer a skos:Concept;
     "Sistema de medida de la orientación del lidar."@es, "Sistema di misurazione dell'orientazione del lidar."@it,
     "贴在激光雷达支架结构上的定位系统，用于测量物体相对于重力方向的倾斜、仰角或俯角角度。而支架结构被固定在地面或其他结构上，如机舱。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Inclinometer"@en, "Inclinometro"@it, "Inclinómetros"@es, "倾斜仪"@cn .
+  skos:prefLabel "Inclinometer"@en, "Inclinometro"@it, "Inclinómetros"@es, "Neigungsmesser"@de,
+    "倾斜仪"@cn .
 
 ontolidar:MotionDetection a skos:Concept;
   skos:broader ontolidar:Design;
@@ -292,8 +296,8 @@ ontolidar:MotionDetection a skos:Concept;
     "该系统旨在检测和补偿由于机舱或浮标安装的激光雷达的运动/振动，例如机舱或浮标运动。它的输出被用于激光雷达数据处理阶段，以纠正其测量结果并补偿平台的运动。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Accelerometer, ontolidar:Gyrometer;
-  skos:prefLabel "Detección de movimiento"@es, "Motion detection"@en, "Sensore di moto"@it,
-    "运动检测"@cn .
+  skos:prefLabel "Bewegungserkennung"@de, "Detección de movimiento"@es, "Motion detection"@en,
+    "Sensore di moto"@it, "运动检测"@cn .
 
 ontolidar:Accelerometer a skos:Concept;
   skos:broader ontolidar:MotionDetection;
@@ -302,7 +306,8 @@ ontolidar:Accelerometer a skos:Concept;
     "Sensori atti alla misurazione del moto del lidar rispetto al suo sistema inerziale locale. In combinazione con i dati dai giroscopi, supporta il filtraggio e la correzione delle misurazioni del vento."@it,
     "用于测量激光雷达相对于当地惯性系统运动的传感器。与陀螺仪结合，提供了一系列的信息，用于过滤或纠正受雷达设备运动影响而产生的激光雷达数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Accelerometer"@en, "Accelerometro"@it, "Acelerómetro"@es, "加速器"@cn .
+  skos:prefLabel "Accelerometer"@en, "Accelerometro"@it, "Acelerómetro"@es, "Beschleunigungsmesser"@de,
+    "加速器"@cn .
 
 ontolidar:Gyrometer a skos:Concept;
   skos:broader ontolidar:MotionDetection;
@@ -311,7 +316,7 @@ ontolidar:Gyrometer a skos:Concept;
     "Sensori atti alla misurazione dell'orientazione del lidar rispetto al vettore di gravità terrestre locale.. In combinazione con i dati dagli accelerometri, supporta il filtraggio e la correzione delle misurazioni del vento."@it,
     "用于测量激光雷达相对于当地地球重力矢量方向的传感器，从而确定激光束的方向。与加速度计相结合，提供一系列的信息，用于过滤或纠正受雷达设备运动影响而产生的激光雷达数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Girometro"@it, "Girómetro"@es, "Gyrometer"@en, "陀螺仪"@cn .
+  skos:prefLabel "Girometro"@it, "Girómetro"@es, "Gyrometer"@de, "Gyrometer"@en, "陀螺仪"@cn .
 
 ontolidar:EnvironmentalConditionsDetection a skos:Concept;
   skos:broader ontolidar:ChassisModule;
@@ -321,7 +326,8 @@ ontolidar:EnvironmentalConditionsDetection a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:LocalMetstation;
   skos:prefLabel "Detección de condiciones medioambientales"@es, "Environmental conditions detection"@en,
-    "Rilevamento delle condizioni ambientali"@it, "环境条件检测"@cn .
+    "Erkennung von Umgebungsbedingungen"@de, "Rilevamento delle condizioni ambientali"@it,
+    "环境条件检测"@cn .
 
 ontolidar:LocalMetstation a skos:Concept;
   skos:broader ontolidar:EnvironmentalConditionsDetection;
@@ -330,8 +336,8 @@ ontolidar:LocalMetstation a skos:Concept;
     "Stazione meteo locale integrata nella scocca del lidar. Riporta le condizioni meteo in cui il lidar sta operando."@it,
     "集成在激光雷达底盘模块的本地气象站，用于记录或报告激光雷达工作时的气象条件。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Estación meteorológica local"@es, "Local MetStation"@en, "Stazione meteorologica locale"@it,
-    "本地气象站"@cn .
+  skos:prefLabel "Estación meteorológica local"@es, "Local MetStation"@en, "Lokale Messstation"@de,
+    "Stazione meteorologica locale"@it, "本地气象站"@cn .
 
 ontolidar:ControlModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -345,7 +351,7 @@ ontolidar:ControlModule a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CommunicationsModule, ontolidar:SignalProcessingModule, ontolidar:StorageModule;
   skos:prefLabel "Componente di controllo"@it, "Control module"@en, "Módulo de control"@es,
-    "控制模块"@cn .
+    "Steuermodul"@de, "控制模块"@cn .
 
 ontolidar:CommunicationsModule a skos:Concept;
   skos:broader ontolidar:ControlModule;
@@ -357,7 +363,7 @@ ontolidar:CommunicationsModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Communications module"@en, "Componente di comunicazione"@it, "Componentes de comunicación"@es,
-    "通讯模块"@cn .
+    "Kommunikations-Modul"@de, "通讯模块"@cn .
 
 ontolidar:SignalProcessingModule a skos:Concept;
   skos:broader ontolidar:ControlModule;
@@ -370,8 +376,8 @@ ontolidar:SignalProcessingModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:AnalogToDigitalConverter, ontolidar:Filter, ontolidar:FrequencyAnalyser;
-  skos:prefLabel "Componente di processamento dati"@it, "Módulo de procesamiento de señal"@es,
-    "Signal processing module"@en, "信号处理模块"@cn;
+  skos:prefLabel "Componente di processamento dati"@it, "Modul zur Signalverarbeitung"@de,
+    "Módulo de procesamiento de señal"@es, "Signal processing module"@en, "信号处理模块"@cn;
   skos:related ontolidar:DataProcessing .
 
 ontolidar:AnalogToDigitalConverter a skos:Concept;
@@ -383,7 +389,7 @@ ontolidar:AnalogToDigitalConverter a skos:Concept;
     "将光电探测器的模拟信号转换为数字信号的装置，以便由频率分析器进行合理地分析"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:NumberOfBits;
-  skos:prefLabel "Analog to digital converter"@en, "Convertidor analógico-digital"@es,
+  skos:prefLabel "Analog to digital converter"@en, "Analog-Digital-Wandler"@de, "Convertidor analógico-digital"@es,
     "Convertitore analogico-digitale"@it, "模拟数字转换器"@cn .
 
 ontolidar:NumberOfBits a skos:Concept;
@@ -394,7 +400,7 @@ ontolidar:NumberOfBits a skos:Concept;
     "Defines the resolution of the analog to digital converter, and represents the number of values or \"levels\" in which the signal can be quantised."@en,
     "Definisce la risoluzione del convertitore analogico-digitale e rappresenta il numero di valori (livelli) in cui il segnale viene separato"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Number of bits"@en, "Numero di bit"@it, "比特数"@cn .
+  skos:prefLabel "Anzahl der Bits"@de, "Number of bits"@en, "Numero di bit"@it, "比特数"@cn .
 
 ontolidar:Filter a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
@@ -404,7 +410,7 @@ ontolidar:Filter a skos:Concept;
     "Segnala la presenza di rumore dall'hardware, da backscatter non legato al vento Tipicamente il filtro e' costituito da una semplice soglia sul livello di rumore."@it,
     "Signal random noise from hardware and unwanted backscattered light is whitenned and a threshold is applied to filter out undesired signal noise."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Filter"@en, "Filtro"@es, "Filtro"@it, "滤波器"@cn .
+  skos:prefLabel "Filter"@de, "Filter"@en, "Filtro"@es, "Filtro"@it, "滤波器"@cn .
 
 ontolidar:FrequencyAnalyser a skos:Concept;
   skos:broader ontolidar:SignalProcessingModule;
@@ -416,10 +422,10 @@ ontolidar:FrequencyAnalyser a skos:Concept;
     "Questo apparezzio produce lo spettro di potenza del segnale di battimento fra la sorgente laser originale ed il segnale di backscatter."@it,
     "Una vez que la señal analógica se convierte en una señal digital, se utiliza un analizador de frecuencias para determinar su espectro de frecuencias. Este aparato proporciona el espectro de frecuencias de la señal mezclada (señal original de la fuente láser + señal retrodispersada), y por tanto el desplazamiento de frecuencia Doppler."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:FastFourierTransform, ontolidar:FrequencyAnalyserSampleRate,
+  skos:narrower ontolidar:DopplerPeak, ontolidar:FastFourierTransform, ontolidar:FrequencyAnalyserSampleRate,
     ontolidar:PeakIdentification;
   skos:prefLabel "Analizador de frecuencia"@es, "Analizzatore della frequenza"@it, "Frequency analyser"@en,
-    "频率分析器"@cn .
+    "Frequenz-Analysator"@de, "频率分析器"@cn .
 
 ontolidar:PeakIdentification a skos:Concept;
   skos:broader ontolidar:FrequencyAnalyser;
@@ -432,7 +438,7 @@ ontolidar:PeakIdentification a skos:Concept;
     "Metodi comuni di identificazione del picco in una distribuzione di frequenza."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Detección de pico"@es, "Identificazione del picco"@it, "Peak identification"@en,
-    "峰值识别"@cn;
+    "Peak-Identifizierung"@de, "峰值识别"@cn;
   skos:related ontolidar:DopplerSpectra .
 
 ontolidar:FastFourierTransform a skos:Concept;
@@ -443,7 +449,8 @@ ontolidar:FastFourierTransform a skos:Concept;
     "Trasformata di Fourier rapida. Metodo per trasformare la serie temporale dei dati nel suo spettro di potenza."@it,
     "快速傅里叶变换。将激光雷达数据时间序列转化为其功率频谱的方法。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "FFT"@cn, "FFT"@it, "Fast fourier transform"@en, "Transformada de Fourier rápida"@es .
+  skos:prefLabel "FFT"@cn, "FFT"@it, "Fast fourier transform"@en, "Schnelle Fourier-Transformation"@de,
+    "Transformada de Fourier rápida"@es .
 
 ontolidar:FrequencyAnalyserSampleRate a skos:Concept;
   ontolidar:units "Hz"@en;
@@ -453,8 +460,8 @@ ontolidar:FrequencyAnalyserSampleRate a skos:Concept;
     "Número de espectros de frecuencia que el lidar computa durante el tiempo necesario para una sola estimación de la velocidad radial."@es,
     "激光雷达计算的频率谱的数量，以获得一个单一实现的径向速度。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Frequency analyser sample rate"@en, "Frequenza di campionamento dell'analizzatore"@it,
-    "Tasa de muestreo"@es, "频率分析器采样率"@cn .
+  skos:prefLabel "Abtastrate des Frequenzanalysators"@de, "Frequency analyser sample rate"@en,
+    "Frequenza di campionamento dell'analizzatore"@it, "Tasa de muestreo"@es, "频率分析器采样率"@cn .
 
 ontolidar:StorageModule a skos:Concept;
   skos:broader ontolidar:ControlModule;
@@ -467,7 +474,7 @@ ontolidar:StorageModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Componente di memorizzazione dati"@it, "Módulo de almacenamiento"@es,
-    "Storage module"@en, "存储模块"@cn .
+    "Speichermodul"@de, "Storage module"@en, "存储模块"@cn .
 
 ontolidar:OpticsModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -480,7 +487,8 @@ ontolidar:OpticsModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Telescope;
-  skos:prefLabel "Componenti ottiche"@it, "Módulo óptico"@es, "Optics module"@en, "光学模块"@cn .
+  skos:prefLabel "Componenti ottiche"@it, "Módulo óptico"@es, "Optics module"@en, "Optik-Modul"@de,
+    "光学模块"@cn .
 
 ontolidar:Telescope a skos:Concept;
   skos:broader ontolidar:OpticsModule;
@@ -491,7 +499,7 @@ ontolidar:Telescope a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:EndFibreToLensDistance, ontolidar:FocalLength, ontolidar:Lense,
     ontolidar:TelescopeApertureDiameter;
-  skos:prefLabel "Telescope"@en, "Telescopio"@es, "Telescopio"@it, "Teleskop"@de, "望远镜"@cn .
+  skos:prefLabel "Fernrohr"@de, "Telescope"@en, "Telescopio"@es, "Telescopio"@it, "望远镜"@cn .
 
 ontolidar:TelescopeApertureDiameter a skos:Concept;
   ontolidar:units "meters"@en;
@@ -502,7 +510,7 @@ ontolidar:TelescopeApertureDiameter a skos:Concept;
     "激光雷达望远镜的特征光学直径. 发射和接收激光的孔径"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Diametro dell'apertura del telescopio"@it, "Diámetro de apertura del telescopio"@es,
-    "Telescope aperture diameter"@en, "望远镜光圈直径"@cn .
+    "Telescope aperture diameter"@en, "Öffnungsdurchmesser des Teleskops"@de, "望远镜光圈直径"@cn .
 
 ontolidar:FocalLength a skos:Concept;
   skos:broader ontolidar:Telescope;
@@ -510,7 +518,7 @@ ontolidar:FocalLength a skos:Concept;
     "Distanza fra il centro della lente ed il suo punto focale."@it, "Focal length of the telescope. Distance between the lense and its focal lenght."@en,
     "镜头与目标之间的距离。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Focal length"@en, "Lunghezza focale"@it, "焦距"@cn;
+  skos:prefLabel "Brennweite"@de, "Focal length"@en, "Lunghezza focale"@it, "焦距"@cn;
   skos:related ontolidar:ProbeVolume .
 
 ontolidar:EndFibreToLensDistance a skos:Concept;
@@ -522,8 +530,8 @@ ontolidar:EndFibreToLensDistance a skos:Concept;
     "In sistemi a luce continua, parametro di controllo per la distanza di puntamento del sistema laser."@it,
     "Los lidares de onda continua utilizan esta distancia para variar la distancia focal."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Distanza fra il termine della fibra ottica e la la lente"@it, "End-fibre to lens distance"@en,
-    "端部纤维到镜头的距离"@cn;
+  skos:prefLabel "Abstand von der Endfaser zur Linse"@de, "Distanza fra il termine della fibra ottica e la la lente"@it,
+    "End-fibre to lens distance"@en, "端部纤维到镜头的距离"@cn;
   skos:related ontolidar:ProbeVolume .
 
 ontolidar:Lense a skos:Concept;
@@ -532,7 +540,7 @@ ontolidar:Lense a skos:Concept;
     "Sistema ottico per espandere e collimare un fascio di luce."@it, "Sistema óptico utilizado para expandir y colimar un hay de luz."@es,
     "扩大出射光束，并使后方散射光束准直。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lense"@en, "Lente"@it, "Lente del telescopio"@es, "镜片"@cn .
+  skos:prefLabel "Lense"@en, "Lente"@it, "Lente del telescopio"@es, "Linse"@de, "镜片"@cn .
 
 ontolidar:PhotonicsModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -546,7 +554,7 @@ ontolidar:PhotonicsModule a skos:Concept;
   skos:narrower ontolidar:AcoustoOpticModulator, ontolidar:BackscatteredLight, ontolidar:Detector,
     ontolidar:EmittedLight, ontolidar:Interfaces, ontolidar:LaserSource;
   skos:prefLabel "Componente fotonica"@it, "Módulo de fotónica"@es, "Photonics module"@en,
-    "光子模块"@cn .
+    "Photonik-Modul"@de, "光子模块"@cn .
 
 ontolidar:LaserSource a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -554,7 +562,8 @@ ontolidar:LaserSource a skos:Concept;
     "Un sistema di generazione e controllo della luce laser."@it, "一种产生和控制激光的组件。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:LaserDiode, ontolidar:LaserMode, ontolidar:LaserWavelength;
-  skos:prefLabel "Fuente láser"@es, "Laser source"@en, "Sorgente laser"@it, "激光源"@cn .
+  skos:prefLabel "Fuente láser"@es, "Laser source"@en, "Laserquelle"@de, "Sorgente laser"@it,
+    "激光源"@cn .
 
 ontolidar:LaserDiode a skos:Concept;
   skos:broader ontolidar:LaserSource;
@@ -563,7 +572,8 @@ ontolidar:LaserDiode a skos:Concept;
     "Un dispositivo optoelettronico a semiconduttore che genera luce laser monocromatica."@it,
     "一种半导体元件，用于产生规定频率的激光。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Diodo laser"@it, "Diodo láser"@es, "Laser diode"@en, "激光二极管"@cn .
+  skos:prefLabel "Diodo laser"@it, "Diodo láser"@es, "Laser diode"@en, "Laserdiode"@de,
+    "激光二极管"@cn .
 
 ontolidar:LaserMode a skos:Concept;
   skos:broader ontolidar:LaserSource;
@@ -577,35 +587,38 @@ ontolidar:LaserMode a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:LaserFrequency, ontolidar:LaserIntensity, ontolidar:LaserPhase,
     ontolidar:LaserPolarisation;
-  skos:prefLabel "Laser mode"@en, "Modo del laser"@it, "激光模式"@cn .
+  skos:prefLabel "Laser mode"@en, "Laser-Modus"@de, "Modo del laser"@it, "激光模式"@cn .
 
 ontolidar:LaserFrequency a skos:Concept;
   skos:broader ontolidar:LaserMode;
   skos:definition "Frecuencia de la luz de la fuente láser."@es, "Frequenza della luce della sorgente laser."@it,
     "Light frequency of the laser source."@en, "激光源的光频率。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Frequenza del laser"@it, "Laser frequency"@en, "激光频率"@cn .
+  skos:prefLabel "Frequenza del laser"@it, "Laser frequency"@en, "Laserfrequenz"@de,
+    "激光频率"@cn .
 
 ontolidar:LaserPolarisation a skos:Concept;
   skos:broader ontolidar:LaserMode;
   skos:definition "Polarización de la luz de la fuente láser."@es, "Polarization of the laser source signal."@en,
     "Polarizzazione della luce della sorgente laser."@it, "激光源信号的偏振。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Laser polarisation"@en, "Polarizzazione del laser"@it, "激光偏振"@cn .
+  skos:prefLabel "Laser polarisation"@de, "Laser polarisation"@en, "Polarizzazione del laser"@it,
+    "激光偏振"@cn .
 
 ontolidar:LaserPhase a skos:Concept;
   skos:broader ontolidar:LaserMode;
   skos:definition "Fase de la luz de la fuente láser."@es, "Fase della luce della sorgente laser"@it,
     "Light phase of the laser source."@en, "激光源的光相位。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Fase del laser"@it, "Laser phase"@en, "激光相位"@cn .
+  skos:prefLabel "Fase del laser"@it, "Laser phase"@en, "Laserphase"@de, "激光相位"@cn .
 
 ontolidar:LaserIntensity a skos:Concept;
   skos:broader ontolidar:LaserMode;
   skos:definition "Intensidad de la luz de la fuente láser."@es, "Intensità della luce della sorgente laser."@it,
     "Light intensity of the laser source."@en, "激光源的光强度。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Intensità del laser"@it, "Laser intensity"@en, "激光强度"@cn .
+  skos:prefLabel "Intensità del laser"@it, "Laser intensity"@en, "Laserintensität"@de,
+    "激光强度"@cn .
 
 ontolidar:LaserWavelength a skos:Concept;
   ontolidar:units "meters"@en;
@@ -616,8 +629,8 @@ ontolidar:LaserWavelength a skos:Concept;
   skos:editorialNote "In unita' di metri."@it, "This is defined in units of meters, e.g., 1450e-9 m for a near-infrared laser source."@en,
     "Unidad en metros"@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Laser wavelength"@en, "Longitud de onda del diodo láser"@es, "Lunghezza d'onda del laser"@it,
-    "激光二极管波长"@cn .
+  skos:prefLabel "Laser wavelength"@en, "Laser-Wellenlänge"@de, "Longitud de onda del diodo láser"@es,
+    "Lunghezza d'onda del laser"@it, "激光二极管波长"@cn .
 
 ontolidar:AcoustoOpticModulator a skos:Concept;
   skos:altLabel "AOM"@en, "Bragg cell"@en;
@@ -629,8 +642,8 @@ ontolidar:AcoustoOpticModulator a skos:Concept;
   skos:editorialNote "Only pulsed lidar"@en, "Sólo válido para lidar pulsado"@es, "Valido solo per sistemi lidar impulsati"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:InsertionLoss, ontolidar:Pulsedmethod, ontolidar:RadioFrequency;
-  skos:prefLabel "Acousto-optic modulator"@en, "Modulador acusto-óptico"@es, "Modulatore acusto-ottico"@it,
-    "声光调制器"@cn .
+  skos:prefLabel "Acousto-optic modulator"@en, "Akusto-optischer Modulator"@de, "Modulador acusto-óptico"@es,
+    "Modulatore acusto-ottico"@it, "声光调制器"@cn .
 
 ontolidar:RadioFrequency a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
@@ -639,7 +652,7 @@ ontolidar:RadioFrequency a skos:Concept;
     "Radio frequency used by the acoustic modulator to modulate the pulse (for pulsed lidars)."@en,
     "声学调制器用于调制脉冲的无线电频率（对于脉冲激光雷达）。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM 无线电频率"@cn, "Frequenza radio AOM"@it, "Radio frequency"@en .
+  skos:prefLabel "AOM 无线电频率"@cn, "Frequenza radio AOM"@it, "Radio frequency"@en, "Radiofrequenz"@de .
 
 ontolidar:Pulsedmethod a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
@@ -647,7 +660,7 @@ ontolidar:Pulsedmethod a skos:Concept;
     "Método para regular la forma de un pulso de luz"@es, "用来塑造脉冲的方法"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Qswitching;
-  skos:prefLabel "AOM 脉冲法"@cn, "Metodo impulsato AOM"@it, "PulsedMethod"@en .
+  skos:prefLabel "AOM 脉冲法"@cn, "Metodo impulsato AOM"@it, "PulsedMethod"@en, "Pulsierungsmethode"@de .
 
 ontolidar:Qswitching a skos:Concept;
   skos:broader ontolidar:Pulsedmethod;
@@ -656,7 +669,7 @@ ontolidar:Qswitching a skos:Concept;
     "Técnica para la formación de pulsos de luz a partir the una fuente láser de radiación continua. Un modulador regula la frecuencia en la emisión del pulso."@es,
     "可从连续波激光源获得短光脉冲的技术，尖端为纳秒，通过调制器控制特定的脉冲重复率。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM QSwitching"@cn, "QSwitch AOM"@it, "QSwitching"@en .
+  skos:prefLabel "AOM QSwitching"@cn, "QSwitch AOM"@it, "QSwitching"@de, "QSwitching"@en .
 
 ontolidar:InsertionLoss a skos:Concept;
   skos:broader ontolidar:AcoustoOpticModulator;
@@ -664,7 +677,7 @@ ontolidar:InsertionLoss a skos:Concept;
     "Power loss due to the insertion of the acousto-optic modulator."@en, "Pérdida de potencia debido a la inserción del modulador acústico-óptico."@es,
     "由于插入了声学调制器而造成的功率损失。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "AOM插入损耗"@cn, "Insertion loss"@en, "Perdita di potenza AOM"@it .
+  skos:prefLabel "AOM插入损耗"@cn, "Insertion loss"@en, "Leistungsverlust"@de, "Perdita di potenza AOM"@it .
 
 ontolidar:EmittedLight a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -674,7 +687,7 @@ ontolidar:EmittedLight a skos:Concept;
     "发出的光的特性，即：强度、频率/波长和偏振。根据不同的设计参数，激光雷达可以有不同的分类。其中一个可能的分类是基于发射光的差异。在这个意义上，激光雷达可以被描述为脉冲激光雷达，即激光雷达发射脉冲光或连续波激光雷达，即激光雷达以连续形式发射光。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ContinuousWaveLidar, ontolidar:PulsedLidar;
-  skos:prefLabel "Emitted light"@en, "Luce emessa"@it, "发出的光"@cn;
+  skos:prefLabel "Ausgestrahltes Licht"@de, "Emitted light"@en, "Luce emessa"@it, "发出的光"@cn;
   skos:related ontolidar:AcoustoOpticModulator .
 
 ontolidar:ContinuousWaveLidar a skos:Concept;
@@ -683,7 +696,8 @@ ontolidar:ContinuousWaveLidar a skos:Concept;
     "Lidar characterisation based on the emitted type of light. Continuous wave lidars (CW) are characterised by its continuous emission of radiation."@en,
     "Lidar la cui luce è emessa in modo continuo."@it, "发出的光的类型，其特点是连续发射"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Continuous Wave lidar"@en, "Lidar ad onda continua"@it, "连续波激光雷达"@cn .
+  skos:prefLabel "Continuous Wave lidar"@en, "Kontinuierliches Lidar"@de, "Lidar ad onda continua"@it,
+    "连续波激光雷达"@cn .
 
 ontolidar:PulsedLidar a skos:Concept;
   skos:broader ontolidar:EmittedLight;
@@ -692,7 +706,7 @@ ontolidar:PulsedLidar a skos:Concept;
     "Lidar la cui luce è modulata nella forma di impulsi."@it, "发出的光被调制成脉冲发射的激光雷达。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:PulseDuration, ontolidar:PulseSampleRate, ontolidar:PulseShape;
-  skos:prefLabel "Lidar pulsati"@it, "Pulsed lidar"@en, "脉冲激光雷达"@cn .
+  skos:prefLabel "Gepulstes Lidar"@de, "Lidar pulsati"@it, "Pulsed lidar"@en, "脉冲激光雷达"@cn .
 
 ontolidar:PulseDuration a skos:Concept;
   skos:broader ontolidar:PulsedLidar;
@@ -703,7 +717,8 @@ ontolidar:PulseDuration a skos:Concept;
     "Los lidares no miden en un solo punto, sino a lo largo de un volumen en la dirección del rayo. La anchura a media altura ( o FWHM por sus siglas en inglés) de la función que caracteriza la forma del pulso define el volumen de la sonda dentro del cual el lidar está midiendo. Por lo tanto, la duración del pulso influye directamente en las estimaciones del lidar, ya que una mayor duración del pulso da lugar a volúmenes de medición mayores."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:FullWidthAtHalfMaximum;
-  skos:prefLabel "Durata dell'impulso"@it, "Pulse duration"@en, "脉冲持续时间"@cn .
+  skos:prefLabel "Dauer des Pulses"@de, "Durata dell'impulso"@it, "Pulse duration"@en,
+    "脉冲持续时间"@cn .
 
 ontolidar:FullWidthAtHalfMaximum a skos:Concept;
   skos:altLabel "FWHM"@en;
@@ -714,7 +729,7 @@ ontolidar:FullWidthAtHalfMaximum a skos:Concept;
     "是指在函数的一个峰当中，前后两个函数值等于峰值一半的点之间的距离"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Anchura a media altura"@es, "Full width at half maximum"@en, "Larghezza a meta' altezza"@it,
-    "半峰全宽"@cn .
+    "Volle Breite bei halbem Maximum"@de, "半峰全宽"@cn .
 
 ontolidar:PulseSampleRate a skos:Concept;
   skos:broader ontolidar:PulsedLidar;
@@ -722,8 +737,8 @@ ontolidar:PulseSampleRate a skos:Concept;
     "Tempo fra due impulsi laser inviati nell'ambiente da un lidar pulsato."@it, "Time slot between two pulses sent by a pulsed lidar to sample the wind."@en,
     "发送的脉冲之间的时隙，以对风进行采样。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Frequenza di campionamento del laser pulsato"@it, "Pulse sample rate"@en,
-    "脉冲采样率"@cn .
+  skos:prefLabel "Frequenza di campionamento del laser pulsato"@it, "Puls-Abtastrate"@de,
+    "Pulse sample rate"@en, "脉冲采样率"@cn .
 
 ontolidar:PulseShape a skos:Concept;
   skos:broader ontolidar:PulsedLidar;
@@ -732,7 +747,7 @@ ontolidar:PulseShape a skos:Concept;
   skos:editorialNote "Continuous wave light can be modulated (e.g. with an acousto-optic-modulator or AOM) to obtain pulses at high power intensities altering the transmitted power and concentrating this energy in a short space. The power intensity around this area can be described as a gaussian function centered around the frequency of interest, which is commonly used to describe the shape of the pulse."@en,
     "La luz de onda continua puede modularse (por ejemplo, con un modulador acústico-óptico o AOM) para obtener pulsos a altas intensidades de potencia alterando la potencia transmitida y concentrando esta energía en un espacio corto. La intensidad de la potencia alrededor de esta zona puede describirse como una función gaussiana centrada en la frecuencia de interés y se suele utilizar para describir la forma del pulso."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Forma dell'impulso"@it, "Pulse shape"@en, "脉冲形状"@cn .
+  skos:prefLabel "Form des Pulses"@de, "Forma dell'impulso"@it, "Pulse shape"@en, "脉冲形状"@cn .
 
 ontolidar:BackscatteredLight a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -740,7 +755,8 @@ ontolidar:BackscatteredLight a skos:Concept;
     "Luz retrodispersada que alcanza el detector del lidar."@es, "到达激光雷达探测器的反向散射光。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:DesiredBackscatteredLight, ontolidar:NonDesiredBackscatteredLight;
-  skos:prefLabel "Backscattered light"@en, "Luce riflessa"@it, "背向散射光"@cn .
+  skos:prefLabel "Backscattered light"@en, "Luce riflessa"@it, "Rückgestreutes Licht"@de,
+    "背向散射光"@cn .
 
 ontolidar:DesiredBackscatteredLight a skos:Concept;
   skos:broader ontolidar:BackscatteredLight;
@@ -749,8 +765,8 @@ ontolidar:DesiredBackscatteredLight a skos:Concept;
     "Porzione della luce che raggiunge il fotorivelatore proveniente dal moto ventoso (tipicamente polarizzata)."@it,
     "到达检测器，具有所需频率和偏振的部分反向散射光。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Desired backscattered light"@en, "Luce riflessa portatrice di segnale"@it,
-    "希望的背向散射光"@cn .
+  skos:prefLabel "Desired backscattered light"@en, "Gewünschtes Rückstreulicht"@de,
+    "Luce riflessa portatrice di segnale"@it, "希望的背向散射光"@cn .
 
 ontolidar:NonDesiredBackscatteredLight a skos:Concept;
   skos:broader ontolidar:BackscatteredLight;
@@ -759,8 +775,8 @@ ontolidar:NonDesiredBackscatteredLight a skos:Concept;
     "Porzione della luce che raggiunge il fotorivelatore non dovuta al moto ventoso (tipicamente non polarizzata)."@it,
     "到达检测器的，来自大气（非偏振）的非期望光信号。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Luce riflessa portatrice di rumore ambientale"@it, "Non-desired backscattered light"@en,
-    "非期望的后向散射光"@cn .
+  skos:prefLabel "Luce riflessa portatrice di rumore ambientale"@it, "Nicht erwünschtes Rückstreulicht"@de,
+    "Non-desired backscattered light"@en, "非期望的后向散射光"@cn .
 
 ontolidar:Detector a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -768,7 +784,7 @@ ontolidar:Detector a skos:Concept;
     "Gruppo di sistemi per ricevere, rilevare e misurare la luce incidente."@it, "收集和检测入射光的组件"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:BeamSplitter, ontolidar:OpticalAmplifier, ontolidar:Photodetector;
-  skos:prefLabel "Detector"@en, "Detector"@es, "Rilevatore"@it, "探测器"@cn .
+  skos:prefLabel "Detector"@en, "Detector"@es, "Detektor"@de, "Rilevatore"@it, "探测器"@cn .
 
 ontolidar:OpticalAmplifier a skos:Concept;
   skos:broader ontolidar:Detector;
@@ -780,7 +796,7 @@ ontolidar:OpticalAmplifier a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:OpticalAmplifierBandwidth, ontolidar:OpticalAmplifierGain;
   skos:prefLabel "Amplificador óptico"@es, "Amplificatore ottico"@it, "Optical amplifier"@en,
-    "光放大器"@cn .
+    "Optischer Verstärker"@de, "光放大器"@cn .
 
 ontolidar:OpticalAmplifierGain a skos:Concept;
   skos:broader ontolidar:OpticalAmplifier;
@@ -788,7 +804,7 @@ ontolidar:OpticalAmplifierGain a skos:Concept;
     "Power gain due to the optical amplification."@en, "光放大带来的功率增益"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Guadagno dell'amplificatore ottico"@it, "Optical amplifier gain"@en,
-    "光放大器增益"@cn .
+    "Verstärkung des optischen Verstärkers"@de, "光放大器增益"@cn .
 
 ontolidar:OpticalAmplifierBandwidth a skos:Concept;
   skos:broader ontolidar:OpticalAmplifier;
@@ -796,8 +812,8 @@ ontolidar:OpticalAmplifierBandwidth a skos:Concept;
     "Banda di frequenza attiva nell'amplificatore ottico"@it, "Working bandwith of the optical amplifier."@en,
     "光放大器的工作带宽"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Larghezza d'onda dell'amplificatore ottico"@it, "Optical amplifier bandwidth"@en,
-    "光放大器带宽"@cn .
+  skos:prefLabel "Bandbreite des optischen Verstärkers"@de, "Larghezza d'onda dell'amplificatore ottico"@it,
+    "Optical amplifier bandwidth"@en, "光放大器带宽"@cn .
 
 ontolidar:BeamSplitter a skos:Concept;
   skos:altLabel "beamsplitter"@en;
@@ -808,14 +824,16 @@ ontolidar:BeamSplitter a skos:Concept;
   skos:editorialNote "En un lidar, el haz de la fuente láser se divide en dos haces diferentes. Uno se envía a la atmósfera para detectar el movimiento de los aerosoles. El otro se envía al fotodetector, donde se utilizará como referencia local para identificar el cambio de frecuencia del haz retrodispersado. Por lo general, el divisor de haz también polariza el haz para que se pueda distinguir de la luz de fondo atmosférica, típicamente no polarizada."@es,
     "In a lidar, the laser source beam is split into two different beams. One is sent out to the atmosphere to detect the aerosols motion. The other one is sent to the photodetector, where it will be used as a local reference to identify the frequency shift of the backscattered beam. Usually the beam splitter also polarises the beam so that it is distinguishable from the atmospheric background light."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Beam splitter"@en, "Divisor de haz"@es, "Sdoppiatore ottico"@it, "分束器"@cn .
+  skos:prefLabel "Beam splitter"@en, "Divisor de haz"@es, "Sdoppiatore ottico"@it, "Strahlteiler"@de,
+    "分束器"@cn .
 
 ontolidar:Photodetector a skos:Concept;
   skos:broader ontolidar:Detector;
   skos:definition "Fotosensore a semi-conduttori."@it, "Semiconductor light sensor."@en,
     "Sensor de luz semiconductor."@es, "半导体光传感器。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Fotodetector"@es, "Fotorivelatore"@it, "Photodetector"@en, "光电探测器"@cn .
+  skos:prefLabel "Fotodetector"@es, "Fotorivelatore"@it, "Photodetector"@en, "Photodetektor"@de,
+    "光电探测器"@cn .
 
 ontolidar:PhotodetectorGain a skos:Concept;
   skos:broader ontolidar:PhotoDetector;
@@ -825,7 +843,7 @@ ontolidar:PhotodetectorGain a skos:Concept;
     "光电探测器的输出电流与到达其有效区域的光子所产生的电流之间的比率。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Ganancia del fotodetector"@es, "Guadagno del fotorivelatore"@it, "Photodetector gain"@en,
-    "光电探测器增益"@cn .
+    "Verstärkung des Photodetektors"@de, "光电探测器增益"@cn .
 
 ontolidar:PhotodetectorActiveArea a skos:Concept;
   skos:broader ontolidar:PhotoDetector;
@@ -836,8 +854,8 @@ ontolidar:PhotodetectorActiveArea a skos:Concept;
   skos:editorialNote "E.G.: sensitivity of 1nW means that I can distinguish 1mW signal from noise, which is better than a sensitivity of 1W"@en,
     "Por ejemplo, una sensibilidada de 1nW significa que puedo distinguir una señal de 1mW con respecto al ruido, lo cual corresponde a una sensibilidad mejor que 1W"@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Area attiva del fotorivelatore"@it, "Photodetector active area"@en,
-    "光电探测器的有效面积"@cn .
+  skos:prefLabel "Aktive Fläche des Photodetektors"@de, "Area attiva del fotorivelatore"@it,
+    "Photodetector active area"@en, "光电探测器的有效面积"@cn .
 
 ontolidar:PhotodetectorSnr a skos:Concept;
   skos:broader ontolidar:PhotoDetector;
@@ -846,7 +864,8 @@ ontolidar:PhotodetectorSnr a skos:Concept;
     "Relación señal /ruido del fotodetector. Principales contribuciones al ruido son la temperatura, el ruido de disparo (o shot noise en inglés) y la corriente de oscuridad ( o dark current in inglés)."@es,
     "光电探测器的信噪比。噪声的主要来源包括：热噪声、射击噪声和暗电流噪声。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Photodetector SNR"@en, "SNR del fotorivelatore"@it, "光电探测器SNR"@cn .
+  skos:prefLabel "Photodetector SNR"@en, "Photodetektor SNR"@de, "SNR del fotorivelatore"@it,
+    "光电探测器SNR"@cn .
 
 ontolidar:PhotodetectorVoltageNoise a skos:Concept;
   skos:broader ontolidar:PhotoDetector;
@@ -854,7 +873,8 @@ ontolidar:PhotodetectorVoltageNoise a skos:Concept;
     "The voltage noise of the photodetector."@en, "光电探测器的电压噪声。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Photodetector voltage noise"@en, "Ruido de voltaje del fotodetector"@es,
-    "Rumore di tensione del fotorivelatore"@it, "光电探测器电压噪声"@cn .
+    "Rumore di tensione del fotorivelatore"@it, "Spannungsrauschen des Photodetektors"@de,
+    "光电探测器电压噪声"@cn .
 
 ontolidar:Interfaces a skos:Concept;
   skos:broader ontolidar:PhotonicsModule;
@@ -864,7 +884,7 @@ ontolidar:Interfaces a skos:Concept;
     "Vero per sistemi all-fibre"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Fibre;
-  skos:prefLabel "Interfacce"@it, "Interfaces"@en, "接口"@cn .
+  skos:prefLabel "Interfacce"@it, "Interfaces"@en, "Schnittstellen"@de, "接口"@cn .
 
 ontolidar:Fibre a skos:Concept;
   skos:broader ontolidar:Interfaces;
@@ -874,7 +894,7 @@ ontolidar:Fibre a skos:Concept;
   skos:editorialNote "El hardware del lidar se conecta entre sí mediante fibra óptica para la transmisión del láser. El uso de fibra óptica es especialmente importante en el módulo óptico, ya que evita el costoso proceso de alineamiento del láser."@es,
     "Lidar hardware components are connected to each other by fibre optics to guide the laser beam along its path. Specially for the telescope module, using fibre optics makes possible to avoid costly and cumbersome alignment processes."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Fibra"@it, "Fibre"@en, "光纤"@cn .
+  skos:prefLabel "Faser"@de, "Fibra"@it, "Fibre"@en, "光纤"@cn .
 
 ontolidar:PowerModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -887,8 +907,8 @@ ontolidar:PowerModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:PowerConverter, ontolidar:UninterruptablePowerSupply;
-  skos:prefLabel "Componente di alimentazione"@it, "Módulo de alimentación"@es, "Power module"@en,
-    "电源模块"@cn .
+  skos:prefLabel "Componente di alimentazione"@it, "Módulo de alimentación"@es, "Netzteil"@de,
+    "Power module"@en, "电源模块"@cn .
 
 ontolidar:PowerConverter a skos:Concept;
   skos:broader ontolidar:PowerModule;
@@ -897,7 +917,7 @@ ontolidar:PowerConverter a skos:Concept;
   skos:editorialNote "Lidar can operate in DC current."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Converter di potenza"@it, "Convertidor de potencia"@es, "Power converter"@en,
-    "电源转换器"@cn .
+    "Wechselrichter"@de, "电源转换器"@cn .
 
 ontolidar:UninterruptablePowerSupply a skos:Concept;
   skos:broader ontolidar:PowerModule;
@@ -906,7 +926,7 @@ ontolidar:UninterruptablePowerSupply a skos:Concept;
     "一个配有电池和变压器的装置，确保了持续和可靠的电力供应。这个装置保证激光雷达短暂脱离供电线后依然可以工作。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Gruppo di continuità (UPS)"@it, "Sistema de alimentación ininterrumpida o SAI"@es,
-    "Uninterruptable power supply"@en, "不间断电源(UPS)"@cn .
+    "Uninterruptable power supply"@en, "Unterbrechungsfreie Stromversorgung"@de, "不间断电源(UPS)"@cn .
 
 ontolidar:UpsBatteryVoltage a skos:Concept;
   ontolidar:units "volts"@en;
@@ -914,8 +934,8 @@ ontolidar:UpsBatteryVoltage a skos:Concept;
   skos:definition "Il voltaggio della batteria (in unità di Volt)."@it, "The battery voltage."@en,
     "Voltaje de la batería."@es, "电池电压。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "UPS battery voltage"@en, "UPS电池电压"@cn, "Voltaggio della batteria dell'UPS"@it,
-    "Voltaje de batería del SAI"@es .
+  skos:prefLabel "UPS battery voltage"@en, "UPS电池电压"@cn, "USV-Batteriespannung"@de,
+    "Voltaggio della batteria dell'UPS"@it, "Voltaje de batería del SAI"@es .
 
 ontolidar:UpsBatteryCapacity a skos:Concept;
   ontolidar:units "Ah"@en;
@@ -925,7 +945,7 @@ ontolidar:UpsBatteryCapacity a skos:Concept;
     "电池电压中存储的总能量，单位是安培小时 (Ah)"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Capacidad de la batería del SAI"@es, "Capacità della batteria dell'UPS"@it,
-    "UPS battery capacity"@en, "UPS电池容量"@cn .
+    "UPS battery capacity"@en, "UPS电池容量"@cn, "USV-Batteriekapazität"@de .
 
 ontolidar:UpsBatteryPower a skos:Concept;
   ontolidar:units "W"@en;
@@ -935,7 +955,7 @@ ontolidar:UpsBatteryPower a skos:Concept;
     "Potenza emessa dal gruppo di continuità per garantire l'operabilità del lidar quando disconnesso dalla rete elettrica."@it,
     "在未接电网工作时，不间断电源提供给激光雷达的电功率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Potenza"@it, "UPS battery power"@en, "UPS电池功率"@cn .
+  skos:prefLabel "Potenza"@it, "UPS battery power"@en, "UPS电池功率"@cn, "USV-Batteriebetrieb"@de .
 
 ontolidar:UpsBatteryIntensity a skos:Concept;
   ontolidar:units "A"@en;
@@ -944,7 +964,7 @@ ontolidar:UpsBatteryIntensity a skos:Concept;
     "Intensità della corrente elettrica provvigionata dal gruppo di continuità."@it, "Lidar working current intensity provided by the UPS when working off-line"@en,
     "在未接电网工作时，不间断电源提供的激光雷达工作电流强度"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Intensità"@it, "UPS battery intensity"@en, "UPS电池强度"@cn .
+  skos:prefLabel "Intensità"@it, "UPS battery intensity"@en, "UPS电池强度"@cn, "USV-Batterieintensität"@de .
 
 ontolidar:ScannerModule a skos:Concept;
   skos:broader ontolidar:Design;
@@ -959,7 +979,7 @@ ontolidar:ScannerModule a skos:Concept;
   skos:narrower ontolidar:ScannerAzimuthPositioningServo, ontolidar:ScannerElevationPositioningServo,
     ontolidar:ScannerMirrors, ontolidar:ScanningSampleRate;
   skos:prefLabel "Componente di scansione"@it, "Módulo del escáner"@es, "Scanner module"@en,
-    "扫描器模块"@cn;
+    "Scanner-Modul"@de, "扫描器模块"@cn;
   skos:related ontolidar:ScanGeometry .
 
 ontolidar:ScannerAzimuthPositioningServo a skos:Concept;
@@ -969,8 +989,9 @@ ontolidar:ScannerAzimuthPositioningServo a skos:Concept;
     "方位角伺服马达驱动扫描器在方位角方向上变化。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:AzimuthAngle, ontolidar:AzimuthSlewRate;
-  skos:prefLabel "Scanner azimuth positioning servo"@en, "Servomotor de posicionamiento azimut del escáner"@es,
-    "Servomotore per la scansione nella direzione azimutale"@it, "扫描器方位定位伺服"@cn .
+  skos:prefLabel "Azimut-Positionierservo des Scanners"@de, "Scanner azimuth positioning servo"@en,
+    "Servomotor de posicionamiento azimut del escáner"@es, "Servomotore per la scansione nella direzione azimutale"@it,
+    "扫描器方位定位伺服"@cn .
 
 ontolidar:AzimuthAngle a skos:Concept;
   ontolidar:units "degrees"@en;
@@ -984,7 +1005,7 @@ ontolidar:AzimuthAngle a skos:Concept;
     "Il vettore di riferimento dell'angolo di azimith è spesso quello che indica il nord geografico. Un qualsiasi altro vettore, in realtà, potrebbe analogamente servire allo scopo."@it,
     "The reference vector from which the azimuth is defined is often true north, but could be some other defined vector."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Azimut"@es, "Azimut"@it, "Azimuth angle"@en, "方位角"@cn .
+  skos:prefLabel "Azimut"@es, "Azimut"@it, "Azimut-Winkel"@de, "Azimuth angle"@en, "方位角"@cn .
 
 ontolidar:AzimuthSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
@@ -994,8 +1015,8 @@ ontolidar:AzimuthSlewRate a skos:Concept;
     "Velocidad máxima de funcionamiento del servomotor en la dirección azimutal."@es,
     "伺服电机在方位角方向的最大运行速率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Azimuth slew rate"@en, "Velocidad de giro azimutal"@es, "Velocità massima azimutale"@it,
-    "方位角回转率"@cn .
+  skos:prefLabel "Azimut-Anstiegsrate"@de, "Azimuth slew rate"@en, "Velocidad de giro azimutal"@es,
+    "Velocità massima azimutale"@it, "方位角回转率"@cn .
 
 ontolidar:ScannerElevationPositioningServo a skos:Concept;
   skos:broader ontolidar:ScannerModule;
@@ -1005,8 +1026,9 @@ ontolidar:ScannerElevationPositioningServo a skos:Concept;
     "仰角伺服电机在仰角方向驱动扫描仪"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ElevationAngle, ontolidar:ElevationSlewRate;
-  skos:prefLabel "Scanner elevation positioning servo"@en, "Servomotor del posicionamiento de elevación del escáner"@es,
-    "Servomotore per la scansione nella direzione di elevazione"@it, "扫描仪仰角定位伺服"@cn .
+  skos:prefLabel "Scanner Höhenpositionierungsservo"@de, "Scanner elevation positioning servo"@en,
+    "Servomotor del posicionamiento de elevación del escáner"@es, "Servomotore per la scansione nella direzione di elevazione"@it,
+    "扫描仪仰角定位伺服"@cn .
 
 ontolidar:ElevationAngle a skos:Concept;
   ontolidar:units "degrees"@en;
@@ -1016,7 +1038,8 @@ ontolidar:ElevationAngle a skos:Concept;
     "L'angolo fra la direzione del fascio laser e un piano di riferimento."@it, "The angle between the line of sight of the lidar and the reference coordinate system."@en,
     "激光雷达的视线与基准平面之间的夹角。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Elevación"@es, "Elevation angle"@en, "Elevazione"@it, "仰角"@cn .
+  skos:prefLabel "Elevación"@es, "Elevation angle"@en, "Elevationswinkel"@de, "Elevazione"@it,
+    "仰角"@cn .
 
 ontolidar:ElevationSlewRate a skos:Concept;
   ontolidar:units "degrees per second"@en;
@@ -1026,8 +1049,8 @@ ontolidar:ElevationSlewRate a skos:Concept;
     "Velocidad máxima de funcionamiento del servomotor en la dirección de elevación."@es,
     "伺服电机在仰角方向的最大运行速率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Elevation slew rate"@en, "Velocidad de giro de elevación"@es, "Velocità massima di elevazione"@it,
-    "仰角回转率"@cn .
+  skos:prefLabel "Elevation slew rate"@en, "Höhenanstiegsrate"@de, "Velocidad de giro de elevación"@es,
+    "Velocità massima di elevazione"@it, "仰角回转率"@cn .
 
 ontolidar:ScannerMirrors a skos:Concept;
   skos:altLabel "ScanModule"@en;
@@ -1037,7 +1060,8 @@ ontolidar:ScannerMirrors a skos:Concept;
     "Specchi per modificare il cammino ottico del fascio laser fra il telescopio e l'atmosfera esterna."@it,
     "修改望远镜和大气层之间光束路径的镜子。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Scanner mirrors"@en, "Specchi dello scanner"@it, "扫描镜"@cn .
+  skos:prefLabel "Scanner mirrors"@en, "Scanner-Spiegel"@de, "Specchi dello scanner"@it,
+    "扫描镜"@cn .
 
 ontolidar:ScanningSampleRate a skos:Concept;
   rdfs:label "Hz"@en;
@@ -1047,7 +1071,7 @@ ontolidar:ScanningSampleRate a skos:Concept;
     "Frequenza della sequenza di scansionamento. Tempo che lo scanner impiega per concludere un ciclo."@it,
     "扫描模式的频率，即扫描器完成一次扫描采样所需的时间"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Frequenza di campionamento"@it, "Scanning sample rate"@de, "Scanning sample rate"@en,
+  skos:prefLabel "Frequenza di campionamento"@it, "Scan-Abtastrate"@de, "Scanning sample rate"@en,
     "Tasa de muestreo del escáner"@es, "扫描采样率"@cn .
 
 ontolidar:InterlocksModule a skos:Concept;
@@ -1061,7 +1085,7 @@ ontolidar:InterlocksModule a skos:Concept;
     "Definizione basata sulla definizione di modulo del progetto OpenLidar. Vedasi https://github.com/e-WindLidar/OpenLidarModuleDefinitions"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Dispositivi di sicurezza"@it, "Dispositivos de seguidad"@es, "Interlocks module"@en,
-    "安全联锁"@cn .
+    "Verriegelungs-Modul"@de, "安全联锁"@cn .
 
 ontolidar:Devices a skos:Concept;
   skos:definition "Implementaciones específicas de la tecnología del lidar de viento."@es,
@@ -1098,7 +1122,7 @@ ontolidar:Windcube a skos:Concept;
     "Leosphere--Vaisala公司生产的风速仪系列。请参考https://www.vaisala.com/en/wind-lidars/wind-energy。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:WindcubeNacelle, ontolidar:WindcubeScan, ontolidar:Windcubev2;
-  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@de, "WindCube"@es, "Windcube"@cn,
+  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@es, "Windcube"@cn, "Windcube"@de,
     "Windcube"@en .
 
 ontolidar:Windcubev2 a skos:Concept;
@@ -1106,7 +1130,7 @@ ontolidar:Windcubev2 a skos:Concept;
   skos:definition "Lidar verticale prodotto da Leosphere - a Vaisala company"@it, "Perfilador vertical producido por Leosphere - a Vaisala company."@es,
     "Vertical profiler manufactured by Leosphere - a Vaisala company."@en, "由维萨拉公司的Leosphere公司生产的垂直剖面仪。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@de, "WindCube"@es, "Windcube"@cn,
+  skos:prefLabel "Lidar 'WindCube'"@it, "WindCube"@es, "Windcube"@cn, "WindcubeV2"@de,
     "WindcubeV2"@en .
 
 ontolidar:WindcubeScan a skos:Concept;
@@ -1167,16 +1191,16 @@ ontolidar:WindEye a skos:Concept;
   skos:definition "Lidar de góndola producido por Windar Photonics."@es, "Lidar per navicella prodotto da Windar Photonics."@it,
     "Nacelle mounted lidar manufactured by Windar Photonics."@en, "Windar Photonics公司生产的机舱式激光雷达。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Wind Eye'"@it, "Wind Eye"@cn, "Wind Eye"@de, "Wind Eye"@en,
-    "Wind Eye"@es .
+  skos:prefLabel "Lidar 'Wind Eye'"@it, "Wind Eye"@cn, "Wind Eye"@en, "Wind Eye"@es,
+    "Windauge"@de .
 
 ontolidar:WindVision a skos:Concept;
   skos:broader ontolidar:WindarPhotonics;
   skos:definition "Lidar de góndola producido por Windar Photonics."@es, "Lidar per navicella prodotto da Windar Photonics."@it,
     "Nacelle mounted lidar manufactured by Windar Photonics."@en, "Windar Photonics公司生产的机舱激光雷达。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Wind Vision'"@it, "Wind Vision"@cn, "Wind Vision"@de, "Wind Vision"@en,
-    "Wind Vision"@es .
+  skos:prefLabel "Lidar 'Wind Vision'"@it, "Wind Vision"@cn, "Wind Vision"@en, "Wind Vision"@es,
+    "Wind-Vision"@de .
 
 ontolidar:Epsiline a skos:Concept;
   skos:broader ontolidar:Devices;
@@ -1185,15 +1209,16 @@ ontolidar:Epsiline a skos:Concept;
     "Family of wind lidars produced by Epsiline. Please refer to http://www.epsiline.com/."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:WindEagle;
-  skos:prefLabel "Epsiline"@cn, "Epsiline"@de, "Epsiline"@en, "Epsiline"@es, "Lidar 'Epsiline'"@it .
+  skos:prefLabel "Epsiline"@cn, "Epsiline"@en, "Epsiline"@es, "Lidar 'Epsiline'"@de,
+    "Lidar 'Epsiline'"@it .
 
 ontolidar:WindEagle a skos:Concept;
   skos:broader ontolidar:Epsiline;
   skos:definition "Epsiline公司生产的机舱激光雷达。"@cn, "Lidar de góndola producido por Epsiline."@es,
     "Lidar per navicella prodotto da Epsiline."@it, "Nacelle mounted lidar manufactured by Epsiline."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Wind Eagle'"@it, "Wind Eagle"@cn, "Wind Eagle"@de, "Wind Eagle"@en,
-    "Wind Eagle"@es .
+  skos:prefLabel "Lidar 'Wind Eagle'"@de, "Lidar 'Wind Eagle'"@it, "Wind Eagle"@cn,
+    "Wind Eagle"@en, "Wind Eagle"@es .
 
 ontolidar:Movelaser a skos:Concept;
   skos:broader ontolidar:Devices;
@@ -1202,7 +1227,7 @@ ontolidar:Movelaser a skos:Concept;
     "Family of wind lidars produced by Nanjing MoveLaser. Please refer to https://mgwtradenservice.com.au/wind-measurement-lidars/."@en,
     "南京MoveLaser公司生产的风雷达家族。请参考https://mgwtradenservice.com.au/wind-measurement-lidars/。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'MoveLaser'"@it, "MoveLaser"@cn, "MoveLaser"@de, "MoveLaser"@en,
+  skos:prefLabel "Lidar 'MoveLaser'"@de, "Lidar 'MoveLaser'"@it, "MoveLaser"@cn, "MoveLaser"@en,
     "MoveLaser"@es .
 
 ontolidar:MolasB300 a skos:Concept;
@@ -1210,8 +1235,8 @@ ontolidar:MolasB300 a skos:Concept;
   skos:definition "Lidar verticale prodotto da Nanjing MoveLaser."@it, "Perfilador vertical producido por Nanjing MoveLaser."@es,
     "Vertical profiler manufactured by Nanjing MoveLaser."@en, "南京MoveLaser公司生产的垂直剖面仪。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'Molas B300'"@it, "Molas B300"@cn, "Molas B300"@de, "Molas B300"@en,
-    "Molas B300"@es .
+  skos:prefLabel "Lidar 'Molas B300'"@de, "Lidar 'Molas B300'"@it, "Molas B300"@cn,
+    "Molas B300"@en, "Molas B300"@es .
 
 ontolidar:MolasNl a skos:Concept;
   skos:broader ontolidar:MoveLaser;
@@ -1229,7 +1254,7 @@ ontolidar:Leice a skos:Concept;
     "Leice公司生产的风向激光雷达系列。请参考http://www.leice-lidar.com/en/index.html。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Wind3D, ontolidar:Windhorizon, ontolidar:Windmast;
-  skos:prefLabel "Leice"@cn, "Leice"@de, "Leice"@en, "Leice"@es, "Lidar 'Leice'"@it .
+  skos:prefLabel "Leice"@cn, "Leice"@en, "Leice"@es, "Lidar 'Leice'"@de, "Lidar 'Leice'"@it .
 
 ontolidar:Windmast a skos:Concept;
   skos:broader ontolidar:Leice;
@@ -1261,7 +1286,7 @@ ontolidar:Halophotonics a skos:Concept;
     "Family of wind lidars produced by HaloPhotonics. Please refer to https://halo-photonics.com/."@en,
     "HaloPhotonics公司生产的风雷达系列。请参考https://halo-photonics.com/。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "HaloPhotonics"@cn, "HaloPhotonics"@de, "HaloPhotonics"@en, "HaloPhotonics"@es,
+  skos:prefLabel "HaloPhotonics"@cn, "HaloPhotonics"@en, "HaloPhotonics"@es, "HaloPhotonik"@de,
     "Lidar 'HaloPhotonics'"@it .
 
 ontolidar:Windpro a skos:Concept;
@@ -1269,8 +1294,7 @@ ontolidar:Windpro a skos:Concept;
   skos:definition "HaloPhotonics公司生产的垂直剖面仪。"@cn, "Lidar verticale prodotto da Halophotonics."@it,
     "Perfilador vertical producido por Halo Photonics."@es, "Vertical profiler manufactured by HaloPhotonics."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'WindMast'"@it, "WindMast"@de, "WindMast"@es, "WindPro"@cn,
-    "WindPro"@en .
+  skos:prefLabel "Lidar 'WindMast'"@it, "WindMast"@es, "WindPro"@cn, "WindPro"@de, "WindPro"@en .
 
 ontolidar:Verticalpro a skos:Concept;
   skos:broader ontolidar:HaloPhotonics;
@@ -1285,8 +1309,8 @@ ontolidar:Streamline a skos:Concept;
   skos:definition "HaloPhotonics公司生产的扫描激光雷达。"@cn, "Lidar de escaneo producido por Halo Photonics."@es,
     "Scanner a lungo raggio prodotto da HaloPhotonics."@it, "Scanning lidar manufactured by HaloPhotonics."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar 'StreamLine'"@it, "StreamLine"@cn, "StreamLine"@de, "StreamLine"@en,
-    "StreamLine"@es .
+  skos:prefLabel "Lidar 'StreamLine'"@it, "StreamLine"@cn, "StreamLine"@en, "StreamLine"@es,
+    "Stromlinie"@de .
 
 ontolidar:GalionG250 a skos:Concept;
   skos:broader ontolidar:Devices;
@@ -1315,7 +1339,7 @@ ontolidar:Vindicator a skos:Concept;
     "Catch the Wind: https://news.softpedia.com/news/A-Good-Mix-LIDAR-and-Wind-Turbines-138511.shtml"@es,
     "捕捉风https://news.softpedia.com/news/A-Good-Mix-LIDAR-and-Wind-Turbines-138511.shtml"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar Vindicator'"@it, "Vindicator"@cn, "Vindicator"@de, "Vindicator"@en .
+  skos:prefLabel "Lidar Vindicator'"@de, "Lidar Vindicator'"@it, "Vindicator"@cn, "Vindicator"@en .
 
 ontolidar:Instances a skos:Concept;
   skos:definition "Cada uno de los objetos lidar."@es, "Each single wind lidar object."@en,
@@ -1334,7 +1358,7 @@ ontolidar:Instances a skos:Concept;
     "Unique identification number for each wind lidar."@en, "测风激光雷达序列号"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Numero seriale"@it, "Número de serie"@es, "Serial number (extended definition)"@en,
-    "序列号"@cn .
+    "Seriennummer (erweiterte Definition)"@de, "序列号"@cn .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/LidarType(ExtendedDefinition)>
   a skos:Concept;
@@ -1343,8 +1367,8 @@ ontolidar:Instances a skos:Concept;
     "Tipo de dispositivo lidar."@es, "Tipologia di lidar (verticale, da navicella, etc)."@it,
     "激光雷达设备类型"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Lidar type (extended definition)"@en, "Tipo de lidar"@es, "Tipologia di lidar"@it,
-    "激光雷达类型"@cn;
+  skos:prefLabel "Lidar type (extended definition)"@en, "Lidar-Typ (erweiterte Definition)"@de,
+    "Tipo de lidar"@es, "Tipologia di lidar"@it, "激光雷达类型"@cn;
   skos:related ontolidar:Devices .
 
 ontolidar:DataProcessing a skos:Concept;
@@ -1354,7 +1378,8 @@ ontolidar:DataProcessing a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CoordinateSystemTransformation, ontolidar:DataFiltering, ontolidar:RadialVelocity,
     ontolidar:WindfieldReconstruction;
-  skos:prefLabel "Data processing"@en, "Processamento dati"@it, "数据处理"@cn;
+  skos:prefLabel "Data processing"@en, "Datenverarbeitung"@de, "Processamento dati"@it,
+    "数据处理"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:RadialVelocity a skos:Concept;
@@ -1377,7 +1402,7 @@ ontolidar:DopplerSpectra a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CentroidPowerValue, ontolidar:MaximumPowerValue, ontolidar:MeanPowerValue,
     ontolidar:SystemNoiseThreshold, ontolidar:TimeIntegration, ontolidar:WeightingFunction;
-  skos:prefLabel "Doppler Spectra"@en, "Doppler-Spektren"@de, "Espectro Doppler"@es,
+  skos:prefLabel "Doppler Spectra"@en, "Doppler-Spektrum"@de, "Espectro Doppler"@es,
     "Spettri Doppler"@it, "多普勒光谱"@cn .
 
 ontolidar:TimeIntegration a skos:Concept;
@@ -1388,7 +1413,7 @@ ontolidar:TimeIntegration a skos:Concept;
     "Time whithin which the frequency analyser accumulates individual frequency spectra generated by the frequency analyser. Then it averages them to obtain the Doppler spectra the lidar uses to estimate the wind radial velocity."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Integración de tiempo"@es, "Integrazione temporale"@it, "Time integration"@en,
-    "Zeitintegration"@de, "时间积分"@cn .
+    "Zeitliche Integration"@de, "时间积分"@cn .
 
 ontolidar:CentroidPowerValue a skos:Concept;
   skos:altLabel "Median"@en;
@@ -1398,7 +1423,7 @@ ontolidar:CentroidPowerValue a skos:Concept;
     "Valore dello spettro Doppler corrispondente al centroide della distribuzione"@it;
   skos:editorialNote "The centroid corresponds to the arithmetic mean of the averaged frequency spectrum yielded by the lidar frequency analiser"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Centroid power value"@en, "Centroide"@es, "Centroide"@it, "Schwerpunkt"@de,
+  skos:prefLabel "Centroid power value"@en, "Centroide"@es, "Centroide"@it, "Wert der Schwerpunktleistung"@de,
     "中心值"@cn;
   skos:related ontolidar:PeakIdentification .
 
@@ -1408,7 +1433,7 @@ ontolidar:MeanPowerValue a skos:Concept;
     "The mean power value in the Doppler spectrum which eventually is identified with the radial velocity measured by the lidar"@en,
     "Valore medio dello spettro Doppler"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Mean power value"@en, "Media"@it, "der Mittelwert"@de, "平均值"@cn;
+  skos:prefLabel "Mean power value"@en, "Media"@it, "Mittlerer Leistungswert"@de, "平均值"@cn;
   skos:related ontolidar:PeakIdentification .
 
 ontolidar:MaximumPowerValue a skos:Concept;
@@ -1417,7 +1442,8 @@ ontolidar:MaximumPowerValue a skos:Concept;
     "The maximum power value in the Doppler spectrum which eventually is identified with the radial velocity measured by the lidar."@en,
     "Valore massimo dello spettro Doppler."@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Massimo"@it, "Maximum power value"@en, "最大值"@cn;
+  skos:prefLabel "Massimo"@it, "Maximaler Leistungswert"@de, "Maximum power value"@en,
+    "最大值"@cn;
   skos:related ontolidar:PeakIdentification .
 
 ontolidar:WeightingFunction a skos:Concept;
@@ -1438,7 +1464,8 @@ ontolidar:SystemNoiseThreshold a skos:Concept;
     "The minimum power value in the frequency spectrum, above the instrument noise, that is accepted as a signal relative to the wind."@en,
     "频谱中被接受为风信号超过仪器噪声的最小功率值"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Soglia di rumore del sistema"@it, "System noise threshold"@en, "系统噪声阈值"@cn .
+  skos:prefLabel "Geräuschschwelle des Systems"@de, "Soglia di rumore del sistema"@it,
+    "System noise threshold"@en, "系统噪声阈值"@cn .
 
 ontolidar:WindfieldReconstruction a skos:Concept;
   skos:altLabel "Wind field reconstruction"@en;
@@ -1451,7 +1478,7 @@ ontolidar:WindfieldReconstruction a skos:Concept;
   skos:narrower ontolidar:FilteringStrategy, ontolidar:Outputs, ontolidar:ScanGeometry,
     ontolidar:VelocityAzimuthDisplay, ontolidar:WindFieldModel;
   skos:prefLabel "Reconstrucción del campo de vientos"@es, "Ricostruzione del campo di vento"@it,
-    "Windfeld Rekonstruktion"@de, "Windfield Reconstruction"@en, "气流（风）流场重构"@cn .
+    "Windfeld-Rekonstruktion"@de, "Windfield Reconstruction"@en, "气流（风）流场重构"@cn .
 
 ontolidar:WindFieldModel a skos:Concept;
   skos:broader ontolidar:WindfieldReconstruction;
@@ -1462,7 +1489,7 @@ ontolidar:WindFieldModel a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:MotionCompensation, ontolidar:WindTurbineModel;
   skos:prefLabel "Modello di campo eolico"@it, "Modelo de campo de viento"@es, "Wind field model"@en,
-    "Windfeldmodell"@de, "气流（风）流场模型"@cn .
+    "Windfeld-Modell"@de, "气流（风）流场模型"@cn .
 
 ontolidar:WindTurbineModel a skos:Concept;
   skos:broader ontolidar:WindFieldModel;
@@ -1523,8 +1550,8 @@ ontolidar:ScanGeometry a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:MeasurementVolume, ontolidar:MultiLidar, ontolidar:NonStatic,
     ontolidar:SingleLidar, ontolidar:Static;
-  skos:prefLabel "Geometria di scansionamento"@it, "Geometria di scansione"@it, "Geometrie scannen"@de,
-    "Geometría de escaneo"@es, "Scan geometry"@en, "扫描的几何路径"@cn, "扫描路径"@cn;
+  skos:prefLabel "Geometria di scansionamento"@it, "Geometria di scansione"@it, "Geometría de escaneo"@es,
+    "Scan geometry"@en, "Scan-Geometrie"@de, "扫描的几何路径"@cn, "扫描路径"@cn;
   skos:related ontolidar:ScanGeometry .
 
 ontolidar:Static a skos:Concept;
@@ -1533,7 +1560,7 @@ ontolidar:Static a skos:Concept;
     "Geometria di scansionamento con il raggio laser fisso nello spazio."@it, "Geometría de escaneo lidar de orientaciones fijas del haz lidar."@es,
     "测风激光雷达工作时，光束在空间中扫描方向固定的扫描路径"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Static"@en, "Statico"@it, "静态扫描"@cn .
+  skos:prefLabel "Static"@en, "Statico"@it, "Statisch"@de, "静态扫描"@cn .
 
 ontolidar:NonStatic a skos:Concept;
   skos:broader ontolidar:ScanGeometry;
@@ -1541,7 +1568,7 @@ ontolidar:NonStatic a skos:Concept;
     "Geometria di scansionamento con il raggio laser in moto nello spazio."@it, "Una geometría de escaneo lidar que deorientaciones dinámicas del haz lidar."@es,
     "测风激光雷达工作时，光束在空间中扫描方向非固定的扫描路径"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Non statico"@it, "Non-static"@en, "非静态扫描"@cn .
+  skos:prefLabel "Nicht statisch"@de, "Non statico"@it, "Non-static"@en, "非静态扫描"@cn .
 
 ontolidar:FilteringStrategy a skos:Concept;
   skos:broader ontolidar:WindfieldReconstruction;
@@ -1551,7 +1578,8 @@ ontolidar:FilteringStrategy a skos:Concept;
     "测风激光雷达原始数据的过滤方法，过滤异常、不确定的数据以生成可靠的数据集，用于气流（风）流场重建等。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:PreProcessedData, ontolidar:ProcessedData, ontolidar:RawData;
-  skos:prefLabel "Filtering strategy"@en, "Strategia di filtraggio dati"@it, "数据过滤方法"@cn .
+  skos:prefLabel "Filtering strategy"@en, "Filterstrategie"@de, "Strategia di filtraggio dati"@it,
+    "数据过滤方法"@cn .
 
 ontolidar:RawData a skos:Concept;
   skos:broader ontolidar:FilteringStrategy;
@@ -1560,7 +1588,7 @@ ontolidar:RawData a skos:Concept;
     "Salida de datos del convertidor analógico-digital (ADC ) del lidar, previo a la aplicación de cualquier algoritmo de filtrado o post-procesamiento."@es,
     "从激光雷达DSP输出，未经过任何数据过滤和后处理的数据"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Raw data"@en, "RawData"@it, "原始数据"@cn .
+  skos:prefLabel "Raw data"@en, "RawData"@it, "Rohdaten"@de, "原始数据"@cn .
 
 ontolidar:PreProcessedData a skos:Concept;
   skos:broader ontolidar:FilteringStrategy;
@@ -1570,7 +1598,8 @@ ontolidar:PreProcessedData a skos:Concept;
     "通过应用CNR阈值和去除异常值对原始数据进行过滤后产生的数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CnrThreshold, ontolidar:Outliers;
-  skos:prefLabel "Dati pre-processati"@it, "Pre-processed data"@en, "预处理的数据"@cn .
+  skos:prefLabel "Dati pre-processati"@it, "Pre-processed data"@en, "Vorverarbeitete Daten"@de,
+    "预处理的数据"@cn .
 
 ontolidar:Outliers a skos:Concept;
   skos:broader ontolidar:PreProcessedData;
@@ -1579,7 +1608,7 @@ ontolidar:Outliers a skos:Concept;
     "Observations that lie abnormal distances from other values in a random sample from a population. These observations are regarded as invalid."@en,
     "在人口的随机抽样中，与其他数值存在异常距离的观测值。这些观测值被认为是无效的。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Anomalie"@it, "Outliers"@en, "异常值"@cn .
+  skos:prefLabel "Anomalie"@it, "Ausreißer"@de, "Outliers"@en, "异常值"@cn .
 
 ontolidar:CnrThreshold a skos:Concept;
   skos:broader ontolidar:PreProcessedData;
@@ -1588,7 +1617,7 @@ ontolidar:CnrThreshold a skos:Concept;
     "The CNR bandwidth within which the intensity of the Doppler peak is clearly visible with respect to the noise intensity in the freqency spectrum."@en,
     "载噪比带宽（-30dB至10dB），在此带宽内，多普勒峰值相对于频谱噪声来说是清晰可见的。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "CNR Threshold"@en, "Soglia CNR"@it, "载噪比阈值"@cn .
+  skos:prefLabel "CNR Threshold"@en, "CNR-Schwellenwert"@de, "Soglia CNR"@it, "载噪比阈值"@cn .
 
 ontolidar:ProcessedData a skos:Concept;
   skos:broader ontolidar:FilteringStrategy;
@@ -1596,7 +1625,8 @@ ontolidar:ProcessedData a skos:Concept;
     "Dati prodotti per applicazione di filtri sui dati pre-processati."@it, "Datos generados tras el procesamiento de los datos pre-procesados mediante métodos especiales de filtrado u otros, en función del propósito."@es,
     "用因地（时）制宜的方法处理后的数据，以获得最终更可靠的数据集。例如，用特殊的方法对光束击中波浪时的数据进行过滤。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Dati post-processati"@it, "Processed data"@en, "已处理的数据"@cn .
+  skos:prefLabel "Dati post-processati"@it, "Processed data"@en, "Verarbeitete Daten"@de,
+    "已处理的数据"@cn .
 
 ontolidar:Outputs a skos:Concept;
   skos:broader ontolidar:WindfieldReconstruction;
@@ -1604,7 +1634,7 @@ ontolidar:Outputs a skos:Concept;
     "Datos generados como producto final del proceso de medición del viento."@es, "经各种方法处理后的雷达数据"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:TurbulenceIntensity, ontolidar:Uncertainties, ontolidar:WindVelocity;
-  skos:prefLabel "Outputs"@en, "Risultati"@it, "输出结果"@cn .
+  skos:prefLabel "Ausgaben"@de, "Outputs"@en, "Risultati"@it, "输出结果"@cn .
 
 ontolidar:WindVelocity a skos:Concept;
   skos:altLabel "Wind speed"@en;
@@ -1614,7 +1644,8 @@ ontolidar:WindVelocity a skos:Concept;
     "Vettore della velocita' del vento, dato dalla combinazione di velocita assoluta e direzione"@it,
     "给定时间内的风速和风向"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Velocità del vento"@it, "Wind velocity"@en, "风速"@cn .
+  skos:prefLabel "Velocità del vento"@it, "Wind velocity"@en, "Windgeschwindigkeit"@de,
+    "风速"@cn .
 
 ontolidar:TurbulenceIntensity a skos:Concept;
   skos:broader ontolidar:Outputs;
@@ -1623,7 +1654,8 @@ ontolidar:TurbulenceIntensity a skos:Concept;
     "Relación entre la desviación estándar de la velocidad del viento y la velocidad media del viento, determinada a partir del mismo conjunto de muestras de datos de viento observado, y tomados durante un periodo de tiempo específico, normalmente 10min o 60min."@es,
     "指定时间段内，风速标准偏差与平均风速的比率，由同一组风速测量数据样本确定，通常为10分钟或60分钟。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Intensità della turbolenza"@it, "Turbulence intensity"@en, "湍流强度"@cn .
+  skos:prefLabel "Intensità della turbolenza"@it, "Turbulence intensity"@en, "Turbulenzintensität"@de,
+    "湍流强度"@cn .
 
 ontolidar:Uncertainties a skos:Concept;
   skos:broader ontolidar:Outputs;
@@ -1631,7 +1663,7 @@ ontolidar:Uncertainties a skos:Concept;
     "Errore statistico della misurazione"@it, "Quantities to indicate the statistical error from lidar measurement data, which affects the lidar data availability, validility, etc."@en,
     "测风激光雷达测量数据的统计误差的度量，会影响数据的可利用率、有效性等。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Incertezze"@it, "Uncertainties"@en, "不确定性"@cn .
+  skos:prefLabel "Incertezze"@it, "Uncertainties"@en, "Ungewissheiten"@de, "不确定性"@cn .
 
 ontolidar:DataFiltering a skos:Concept;
   skos:broader ontolidar:DataProcessing;
@@ -1641,7 +1673,8 @@ ontolidar:DataFiltering a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CleanAirDetection, ontolidar:CloudDetection, ontolidar:FogDetection,
     ontolidar:HardTargetDetection;
-  skos:prefLabel "Data filtering"@en, "Filtraggio dati per qualità"@it, "数据过滤"@cn;
+  skos:prefLabel "Data filtering"@en, "Filterung von Daten"@de, "Filtraggio dati per qualità"@it,
+    "数据过滤"@cn;
   skos:related ontolidar:FilteringStrategy .
 
 ontolidar:HardTargetDetection a skos:Concept;
@@ -1669,7 +1702,7 @@ ontolidar:CleanAirDetection a skos:Concept;
     "Filtro specifico per rimuovere dati spuri dovuti alla presenza di aria pulita nel tragitto del raggio laser."@it,
     "一个范围（或数值）用来表示空气中含有较少的气溶胶，在数据过滤过程中应特别处理对应的测量数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Clean air detection"@en, "Rilevamento di condizione di aria pulita"@it,
+  skos:prefLabel "Clean air detection"@en, "Erkennung sauberer Luft"@de, "Rilevamento di condizione di aria pulita"@it,
     "超净空气识别"@cn .
 
 ontolidar:FogDetection a skos:Concept;
@@ -1679,7 +1712,8 @@ ontolidar:FogDetection a skos:Concept;
     "Filtro specifico per rimuovere dati spuri dovuti alla presenza di nebbia nel tragitto del raggio laser."@it,
     "表示天气处于大雾状态的数量，在数据过滤过程中应特别处理相关的激光雷达测量数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Fog detection"@en, "Rilevamento di nebbia"@it, "大雾天气识别"@cn .
+  skos:prefLabel "Fog detection"@en, "Nebel-Erkennung"@de, "Rilevamento di nebbia"@it,
+    "大雾天气识别"@cn .
 
 ontolidar:CoordinateSystemTransformation a skos:Concept;
   skos:broader ontolidar:DataProcessing;
@@ -1688,13 +1722,14 @@ ontolidar:CoordinateSystemTransformation a skos:Concept;
     "Transfer the data from the lidar default coordinate system (e.g. spherical coordinate system, etc.) to the coordinate system required by data application (e.g. right hand inertial coordinate system)"@en,
     "将数据从激光雷达默认坐标系（如球面坐标系等）转移到数据应用所需的坐标系（如右手惯性坐标系）。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Coordinate system transformation"@en, "Trasformazione del sistema di coordinate"@it,
-    "坐标系统转换"@cn .
+  skos:prefLabel "Coordinate system transformation"@en, "Transformation des Koordinatensystems"@de,
+    "Trasformazione del sistema di coordinate"@it, "坐标系统转换"@cn .
 
 ontolidar:MeasurementSetup a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:MeasurementHeight, ontolidar:Probe, ontolidar:ScanGeometry;
-  skos:prefLabel "Disposizione di misurazione"@it, "Measurement setup"@en, "测量设置"@cn;
+  skos:prefLabel "Aufbau der Messung"@de, "Disposizione di misurazione"@it, "Measurement setup"@en,
+    "测量设置"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:SingleLidar a skos:Concept;
@@ -1705,7 +1740,7 @@ ontolidar:SingleLidar a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ArbitraryTrajectory, ontolidar:CompoundScan, ontolidar:SimpleScan,
     ontolidar:Staring, ontolidar:StopStare, ontolidar:SweepStare;
-  skos:prefLabel "Einzel-Lidar"@de, "Lidar individual"@es, "Lidar singolo"@it, "Single lidar"@en,
+  skos:prefLabel "Einzelnes Lidar"@de, "Lidar individual"@es, "Lidar singolo"@it, "Single lidar"@en,
     "单个激光雷达"@cn .
 
 ontolidar:SimpleScan a skos:Concept;
@@ -1716,8 +1751,8 @@ ontolidar:SimpleScan a skos:Concept;
     "一种简单的扫描路径，通过方向在单个自由度内的控制来改变扫描位置"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:VariableAzimuthScan, ontolidar:VariableElevationScan;
-  skos:prefLabel "Escaneo simple"@es, "Scansione semplice"@it, "Simple scan"@en, "einfacher Scan"@de,
-    "简单扫描"@cn .
+  skos:prefLabel "Einfacher Scan"@de, "Escaneo simple"@es, "Scansione semplice"@it,
+    "Simple scan"@en, "简单扫描"@cn .
 
 ontolidar:VariableAzimuthScan a skos:Concept;
   skos:altLabel "PPI"@en;
@@ -1740,7 +1775,7 @@ ontolidar:CompleteCone a skos:Concept;
     "Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Complete cone"@en, "Geometria a cono completo"@it, "Geometía de cono completo"@es,
-    "Vollständiger Kegel"@de, "完整的锥体扫描法"@cn .
+    "Kompletter Kegel"@de, "完整的锥体扫描法"@cn .
 
 ontolidar:ConeSector a skos:Concept;
   skos:altLabel "PPI"@en, "Plan-position indicator"@en;
@@ -1753,20 +1788,20 @@ ontolidar:ConeSector a skos:Concept;
     "Wind speed and direction values can be obtained through a wind field reconstruction process, for example by assuming a sinusoidal dependence on azimuth angle."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Cone sector"@en, "Geometria a settore di cono"@it, "Geometría de cono sectorial"@es,
-    "Kegelsektor"@de, "锥体扇形扫描法"@cn .
+    "Kegel-Sektor"@de, "锥体扇形扫描法"@cn .
 
 ontolidar:DopplerBeamSwinging a skos:Concept;
   skos:altLabel "DBS"@en;
   skos:broader ontolidar:VariableAzimuthScan;
   skos:definition "A scan measurement principle in which the wind velocity reconstruction algorithm calculates wind velocity vector components immediately upon a new radial wind velocity becoming available. This technique provides the maximum sampling rate of the wind velocity components and consequently the wind velocity vector, which is desirable for instance in turbulence measurements."@en,
-    "Geometría de escaneo en la cual el ángulo de escaneo azimutal se varía enintervalos de 90 grados a lo largo de los 360 grados posibles del ángulo azimutal. Los valores de velocidad y dirección del viento se pueden obertener a través de un proceso de reconstrucción del campo de viento asumiendo, por ejemplo, una dependencia sinusoidal de la velocidad radial con el ángulo azimutal."@es,
+    "Geometría de escaneo en la cual el ángulo de escaneo azimutal se varía en intervalos de 90 grados a lo largo de los 360 grados posibles del ángulo azimutal. Los valores de velocidad y dirección del viento se pueden obertener a través de un proceso de reconstrucción del campo de viento asumiendo, por ejemplo, una dependencia sinusoidal de la velocidad radial con el ángulo azimutal."@es,
     "Una geometria di scansione dello spazio in cui il fascio laser è mosso in intervalli di 90 gradi lungo l'angolo azimutale. La velocità e la direzione del vento possono essere ottenute attraverso un processo di ricostruzione del campo ventoso che assume, per esempio, una dipendenza sinusoidale della velocità radiale dall'angolo di azimuth."@it,
     "一种扫描方式，其中光束的方位角在可能的方位角的整个 360 度范围内间隔90度变化。风速和风向值可以通过气流流场重建推算获得，例如通过假定计算值（风速，风向）与方位角存在正弦函数关系。"@cn;
   skos:editorialNote "Reference: Kelberlau, F. and Mann, J. “Cross-contamination effect on turbulence spectra from Doppler beam swinging wind lidar”, Wind Energ. Sci., 5, 519–541, 2020"@en,
     "Referencias: Kelberlau, F. and Mann, J. “Cross-contamination effect on turbulence spectra from Doppler beam swinging wind lidar”, Wind Energ. Sci., 5, 519–541, 2020"@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Doppler beam swinging"@en, "Geometria ad oscillazione del fascio laser"@it,
-    "Geometría de oscilación del haz Doppler"@es, "Schwingender Dopplerstrahl"@de, "多普勒光束摆动扫描法"@cn .
+    "Geometría de oscilación del haz Doppler"@es, "多普勒光束摆动扫描法"@cn .
 
 ontolidar:VariableElevationScan a skos:Concept;
   skos:altLabel "RHI"@en;
@@ -1780,7 +1815,7 @@ ontolidar:VariableElevationScan a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:VerticalSlice;
   skos:prefLabel "Geometria ad elevazione variabile"@it, "Geometría de elevación variable"@es,
-    "Variable elevation scan"@en, "可变仰角扫描法"@cn .
+    "Scan mit variabler Höhe"@de, "Variable elevation scan"@en, "可变仰角扫描法"@cn .
 
 ontolidar:CompoundScan a skos:Concept;
   skos:broader ontolidar:SingleLidar;
@@ -1791,7 +1826,7 @@ ontolidar:CompoundScan a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:SequentialScan;
   skos:prefLabel "Compound scan"@en, "Escaneo compuesto"@es, "Scansione composita"@it,
-    "复合扫描扫描法"@cn .
+    "Zusammengesetzter Scan"@de, "复合扫描扫描法"@cn .
 
 ontolidar:ArbitraryTrajectory a skos:Concept;
   skos:broader ontolidar:SingleLidar;
@@ -1801,7 +1836,7 @@ ontolidar:ArbitraryTrajectory a skos:Concept;
     "一种测风激光雷达的扫描方法，可以通过仰角和方位角的任意组合，跟踪所需轨迹进行扫描。比如：站在一个固定位置跟踪飞鸟的路径。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Arbitrary trajectory"@en, "Traiettoria arbitraria"@it, "Trayectoria arbitraria"@es,
-    "任意运动轨迹扫描法"@cn .
+    "Willkürliche Flugbahn"@de, "任意运动轨迹扫描法"@cn .
 
 ontolidar:StopStare a skos:Concept;
   skos:broader ontolidar:SingleLidar;
@@ -1811,7 +1846,7 @@ ontolidar:StopStare a skos:Concept;
     "一种测风激光雷达的扫描方法，只有当光束在预设扫描方向上保持静止时，才获取视线方向(LOS)的数据。当光束在预设位置之间切换移动时，不获取数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Geometria \"osserva da fisso\""@it, "Geometría de punto fijo"@es,
-    "Stop-stare"@en, "停止-凝视扫描法"@cn .
+    "Stop-stare"@en, "Stop-starren"@de, "停止-凝视扫描法"@cn .
 
 ontolidar:SweepStare a skos:Concept;
   skos:broader ontolidar:SingleLidar;
@@ -1821,14 +1856,15 @@ ontolidar:SweepStare a skos:Concept;
     "一种测风激光雷达的扫描方法，当光束在预定位置之间移动时，也会连续获取视线方向(LOS)的数据。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Geometria \"osserva in movimento\""@it, "Geometría de barrido"@es,
-    "Sweep-stare"@en, "扫视扫描法"@cn .
+    "Sweep-stare"@en, "Sweep-starren"@de, "扫视扫描法"@cn .
 
 ontolidar:Staring a skos:Concept;
   skos:broader ontolidar:SingleLidar;
   skos:definition "A scan geometry comprised of a single beam orientation."@en, "Geometría de escaneo que comprende una sola orientación del rayo de medición."@es,
     "Un lidar con orientazione del fascio laser fissa nello spazio."@it, "光束仅在单一方向扫描的扫描方式。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Geometria fissa"@it, "Geometría fija"@es, "Staring"@en, "凝视（单向）扫描法"@cn .
+  skos:prefLabel "Geometria fissa"@it, "Geometría fija"@es, "Glotzend"@de, "Staring"@en,
+    "凝视（单向）扫描法"@cn .
 
 ontolidar:MultiLidar a skos:Concept;
   skos:altLabel "multilidar"@en, "multistatic"@en;
@@ -1839,7 +1875,8 @@ ontolidar:MultiLidar a skos:Concept;
     "多个激光雷达在同一区域进行的协调测量。测量结果在时间上可能会（或不会）同步。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ConvergentScan, ontolidar:VirtualMetMast;
-  skos:prefLabel "Multi-lidar"@en, "Multi-lidar"@es, "Multi-lidar"@it, "多激光雷达"@cn .
+  skos:prefLabel "Multi-Lidar"@de, "Multi-lidar"@en, "Multi-lidar"@es, "Multi-lidar"@it,
+    "多激光雷达"@cn .
 
 ontolidar:MeasurementVolume a skos:Concept;
   skos:broader ontolidar:ScanGeometry;
@@ -1848,8 +1885,8 @@ ontolidar:MeasurementVolume a skos:Concept;
     "The region characterised by the wind lidar. Corresponds to the region penetrated by the various beam orientations / lines of sight and probe volumes where intermediate data are acquired to produce a final measurement."@en,
     "测风激光雷达采集信号的空间范围。具体来说，由光束预设的扫描位置所围成的空间，激光雷达将在这个空间内进行测量。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Measurement volume"@en, "Volume di misurazione"@it, "Volumen de medición"@es,
-    "测量范围"@cn .
+  skos:prefLabel "Measurement volume"@en, "Messvolumen"@de, "Volume di misurazione"@it,
+    "Volumen de medición"@es, "测量范围"@cn .
 
 ontolidar:Probe a skos:Concept;
   skos:broader ontolidar:MeasurementSetup;
@@ -1859,7 +1896,7 @@ ontolidar:Probe a skos:Concept;
     "对于脉冲激光雷达，探测是沿视线发射的激光脉冲，其方向和位置由激光雷达的设置决定。对于连续波激光雷达，探测是沿视线方向聚集灵敏度相对较高的区域，由取决于系统的光学焦点。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:ProbeVolume, ontolidar:Range;
-  skos:prefLabel "Probe"@en, "Sonda"@es, "Sonda"@it, "探测"@cn .
+  skos:prefLabel "Probe"@en, "Sonda"@es, "Sonda"@it, "Sonde"@de, "探测"@cn .
 
 ontolidar:Range a skos:Concept;
   skos:broader ontolidar:Probe;
@@ -1869,7 +1906,7 @@ ontolidar:Range a skos:Concept;
     "探测的最大距离。超过这个距离，数据可用性会降低，例如，信噪比超出正常范围。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:FocusDistance, ontolidar:RangeResolution, ontolidar:TimeOfFlight;
-  skos:prefLabel "Range"@en, "Range"@it, "探测距离"@cn .
+  skos:prefLabel "Bereich"@de, "Range"@en, "Range"@it, "探测距离"@cn .
 
 ontolidar:FocusDistance a skos:Concept;
   skos:broader ontolidar:Range;
@@ -1877,7 +1914,8 @@ ontolidar:FocusDistance a skos:Concept;
     "La distanza fra il centro della lente ottica e il suo fuoco."@it, "The distance from the lidar to the telescope focal length. Ideally coincides with the laser beam waist."@en,
     "从测风激光雷达到激光束汇聚点的距离，由望远镜的焦距规定。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Distanza di messa a fuoco"@it, "Focus distance"@en, "焦距"@cn .
+  skos:prefLabel "Distanza di messa a fuoco"@it, "Focus distance"@en, "Fokus-Distanz"@de,
+    "焦距"@cn .
 
 ontolidar:TimeOfFlight a skos:Concept;
   skos:altLabel "TOF"@en;
@@ -1887,7 +1925,8 @@ ontolidar:TimeOfFlight a skos:Concept;
     "The time taken for a lidar pulse to be emitted, interact with the atmosphere in a probe volume such that it is backscattered, and return to be detected by the system."@en,
     "从激光雷达脉冲发射，到反射信号返回并被系统检测到所需要的时间。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Tempo di volo"@it, "Tiempo de vuelo"@es, "Time of flight"@en, "飞行时间"@cn .
+  skos:prefLabel "Flugzeit"@de, "Tempo di volo"@it, "Tiempo de vuelo"@es, "Time of flight"@en,
+    "飞行时间"@cn .
 
 ontolidar:RangeResolution a skos:Concept;
   skos:broader ontolidar:Range;
@@ -1896,8 +1935,8 @@ ontolidar:RangeResolution a skos:Concept;
     "The range resolution is the distance that can be resolved by the laser pulse length. This is given by (half) the speed of light multiplied by the pulse duration."@en,
     "探测间隔分辨率是激光脉冲波所覆盖的距离。数值上等于光速乘以脉冲持续时间除以二。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Range resolution"@en, "Resolución de distancia"@es, "Risoluzione della distanza"@it,
-    "探测间隔分辨率"@cn .
+  skos:prefLabel "Bereichsauflösung"@de, "Range resolution"@en, "Resolución de distancia"@es,
+    "Risoluzione della distanza"@it, "探测间隔分辨率"@cn .
 
 ontolidar:ProbeVolume a skos:Concept;
   skos:broader ontolidar:Probe;
@@ -1907,7 +1946,7 @@ ontolidar:ProbeVolume a skos:Concept;
     "测风激光雷达测量视线方向速度所覆盖的空间范围。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:BeamDiameter, ontolidar:RayleighLength;
-  skos:prefLabel "Probe volume"@en, "Volume della sonda"@it, "Volumen de la sonda"@es,
+  skos:prefLabel "Probe volume"@en, "Sondenvolumen"@de, "Volume della sonda"@it, "Volumen de la sonda"@es,
     "探测体积"@cn .
 
 ontolidar:RayleighLength a skos:Concept;
@@ -1917,15 +1956,15 @@ ontolidar:RayleighLength a skos:Concept;
     "Distanza lungo la direzione di propagazione del raggio laser fra il punto di minima apertura radiale del raggio laser al punto di apertura radiale doppia rispetto al valor minimo. La distanza di Rayleigh è usata per caratterizzare il volume della sonda di misurazione e corrisponde a metà della lunghezza della sonda di prova."@it,
     "一种距离的表示方式，从传播方向的光束腰部开始，光束部分的截面积面积增加了2倍，或者截面半径增加了根号2倍。瑞利长度用于描述探测体积的特征，相当于探测体长度的一半。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Longitud Rayleigh"@es, "Lunghezza Rayleigh"@it, "Rayleigh length"@en,
-    "瑞利长度"@cn;
+  skos:prefLabel "Longitud Rayleigh"@es, "Lunghezza Rayleigh"@it, "Rayleigh Länge"@de,
+    "Rayleigh length"@en, "瑞利长度"@cn;
   skos:related ontolidar:FullWidthAtHalfMaximum .
 
 ontolidar:BeamDiameter a skos:Concept;
   skos:broader ontolidar:ProbeVolume;
   skos:definition "Diameter of the laser beam"@en, "Diametro del raggio laser"@it, "Diámetro del rayo láser."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Beam diameter"@en, "Diametro del fascio"@it .
+  skos:prefLabel "Beam diameter"@en, "Diametro del fascio"@it, "Strahldurchmesser"@de .
 
 ontolidar:MeasurementHeight a skos:Concept;
   skos:broader ontolidar:MeasurementSetup;
@@ -1938,7 +1977,7 @@ ontolidar:MeasurementHeight a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:DatumElevation, ontolidar:DatumFeature, ontolidar:DatumPlane;
   skos:prefLabel "Altezza di misurazione"@it, "Altura de medición"@es, "Measurement height"@en,
-    "测量高度"@cn .
+    "Messhöhe"@de, "测量高度"@cn .
 
 ontolidar:DatumFeature a skos:Concept;
   skos:altLabel "Reference marker"@en;
@@ -1981,8 +2020,8 @@ ontolidar:MeasurementPrinciples a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:DetectionType, <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emitter/ReceiverConfiguration>,
     ontolidar:LidarSampleRate, ontolidar:LineOfSight, ontolidar:Scattering, ontolidar:WindSpeedEvaluation;
-  skos:prefLabel "Measurement principles"@en, "Principi di misurazione"@it, "Principios de medición"@es,
-    "测量原则"@cn;
+  skos:prefLabel "Measurement principles"@en, "Messprinzipien"@de, "Principi di misurazione"@it,
+    "Principios de medición"@es, "测量原则"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emitter/ReceiverConfiguration>
@@ -1996,7 +2035,7 @@ ontolidar:MeasurementPrinciples a skos:Concept;
     "This can be monostatic (with biaxial or a coaxial sensor arrangement) or bistatic"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Configurazione dell'emettitore/ricevitore"@it, "Emitter/receiver configuration"@en,
-    "发射器/接收器配置"@cn .
+    "Sender-/Empfängerkonfiguration"@de, "发射器/接收器配置"@cn .
 
 ontolidar:Monostatic a skos:Concept;
   skos:broader <http://vocab.ieawindtask32.org/wind-lidar-ontology/Emmiter/ReceiverConfiguration>;
@@ -2047,7 +2086,7 @@ ontolidar:Mie a skos:Concept;
     "Elastische Lichtstreuung, bei der der Durchmesser der Streupartikel größer ist als etwa die Wellenlänge des einfallenden Lichts."@de,
     "光的弹性散射，散射粒子的直径大于入射光的波长。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Mie"@de, "Mie"@en, "Mie"@it, "米氏"@cn .
+  skos:prefLabel "Mie"@en, "Mie"@it, "米氏"@cn .
 
 ontolidar:Rayleigh a skos:Concept;
   skos:broader ontolidar:Scattering;
@@ -2068,7 +2107,7 @@ ontolidar:DetectionType a skos:Concept;
     "确定散射辐射的频移的方法。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Coherent, ontolidar:DetectionConfiguration, ontolidar:Incoherent;
-  skos:prefLabel "Detection type"@en, "Detektionsart"@de, "Tipo di rilevamento"@it,
+  skos:prefLabel "Art der Erkennung"@de, "Detection type"@en, "Tipo di rilevamento"@it,
     "检测类型"@cn .
 
 ontolidar:Coherent a skos:Concept;
@@ -2096,7 +2135,7 @@ ontolidar:DetectionConfiguration a skos:Concept;
   skos:broader ontolidar:DetectionType;
   skos:definition "The process of detecting a radio wave by the aid of a locally generated current or wave of exactly the same frequency as that of the incoming wave. A signal frequency that is created by combining or mixing two other frequencies using a signal processing technique called heterodyning."@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Configurazione"@it, "Detection Configuration"@en, "Detektions-Konfiguration"@de,
+  skos:prefLabel "Configurazione"@it, "Detection Configuration"@en, "Konfiguration der Erkennung"@de,
     "配置"@cn .
 
 ontolidar:Homodyne a skos:Concept;
@@ -2107,7 +2146,7 @@ ontolidar:Homodyne a skos:Concept;
     "Un método de detección de desplazamiento de frecuencia. El lidar mezcla directamente la señal de referencia y la retrodispersada, obteniendo un desplazamiento de frecuencia (Doppler). Sólo se puede conocer la magnitud del desplazamiento de la frecuencia, pero no la dirección del mismo. Esto significa que sólo podemos inferir el módulo (y no la dirección) del vector de velocidad del viento."@es,
     "一种激光雷达检测方法，其中参考辐射在调制过程之前来自与信号相同的来源。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Homodyn"@de, "Homodyne"@en, "Omodinamico"@it, "同位素"@cn .
+  skos:prefLabel "Homodyne"@en, "Omodinamico"@it, "同位素"@cn .
 
 ontolidar:Heterodyne a skos:Concept;
   skos:broader ontolidar:Configuration;
@@ -2117,7 +2156,7 @@ ontolidar:Heterodyne a skos:Concept;
     "Un método de detección de desplazamiento de frecuencia. Antes de la mezcla de las señales original y retrodispersada, la original se desplaza en frecuencia. Esto permite obtener no sólo la magnitud del cambio de frecuencia entre la señal original y la retrodispersa, sino también la dirección del cambio. Esto significa que podemos inferir tanto el módulo como la dirección del vector de velocidad del viento."@es,
     "一种激光雷达检测方法，其中参考辐射在调制过程之前来自与信号不同的来源。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Eterodinamico"@it, "Heterodyn"@de, "Heterodyne"@en, "异频雷达"@cn .
+  skos:prefLabel "Eterodinamico"@it, "Heterodyne"@en, "Überlagern"@de, "异频雷达"@cn .
 
 ontolidar:WindSpeedEvaluation a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
@@ -2128,7 +2167,7 @@ ontolidar:WindSpeedEvaluation a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:CrossCorrelation, ontolidar:ParticleTracking;
   skos:prefLabel "Valutazione della velocità del vento"@it, "Wind speed evaluation"@en,
-    "Windgeschwindigkeits-Auswertung"@de, "风速评估"@cn .
+    "Windgeschwindigkeitsevaluation"@de, "风速评估"@cn .
 
 ontolidar:ParticleTracking a skos:Concept;
   skos:broader ontolidar:WindSpeedEvaluation;
@@ -2137,7 +2176,7 @@ ontolidar:ParticleTracking a skos:Concept;
     "Seguimiento de partículas como método en la que el haz lidar sigue a la partícula en el flujo."@es,
     "一种气流流场模型：粒子跟踪作为一种应用，激光雷达光束在流动中跟随粒子（参考Langrangian统计）。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Particle tracking"@en, "Partikel-Nachlauf"@de, "Tracciamento di particella"@it,
+  skos:prefLabel "Particle tracking"@en, "Partikel-Tracking"@de, "Tracciamento di particella"@it,
     "粒子跟踪"@cn .
 
 ontolidar:CrossCorrelation a skos:Concept;
@@ -2150,11 +2189,12 @@ ontolidar:CrossCorrelation a skos:Concept;
     "交叉相关"@cn .
 
 ontolidar:DopplerPeak a skos:Concept;
+  skos:broader ontolidar:FrequencyAnalyser;
   skos:definition "Doppler peak as a method to describe the amplitude of the wind speed asumming that the aerosols flow at the same speed as the wind."@en,
     "Pico Doppler como método para describir la amplitud de la velocidad del viento asumiendo que los aerosoles se desplazan a la misma velocidad que el viento."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Doppler peak"@en, "Doppler-Höhepunkt"@de;
-  skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
+  skos:prefLabel "Doppler peak"@en;
+  skos:related ontolidar:DopplerSpectra .
 
 ontolidar:LineOfSight a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;
@@ -2185,7 +2225,7 @@ ontolidar:VerticalSlice a skos:Concept;
     "通过改变仰角而非方位角，可以在光束扫过垂直切面的情况下进行扫描。这些扫描也称为范围高度指示器 (RHI) 扫描。该种扫描方式可用于观察采样横截面中的流场详细信息"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Geometria a taglio verticale"@it, "Geometría de corte vertical"@es,
-    "Vertical slice"@en, "垂直切面扫描法"@cn .
+    "Vertical slice"@en, "Vertikale Scheibe"@de, "垂直切面扫描法"@cn .
 
 ontolidar:SequentialScan a skos:Concept;
   skos:broader ontolidar:CompoundScan;
@@ -2198,7 +2238,7 @@ ontolidar:SequentialScan a skos:Concept;
     "The scanning geometry taxonomy is based on Figure 3 in NREL/TP-5000-64634 https://www.nrel.gov/docs/fy16osti/64634.pdf"@en;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Escaneo secuencial"@es, "Scansione sequenziale"@it, "Sequential scan"@en,
-    "顺序扫描扫描法"@cn .
+    "Sequenzieller Scan"@de, "顺序扫描扫描法"@cn .
 
 ontolidar:ConvergentScan a skos:Concept;
   skos:altLabel "Convergent beam"@en, "convergent-beam lidar"@en;
@@ -2208,8 +2248,8 @@ ontolidar:ConvergentScan a skos:Concept;
     "Una configurazione di misurazione che coinvolge più unità lidar operate in un modo coordinato e sincronizzato in modo tale che i loro fasci convergano e si intersechino in specifici punti dello spazio. Se sono utilizzate tre o più unità lidar, è possibile ricostruire integralmente il vettore velocità del vento nelle aree dove i fasci laser si intersecano, fatto salvi i limiti definiti dalla lunghezza dell'area sensivile, l'intervallo di campionamento e la geometria di misurazione."@it,
     "一种涉及多个激光雷达单元的测量配置，这些单元以协调和同步的方式运行，使其光束在连续的探测体积中汇聚并相交。如果使用三个或更多激光雷达单元，则可以在探测体长度、采样间隔和扫描规定的空间内表征光束相交处的探测体积中的风速矢量。"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Convergent scan"@en, "Escaneo convergente"@es, "Scansione convergente"@it,
-    "聚合扫描"@cn .
+  skos:prefLabel "Convergent scan"@en, "Escaneo convergente"@es, "Konvergente Suche"@de,
+    "Scansione convergente"@it, "聚合扫描"@cn .
 
 ontolidar:Parameters a skos:Concept;
   skos:definition "Parámetros específicos del lidar de viento."@es, "Specifici parametri del lidar."@it,
@@ -2222,7 +2262,7 @@ ontolidar:Parameters a skos:Concept;
 ontolidar:CarrierToNoiseRatio a skos:Concept;
   skos:altLabel "CNR"@en;
   skos:broader ontolidar:Parameters;
-  skos:definition "En una señal modulada, CNR es el cociente entre la potencia de la señal y la potencia del ruido de es señal."@es,
+  skos:definition "En una señal modulada, cociente entre la potencia de la señal y la potencia del ruido de esa señal."@es,
     "In a modulated signal (i.e. the pulse), the carrier to noise ratio is the ratio of the signal power to the signal noise power."@en,
     "Una misura della forza del segnale di ritorno al lidar."@it, "在调制信号中，载波噪声比是信号功率与信号噪声功率的比值。"@cn;
   skos:editorialNote "A measure of lidar return signal quality. Is the signal to noise ratio of the modulated signal sent to probe the atmosphere and defines the lidar data availability. If CNR is below a certain threshold the information carried by the backscattered (modulated) light is discarded. Often used interchangably with SNR."@en,
@@ -2234,14 +2274,14 @@ ontolidar:CarrierToNoiseRatio a skos:Concept;
 ontolidar:SignalToNoiseRatio a skos:Concept;
   skos:altLabel "SNR"@en;
   skos:broader ontolidar:Parameters;
-  skos:definition "SNR es el cociente entre la potencia de la señaly la potencia del ruido de esa señal."@es,
+  skos:definition "SNR es el cociente entre la potencia de la señal y la potencia del ruido de esa señal."@es,
     "The ratio of signal power to signal noise power before modulation."@en, "Una misura della forza del segnale di ritorno al lidar."@it,
     "信号功率与信号噪声功率之比。"@cn;
   skos:editorialNote "A menudo se usa de forma intercambiable con CNR."@es, "Often used interchangably with CNR."@en,
     "Spesso usato in modo interscambiabile con CNR"@it;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Rapporto segnale-rumore"@it, "Relación señal-ruido"@es, "Signal to noise ratio"@en,
-    "信噪比"@cn .
+    "Signal-Rausch-Verhältnis"@de, "信噪比"@cn .
 
 ontolidar:DataFormats a skos:Concept;
   skos:definition "Format of the lidar data file. It is generally common across products from the same lidar manufacturer."@en,
@@ -2252,7 +2292,7 @@ ontolidar:DataFormats a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:EWindlidar, ontolidar:HaloPhotonics, ontolidar:Leosphere,
     ontolidar:Zx;
-  skos:prefLabel "Data formats"@en, "Datenformatierung"@de, "Formato dei dati"@it, "数据格式"@cn;
+  skos:prefLabel "Data formats"@en, "Datenformate"@de, "Formato dei dati"@it, "数据格式"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:Leosphere a skos:Concept;
@@ -2279,7 +2319,7 @@ ontolidar:HaloPhotonics a skos:Concept;
     "Halo photonics公司产品的通用数据格式。"@cn, "Übliches Datenformat für Produkte des Herstellers Halo photonics."@de;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Streamline, ontolidar:Verticalpro, ontolidar:Windpro;
-  skos:prefLabel "Halo photonics"@cn, "Halo photonics"@de, "Halo photonics"@en, "Halo photonics"@it .
+  skos:prefLabel "Halo photonics"@cn, "Halo photonics"@en, "Halo photonics"@it, "Halo-Photonik"@de .
 
 ontolidar:EWindlidar a skos:Concept;
   skos:broader ontolidar:DataFormats;
@@ -2341,7 +2381,7 @@ ontolidar:Wifi a skos:Concept;
     "Protocollo di trasferimento dati basato sul sistema WLAN."@it, "Transferencia de datos a través del protocolo WLAN."@es,
     "通过WLAN协议的数据传输"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "WIFI"@cn, "WIFI"@en, "WLAN"@de, "Wi-Fi"@it .
+  skos:prefLabel "WIFI"@cn, "WIFI"@en, "Wi-Fi"@de, "Wi-Fi"@it .
 
 ontolidar:Lan a skos:Concept;
   ontolidar:units "text"@en;
@@ -2369,8 +2409,8 @@ ontolidar:LoggingFrequency a skos:Concept;
     "Frequenza massima di scrittura dei logs di un lidar"@it, "Maximale Aufzeichnungsfrequenz des Lidar-Messgerätes."@de,
     "Maximum logging frequency of the logger or the Lidar measurement device."@en, "记录器或激光雷达的最大记录频率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Aufzeichnungsfrequenz"@de, "Frequenza di registrazione"@it, "Logging frequency"@en,
-    "记录频率"@cn .
+  skos:prefLabel "Frequenza di registrazione"@it, "Häufigkeit der Protokollierung"@de,
+    "Logging frequency"@en, "记录频率"@cn .
 
 ontolidar:FileGranulity a skos:Concept;
   ontolidar:units "samples"@en;
@@ -2380,7 +2420,7 @@ ontolidar:FileGranulity a skos:Concept;
     "Intervallo temporale coperto da dei dati contenuti in un file dati."@it, "The size of the file in terms of time period or samples e.g. 10-min files or 1 hour files."@en,
     "以时间或采样单位来表示的文件大小，例如，10分钟文件或1小时文件"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Datei-Granularität"@de, "File granulity"@en, "Granularita' del file"@it,
+  skos:prefLabel "File granulity"@en, "Granularita' del file"@it, "Granularität der Datei"@de,
     "文件颗粒度"@cn .
 
 ontolidar:DataTransferFrequency a skos:Concept;
@@ -2392,8 +2432,8 @@ ontolidar:DataTransferFrequency a skos:Concept;
     "The frequency at which data is transferred between the measurement device (primary) and a secondary device"@en,
     "测量设备（主设备）和辅助设备之间传输数据的频率"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Data transfer frequency"@en, "Datenübertragungs-Frequenz"@de, "Frequenza di trasferimento dati"@it,
-    "数据传输频率"@cn .
+  skos:prefLabel "Data transfer frequency"@en, "Frequenza di trasferimento dati"@it,
+    "Häufigkeit der Datenübertragung"@de, "数据传输频率"@cn .
 
 ontolidar:DataAveragingPeriod a skos:Concept;
   ontolidar:units "seconds"@en;
@@ -2402,7 +2442,7 @@ ontolidar:DataAveragingPeriod a skos:Concept;
     "Die Mittelungszeit der Daten, z.B. für 20 Hz gemittelt als 10 min Daten."@de, "Periodo de promediación de los datos, por ejemplo, los datos de 20 Hz se pueden promediar a datos de 10 minutos."@es,
     "Periodo temporale di media delle misurazioni grezze"@it, "计算均值所设定的周期，例如，用20赫兹的数据计算出10分钟平均的数据，10分钟就是数据均值周期"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Data averaging period"@en, "Daten-Mittelungszeitraum"@de, "Durata del periodo di media"@it,
+  skos:prefLabel "Data averaging period"@en, "Durata del periodo di media"@it, "Zeitraum der Datenmittelung"@de,
     "数据均值周期"@cn .
 
 ontolidar:Installation a skos:Concept;
@@ -2412,7 +2452,7 @@ ontolidar:Installation a skos:Concept;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:narrower ontolidar:Decommission, ontolidar:Deployment, ontolidar:Relocation,
     ontolidar:Repair;
-  skos:prefLabel "Aufbau"@de, "Installation"@en, "Installazione"@it, "安装"@cn;
+  skos:prefLabel "Installation"@de, "Installation"@en, "Installazione"@it, "安装"@cn;
   skos:topConceptOf <http://vocab.ieawindtask32.org/wind-lidar-ontology/> .
 
 ontolidar:Deployment a skos:Concept;
@@ -2422,7 +2462,7 @@ ontolidar:Deployment a skos:Concept;
     "Datum, Uhrzeit und Ort der Bereitstellung"@de, "Deployment date and time, location (gps)."@en,
     "部署日期和时间，位置（gps）"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Bereitstellung"@de, "Deployment"@en, "Messa in opera"@it, "部署"@cn .
+  skos:prefLabel "Deployment"@en, "Einsatz"@de, "Messa in opera"@it, "部署"@cn .
 
 ontolidar:Repair a skos:Concept;
   ontolidar:units "DateTime, GPS coordinates"@en;
@@ -2431,7 +2471,7 @@ ontolidar:Repair a skos:Concept;
     "Datum, Uhrzeit und Ort der Reparatur"@de, "Repair date and time, location (gps)."@en,
     "维修日期和时间，位置（gps）"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Repair"@en, "Reparatur"@de, "Riparazione"@it, "修复"@cn .
+  skos:prefLabel "Repair"@en, "Reparieren"@de, "Riparazione"@it, "修复"@cn .
 
 ontolidar:Relocation a skos:Concept;
   ontolidar:units "DateTime, GPS coordinates"@en;

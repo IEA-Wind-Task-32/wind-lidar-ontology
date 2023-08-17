@@ -422,7 +422,7 @@ ontolidar:FrequencyAnalyser a skos:Concept;
     "Questo apparezzio produce lo spettro di potenza del segnale di battimento fra la sorgente laser originale ed il segnale di backscatter."@it,
     "Una vez que la señal analógica se convierte en una señal digital, se utiliza un analizador de frecuencias para determinar su espectro de frecuencias. Este aparato proporciona el espectro de frecuencias de la señal mezclada (señal original de la fuente láser + señal retrodispersada), y por tanto el desplazamiento de frecuencia Doppler."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:DopplerPeak, ontolidar:FastFourierTransform, ontolidar:FrequencyAnalyserSampleRate,
+  skos:narrower ontolidar:FastFourierTransform, ontolidar:FrequencyAnalyserSampleRate,
     ontolidar:PeakIdentification;
   skos:prefLabel "Analizador de frecuencia"@es, "Analizzatore della frequenza"@it, "Frequency analyser"@en,
     "Frequenz-Analysator"@de, "频率分析器"@cn .
@@ -1400,8 +1400,9 @@ ontolidar:DopplerSpectra a skos:Concept;
     "Distribuzione di frequenza della luce in backscatter."@it, "Frequency distribution of the power of the received signals."@en,
     "接收信号的功率的频率分布"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:narrower ontolidar:CentroidPowerValue, ontolidar:MaximumPowerValue, ontolidar:MeanPowerValue,
-    ontolidar:SystemNoiseThreshold, ontolidar:TimeIntegration, ontolidar:WeightingFunction;
+  skos:narrower ontolidar:CentroidPowerValue, ontolidar:DopplerPeak, ontolidar:MaximumPowerValue,
+    ontolidar:MeanPowerValue, ontolidar:SystemNoiseThreshold, ontolidar:TimeIntegration,
+    ontolidar:WeightingFunction;
   skos:prefLabel "Doppler Spectra"@en, "Doppler-Spektrum"@de, "Espectro Doppler"@es,
     "Spettri Doppler"@it, "多普勒光谱"@cn .
 
@@ -2189,12 +2190,11 @@ ontolidar:CrossCorrelation a skos:Concept;
     "交叉相关"@cn .
 
 ontolidar:DopplerPeak a skos:Concept;
-  skos:broader ontolidar:FrequencyAnalyser;
+  skos:broader ontolidar:DopplerSpectra;
   skos:definition "Doppler peak as a method to describe the amplitude of the wind speed asumming that the aerosols flow at the same speed as the wind."@en,
     "Pico Doppler como método para describir la amplitud de la velocidad del viento asumiendo que los aerosoles se desplazan a la misma velocidad que el viento."@es;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
-  skos:prefLabel "Doppler peak"@en;
-  skos:related ontolidar:DopplerSpectra .
+  skos:prefLabel "Doppler peak"@en .
 
 ontolidar:LineOfSight a skos:Concept;
   skos:broader ontolidar:MeasurementPrinciples;

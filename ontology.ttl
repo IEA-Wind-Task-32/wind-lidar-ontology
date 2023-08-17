@@ -2458,8 +2458,8 @@ ontolidar:Installation a skos:Concept;
 ontolidar:Deployment a skos:Concept;
   ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
-  skos:definition "Data, luogo e posizione della messa in opera di un lidar"@it, "Datos y hora de instalación, ubicación (gps)."@es,
-    "Datum, Uhrzeit und Ort der Bereitstellung"@de, "Deployment date and time, location (gps)."@en,
+  skos:definition "Data, luogo e posizione della messa in opera di un lidar"@it, "Datum, Uhrzeit und Ort der Bereitstellung"@de,
+    "Deployment date and time, location (gps)."@en, "Fecha y hora de instalación, ubicación (gps)."@es,
     "部署日期和时间，位置（gps）"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Deployment"@en, "Einsatz"@de, "Messa in opera"@it, "部署"@cn .
@@ -2467,8 +2467,8 @@ ontolidar:Deployment a skos:Concept;
 ontolidar:Repair a skos:Concept;
   ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
-  skos:definition "Data, luogo e posizione della riparazione di un lidar"@it, "Datos y hora de reparación, ubicación (gps)."@es,
-    "Datum, Uhrzeit und Ort der Reparatur"@de, "Repair date and time, location (gps)."@en,
+  skos:definition "Data, luogo e posizione della riparazione di un lidar"@it, "Datum, Uhrzeit und Ort der Reparatur"@de,
+    "Fecha y hora de reparación, ubicación (gps)."@es, "Repair date and time, location (gps)."@en,
     "维修日期和时间，位置（gps）"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Repair"@en, "Reparieren"@de, "Riparazione"@it, "修复"@cn .
@@ -2477,7 +2477,7 @@ ontolidar:Relocation a skos:Concept;
   ontolidar:units "DateTime, GPS coordinates"@en;
   skos:broader ontolidar:Installation;
   skos:definition "Data, luogo e posizione di una nuova messa in opera di un lidar"@it,
-    "Datos de la reubicación y hora, ubicación (gps)."@es, "Datum, Uhrzeit und Ort des neuen Standortes"@de,
+    "Datum, Uhrzeit und Ort des neuen Standortes"@de, "Fecha de la reubicación y hora, ubicación (gps)."@es,
     "Relocation date and time, location (gps)."@en, "搬迁日期和时间，地点（gps）"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
   skos:prefLabel "Relocation"@en, "Rilocalizzazione"@it, "Standortwechsel"@de, "搬迁"@cn .

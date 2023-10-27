@@ -123,8 +123,8 @@ ontolidar:PerformanceVerification a skos:Concept;
 
 ontolidar:IecStandard61400502 a skos:Concept;
   skos:broader ontolidar:PerformanceVerification;
-  skos:definition "Standard interanzionali di riferimento per misurazioni della prestazione delle turbine basata su lidar montati a terra."@it,
-    "Standards de medición del rendimiento en la generación de potencia de una turbina eólica que están basados en las mediciones de lidares montados en tierra."@es,
+  skos:definition "Estándares de medición del rendimiento en la generación de potencia de una turbina eólica que están basados en las mediciones de lidares montados en tierra."@es,
+    "Standard interanzionali di riferimento per misurazioni della prestazione delle turbine basata su lidar montati a terra."@it,
     "Wind turbine's power performance measurement standards based on ground based lidars."@en,
     "基于地面式测风激光雷达的风力发电机组功率特性测试国际标准"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -133,8 +133,8 @@ ontolidar:IecStandard61400502 a skos:Concept;
 
 ontolidar:IecStandard61400503 a skos:Concept;
   skos:broader ontolidar:PerformanceVerification;
-  skos:definition "Standard interanzionali di riferimento per misurazioni della prestazione delle turbine basata su lidar montati sulla turbina."@it,
-    "Standards de medición del rendimiento en la generación de potencia de una turbina eólica que están basados en las mediciones de lidares montados en góndola."@es,
+  skos:definition "Estándares de medición del rendimiento en la generación de potencia de una turbina eólica que están basados en las mediciones de lidares montados en góndola."@es,
+    "Standard interanzionali di riferimento per misurazioni della prestazione delle turbine basata su lidar montati sulla turbina."@it,
     "Wind turbine's power performance measurement standards based on nacelle mounted lidars."@en,
     "基于机舱式测风激光雷达的风力发电机组功率特性测试国际标准"@cn;
   skos:inScheme <http://vocab.ieawindtask32.org/wind-lidar-ontology/>;
@@ -2264,7 +2264,7 @@ ontolidar:Parameters a skos:Concept;
 ontolidar:CarrierToNoiseRatio a skos:Concept;
   skos:altLabel "CNR"@en;
   skos:broader ontolidar:Parameters;
-  skos:definition "En una señal modulada, cociente entre la potencia de la señal y la potencia del ruido de esa señal."@es,
+  skos:definition "En una señal modulada (ej. pulsada), cociente entre la potencia de la señal y la potencia del ruido de esa señal."@es,
     "In a modulated signal (i.e. the pulse), the carrier to noise ratio is the ratio of the signal power to the signal noise power."@en,
     "Una misura della forza del segnale di ritorno al lidar."@it, "在调制信号中，载波噪声比是信号功率与信号噪声功率的比值。"@cn;
   skos:editorialNote "A measure of lidar return signal quality. Is the signal to noise ratio of the modulated signal sent to probe the atmosphere and defines the lidar data availability. If CNR is below a certain threshold the information carried by the backscattered (modulated) light is discarded. Often used interchangably with SNR."@en,
